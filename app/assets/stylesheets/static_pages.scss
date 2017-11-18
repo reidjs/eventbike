@@ -1,3 +1,31 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  transition: all 0.5s ease 3s;
+}
+
+.nav-dropdown:hover .nav-dropdown-content {
+  display: block;
+  transition: all 0.5s ease 0s;
+  
+}
+
+// .nav-dropdown:
+
+.main {
+  display: block;
+}
