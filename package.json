@@ -36,5 +36,10 @@
   "bugs": {
     "url": "https://github.com/reidjs/eventbike/issues"
   },
-  "homepage": "https://github.com/reidjs/eventbike#readme"
+  "homepage": "https://github.com/reidjs/eventbike#readme",
+  "devDependencies": {
+    "redux-devtools": "^3.4.1",
+    "redux-devtools-dock-monitor": "^1.1.2",
+    "redux-devtools-log-monitor": "^1.4.0"
+  }
 }

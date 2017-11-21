@@ -1,52 +1,52 @@
 {
     entities: {
-      events: {
-        1: {
-          id: 1,
-          Title: "Apple Picking in Sonoma Ride",
-          img_url: "www.fake.com/img1.jpg",
-          attendees: [1, 2, 3],
-          created_by: [1]
-    
-        },
-        2: {
-          id: 2,
-          Title: "Biking around the block",
-          img_url: "www.fake.com/img2.jpg",
-          attendees: [1, 2],
-          created_by: [2]
-        },
-        3: {
-          id: 3,
-          Title: "Berkeley Century Ride",
-          img_url: "www.fake.com/img3.jpg",
-          attendees: [1],
-          created_by: [1]
+        events: {
+            1: {
+                id: 1,
+                Title: "Apple Picking in Sonoma Ride",
+                img_url: "www.fake.com/img1.jpg",
+                attendees: [1, 2, 3],
+                created_by: [1]
+
+            },
+            2: {
+                id: 2,
+                Title: "Biking around the block",
+                img_url: "www.fake.com/img2.jpg",
+                attendees: [1, 2],
+                created_by: [2]
+            },
+            3: {
+                id: 3,
+                Title: "Berkeley Century Ride",
+                img_url: "www.fake.com/img3.jpg",
+                attendees: [1],
+                created_by: [1]
+            }
         }
-      }
-    }
-    users: {
-      1: {
-        id: 1,
-        username: "Adam",
-        created_events: [1, 2, 3],
-        saved_events: [1, 2, 3],
-        registered_events: [1, 2, 3]
-      }
-      2: {
-        id: 2,
-        username: "Bob",
-        created_events: []
-        saved_events: [2]
-        registered_events: []
-      }
-      3: {
-        id: 3,
-        username: "Charlie",
-        created_events: []
-        saved_events: []
-        registered_events: [1]
-      }
+        users: {
+            1: {
+                id: 1,
+                username: "Adam",
+                created_events: [1, 2, 3],
+                saved_events: [1, 2, 3],
+                registered_events: [1, 2, 3]
+            },
+            2: {
+                id: 2,
+                username: "Bob",
+                created_events: []
+                saved_events: [2]
+                registered_events: []
+            },
+            3: {
+                id: 3,
+                username: "Charlie",
+                created_events: []
+                saved_events: []
+                registered_events: [1]
+            }
+        }
     }
     errors: {
       login: [],
@@ -58,4 +58,4 @@
         username: "Charlie"
       }
     }
-    }
+}
