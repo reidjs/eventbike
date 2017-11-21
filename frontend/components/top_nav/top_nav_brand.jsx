@@ -2,7 +2,7 @@ import React from 'react'
 
 const TopNavBrand = () => {
   return (
-    <div>Top nav brand </div>
+    <strong>EventBike</strong>
   )
 }
 

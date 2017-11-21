@@ -6,11 +6,22 @@ import { Link } from 'react-router-dom';
 const TopNav = ({currentUser}) => {
   // console.log(currentUser)
   return (
-    <div>
-      <TopNavBrand />
-      <TopNavDropDown currentUser={currentUser} logout={logout} />
-      <Link to="/events/new">Create Event</Link>
-    </div>
+    <nav className="navbar navbar-default">
+      <div className="container-fluid">
+        <div className="navbar-header">
+          <a className="navbar-brand" href="#">
+            <TopNavBrand />
+          </a>
+          <ul className="nav navbar-nav">
+          <li className="nav-item">
+            <TopNavDropDown currentUser={currentUser} logout={logout} />
+            
+          </li>
+          <li className="nav-item"><Link to="/events/new">Create Event</Link></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   )
 } 
 export default TopNav

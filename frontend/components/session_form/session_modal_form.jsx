@@ -42,7 +42,7 @@ class SessionModalForm extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.openModal}>Open Modal</button>
+        <button className="btn btn-default" onClick={this.openModal}>Sign In</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
