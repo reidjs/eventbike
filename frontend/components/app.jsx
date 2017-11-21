@@ -2,6 +2,17 @@ import React from 'react'
 import EventItem from './event_item'
 import NavDropDown from './test_dropdown/nav_drop_down'
 import SessionFormContainer from './session_form/session_form_container'
+import { 
+  AuthRoute, 
+  ProtectedRoute 
+} from '../util/route_util';
+import {
+  Route,
+  Redirect,
+  Switch,
+  Link,
+  HashRouter
+} from 'react-router-dom';
 const title = "User information"
 
 const event = {
@@ -24,7 +35,10 @@ const App = () => (
             Main content here, nav above
             <EventItem event={event}/>
         </section>
-        <SessionFormContainer />
+        <Switch>
+          <AuthRoute path="/login" component={SessionFormContainer} />
+          <AuthRoute path="/signup" component={SessionFormContainer} />
+        </Switch>
     </div>
 )
 
