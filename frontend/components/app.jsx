@@ -30,11 +30,6 @@ const event = {
 
 const App = () => (
     <div>
-        <NavDropDown title={title} />
-        <section className="main">
-            Main content here, nav above
-            <EventItem event={event}/>
-        </section>
         <Switch>
           <AuthRoute path="/login" component={SessionFormContainer} />
           <AuthRoute path="/signup" component={SessionFormContainer} />
