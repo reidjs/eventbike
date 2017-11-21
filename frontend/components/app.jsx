@@ -2,6 +2,8 @@ import React from 'react'
 import EventItem from './event_item'
 import NavDropDown from './test_dropdown/nav_drop_down'
 import SessionFormContainer from './session_form/session_form_container'
+import TopNavContainer from './top_nav/top_nav_container';
+import SessionModalForm from './session_form/session_modal_form'
 import { 
   AuthRoute, 
   ProtectedRoute 
@@ -30,9 +32,12 @@ const event = {
 
 const App = () => (
     <div>
+        <TopNavContainer />
+        Welcome to eventbike 
         <Switch>
           <AuthRoute path="/login" component={SessionFormContainer} />
           <AuthRoute path="/signup" component={SessionFormContainer} />
+          <Route path="/modal" component={SessionModalForm} />
         </Switch>
     </div>
 )
