@@ -8,7 +8,6 @@ const EventItem = ({event}) => {
       {event.title}
       <button onClick={event.register}>Register</button>
       <button onClick={event.bookmark}>Bookmark</button>
-      <Link to=""/>
     </div>
   )
 }

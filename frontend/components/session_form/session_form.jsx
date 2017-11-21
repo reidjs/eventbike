@@ -57,7 +57,6 @@ class SessionForm extends React.Component {
           Welcome to BenchBnB!
           <br/>
           Please {this.props.formType} or {this.navLink()}
-          {this.renderErrors()}
           <div className="login-form">
             <br/>
             <label>Username:
