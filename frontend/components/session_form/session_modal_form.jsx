@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import UsernameForm from './username_form'
 import { Link } from 'react-router-dom'
 import SignupForm from './signup_form'
 import LoginForm from './login_form'
@@ -52,7 +51,7 @@ class SessionModalForm extends React.Component {
     this.setState({modalIsOpen: false});
   }
   componentDidMount() {
-
+    
   }
   componentWillReceiveProps(nextProps) {
     if (this.props.potentialUser !== nextProps.potentialUser) {
@@ -60,21 +59,21 @@ class SessionModalForm extends React.Component {
         this.props.history.push('/signin/signup')
         this.setState({formType: 'signup'})
       } else {
-        console.log(this.props)
+        // console.log(this.props)
         this.props.history.push('/signin/login')        
         this.setState({formType: 'login'})
       }
     }
   }
   render() {
-    console.log("p user", this.props.potentialUser)
+    // console.log("p user", this.props.potentialUser)
     let formToShow;
     if (this.props.potentialUser === null){
       formToShow = <UsernameFormSimple lookup={this.props.lookup}/>
     } else if(this.props.newUserFlag) {
-      formToShow = <SignupForm username={this.props.potentialUser} signup={this.props.signup} />
+      formToShow = <SignupForm username={this.props.potentialUser} history={this.props.history} signup={this.props.signup} reset={this.props.reset} />
     } else {
-      formToShow = <LoginForm username={this.props.potentialUser} login={this.props.login} />
+      formToShow = <LoginForm username={this.props.potentialUser} history={this.props.history} login={this.props.login} reset={this.props.reset} />
     }
 
     // if (this.state.formType === 'signup') {

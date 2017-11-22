@@ -17,6 +17,9 @@ class UsernameFormSimple extends React.Component {
     const username = this.state.username
     this.props.lookup(username)
   }
+  componentDidMount() {
+    this.setState({username: ""})
+  }
   render() {
     return(
       <form onSubmit={this.handleSubmit}>

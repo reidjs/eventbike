@@ -4,7 +4,8 @@ import merge from 'lodash/merge';
 import {
   RECEIVE_CURRENT_USER,
   RECEIVE_USERNAME, 
-  RECEIVE_NEW_USERNAME
+  RECEIVE_NEW_USERNAME,
+  RESET_POTENTIAL_USER
 } from '../actions/session_actions';
 
 const _nullUser = Object.freeze({
@@ -18,6 +19,9 @@ const sessionReducer = (state = _nullUser, action) => {
   let potentialUser;
   let newUserFlag;
   switch(action.type) {
+    case RESET_POTENTIAL_USER:
+      console.log('reset user!')
+      return _nullUser;
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
       return merge({}, { currentUser });

@@ -7,6 +7,8 @@ class LoginForm extends React.Component {
     this.state = ({password: ""});
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleBack = this.handleBack.bind(this);
+    
   }
   handleChange(e) {
     // console.log(e.target.value)
@@ -16,12 +18,18 @@ class LoginForm extends React.Component {
     const user = {username: this.props.username, password: this.state.password}
     this.props.login(user)
   }
+  handleBack(e) {
+    this.props.reset()
+    this.props.history.push('/signin')
+  }
   render() {
     return(
       <form onSubmit={this.handleSubmit}>
-        Welcome back! Enter your password to login.
+        Welcome back {this.props.username}! Enter your password to login.
         <input type="password" value={this.state.password} onChange={this.handleChange}/>
         <input type="submit" value="Log In" />
+        <button onClick={this.handleBack}>Backwards</button>
+
       </form>
     )
   }

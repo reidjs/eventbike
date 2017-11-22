@@ -5,6 +5,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const RECEIVE_USERNAME = 'RECEIVE_USERNAME';
 export const RECEIVE_NEW_USERNAME = 'RECEIVE_NEW_USERNAME';
+export const RESET_POTENTIAL_USER = 'RESET_POTENTIAL_USER'
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -24,7 +25,13 @@ export const receiveUsername = username => ({
   type: RECEIVE_USERNAME,
   username
 });
+export const resetPotentialUser = () => ({
+  type: RESET_POTENTIAL_USER
+});
 
+export const reset = () => dispatch => (
+  dispatch(resetPotentialUser())
+)
 export const signup = user => dispatch => (
   SessionAPIUtil.signup(user).then(user => (
     dispatch(receiveCurrentUser(user))

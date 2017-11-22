@@ -1,7 +1,7 @@
 //https://github.com/appacademy/curriculum/blob/master/react/projects/bench_bnb/solution/frontend/components/session_form/session_form_container.js
 import { connect } from 'react-redux';
 
-import { login, logout, signup, lookup } from '../../actions/session_actions';
+import { login, logout, signup, lookup, reset } from '../../actions/session_actions';
 import SessionModalForm from './session_modal_form';
 
 
@@ -28,7 +28,8 @@ const mapDispatchToProps = (dispatch, { location }) => {
   return {
     lookup: (username) => dispatch(lookup(username)),
     login: (user) => dispatch(login(user)),
-    signup: (user) => dispatch(signup(user))
+    signup: (user) => dispatch(signup(user)),
+    reset: () => dispatch(reset())
   };
 };
 // processForm: user => dispatch(processForm(user)),
