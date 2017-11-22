@@ -20,18 +20,18 @@ const sessionReducer = (state = _nullUser, action) => {
   let newUserFlag;
   switch(action.type) {
     case RESET_POTENTIAL_USER:
-      console.log('reset user!')
+      // console.log('reset user!')
       return _nullUser;
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
       return merge({}, { currentUser });
     case RECEIVE_NEW_USERNAME:
-      console.log('new user:', action)
+      // console.log('new user:', action)
       potentialUser = action.username;
       newUserFlag = true
       return merge({}, { potentialUser, newUserFlag });
     case RECEIVE_USERNAME:
-      console.log("Received username", action.username.username)
+      // console.log("Received username", action.username.username)
       potentialUser = action.username.username //refactor this
       return merge({}, { potentialUser })
     default:

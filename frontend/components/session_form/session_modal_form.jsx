@@ -28,13 +28,13 @@ class SessionModalForm extends React.Component {
     // this.logout = props.logout;
     this.state = {
       modalIsOpen: true,
-      formType: "username"
+      formType: "signin"
     };
     this.errors = props.errors
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-
+    this.determineFormType = this.determineFormType.bind(this);
   }
 
   openModal() {
@@ -53,40 +53,76 @@ class SessionModalForm extends React.Component {
   componentDidMount() {
     
   }
+  // componentWillReceiveProps(nextProps) {
+  //   // console.log("receive",nextProps)
+  //   if (this.props.potentialUser !== nextProps.potentialUser) {
+  //     if (nextProps.newUserFlag === true) {
+  //       this.props.history.push('/signin/signup')
+  //       this.setState({formType: 'signup'})
+  //     } else if (nextProps.potentialUser !== null) {
+  //       // console.log(this.props)
+  //       // console.log('there')
+  //       this.props.history.push('/signin/login')        
+  //       this.setState({formType: 'login'})
+  //     } else {
+  //       // console.log('here')
+  //       this.setState({formType: 'username'})
+  //     }
+  //   }
+  // }
   componentWillReceiveProps(nextProps) {
-    console.log("receive",nextProps)
-    if (this.props.potentialUser !== nextProps.potentialUser) {
-      if (nextProps.newUserFlag === true) {
-        this.props.history.push('/signin/signup')
-        this.setState({formType: 'signup'})
-      } else if (nextProps.potentialUser !== null) {
-        // console.log(this.props)
-        console.log('there')
-        this.props.history.push('/signin/login')        
-        this.setState({formType: 'login'})
-      } else {
-        console.log('here')
-        this.setState({formType: 'username'})
-      }
+    // console.log("receive",nextProps)
+    // if (this.props.potentialUser !== nextProps.potentialUser) {
+    //   if (nextProps.newUserFlag === true) {
+    //     this.props.history.push('/signin/signup')
+    //     this.setState({formType: 'signup'})
+    //   } else if (nextProps.potentialUser !== null) {
+    //     // console.log(this.props)
+    //     // console.log('there')
+    //     this.props.history.push('/signin/login')        
+    //     this.setState({formType: 'login'})
+    //   } else {
+    //     // console.log('here')
+    //     this.setState({formType: 'username'})
+    //   }
+    // }
+    //username form 
+    if (nextProps.potentialUser !== this.props.potentialUser) {
+      this.determineFormType(nextProps);
+    }
+  }
+  determineFormType(nextProps) {
+    if (nextProps.potentialUser === null) {
+      this.setState({formType: 'signin'})
+      return 
+    } else if (nextProps.newUserFlag) {
+      this.props.history.push('/signin/signup')      
+      this.setState({formType: 'signup'})
+      return 
+    } else {
+      this.props.history.push('/signin/login')        
+      this.setState({formType: 'login'})
+      return 
     }
   }
   render() {
     // console.log("p user", this.props.potentialUser)
     let formToShow;
-    if (this.props.potentialUser === null){
-      formToShow = <UsernameFormSimple lookup={this.props.lookup}/>
-    } else if(this.props.newUserFlag) {
-      formToShow = <SignupForm username={this.props.potentialUser} history={this.props.history} signup={this.props.signup} reset={this.props.reset} />
-    } else {
-      formToShow = <LoginForm username={this.props.potentialUser} history={this.props.history} login={this.props.login} reset={this.props.reset} />
-    }
-
-    // if (this.state.formType === 'signup') {
-    //   formToShow = <SignupForm username={this.props.potentialUser} signup={this.props.signup} />      
-    // } else if (this.state.formType === 'login') {
-    //   formToShow = <LoginForm username={this.props.potentialUser} login={this.props.login} />
-    // } else {
+    // if (this.props.potentialUser === null){
     //   formToShow = <UsernameFormSimple lookup={this.props.lookup}/>
+    // } else if(this.props.newUserFlag) {
+    //   formToShow = <SignupForm username={this.props.potentialUser} history={this.props.history} signup={this.props.signup} reset={this.props.reset} />
+    // } else {
+    //   formToShow = <LoginForm username={this.props.potentialUser} history={this.props.history} login={this.props.login} reset={this.props.reset} />
+    // }
+
+    if (this.state.formType === 'signup') {
+      formToShow = <SignupForm username={this.props.potentialUser} history={this.props.history} signup={this.props.signup} reset={this.props.reset} />     
+    } else if (this.state.formType === 'login') {
+      formToShow = <LoginForm username={this.props.potentialUser} history={this.props.history} login={this.props.login} reset={this.props.reset} />
+    } else {
+      formToShow = <UsernameFormSimple lookup={this.props.lookup}/>
+    }
     // }
     // const formToShow = (this.props.potentialUser === null) ? "Show username form" : "Show password form"
     return (
