@@ -26,12 +26,16 @@ class SigninForm extends React.Component {
     })
     return(
       <form onSubmit={this.handleSubmit}>
-        Enter username
+        <span className="brand">eB</span>
+        <h1>Let's do this.</h1>
+        <h2>Enter a username to sign up or log in.</h2>
+        <label>Username<br/>
         <input type="text" value={this.state.username} onChange={this.handleChange}/>
-        <input type="submit" value="Enter" />
+        </label>
         <ul>
           {errorList}
         </ul>
+        <input type="submit" value="Get Started" />
       </form>
     )
   }

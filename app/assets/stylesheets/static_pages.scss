@@ -43,62 +43,62 @@
   // bottom: '75%';
   // transform: 'translate(-50%, -50%)';
 }
-.modal_after-open {
-  // position: relative;
-  // top: 20%;
-  // left: 20%;
-  // right: 0;
-  // bottom: 0;
+// .modal_after-open {
+//   // position: relative;
+//   // top: 20%;
+//   // left: 20%;
+//   // right: 0;
+//   // bottom: 0;
 
-  width: 85%;
-  height: 85%;
-  border: 1px solid rgb(204, 204, 204);
-  background: rgb(255, 255, 255);
-  overflow: auto;
-  border-radius: 4px;
-  outline: none;
-  padding: 20px;
-  // margin-right: 0%;
-  // transform: translate(-10%, -20%);
-  margin: 50px auto;
-  // animation: blowUp 0.5s;
-  // animation-timing-function: ease-in;
-  animation: growFromCenter 0.5s;
+//   width: 85%;
+//   height: 85%;
+//   border: 1px solid rgb(204, 204, 204);
+//   background: rgb(255, 255, 255);
+//   overflow: auto;
+//   border-radius: 4px;
+//   outline: none;
+//   padding: 20px;
+//   // margin-right: 0%;
+//   // transform: translate(-10%, -20%);
+//   margin: 50px auto;
+//   // animation: blowUp 0.5s;
+//   // animation-timing-function: ease-in;
+//   animation: growFromCenter 0.5s;
   
-  //https://gist.github.com/CodeMyUI/60aa0f3b1e8589bb5bff#file-style-css-L35
+//   //https://gist.github.com/CodeMyUI/60aa0f3b1e8589bb5bff#file-style-css-L35
   
-}
-.modal_before-close {
-}
+// }
+// .modal_before-close {
+// }
 
-.modal_before-close {
+// .modal_before-close {
 
-}
+// }
 
-.modalOverlay {
+// .modalOverlay {
   
-}
-.modalOverlay_after-open {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  background-color: rgba(255, 255, 255, 0.75);
+// }
+// .modalOverlay_after-open {
+//   position: fixed;
+//   top: 0px;
+//   left: 0px;
+//   right: 0px;
+//   bottom: 0px;
+//   background-color: rgba(255, 255, 255, 0.75);
   
 
-}
+// }
 
-.modalOverlay_before-close {
+// .modalOverlay_before-close {
 
-}
-//https://stackoverflow.com/questions/42632767/css-animations-grow-from-center
-@keyframes growFromCenter {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
+// }
+// //https://stackoverflow.com/questions/42632767/css-animations-grow-from-center
+// @keyframes growFromCenter {
+//   from {
+//     transform: scale(0);
+//   }
+//   to {
+//     transform: scale(1);
+//   }
+// }
 

@@ -110,8 +110,12 @@ class SessionModalForm extends React.Component {
           }}
           contentLabel="Sign In Modal"
         >
-          <Link to="/">Close</Link>
+        <div className="closeButton"> 
+          <Link to="/" className="closeButton">&times;</Link>
+        </div>
+        <div className="modalForm">
           {formToShow}
+        </div>
         </Modal>
       </div>
     );

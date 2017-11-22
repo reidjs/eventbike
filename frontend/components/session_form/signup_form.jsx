@@ -29,10 +29,16 @@ class SignupForm extends React.Component {
     })
     return(
       <form onSubmit={this.handleSubmit}>
-        Hello {this.props.username}! Enter a password to get started.
+        <h2>Hello {this.props.username}! Enter a password to get started.</h2>
+        <label>username
+          <p>{this.props.username}</p>
+          <button onClick={this.handleBack}>Edit</button>
+        </label>
+        <label>Password
         <input type="password" value={this.state.password} onChange={this.handleChange}/>
+        </label>
         <input type="submit" value="Sign up" />
-        <button onClick={this.handleBack}>Backwards</button>
+        
         <ul>
           {errorList}
         </ul>

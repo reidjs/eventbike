@@ -28,8 +28,11 @@ class LoginForm extends React.Component {
     })
     return(
       <form onSubmit={this.handleSubmit}>
-        Welcome back {this.props.username}! Enter your password to login.
+        {/* image here */}
+        <h2>Welcome back {this.props.username}! Enter your password to login.</h2>
+        <label>Password
         <input type="password" value={this.state.password} onChange={this.handleChange}/>
+        </label>
         <input type="submit" value="Log In" />
         <button onClick={this.handleBack}>Backwards</button>
         <ul>
