@@ -16,11 +16,12 @@ class Api::UsersController < ApplicationController
   def show 
     #this works because of the definition in the user model 
     @user = User.find_by(username: params[:id])
-    # fail
     if !@user.nil?
       render "api/users/show"
+    elsif params[:id].nil? || params[:id].length < 3
+      render json: ["name too short"], status: 405
     else 
-      render json: "no user found", status: 404
+      render json: ["no user found"], status: 404
     end 
   end 
 

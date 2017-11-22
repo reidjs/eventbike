@@ -27,7 +27,7 @@ class SessionModalForm extends React.Component {
     this.state = {
       modalIsOpen: true
     };
-
+    this.errors = props.errors
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -47,8 +47,8 @@ class SessionModalForm extends React.Component {
 
     this.setState({modalIsOpen: false});
   }
-  
   render() {
+    console.log("p user", this.props.potentialUser)
     return (
       <div>
         {/* This button is either going to be sign in or log out  */}
@@ -61,7 +61,9 @@ class SessionModalForm extends React.Component {
           contentLabel="Sign In Modal"
         >
         {/*modal is now open, show enter user name OR enter password*/}
-          <UsernameForm history={this.props.history} signup={this.props.signup} login={this.props.login}/>
+          {/* if this.state.potentialUser then render the Password form instead */}
+
+          <UsernameForm errors={this.errors} lookup={this.props.lookup} history={this.props.history} signup={this.props.signup} login={this.props.login}/>
           <Link to="/">Close</Link>
           
         </Modal>

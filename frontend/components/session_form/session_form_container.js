@@ -9,10 +9,13 @@ const mapStateToProps = (state, ownProps) => {
   // console.log(state)
   // debugger
   console.log(ownProps)
+  console.log(state)
   return {
     loggedIn: Boolean(state.session.currentUser),
     ownProps: ownProps,
-    history: ownProps.history
+    history: ownProps.history,
+    errors: state.errors,
+    potentialUser: state.session.potentialUser
   }
   // errors: state.errors.session
 };

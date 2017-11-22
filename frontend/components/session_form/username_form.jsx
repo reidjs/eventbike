@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { fetchUserByUsername } from '../../util/session_api_util';
-import { browserHistory } from 'react-router'
+// import { browserHistory } from 'react-router'
 import { Link } from 'react-router-dom'
 class UsernameForm extends React.Component {
   constructor() {
@@ -30,12 +30,15 @@ class UsernameForm extends React.Component {
     const username = this.state.username;
     console.log('ere')
     // browserHistory.push('/test')
+    this.props.lookup(username)
     fetchUserByUsername(username)
       .then(username => {
         this.props.history.push('/signin/login')
         return this.setState({verifiedUsername: 1, submitAction: this.props.login})
       })
       .fail(err => {
+        console.log("Error: ",err)
+        // if (erx/r.status === 404)
         this.props.history.push('/signin/signup')
         return this.setState({verifiedUsername: -1, submitAction: this.props.signup})
       })
@@ -45,6 +48,7 @@ class UsernameForm extends React.Component {
     const user = {username: this.state.username, password: this.state.password}
     console.log("login with ", user)
     this.props.login(user)
+    
   }
   handleSubmitSignup(e) {
     const user = {username: this.state.username, password: this.state.password}
