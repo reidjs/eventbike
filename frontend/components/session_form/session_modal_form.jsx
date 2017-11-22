@@ -43,6 +43,7 @@ class SessionModalForm extends React.Component {
   }
 
   closeModal() {
+    this.props.reseterrors();
     this.props.history.push('/')
     this.setState({modalIsOpen: false});
   }
@@ -90,8 +91,6 @@ class SessionModalForm extends React.Component {
     } else {
       formToShow = <SigninForm lookup={this.props.lookup} errors={this.props.errors}/>
     }
-    // }
-    // const formToShow = (this.props.potentialUser === null) ? "Show username form" : "Show password form"
     return (
       <div>
         <Modal
@@ -108,8 +107,4 @@ class SessionModalForm extends React.Component {
     );
   }
 }
-{/* <UsernameForm errors={this.errors} lookup={this.props.lookup} history={this.props.history} signup={this.props.signup} login={this.props.login}/> */}
-
-
-// ReactDOM.render(<App />, appElement);
 export default SessionModalForm;

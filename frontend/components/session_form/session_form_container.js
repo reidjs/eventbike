@@ -1,7 +1,7 @@
 //https://github.com/appacademy/curriculum/blob/master/react/projects/bench_bnb/solution/frontend/components/session_form/session_form_container.js
 import { connect } from 'react-redux';
 
-import { login, logout, signup, lookup, reset } from '../../actions/session_actions';
+import { login, logout, signup, lookup, reset, reseterrors } from '../../actions/session_actions';
 import SessionModalForm from './session_modal_form';
 import values from 'lodash/values'
 
@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   // console.log(state)
   // debugger
   // console.log(ownProps)
-  console.log("Errors:", state.errors)
+  // console.log("Errors:", state.errors)
   return {
     loggedIn: Boolean(state.session.currentUser),
     ownProps: ownProps,
@@ -29,7 +29,8 @@ const mapDispatchToProps = (dispatch, { location }) => {
     lookup: (username) => dispatch(lookup(username)),
     login: (user) => dispatch(login(user)),
     signup: (user) => dispatch(signup(user)),
-    reset: () => dispatch(reset())
+    reset: () => dispatch(reset()),
+    reseterrors: () => dispatch(reseterrors())
   };
 };
 // processForm: user => dispatch(processForm(user)),
