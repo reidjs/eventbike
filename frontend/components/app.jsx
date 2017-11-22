@@ -1,9 +1,12 @@
-import React from 'react'
-import EventItem from './event_item'
-import NavDropDown from './test_dropdown/nav_drop_down'
-import SessionFormContainer from './session_form/session_form_container'
+import React from 'react';
+import EventItem from './event_item';
+import NavDropDown from './test_dropdown/nav_drop_down';
+import SessionFormContainer from './session_form/session_form_container';
 import TopNavContainer from './top_nav/top_nav_container';
-import SessionModalForm from './session_form/session_modal_form'
+import SessionModalForm from './session_form/session_modal_form';
+import UsernameModal from './modal/username_modal';
+import PasswordModal from './modal/password_modal';
+import SigninModal from './modal/signin_modal';
 import { 
   AuthRoute, 
   ProtectedRoute 
@@ -37,8 +40,8 @@ const App = () => (
         <Switch>
           <AuthRoute path="/login" component={SessionFormContainer} />
           <AuthRoute path="/signup" component={SessionFormContainer} />
-          <Route path="/modal" component={SessionModalForm} />
         </Switch>
+        <SigninModal />
     </div>
 )
 

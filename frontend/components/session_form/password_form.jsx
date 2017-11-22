@@ -1,14 +1,12 @@
 import React from 'react'
-import { fetchUserByUsername } from '../../util/session_api_util';
-import PasswordForm from './password_form';
-class UsernameForm extends React.Component {
+class PasswordForm extends React.Component {
   constructor() {
     super();
     //0: pending, 1: true, -1: false
-    this.state = ({verifiedUsername: 0, username: "", password: ""})
-    this.handleChangeUsername = this.handleChangeUsername.bind(this);
+    this.state = ({password: ""})
+    this.newUser = this.props.newUser;
+    this.username = this.props.username;
     this.handleChangePassword = this.handleChangePassword.bind(this);
-    this.handleSubmitUsername = this.handleSubmitUsername.bind(this);
     this.handleSubmitLogin = this.handleSubmitLogin.bind(this);
     this.handleSubmitSignup = this.handleSubmitSignup.bind(this);
   }
@@ -83,4 +81,4 @@ class UsernameForm extends React.Component {
     )
   }
 }
-export default UsernameForm
+export default PasswordForm
