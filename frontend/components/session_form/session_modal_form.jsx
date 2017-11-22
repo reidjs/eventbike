@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import UsernameForm from './username_form'
 import { Link } from 'react-router-dom'
+import SignupForm from './signup_form'
+import LoginForm from './login_form'
+import UsernameFormSimple from './username_form_simple'
 // import SessionFormContainer from './session_form_container'
 
 //https://github.com/reactjs/react-modal
@@ -51,11 +54,11 @@ class SessionModalForm extends React.Component {
     console.log("p user", this.props.potentialUser)
     let formToShow;
     if (this.props.potentialUser === null){
-      formToShow = "Show the username form"
+      formToShow = <UsernameFormSimple lookup={this.props.lookup}/>
     } else if(this.props.newUserFlag) {
-      formToShow = "Show the new user form"
+      formToShow = <SignupForm username={this.props.potentialUser} signup={this.props.signup} />
     } else {
-      formToShow = "Show login form"
+      formToShow = <LoginForm username={this.props.potentialUser} login={this.props.login} />
     }
     // const formToShow = (this.props.potentialUser === null) ? "Show username form" : "Show password form"
     return (
@@ -72,14 +75,15 @@ class SessionModalForm extends React.Component {
         {/*modal is now open, show enter user name OR enter password*/}
           {/* if this.state.potentialUser then render the Password form instead */}
 
-          <UsernameForm errors={this.errors} lookup={this.props.lookup} history={this.props.history} signup={this.props.signup} login={this.props.login}/>
           <Link to="/">Close</Link>
           {formToShow}
+          
         </Modal>
       </div>
     );
   }
 }
+{/* <UsernameForm errors={this.errors} lookup={this.props.lookup} history={this.props.history} signup={this.props.signup} login={this.props.login}/> */}
 
 
 // ReactDOM.render(<App />, appElement);
