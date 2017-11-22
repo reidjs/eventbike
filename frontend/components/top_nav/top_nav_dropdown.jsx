@@ -1,17 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import SessionFormContainer from '../session_form/session_form_container'
 const TopNavDropDown = ({currentUser, logout}) => {
   if (currentUser === null) {
     // return (
     //     <Link to="/signup">Sign in</Link>
     // )
+    //we need a button for sign up...
     return (
-      <SessionFormContainer currentUser={currentUser} logout={logout} location={location}/>
+      <Link to="/signin">SIgn in</Link>
     )
+    // <SessionFormContainer currentUser={currentUser} logout={logout} location={location}/>
   } else {
     //display dropdown
-  return (
+    return (
       <button className="btn btn-primary" onClick={logout}>Logout </button>
     )
   }

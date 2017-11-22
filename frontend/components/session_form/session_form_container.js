@@ -5,17 +5,20 @@ import { login, logout, signup, lookup } from '../../actions/session_actions';
 import SessionModalForm from './session_modal_form';
 
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, ownProps) => {
   // console.log(state)
   // debugger
+  console.log(ownProps.location.pathname)
   return {
-    loggedIn: Boolean(state.session.currentUser)
+    loggedIn: Boolean(state.session.currentUser),
+    ownProps: ownProps,
+    loc: ownProps.location.pathname
   }
   // errors: state.errors.session
 };
 
 const mapDispatchToProps = (dispatch, { location }) => {
-  const formType = location.pathname.slice(1); //must set up router
+  const endLocation = location.pathname.slice(1); //must set up router
   // let formType = 'login'
   // const processForm = (formType === 'login') ? login : signup;
   return {

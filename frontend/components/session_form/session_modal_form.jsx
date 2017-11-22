@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
 import UsernameForm from './username_form'
+import { Link } from 'react-router-dom'
 // import SessionFormContainer from './session_form_container'
 
 //https://github.com/reactjs/react-modal
@@ -17,13 +18,14 @@ const customStyles = {
 };
 
 class SessionModalForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    console.log(props.loc)
     // debugger
     // this.currentUser = props.currentUser;
     // this.logout = props.logout;
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: true
     };
 
     this.openModal = this.openModal.bind(this);
@@ -42,6 +44,7 @@ class SessionModalForm extends React.Component {
   }
 
   closeModal() {
+
     this.setState({modalIsOpen: false});
   }
   
@@ -49,7 +52,7 @@ class SessionModalForm extends React.Component {
     return (
       <div>
         {/* This button is either going to be sign in or log out  */}
-        <button className="btn btn-default" onClick={this.openModal}>Sign In</button>
+        {/* <button className="btn btn-default" onClick={this.openModal}>Sign In</button> */}
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -59,7 +62,7 @@ class SessionModalForm extends React.Component {
         >
         {/*modal is now open, show enter user name OR enter password*/}
           <UsernameForm signup={this.props.signup} login={this.props.login}/>
-          
+          <Link to="/">Close</Link>
           
         </Modal>
       </div>
