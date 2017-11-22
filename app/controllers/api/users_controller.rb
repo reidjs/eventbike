@@ -13,6 +13,17 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def show 
+    #this works because of the definition in the user model 
+    @user = User.find_by(username: params[:id])
+    # fail
+    if !@user.nil?
+      render "api/users/show"
+    else 
+      render json: "here"
+    end 
+  end 
+
   private
 
   def user_params

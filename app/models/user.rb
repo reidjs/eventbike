@@ -18,6 +18,11 @@ class User < ApplicationRecord
     return nil unless user && user.valid_password?(password)
     user
   end
+  
+  #For looking up users by username only
+  def to_param
+    username
+  end 
 
   def password=(password)
     @password = password

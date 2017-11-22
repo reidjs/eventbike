@@ -3,6 +3,7 @@ import * as SessionAPIUtil from '../util/session_api_util'
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const RECEIVE_USERNAME = 'RECEIVE_USERNAME';
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -12,6 +13,10 @@ export const receiveCurrentUser = currentUser => ({
 export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
+});
+export const receiveUsername = username => ({
+  type: RECEIVE_USERNAME,
+  username
 });
 
 export const signup = user => dispatch => (
@@ -35,3 +40,8 @@ export const logout = () => dispatch => (
     dispatch(receiveCurrentUser(null))
   ))
 );
+//look for user by username in db
+export const lookup = (username) => dispatch => (
+  SessionAPIUtil.fetchUserByUsername(username)
+    .then(username => dispatch(receiveUsername(username)))
+)
