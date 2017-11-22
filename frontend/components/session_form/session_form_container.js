@@ -8,11 +8,11 @@ import SessionModalForm from './session_modal_form';
 const mapStateToProps = (state, ownProps) => {
   // console.log(state)
   // debugger
-  console.log(ownProps.location.pathname)
+  console.log(ownProps)
   return {
     loggedIn: Boolean(state.session.currentUser),
     ownProps: ownProps,
-    loc: ownProps.location.pathname
+    history: ownProps.history
   }
   // errors: state.errors.session
 };

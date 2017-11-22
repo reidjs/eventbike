@@ -24,8 +24,6 @@ const App = () => (
     <TopNavContainer />
         Welcome to eventbike 
         <Switch>
-          <AuthRoute path="/login" component={SessionFormContainer} />
-          <AuthRoute path="/signup" component={SessionFormContainer} />
           <Route path="/signin" component={SessionFormContainer} />
         </Switch>
         
@@ -34,6 +32,8 @@ const App = () => (
 )
 
 export default App;
+{/* <AuthRoute path="/login" component={SessionFormContainer} />
+<AuthRoute path="/signup" component={SessionFormContainer} /> */}
 // const event = {
 //     //state props
 //     title: "Event title goes here",

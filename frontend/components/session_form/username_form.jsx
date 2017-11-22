@@ -1,9 +1,14 @@
+
+
 import React from 'react'
 import { fetchUserByUsername } from '../../util/session_api_util';
+import { browserHistory } from 'react-router'
+import { Link } from 'react-router-dom'
 class UsernameForm extends React.Component {
   constructor() {
     super();
     //0: pending, 1: true, -1: false
+    //this.props.history.push(`/pokemon/${data.pokemon.id}`
     this.state = ({verifiedUsername: 0, username: "", password: ""})
     this.handleChangeUsername = this.handleChangeUsername.bind(this);
     this.handleChangePassword = this.handleChangePassword.bind(this);
@@ -20,14 +25,18 @@ class UsernameForm extends React.Component {
     this.setState({password: e.target.value})
   }
   handleSubmitUsername(e) {
+    //At this point we should link to the next form
     e.preventDefault();
     const username = this.state.username;
-
+    console.log('ere')
+    // browserHistory.push('/test')
     fetchUserByUsername(username)
       .then(username => {
+        this.props.history.push('/signin/login')
         return this.setState({verifiedUsername: 1, submitAction: this.props.login})
       })
       .fail(err => {
+        this.props.history.push('/signin/signup')
         return this.setState({verifiedUsername: -1, submitAction: this.props.signup})
       })
     // .then(username => this.setState({username}))
@@ -46,6 +55,7 @@ class UsernameForm extends React.Component {
     let action;
     let inputHandler;
     let inputValue;
+    let link;
     switch(this.state.verifiedUsername) {
       case 1: 
         message = "Welcome back! Enter your password to log in";

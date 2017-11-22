@@ -61,7 +61,7 @@ class SessionModalForm extends React.Component {
           contentLabel="Sign In Modal"
         >
         {/*modal is now open, show enter user name OR enter password*/}
-          <UsernameForm signup={this.props.signup} login={this.props.login}/>
+          <UsernameForm history={this.props.history} signup={this.props.signup} login={this.props.login}/>
           <Link to="/">Close</Link>
           
         </Modal>
