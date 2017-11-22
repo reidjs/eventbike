@@ -22,13 +22,11 @@ const title = "User information"
 const App = () => (
   <div>
     <TopNavContainer />
-        Welcome to eventbike 
-        <Switch>
-          <AuthRoute path="/signin" component={SessionFormContainer} />
-        </Switch>
-        
-
-    </div>
+      Welcome to eventbike 
+      <Switch>
+        <AuthRoute path="/signin" component={SessionFormContainer} />
+      </Switch>
+  </div>
 )
 
 export default App;

@@ -7,6 +7,7 @@ import TopNav from './top_nav';
 const mapStateToProps = ({ session }, ownProps) => {
 
   // console.log(ownProps.location.slice(1))  
+  console.log("session cur:", session.currentUser)  
   return {
     location: ownProps.location,
     currentUser: session.currentUser

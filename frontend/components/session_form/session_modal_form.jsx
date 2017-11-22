@@ -57,9 +57,11 @@ class SessionModalForm extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (this.props.potentialUser !== nextProps.potentialUser) {
       if (this.props.newUserFlag) {
+        this.props.history.push('/signin/signup')
         this.setState({formType: 'signup'})
       } else {
         console.log(this.props)
+        this.props.history.push('/signin/login')        
         this.setState({formType: 'login'})
       }
     }

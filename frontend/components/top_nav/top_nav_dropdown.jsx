@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, Route } from 'react-router-dom';
 import SessionFormContainer from '../session_form/session_form_container'
 const TopNavDropDown = ({currentUser, logout}) => {
-  if (currentUser === null) {
+  if (currentUser === null || currentUser === undefined) {
     // return (
     //     <Link to="/signup">Sign in</Link>
     // )
