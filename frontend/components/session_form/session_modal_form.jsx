@@ -11,24 +11,25 @@ import UsernameFormSimple from './username_form_simple'
 //https://github.com/reactjs/react-modal
 const customStyles = {
   content : {
-    top                   : '0%',
-    left                  : '0%',
-    right                 : '0%',
-    bottom                : '0%',
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
     marginRight           : '0%',
-    transform             : 'translate(-0%, -0%)'
+    transform             : 'translate(-50%, -50%)'
   }
 };
 
 class SessionModalForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props.loc)
+    // console.log(props.loc)
     // debugger
     // this.currentUser = props.currentUser;
     // this.logout = props.logout;
     this.state = {
-      modalIsOpen: true
+      modalIsOpen: true,
+      formType: "username"
     };
     this.errors = props.errors
     this.openModal = this.openModal.bind(this);
@@ -47,8 +48,21 @@ class SessionModalForm extends React.Component {
   }
 
   closeModal() {
-
+    this.props.history.push('/')
     this.setState({modalIsOpen: false});
+  }
+  componentDidMount() {
+
+  }
+  componentWillReceiveProps(nextProps) {
+    if (this.props.potentialUser !== nextProps.potentialUser) {
+      if (this.props.newUserFlag) {
+        this.setState({formType: 'signup'})
+      } else {
+        console.log(this.props)
+        this.setState({formType: 'login'})
+      }
+    }
   }
   render() {
     console.log("p user", this.props.potentialUser)
@@ -60,6 +74,14 @@ class SessionModalForm extends React.Component {
     } else {
       formToShow = <LoginForm username={this.props.potentialUser} login={this.props.login} />
     }
+
+    // if (this.state.formType === 'signup') {
+    //   formToShow = <SignupForm username={this.props.potentialUser} signup={this.props.signup} />      
+    // } else if (this.state.formType === 'login') {
+    //   formToShow = <LoginForm username={this.props.potentialUser} login={this.props.login} />
+    // } else {
+    //   formToShow = <UsernameFormSimple lookup={this.props.lookup}/>
+    // }
     // const formToShow = (this.props.potentialUser === null) ? "Show username form" : "Show password form"
     return (
       <div>
