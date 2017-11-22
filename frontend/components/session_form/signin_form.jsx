@@ -30,7 +30,7 @@ class SigninForm extends React.Component {
         <h1>Let's do this.</h1>
         <h2>Enter a username to sign up or log in.</h2>
         <label>Username<br/>
-        <input type="text" value={this.state.username} onChange={this.handleChange}/>
+        <input type="text" placeholder="Enter your name." value={this.state.username} onChange={this.handleChange}/>
         </label>
         <ul>
           {errorList}

@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
         {/* image here */}
         <h2>Welcome back {this.props.username}! Enter your password to login.</h2>
         <label>Password
-        <input type="password" value={this.state.password} onChange={this.handleChange}/>
+        <input type="password" placeholder="Enter your password." value={this.state.password} onChange={this.handleChange}/>
         </label>
         <input type="submit" value="Log In" />
         <button onClick={this.handleBack}>Backwards</button>

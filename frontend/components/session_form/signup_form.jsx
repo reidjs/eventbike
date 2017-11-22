@@ -35,7 +35,7 @@ class SignupForm extends React.Component {
           <button onClick={this.handleBack}>Edit</button>
         </label>
         <label>Password
-        <input type="password" value={this.state.password} onChange={this.handleChange}/>
+        <input type="password" placeholder="Enter your password." value={this.state.password} onChange={this.handleChange}/>
         </label>
         <input type="submit" value="Sign up" />
         
