@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 
 import { login, logout, signup, lookup, reset } from '../../actions/session_actions';
 import SessionModalForm from './session_modal_form';
-
+import values from 'lodash/values'
 
 const mapStateToProps = (state, ownProps) => {
   // console.log(state)
   // debugger
-  console.log(ownProps)
-  console.log(state)
+  // console.log(ownProps)
+  console.log("Errors:", state.errors)
   return {
     loggedIn: Boolean(state.session.currentUser),
     ownProps: ownProps,

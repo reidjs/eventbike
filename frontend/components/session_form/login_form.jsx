@@ -23,13 +23,18 @@ class LoginForm extends React.Component {
     this.props.reset()
   }
   render() {
+    const errorList = this.props.errors.session.map((err) => {
+      return <li>{err}</li>
+    })
     return(
       <form onSubmit={this.handleSubmit}>
         Welcome back {this.props.username}! Enter your password to login.
         <input type="password" value={this.state.password} onChange={this.handleChange}/>
         <input type="submit" value="Log In" />
         <button onClick={this.handleBack}>Backwards</button>
-
+        <ul>
+          {errorList}
+        </ul>
       </form>
     )
   }

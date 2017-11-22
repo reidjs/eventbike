@@ -2,7 +2,8 @@
 import {
   RECEIVE_SESSION_ERRORS,
   RECEIVE_CURRENT_USER,
-  RECEIVE_USERNAME
+  RECEIVE_USERNAME,
+  RECEIVE_NEW_USERNAME
 } from '../actions/session_actions';
 
 export default (state = [], action) => {
@@ -11,12 +12,15 @@ export default (state = [], action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_SESSION_ERRORS:
-      return state;
+      return action.errors;
     case RECEIVE_CURRENT_USER:
-      return state; //may cause issues
+      return []; //may cause issues
     case RECEIVE_USERNAME:
       console.log('recieve username: ', action)
-      return state;
+      return [];
+    case RECEIVE_NEW_USERNAME:
+      console.log('recieve new username: ', action)
+      return [];
     default:
       return state;
   }

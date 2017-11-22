@@ -74,11 +74,21 @@ class SessionModalForm extends React.Component {
     let formToShow;
     //Render the appropriate form based on the formTYpe
     if (this.state.formType === 'signup') {
-      formToShow = <SignupForm username={this.props.potentialUser} history={this.props.history} signup={this.props.signup} reset={this.props.reset} />     
+      formToShow = <SignupForm 
+      username={this.props.potentialUser} 
+      history={this.props.history} 
+      signup={this.props.signup} 
+      reset={this.props.reset}  
+      errors={this.props.errors} />     
     } else if (this.state.formType === 'login') {
-      formToShow = <LoginForm username={this.props.potentialUser} history={this.props.history} login={this.props.login} reset={this.props.reset} />
+      formToShow = <LoginForm 
+      username={this.props.potentialUser} 
+      history={this.props.history} 
+      login={this.props.login} 
+      reset={this.props.reset}
+      errors={this.props.errors} />
     } else {
-      formToShow = <SigninForm lookup={this.props.lookup}/>
+      formToShow = <SigninForm lookup={this.props.lookup} errors={this.props.errors}/>
     }
     // }
     // const formToShow = (this.props.potentialUser === null) ? "Show username form" : "Show password form"

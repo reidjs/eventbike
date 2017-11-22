@@ -21,11 +21,17 @@ class SigninForm extends React.Component {
     this.setState({username: ""})
   }
   render() {
+    const errorList = this.props.errors.session.map((err) => {
+      return <li>{err}</li>
+    })
     return(
       <form onSubmit={this.handleSubmit}>
         Enter username
         <input type="text" value={this.state.username} onChange={this.handleChange}/>
         <input type="submit" value="Enter" />
+        <ul>
+          {errorList}
+        </ul>
       </form>
     )
   }
