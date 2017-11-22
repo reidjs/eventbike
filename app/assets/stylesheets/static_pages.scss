@@ -36,22 +36,22 @@
 }
 
 .modal{
-  position: fixed;
-  top: '25%';
-  left: '25%';
-  right: '75%';
-  bottom: '75%';
-  transform: 'translate(-50%, -50%)';
+  // position: fixed;
+  // top: '25%';
+  // left: '25%';
+  // right: '75%';
+  // bottom: '75%';
+  // transform: 'translate(-50%, -50%)';
 }
 .modal_after-open {
-  position: relative;
+  // position: relative;
   // top: 20%;
   // left: 20%;
   // right: 0;
   // bottom: 0;
 
-  width: 50%;
-  height: 50%;
+  width: 85%;
+  height: 85%;
   border: 1px solid rgb(204, 204, 204);
   background: rgb(255, 255, 255);
   overflow: auto;
@@ -60,7 +60,7 @@
   padding: 20px;
   // margin-right: 0%;
   // transform: translate(-10%, -20%);
-  margin: 0 auto;
+  margin: 50px auto;
   // animation: blowUp 0.5s;
   // animation-timing-function: ease-in;
   animation: growFromCenter 0.5s;
