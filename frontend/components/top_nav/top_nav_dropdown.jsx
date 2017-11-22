@@ -1,23 +1,31 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom';
 import SessionFormContainer from '../session_form/session_form_container'
-const TopNavDropDown = ({currentUser, logout}) => {
-  if (currentUser === null || currentUser === undefined) {
-    // return (
-    //     <Link to="/signup">Sign in</Link>
-    // )
-    //we need a button for sign up...
-    return (
-      <Link to="/signin">SIgn in</Link>
-    )
-    // <SessionFormContainer currentUser={currentUser} logout={logout} location={location}/>
-  } else {
-    //display dropdown
-    return (
-      <button className="btn btn-primary" onClick={logout}>Logout </button>
-    )
+
+class TopNavDropDown extends React.Component {
+  constructor() {
+    super()
+    // this.currentUser = 
+    // this.currentUser = this.props.currentUser;
+
+  }
+  
+
+  render() {
+    if (!this.props.currentUser) {
+      return (
+        <Link to="/signin">Sign in</Link>
+      )
+    } else {
+      //display dropdown
+      return (
+        <button className="btn btn-primary" onClick={logout}>Logout </button>
+      )
+    }
   }
 }
+// const TopNavDropDown = ({currentUser, logout}) => {
+// }
 export default TopNavDropDown;
 // class TopNavDropDown extends React.Component {
 //   constructor(props) {

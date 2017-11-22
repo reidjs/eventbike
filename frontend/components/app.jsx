@@ -19,15 +19,18 @@ import {
 const title = "User information"
 
 //authroutes should take care of issues where the logout button is not re-rendering.
-const App = () => (
-  <div>
-    <TopNavContainer />
-      Welcome to eventbike 
-      <Switch>
-        <AuthRoute path="/signin" component={SessionFormContainer} />
-      </Switch>
-  </div>
-)
+const App = () => {
+  // console.log(loggedIn)
+  return (
+    <div>
+        <Route path="/" component={TopNavContainer} />
+        <Switch>
+          <AuthRoute path="/signin" component={SessionFormContainer} />
+        </Switch>
+        Welcome to eventbike 
+    </div>
+  )
+}
 
 export default App;
 {/* <AuthRoute path="/login" component={SessionFormContainer} />

@@ -5,9 +5,7 @@ import { logout, login } from '../../actions/session_actions';
 import TopNav from './top_nav';
 
 const mapStateToProps = ({ session }, ownProps) => {
-
-  // console.log(ownProps.location.slice(1))  
-  console.log("session cur:", session.currentUser)  
+  console.log("nav dropdown: ", session)
   return {
     location: ownProps.location,
     currentUser: session.currentUser

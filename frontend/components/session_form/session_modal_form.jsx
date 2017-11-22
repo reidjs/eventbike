@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import { Link } from 'react-router-dom'
 import SignupForm from './signup_form'
 import LoginForm from './login_form'
-import UsernameFormSimple from './username_form_simple'
+import SigninForm from './signin_form'
 // import SessionFormContainer from './session_form_container'
 
 //https://github.com/reactjs/react-modal
@@ -22,10 +22,6 @@ const customStyles = {
 class SessionModalForm extends React.Component {
   constructor(props) {
     super(props);
-    // console.log(props.loc)
-    // debugger
-    // this.currentUser = props.currentUser;
-    // this.logout = props.logout;
     this.state = {
       modalIsOpen: true,
       formType: "signin"
@@ -53,45 +49,14 @@ class SessionModalForm extends React.Component {
   componentDidMount() {
     
   }
-  // componentWillReceiveProps(nextProps) {
-  //   // console.log("receive",nextProps)
-  //   if (this.props.potentialUser !== nextProps.potentialUser) {
-  //     if (nextProps.newUserFlag === true) {
-  //       this.props.history.push('/signin/signup')
-  //       this.setState({formType: 'signup'})
-  //     } else if (nextProps.potentialUser !== null) {
-  //       // console.log(this.props)
-  //       // console.log('there')
-  //       this.props.history.push('/signin/login')        
-  //       this.setState({formType: 'login'})
-  //     } else {
-  //       // console.log('here')
-  //       this.setState({formType: 'username'})
-  //     }
-  //   }
-  // }
   componentWillReceiveProps(nextProps) {
-    // console.log("receive",nextProps)
-    // if (this.props.potentialUser !== nextProps.potentialUser) {
-    //   if (nextProps.newUserFlag === true) {
-    //     this.props.history.push('/signin/signup')
-    //     this.setState({formType: 'signup'})
-    //   } else if (nextProps.potentialUser !== null) {
-    //     // console.log(this.props)
-    //     // console.log('there')
-    //     this.props.history.push('/signin/login')        
-    //     this.setState({formType: 'login'})
-    //   } else {
-    //     // console.log('here')
-    //     this.setState({formType: 'username'})
-    //   }
-    // }
-    //username form 
+    //We received a new potential user, determine the correct form type to show
     if (nextProps.potentialUser !== this.props.potentialUser) {
       this.determineFormType(nextProps);
     }
   }
   determineFormType(nextProps) {
+    //Set the form based on the current session data 
     if (nextProps.potentialUser === null) {
       this.setState({formType: 'signin'})
       return 
@@ -106,29 +71,19 @@ class SessionModalForm extends React.Component {
     }
   }
   render() {
-    // console.log("p user", this.props.potentialUser)
     let formToShow;
-    // if (this.props.potentialUser === null){
-    //   formToShow = <UsernameFormSimple lookup={this.props.lookup}/>
-    // } else if(this.props.newUserFlag) {
-    //   formToShow = <SignupForm username={this.props.potentialUser} history={this.props.history} signup={this.props.signup} reset={this.props.reset} />
-    // } else {
-    //   formToShow = <LoginForm username={this.props.potentialUser} history={this.props.history} login={this.props.login} reset={this.props.reset} />
-    // }
-
+    //Render the appropriate form based on the formTYpe
     if (this.state.formType === 'signup') {
       formToShow = <SignupForm username={this.props.potentialUser} history={this.props.history} signup={this.props.signup} reset={this.props.reset} />     
     } else if (this.state.formType === 'login') {
       formToShow = <LoginForm username={this.props.potentialUser} history={this.props.history} login={this.props.login} reset={this.props.reset} />
     } else {
-      formToShow = <UsernameFormSimple lookup={this.props.lookup}/>
+      formToShow = <SigninForm lookup={this.props.lookup}/>
     }
     // }
     // const formToShow = (this.props.potentialUser === null) ? "Show username form" : "Show password form"
     return (
       <div>
-        {/* This button is either going to be sign in or log out  */}
-        {/* <button className="btn btn-default" onClick={this.openModal}>Sign In</button> */}
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -136,12 +91,8 @@ class SessionModalForm extends React.Component {
           style={customStyles}
           contentLabel="Sign In Modal"
         >
-        {/*modal is now open, show enter user name OR enter password*/}
-          {/* if this.state.potentialUser then render the Password form instead */}
-
           <Link to="/">Close</Link>
           {formToShow}
-          
         </Modal>
       </div>
     );
