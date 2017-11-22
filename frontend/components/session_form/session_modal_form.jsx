@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
+import UsernameForm from './username_form'
 // import SessionFormContainer from './session_form_container'
 
 //https://github.com/reactjs/react-modal
@@ -23,6 +24,7 @@ class SessionModalForm extends React.Component {
     // this.logout = props.logout;
     this.state = {
       modalIsOpen: false,
+      newUser: false,
       username: "",
       password: ""
     };
@@ -30,8 +32,7 @@ class SessionModalForm extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.handleChangeUsername = this.handleChangeUsername.bind(this);
-    this.handleSubmitUsername = this.handleSubmitUsername.bind(this)
+
   }
 
   openModal() {
@@ -47,16 +48,7 @@ class SessionModalForm extends React.Component {
     this.setState({modalIsOpen: false});
   }
 
-  handleSubmitUsername(e) {
-    e.preventDefault();
-    const username = this.state.username;
-    //if user exists 
-    //tell modal to show enter password field 
-    //
-    // this.props.processForm({user});
-    console.log('here')
-    this.props.lookup(username)
-  }
+  
   handleSubmitLogIn(e) {
     e.preventDefault();
     const user = {username: this.state.username, password: this.state.password}
@@ -67,11 +59,7 @@ class SessionModalForm extends React.Component {
     const user = {username: this.state.username, password: this.state.password}
     this.props.signUp(e)
   }
-  handleChangeUsername(e) {
-    console.log(e.target.value)
-    this.setState({username: e.target.value})
-  }
-
+  
   render() {
     return (
       <div>
@@ -85,9 +73,9 @@ class SessionModalForm extends React.Component {
           contentLabel="Sign In Modal"
         >
         {/*modal is now open, show enter user name OR enter password*/}
-          Enter Username
-          <input type="text" value={this.state.username} onChange={this.handleChangeUsername} />
-          <button onClick={this.handleSubmitUsername}>Submit</button>
+          <UsernameForm />
+          
+          
         </Modal>
       </div>
     );

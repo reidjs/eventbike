@@ -20,7 +20,7 @@ class Api::UsersController < ApplicationController
     if !@user.nil?
       render "api/users/show"
     else 
-      render json: "here"
+      render json: "no user found", status: 404
     end 
   end 
 
