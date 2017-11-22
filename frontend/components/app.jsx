@@ -18,13 +18,13 @@ import {
 } from 'react-router-dom';
 const title = "User information"
 
-
+//authroutes should take care of issues where the logout button is not re-rendering.
 const App = () => (
   <div>
     <TopNavContainer />
         Welcome to eventbike 
         <Switch>
-          <Route path="/signin" component={SessionFormContainer} />
+          <AuthRoute path="/signin" component={SessionFormContainer} />
         </Switch>
         
 
