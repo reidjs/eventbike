@@ -1,6 +1,5 @@
 import React from 'react'
 import { fetchUserByUsername } from '../../util/session_api_util';
-import PasswordForm from './password_form';
 class UsernameForm extends React.Component {
   constructor() {
     super();
@@ -23,13 +22,7 @@ class UsernameForm extends React.Component {
   handleSubmitUsername(e) {
     e.preventDefault();
     const username = this.state.username;
-    //if user exists 
-    //tell modal to show enter password field 
-    //
-    // this.props.processForm({user});
-    // console.log('here')
-    // this.props.lookup(username)
-    console.log('here')
+
     fetchUserByUsername(username)
       .then(username => {
         return this.setState({verifiedUsername: 1, submitAction: this.props.login})
@@ -49,8 +42,6 @@ class UsernameForm extends React.Component {
     this.props.signup(user)
   }
   render() {
-    //Do conditional logic here. If username is fetched show a certain 
-    //message, otherwise 
     let message;
     let action;
     let inputHandler;
