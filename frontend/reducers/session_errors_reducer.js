@@ -5,10 +5,12 @@ import {
 } from '../actions/session_actions';
 
 export default (state = [], action) => {
+  console.log(action, state)
+  // debugger
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_SESSION_ERRORS:
-      return action.errors;
+      return state;
     case RECEIVE_CURRENT_USER:
       return state; //may cause issues
     default:

@@ -18,6 +18,7 @@ const SignInModal = () => {
       style={customStyles}
       contentLabel="Sign In Modal"
     >
+    
     <h1>Sign In</h1>
     <button onClick={this.closeModal}>close</button>
     <div>I am a modal</div>
