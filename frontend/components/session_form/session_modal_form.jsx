@@ -93,11 +93,21 @@ class SessionModalForm extends React.Component {
     }
     return (
       <div>
-        <Modal
+
+        <Modal 
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
-          style={customStyles}
+          className={{
+            base: 'modal',
+            afterOpen: 'modal_after-open',
+            beforeClose: 'modal_before-close'
+          }}
+          overlayClassName={{
+            base: 'modalOverlay',
+            afterOpen: 'modalOverlay_after-open',
+            beforeClose: 'modalOverlay_before-close'
+          }}
           contentLabel="Sign In Modal"
         >
           <Link to="/">Close</Link>
