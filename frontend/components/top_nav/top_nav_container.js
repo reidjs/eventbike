@@ -4,11 +4,12 @@ import { withRouter } from 'react-router-dom';
 import { logout, login } from '../../actions/session_actions';
 import TopNav from './top_nav';
 
-const mapStateToProps = ({ session }) => {
+const mapStateToProps = ({ session }, ownProps) => {
 
-  console.log(session)  
+  console.log(ownProps)  
   return {
-  currentUser: session.currentUser
+    location: ownProps.location,
+    currentUser: session.currentUser
   }
 }
 

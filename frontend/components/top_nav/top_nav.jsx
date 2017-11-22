@@ -14,7 +14,7 @@ const TopNav = ({currentUser}) => {
           </a>
           <ul className="nav navbar-nav">
           <li className="nav-item">
-            <TopNavDropDown currentUser={currentUser} logout={logout} />
+            <TopNavDropDown currentUser={currentUser} logout={logout} location={location} />
             
           </li>
           <li className="nav-item"><Link to="/events/new">Create Event</Link></li>

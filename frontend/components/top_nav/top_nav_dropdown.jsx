@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import SessionModalForm from '../session_form/session_modal_form'
+import SessionFormContainer from '../session_form/session_form_container'
 const TopNavDropDown = ({currentUser, logout}) => {
   if (currentUser === null) {
     // return (
     //     <Link to="/signup">Sign in</Link>
     // )
     return (
-      <SessionModalForm />
+      <SessionFormContainer currentUser={currentUser} logout={logout} location={location}/>
     )
   } else {
     //display dropdown
