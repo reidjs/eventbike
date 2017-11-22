@@ -19,8 +19,8 @@ class LoginForm extends React.Component {
     this.props.login(user)
   }
   handleBack(e) {
-    this.props.reset()
     this.props.history.push('/signin')
+    this.props.reset()
   }
   render() {
     return(

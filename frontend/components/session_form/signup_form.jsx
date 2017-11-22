@@ -20,8 +20,8 @@ class SignupForm extends React.Component {
     this.props.signup(user)
   }
   handleBack(e) {
-    this.props.reset()
     this.props.history.push('/signin')
+    this.props.reset()
   }
   render() {
     return(
@@ -29,7 +29,7 @@ class SignupForm extends React.Component {
         Hello {this.props.username}! Enter a password to get started.
         <input type="password" value={this.state.password} onChange={this.handleChange}/>
         <input type="submit" value="Sign up" />
-        <button onClick={this.handleBack}>Backwards2</button>
+        <button onClick={this.handleBack}>Backwards</button>
       </form>
     )
   }
