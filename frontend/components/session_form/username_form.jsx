@@ -56,29 +56,33 @@ class UsernameForm extends React.Component {
     let inputHandler;
     let inputValue;
     let link;
+    let inputType;
     switch(this.state.verifiedUsername) {
       case 1: 
         message = "Welcome back! Enter your password to log in";
         action = this.handleSubmitLogin; 
         inputValue = this.state.password;
         inputHandler = this.handleChangePassword;
+        inputType = "password"
         break 
       case -1:
         message = "Enter a password to sign up for an account!"
         action = this.handleSubmitSignup;
         inputValue = this.state.password;
-        inputHandler = this.handleChangePassword;        
+        inputHandler = this.handleChangePassword;
+        inputType = "password"        
         break 
       default:
         message = "Enter username";
         inputHandler = this.handleChangeUsername;     
         inputValue = this.state.username   
         action = this.handleSubmitUsername
+        inputType = "text"
     }
     return (
       <div>
         {message} <br/>
-        <input type="text" value={inputValue} onChange={inputHandler} />
+        <input type={inputType} value={inputValue} onChange={inputHandler} />
         <button onClick={action}>Submit</button>
       </div>
     )
