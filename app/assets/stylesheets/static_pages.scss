@@ -44,22 +44,26 @@
   transform: 'translate(-50%, -50%)';
 }
 .modal_after-open {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  right: 0;
-  bottom: 0;
-  // width: 50%;
-  // height: 50%;
+  position: relative;
+  // top: 20%;
+  // left: 20%;
+  // right: 0;
+  // bottom: 0;
+
+  width: 50%;
+  height: 50%;
   border: 1px solid rgb(204, 204, 204);
   background: rgb(255, 255, 255);
   overflow: auto;
   border-radius: 4px;
   outline: none;
   padding: 20px;
-  margin-right: 0%;
-  transform: translate(-10%, -20%);
-  animation: blowUp 0.5s;
+  // margin-right: 0%;
+  // transform: translate(-10%, -20%);
+  margin: 0 auto;
+  // animation: blowUp 0.5s;
+  // animation-timing-function: ease-in;
+  animation: growFromCenter 0.5s;
   
   //https://gist.github.com/CodeMyUI/60aa0f3b1e8589bb5bff#file-style-css-L35
   
@@ -88,31 +92,13 @@
 .modalOverlay_before-close {
 
 }
-
-@keyframes blowUp {
-  0% {
-    width: 0;
-    height: 0;
-    margin: 0 auto;
+//https://stackoverflow.com/questions/42632767/css-animations-grow-from-center
+@keyframes growFromCenter {
+  from {
+    transform: scale(0);
   }
-  25% {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-  }
-  50% {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-  }
-  75% {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-  }
-  100% {
-    width: 400px;
-    height: 400px;
-    margin: 0 auto;
+  to {
+    transform: scale(1);
   }
 }
+
