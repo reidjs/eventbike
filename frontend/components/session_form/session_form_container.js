@@ -15,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
     ownProps: ownProps,
     history: ownProps.history,
     errors: state.errors,
-    potentialUser: state.session.potentialUser
+    potentialUser: state.session.potentialUser,
+    newUserFlag: state.session.newUserFlag
   }
   // errors: state.errors.session
 };

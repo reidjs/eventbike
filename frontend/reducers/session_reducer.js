@@ -9,12 +9,14 @@ import {
 
 const _nullUser = Object.freeze({
   currentUser: null,
-  potentialUser: null
+  potentialUser: null,
+  newUserFlag: false
 });
 
 const sessionReducer = (state = _nullUser, action) => {
   Object.freeze(state);
   let potentialUser;
+  let newUserFlag;
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
@@ -22,7 +24,8 @@ const sessionReducer = (state = _nullUser, action) => {
     case RECEIVE_NEW_USERNAME:
       console.log('new user:', action)
       potentialUser = action.username;
-      return merge({}, { potentialUser });
+      newUserFlag = true
+      return merge({}, { potentialUser, newUserFlag });
     case RECEIVE_USERNAME:
       console.log("Received username", action.username.username)
       potentialUser = action.username.username //refactor this

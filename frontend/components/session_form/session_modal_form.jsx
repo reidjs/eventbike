@@ -49,6 +49,15 @@ class SessionModalForm extends React.Component {
   }
   render() {
     console.log("p user", this.props.potentialUser)
+    let formToShow;
+    if (this.props.potentialUser === null){
+      formToShow = "Show the username form"
+    } else if(this.props.newUserFlag) {
+      formToShow = "Show the new user form"
+    } else {
+      formToShow = "Show login form"
+    }
+    // const formToShow = (this.props.potentialUser === null) ? "Show username form" : "Show password form"
     return (
       <div>
         {/* This button is either going to be sign in or log out  */}
@@ -65,7 +74,7 @@ class SessionModalForm extends React.Component {
 
           <UsernameForm errors={this.errors} lookup={this.props.lookup} history={this.props.history} signup={this.props.signup} login={this.props.login}/>
           <Link to="/">Close</Link>
-          
+          {formToShow}
         </Modal>
       </div>
     );
