@@ -4,7 +4,6 @@ import NavDropDown from './test_dropdown/nav_drop_down';
 import SessionFormContainer from './session_form/session_form_container';
 import TopNavContainer from './top_nav/top_nav_container';
 import SessionModalForm from './session_form/session_modal_form';
-
 import { 
   AuthRoute, 
   ProtectedRoute 
@@ -24,7 +23,7 @@ const App = () => {
 
   return (
     <div>
-          <Route path="/" component={TopNavContainer} />
+        <Route path="/" component={TopNavContainer} />
         <Switch>
           <AuthRoute path="/signin" component={SessionFormContainer} />
         </Switch>

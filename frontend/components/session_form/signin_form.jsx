@@ -20,11 +20,16 @@ class SigninForm extends React.Component {
   }
   componentDidMount() {
     this.setState({username: ""})
+    if (this.props.ui.text) {
+      console.log('here')
+      this.setState({username: this.props.ui.text})
+    }
   }
   render() {
     const errorList = this.props.errors.session.map((err) => {
       return <li>{err}</li>
     })
+
     return(
       <form onSubmit={this.handleSubmit}>
         <span className="brand">eB</span>

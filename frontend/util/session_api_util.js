@@ -19,7 +19,7 @@ export const signup = user => {
 )};
 
 export const fetchUserByUsername = username => {
-  console.log("fetching user ", username)
+  // console.log("fetching user ", username)
   return (
     $.ajax({
       method: 'GET',

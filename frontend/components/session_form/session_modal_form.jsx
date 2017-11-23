@@ -5,19 +5,12 @@ import { Link } from 'react-router-dom'
 import SignupForm from './signup_form'
 import LoginForm from './login_form'
 import SigninForm from './signin_form'
+import DemoLogin from './demo_login';
+
 // import SessionFormContainer from './session_form_container'
 
 //https://github.com/reactjs/react-modal
-// const customStyles = {
-//   content : {
-//     top                   : '50%',
-//     left                  : '50%',
-//     right                 : 'auto',
-//     bottom                : 'auto',
-//     marginRight           : '0%',
-//     transform             : 'translate(-50%, -50%)'
-//   }
-// };
+
 
 class SessionModalForm extends React.Component {
   constructor(props) {
@@ -49,6 +42,7 @@ class SessionModalForm extends React.Component {
   }
   componentDidMount() {
     this.determineFormType(this.props);
+    this.props.entertext('asdf');
 
   }
   componentWillReceiveProps(nextProps) {
@@ -79,6 +73,7 @@ class SessionModalForm extends React.Component {
       return 
     }
   }
+  
   render() {
     let formToShow;
     //Render the appropriate form based on the formTYpe
@@ -97,7 +92,10 @@ class SessionModalForm extends React.Component {
       reset={this.props.reset}
       errors={this.props.errors} />
     } else {
-      formToShow = <SigninForm lookup={this.props.lookup} errors={this.props.errors}/>
+      formToShow = <SigninForm 
+      lookup={this.props.lookup} 
+      errors={this.props.errors}
+      ui={this.props.ui}/>
     }
     console.log(this.props.match.path)
     return (
@@ -124,6 +122,7 @@ class SessionModalForm extends React.Component {
         </div>
         <div className="modalForm">
           {formToShow}
+          <DemoLogin props={this.props}/>
         </div>
         </Modal>
       </div>
