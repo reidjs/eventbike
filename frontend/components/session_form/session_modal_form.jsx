@@ -90,7 +90,8 @@ class SessionModalForm extends React.Component {
       history={this.props.history} 
       login={this.props.login} 
       reset={this.props.reset}
-      errors={this.props.errors} />
+      errors={this.props.errors} 
+      ui={this.props.ui}/>
     } else {
       formToShow = <SigninForm 
       lookup={this.props.lookup} 
