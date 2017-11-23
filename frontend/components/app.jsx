@@ -5,6 +5,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import TopNavContainer from './top_nav/top_nav_container';
 import SessionModalForm from './session_form/session_modal_form';
 import NewEventForm from './event_form/new_event_form';
+import FlashContainer from './flash/flash_container';
 import Greeting from './greeting';
 import Footer from './footer';
 import { 
@@ -27,7 +28,9 @@ const App = () => {
   //note you may be able to pass props to a route using standard method
   return (
     <div>
+        
         <Route path="/" component={TopNavContainer}/>
+        <Route path="/" component={FlashContainer} />
         <Switch>
           <Route exact path="/" component={Greeting}/>
           <ProtectedRoute path="/events/new" component={NewEventForm}/>
