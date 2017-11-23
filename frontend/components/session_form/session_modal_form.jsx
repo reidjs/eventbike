@@ -48,7 +48,8 @@ class SessionModalForm extends React.Component {
     this.setState({modalIsOpen: false});
   }
   componentDidMount() {
-    
+    this.determineFormType(this.props);
+
   }
   componentWillReceiveProps(nextProps) {
     //We received a new potential user, determine the correct form type to show
