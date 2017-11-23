@@ -42,6 +42,7 @@ class LoginForm extends React.Component {
         if (index < this.demoPassword.length - 1) {
           return this.setText(text, index+1)
         } else {
+          //reset demo user here
           this.handleSubmit()
           return ""
         }
