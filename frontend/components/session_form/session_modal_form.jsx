@@ -53,10 +53,8 @@ class SessionModalForm extends React.Component {
   }
   componentWillReceiveProps(nextProps) {
     //We received a new potential user, determine the correct form type to show
-
-    //somethings faulty with this logic
-    console.log("nextprops: ", nextProps)
-    console.log(this.props)
+    // console.log("nextprops: ", nextProps)
+    // console.log(this.props)
     if (nextProps.potentialUser !== this.props.potentialUser) {
     // if (nextProps.potentialUser)
       this.determineFormType(nextProps);
@@ -121,8 +119,8 @@ class SessionModalForm extends React.Component {
           }}
           contentLabel="Sign In Modal"
         >
-        <div className="closeButton"> 
-          <Link to="/" className="closeButton">&times;</Link>
+        <div className="closeButton" onClick={this.closeModal}> 
+          <span className="closeButton">&times;</span>
         </div>
         <div className="modalForm">
           {formToShow}

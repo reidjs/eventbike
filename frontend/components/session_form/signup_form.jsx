@@ -30,19 +30,21 @@ class SignupForm extends React.Component {
     })
     return(
       <form onSubmit={this.handleSubmit}>
-        <h2>Hello {this.props.username}! Enter a password to get started.</h2>
-        <label>username
+        <h1>Hey there.</h1>
+        <h2>Enter a password to get started.</h2>
+        <div className="show-username">
+        <label>username</label><br/>
           <p>{this.props.username}</p>
           <button onClick={this.handleBack}>Edit</button>
-        </label>
-        <label>Password
+        </div>
+        <div className="input-label">
+          <label>Password</label>
+        </div>
         <input type="password" placeholder="Enter your password." value={this.state.password} onChange={this.handleChange}/>
-        </label>
-        <input type="submit" value="Sign up" />
-        
         <ul>
           {errorList}
         </ul>
+        <input type="submit" value="Sign up" />
       </form>
     )
   }
