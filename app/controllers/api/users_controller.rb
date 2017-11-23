@@ -13,16 +13,21 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def index 
+    render json: ["Please fill in the username"], status: 405
+  end 
+
   def show 
     #this works because of the definition in the user model 
     # debugger
     @user = User.find_by(username: params[:id])
-    if !@user.nil?
+    # debugger
+    if !@user.nil? 
       render "api/users/show"
-    elsif params[:id].nil? || params[:id].length < 3
-      render json: ["name too short"], status: 405
-    else 
+    elsif params[:id].length >= 3
       render json: ["no user found"], status: 404
+    else 
+      render json: ["Sorry, that name is too short (minimum 3 letters)"], status: 405
     end 
   end 
 
