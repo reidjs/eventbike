@@ -1,21 +1,23 @@
 import { connect } from 'react-redux';
 
-import { flashMessage } from '../../actions/ui_actions';
+import { flashMessage, clearFlash } from '../../actions/ui_actions';
 import Flash from './flash';
 
 const mapStateToProps = (state) => {
   //may need ownprops
-  console.log(state.ui)
-  const message = state.ui.flash
+  // console.log(state.ui)
+
+  const messages = state.ui.flash
+  dispatch(clearFlash())
   return {
-    message
+    messages
   }
 };
 
 const mapDispatchToProps = (dispatch) => {
-
   return {
     flashMessage: (message) => dispatch(flashMessage(message)),
+    clearFlash: () => dispatch(clearFlash())
   };
 };
 // processForm: user => dispatch(processForm(user)),
