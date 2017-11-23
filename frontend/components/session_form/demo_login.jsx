@@ -13,7 +13,7 @@ class DemoLogin extends React.Component {
     // this.state.ui
     console.log(this.props)
     // debugger
-    this.props.demouser({username: 'asdf', password: 'asdfasdf'});
+    this.props.demouser({username: 'reidjs', password: '123456'});
   }
   render() {
     return (
