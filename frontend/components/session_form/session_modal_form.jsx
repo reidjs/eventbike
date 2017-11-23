@@ -42,7 +42,7 @@ class SessionModalForm extends React.Component {
   }
   componentDidMount() {
     this.determineFormType(this.props);
-    this.props.entertext('asdf');
+    // this.props.entertext('asdf');
 
   }
   componentWillReceiveProps(nextProps) {
@@ -97,7 +97,7 @@ class SessionModalForm extends React.Component {
       errors={this.props.errors}
       ui={this.props.ui}/>
     }
-    console.log(this.props.match.path)
+    // console.log(this.props.match.path)
     return (
       <div>
 
@@ -122,7 +122,7 @@ class SessionModalForm extends React.Component {
         </div>
         <div className="modalForm">
           {formToShow}
-          <DemoLogin props={this.props}/>
+          <DemoLogin demouser={this.props.demouser}/>
         </div>
         </Modal>
       </div>

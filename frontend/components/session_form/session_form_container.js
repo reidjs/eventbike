@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 
 import { login, logout, signup, lookup, reset, reseterrors } from '../../actions/session_actions';
-import { enterText } from '../../actions/ui_actions';
+import { enterText, demoUser } from '../../actions/ui_actions';
 import SessionModalForm from './session_modal_form';
 import values from 'lodash/values'
 
@@ -30,6 +30,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   // const processForm = (formType === 'login') ? login : signup;
   return {
     entertext: (field, text) => dispatch(enterText(field, text)),
+    demouser: (user) => dispatch(demoUser(user)),
     lookup: (username) => dispatch(lookup(username)),
     login: (user) => dispatch(login(user)),
     signup: (user) => dispatch(signup(user)),

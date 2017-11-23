@@ -5,8 +5,11 @@ class SigninForm extends React.Component {
   constructor(props) {
     super(props);
     // this.username = props.username
+    console.log(props)
     this.state = ({username: ""});
-    this.demoText = props.ui.text
+    // this.demoText = props.ui.text
+    // this.demoUsername = props.ui.user.username;
+    this.demoUsername;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.setText = this.setText.bind(this)
@@ -16,27 +19,37 @@ class SigninForm extends React.Component {
     this.setState({username: e.target.value})
   }
   handleSubmit(e) {
-    e.preventDefault();
+    if (e)
+      e.preventDefault();
     const username = this.state.username
     this.props.lookup(username)
   }
   componentDidMount() {
     this.setState({username: ""})
-    this.setText(this.demoText, 0)
-    // let index = 0;
+    
+    // this.setText(this.demoText, 0)
     
   }
+  componentWillReceiveProps(newProps) {
+    console.log('here')
+    if (newProps.ui.user) {
+      this.demoUsername = newProps.ui.user.username;
+      this.setText(this.demoUsername, 0);
+    }
+  }
+  //for the demo user
   setText(text, index) {
     setTimeout(() => {
-      const username = this.state.username + this.demoText[index];
+      const username = this.state.username + this.demoUsername[index];
       this.setState({username}, () => {
-        if (index < this.demoText.length - 1) {
+        if (index < this.demoUsername.length - 1) {
           return this.setText(text, index+1)
         } else {
+          this.handleSubmit()
           return ""
         }
       })
-    }, 300) 
+    }, 100) 
   }
 
   render() {
