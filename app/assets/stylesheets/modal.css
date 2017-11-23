@@ -65,6 +65,7 @@ div.input-label {
   align-content: left; }
 
 .modalForm ul li {
+  position: fixed;
   list-style-type: none;
   color: red; }
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Modal from 'react-modal';
-import { Link } from 'react-router-dom'
+import { Link, Route } from 'react-router-dom'
 import SignupForm from './signup_form'
 import LoginForm from './login_form'
 import SigninForm from './signin_form'
-import DemoLogin from './demo_login';
+import DemoContainer from './demo_container';
 
 // import SessionFormContainer from './session_form_container'
 
@@ -123,7 +123,7 @@ class SessionModalForm extends React.Component {
         </div>
         <div className="modalForm">
           {formToShow}
-          <DemoLogin demouser={this.props.demouser}/>
+          <Route exact path="/signin" component={DemoContainer}/>
         </div>
         </Modal>
       </div>
