@@ -8,7 +8,6 @@ class SigninForm extends React.Component {
     console.log(props)
     this.state = ({username: ""});
     // this.demoText = props.ui.text
-    // this.demoUsername = props.ui.user.username;
     this.demoUsername;
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -32,8 +31,8 @@ class SigninForm extends React.Component {
   }
   componentWillReceiveProps(newProps) {
     console.log('here')
-    if (newProps.ui.user) {
-      this.demoUsername = newProps.ui.user.username;
+    if (newProps.ui.demoUser) {
+      this.demoUsername = newProps.ui.demoUser.username;
       this.setText(this.demoUsername, 0);
     }
   }

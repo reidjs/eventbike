@@ -29,8 +29,8 @@ class LoginForm extends React.Component {
     this.props.reset()
   }
   componentDidMount() {
-    if (this.props.ui.user) {
-      this.demoPassword = this.props.ui.user.password;
+    if (this.props.ui.demoUser) {
+      this.demoPassword = this.props.ui.demoUser.password;
       this.setText(this.demoPassword, 0);
     }
   }
