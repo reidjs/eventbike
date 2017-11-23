@@ -7,6 +7,11 @@ class TopNavDropDown extends React.Component {
     super()
 
   }
+  componentWillReceiveProps(newProps) {
+    if (newProps.currentUser) {
+      console.log('here')
+    }
+  }
   
 
   render() {

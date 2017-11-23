@@ -17,8 +17,8 @@ class DemoLogin extends React.Component {
   }
   render() {
     return (
-      <div>
-        <button onClick={this.handleClick}> Demo User</button>
+      <div className="demo-button">
+        <button onClick={this.handleClick}>Demo User</button>
       </div>
     )
   }
