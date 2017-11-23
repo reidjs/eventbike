@@ -2,12 +2,14 @@
 //pass this component the username and a dispatch action to signup user
 import React from 'react'
 class SigninForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     // this.username = props.username
     this.state = ({username: ""});
+    this.demoText = props.ui.text
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.setText = this.setText.bind(this)
   }
   handleChange(e) {
     // console.log(e.target.value)
@@ -20,11 +22,23 @@ class SigninForm extends React.Component {
   }
   componentDidMount() {
     this.setState({username: ""})
-    if (this.props.ui.text) {
-      console.log('here')
-      this.setState({username: this.props.ui.text})
-    }
+    this.setText(this.demoText, 0)
+    // let index = 0;
+    
   }
+  setText(text, index) {
+    setTimeout(() => {
+      const username = this.state.username + this.demoText[index];
+      this.setState({username}, () => {
+        if (index < this.demoText.length - 1) {
+          return this.setText(text, index+1)
+        } else {
+          return ""
+        }
+      })
+    }, 300) 
+  }
+
   render() {
     const errorList = this.props.errors.session.map((err) => {
       return <li>{err}</li>
