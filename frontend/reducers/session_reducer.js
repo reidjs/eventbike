@@ -31,7 +31,7 @@ const sessionReducer = (state = _nullUser, action) => {
       newUserFlag = true
       return merge({}, { potentialUser, newUserFlag });
     case RECEIVE_USERNAME:
-      // console.log("Received username", action.username.username)
+      console.log("Received username", action.username.username)
       potentialUser = action.username.username //refactor this
       return merge({}, { potentialUser })
     default:

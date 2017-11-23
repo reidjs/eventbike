@@ -37,7 +37,37 @@ div.closeButton:hover {
   padding: 0;
   position: relative;
   left: -150px;
+}
+
+div.show-username {
+  width: 100%;
+  align-content: left;
+}
+div.show-username label{
+  font-size: 12px;
+}
+div.show-username p{
+  margin-bottom: 5px;
+}
+
+div.show-username button{
+  margin-bottom: 40px;
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
   
+}
+// .modalForm label {
+//   font-size: 12px;
+//   position: relative;
+//   left: -170px;
+//   top: 10px;
+// }
+div.input-label {
+  font-size: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+  align-content: left;
 }
 .modalForm ul li {
   list-style-type: none;
@@ -56,6 +86,7 @@ div.modalForm * {
   font-weight: 300;
   
 }
+
 div.modalForm input {
   // background: blue;
   border: 1px solid rgb(188, 200, 188);
@@ -83,7 +114,8 @@ span.brand {
   background: #f6682f;
   border-radius: 50px;
   font-size: 32px;
-  padding: 10px;
+  padding: 10px 15px;
+
   margin-bottom: 20px;
   animation: bounce 0.6s;
   animation-delay: 0.4s;

@@ -13,15 +13,16 @@ export const receiveCurrentUser = currentUser => ({
   currentUser
 });
 
-export const receiveNewUsername = username => ({
-  type: RECEIVE_NEW_USERNAME,
-  username
-})
-
 export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
 });
+//user doesn't exist
+export const receiveNewUsername = username => ({
+  type: RECEIVE_NEW_USERNAME,
+  username
+})
+//user exists
 export const receiveUsername = username => ({
   type: RECEIVE_USERNAME,
   username

@@ -5,8 +5,6 @@ import SessionFormContainer from '../session_form/session_form_container'
 class TopNavDropDown extends React.Component {
   constructor() {
     super()
-    // this.currentUser = 
-    // this.currentUser = this.props.currentUser;
 
   }
   
@@ -24,23 +22,7 @@ class TopNavDropDown extends React.Component {
     }
   }
 }
-// const TopNavDropDown = ({currentUser, logout}) => {
-// }
+
 export default TopNavDropDown;
-// class TopNavDropDown extends React.Component {
-//   constructor(props) {
-//     super(props)
-//     console.log(props)
-//     this.currentUser = props.currentUser;
-//     this.logout = props.logout;
-//     this.state=({})
-//   }
-//   componentWillUpdate() {
-//     console.log(this.props)
-//   }
-//   render() {
-  // }
-  // const TopNavDropDown = ({currentUser, logout}) => {
-//   console.log(logout)
-// }
+
 

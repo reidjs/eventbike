@@ -15,6 +15,7 @@ class LoginForm extends React.Component {
     this.setState({password: e.target.value})
   }
   handleSubmit(e) {
+    e.preventDefault();
     const user = {username: this.props.username, password: this.state.password}
     this.props.login(user)
   }
@@ -29,15 +30,22 @@ class LoginForm extends React.Component {
     return(
       <form onSubmit={this.handleSubmit}>
         {/* image here */}
-        <h2>Welcome back {this.props.username}! Enter your password to login.</h2>
-        <label>Password
+        <h1>Welcome back</h1>
+        <h2>Enter your password to login.</h2>
+        <div className="show-username">
+          <label>Username</label>
+          <p>{this.props.username}</p>
+          <button onClick={this.handleBack}>Edit</button>
+        </div>
+        <div className="input-label">
+          <label>Password</label>
+
+        </div>
         <input type="password" placeholder="Enter your password." value={this.state.password} onChange={this.handleChange}/>
-        </label>
-        <input type="submit" value="Log In" />
-        <button onClick={this.handleBack}>Backwards</button>
         <ul>
           {errorList}
         </ul>
+        <input type="submit" value="Log In" />
       </form>
     )
   }
