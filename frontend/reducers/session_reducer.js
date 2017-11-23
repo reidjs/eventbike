@@ -23,6 +23,8 @@ const sessionReducer = (state = _nullUser, action) => {
       // console.log('reset user!')
       return _nullUser;
     case RECEIVE_CURRENT_USER:
+      //this should probably reset potential user and new user flag
+      console.log('session receive user', action)
       const currentUser = action.currentUser;
       return merge({}, { currentUser });
     case RECEIVE_NEW_USERNAME:

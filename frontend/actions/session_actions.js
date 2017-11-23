@@ -9,10 +9,12 @@ export const RECEIVE_NEW_USERNAME = 'RECEIVE_NEW_USERNAME';
 export const RESET_POTENTIAL_USER = 'RESET_POTENTIAL_USER';
 export const RESET_ERRORS = 'RESET_POTENTIAL_USER';
 
-export const receiveCurrentUser = currentUser => ({
+export const receiveCurrentUser = currentUser => {
+  console.log('receive current user', currentUser)
+  return ({
   type: RECEIVE_CURRENT_USER,
   currentUser
-});
+})};
 
 
 export const receiveErrors = errors => ({
@@ -58,11 +60,19 @@ export const login = user => dispatch => {
   ))
 )};
 
-export const logout = () => dispatch => (
-  SessionAPIUtil.logout().then(user => (
-    dispatch(receiveCurrentUser(null))
-  ))
-);
+export const logout = () => dispatch => {
+  console.log('logout user')
+  return (
+  SessionAPIUtil.logout()
+  .then(res=> (dispatch(receiveCurrentUser(null))))
+  .fail(res => (console.log(res)))
+  // SessionAPIUtil.logout().then(res => {
+  //   console.log('asdf')
+  //   return (
+  //   dispatch(receiveCurrentUser(null)), err=>{console.log})
+  // })).fail(res => {console.log})
+  )
+};
 //look for user by username in db
 export const lookup = (username) => dispatch => (
   SessionAPIUtil.fetchUserByUsername(username)

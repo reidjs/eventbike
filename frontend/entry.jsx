@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store'
-import { logout } from './util/session_api_util'
+// import { logout } from './util/session_api_util'
 document.addEventListener('DOMContentLoaded', () => {
   const rootEl = document.getElementById('root');
   let store;
@@ -15,6 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.store = store 
   window.dispatch = store.dispatch
-  window.logout = logout
+  // window.logout = logout
   ReactDOM.render(<Root store={store}/>, rootEl);
 });

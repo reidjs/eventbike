@@ -1,113 +1,91 @@
-@import "util/variables.scss";
-
 * {
-  background: 'blue';
-}
-//https://stackoverflow.com/questions/5703552/css-center-text-horizontally-and-vertically-inside-a-div-block
-.closeButton {
-  color: rgb(175, 175, 175);
-  background  : none;
-  // padding: 10px;
+  background: 'blue'; }
 
+.closeButton {
+  color: #afafaf;
+  background: none;
   font-size: 24px;
   text-decoration: none;
-  height: 70%;
-}
+  height: 70%; }
+
 .closeButton:hover {
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 div.closeButton {
-  background: rgb(221, 221, 221);
+  background: #dddddd;
   margin-left: auto;
   width: 48px;
   height: 48px;
   border-radius: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  
-}
+  justify-content: center; }
+
 div.closeButton:hover {
-  background: rgb(120, 121, 120);
+  background: #787978;
   -webkit-transition: background-color 2s ease-out;
   -moz-transition: background-color 2s ease-out;
   -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out;
-}
+  transition: background-color 2s ease-out; }
+
 .modalForm ul {
   margin: 0;
   padding: 0;
   position: relative;
-  left: -150px;
-}
+  left: -150px; }
 
 div.show-username {
   width: 100%;
-  align-content: left;
-}
-div.show-username label{
-  font-size: 12px;
-}
-div.show-username p{
-  margin-bottom: 5px;
-}
-// edit button
-div.show-username button{
+  align-content: left; }
+
+div.show-username label {
+  font-size: 12px; }
+
+div.show-username p {
+  margin-bottom: 5px; }
+
+div.show-username button {
   margin-bottom: 40px;
   width: 80px;
   height: 25px;
   border-radius: 5px;
   text-align: center;
-  border: 1px solid black;
-}
+  border: 1px solid black; }
 
 div.show-username button:focus {
-  outline: 0;
-}
-div.show-username button:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-// .modalForm label {
-//   font-size: 12px;
-//   position: relative;
-//   left: -170px;
-//   top: 10px;
-// }
+  outline: 0; }
+
+div.show-username button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
+
 div.input-label {
   font-size: 12px;
   margin-bottom: 10px;
   width: 100%;
-  align-content: left;
-}
+  align-content: left; }
+
 .modalForm ul li {
   list-style-type: none;
-  color: red;
-}
+  color: red; }
+
 div.modalForm form {
-  // background: yellow;
   background: white;
   display: flex;
   align-items: center;
-  flex-direction: column;
-}
+  flex-direction: column; }
+
 div.modalForm * {
   background: white;
   font-family: 'Oxygen';
-  font-weight: 300;
-  
-}
+  font-weight: 300; }
 
 div.modalForm input {
-  // background: blue;
-  border: 1px solid rgb(188, 200, 188);
+  border: 1px solid #bcc8bc;
   padding: 10px;
   width: 400px;
   height: 40px;
-  // font-size: 20px;
-  font-weight: 700;
-}
+  font-weight: 700; }
 
-//https://css-tricks.com/snippets/css/glowing-blue-input-highlights/
 input[type=text] {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
@@ -116,43 +94,37 @@ input[type=text] {
   outline: none;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
-  border: 1px solid #DDDDDD;
-}
+  border: 1px solid #DDDDDD; }
+
 div.modalForm input[type=text]:focus {
-  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  box-shadow: 0 0 5px #51cbee;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
-  border: 1px solid rgba(81, 203, 238, 1);
-}
-.modalForm h1{
-  margin-bottom: 0;
-  // font-family: 'Times New Roman', Times, serif
-  // font-family: 'Oxygen', sans-serif;
-  // font-weight: 300;
-  
-}
-.modalForm h2{
+  border: 1px solid #51cbee; }
+
+.modalForm h1 {
+  margin-bottom: 0; }
+
+.modalForm h2 {
   margin-top: 10px;
   margin-bottom: 50px;
-  font-family: 'Oxygen', sans-serif;
-  
-}
+  font-family: 'Oxygen', sans-serif; }
+
 span.brand {
   color: white;
-  background: $color-orange;
+  background: #cd5120;
   border-radius: 50px;
   font-size: 32px;
   padding: 10px 15px;
-
   margin-bottom: 20px;
   animation: bounce 0.6s;
   animation-delay: 0.4s;
-  -webkit-animation-delay: 0.4s;
-}
+  -webkit-animation-delay: 0.4s; }
+
 div.modalForm input[type="submit"] {
   margin-top: 30px;
   border: none;
-  background: $color-orange;
+  background: #cd5120;
   display: block;
   color: white;
   fill: white;
@@ -164,22 +136,19 @@ div.modalForm input[type="submit"] {
   -webkit-transition: background-color 2s ease-out;
   -moz-transition: background-color 2s ease-out;
   -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out;
-  
-}
+  transition: background-color 2s ease-out; }
+
 div.demo-button {
   align-content: center;
   margin-top: 30px;
   margin-right: 0;
   display: flex;
-  justify-content: center;
+  justify-content: center; }
 
-  // margin: 0 auto;
-}
-.demo-button button{
+.demo-button button {
   align-self: center;
   border: none;
-  background: hsl(17, 61%, 13%);
+  background: #35180d;
   display: block;
   color: white;
   fill: white;
@@ -191,84 +160,49 @@ div.demo-button {
   -webkit-transition: background-color 2s ease-out;
   -moz-transition: background-color 2s ease-out;
   -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out;
-  
-}
-
-// div.demo-button p{
-//   color: $color-orange;
-// }
+  transition: background-color 2s ease-out; }
 
 div.modalForm input[type="submit"]:hover {
   background: red;
-  cursor: pointer;
-  
-}
+  cursor: pointer; }
+
 div.modalForm input[type="submit"]:focus {
-  border: none;
-}
+  border: none; }
+
 .modal_after-open {
-  // position: relative;
-  // top: 20%;
-  // left: 20%;
-  // right: 0;
-  // bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 85%;
   height: 85%;
-  border: 1px solid rgb(204, 204, 204);
-  background: rgb(255, 255, 255);
+  border: 1px solid #cccccc;
+  background: white;
   overflow: auto;
   border-radius: 4px;
   outline: none;
   padding: 20px;
-  // margin-right: 0%;
-  // transform: translate(-10%, -20%);
   margin: 50px auto;
-  // animation: blowUp 0.5s;
-  // animation-timing-function: ease-in;
-  animation: growFromCenter 0.5s;
-  
-  //https://gist.github.com/CodeMyUI/60aa0f3b1e8589bb5bff#file-style-css-L35
-  
-}
-.modal_before-close {
-}
+  animation: growFromCenter 0.5s; }
 
-.modal_before-close {
-
-}
-
-.modalOverlay {
-  
-}
 .modalOverlay_after-open {
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background-color: rgba(255, 255, 255, 0.75);
-  
+  background-color: rgba(255, 255, 255, 0.75); }
 
-}
-
-.modalOverlay_before-close {
-
-}
-//https://stackoverflow.com/questions/42632767/css-animations-grow-from-center
 @keyframes growFromCenter {
   from {
-    transform: scale(0);
-  }
+    transform: scale(0); }
   to {
-    transform: scale(1);
-  }
-}
+    transform: scale(1); } }
 @keyframes bounce {
-  0% {transform: scale(.6)};
-  50% {transform: scale(1.6)};
-  100% {transform: scale(1)};
-}
+  0% {
+    transform: scale(0.6); }
+  50% {
+    transform: scale(1.6); }
+  100% {
+    transform: scale(1); } }
+
+/*# sourceMappingURL=modal.css.map */
