@@ -1,7 +1,5 @@
 import {
   DEMO_USER,
-  FLASH_MESSAGE, 
-  CLEAR_FLASH
 } from '../actions/ui_actions'
 import {
   RECEIVE_CURRENT_USER
@@ -9,8 +7,7 @@ import {
 import merge from 'lodash/merge'
 
 const _defaultState = {
-  demoUser: null,
-  flash: []
+  demoUser: null
 }
 
 const uiReducer = (state = _defaultState, action) => {
@@ -23,16 +20,6 @@ const uiReducer = (state = _defaultState, action) => {
     case RECEIVE_CURRENT_USER:
       //we received a log in, so set the demo user to null
       return merge({}, {demoUser: null})
-    case FLASH_MESSAGE: 
-      //shjould dissapear on URL change
-      // console.log('flash message received', action)
-      return merge({}, {flash: [action.message]})
-    case CLEAR_FLASH:
-      console.log('trying to clear flash')
-      newState = merge({}, state)
-      newState.flash = []
-      console.log('newstatE: ', newState)
-      return newState;
     default:
       // console.log('return default state')
       return state;

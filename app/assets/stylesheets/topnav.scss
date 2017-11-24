@@ -6,7 +6,8 @@ div.top-nav {
 
 }
 
-div.top-nav ul {
-  
+div.top-nav-right {
+  display: flex;
+  justify-content: space-between;
 }
 

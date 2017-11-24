@@ -1,8 +1,8 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 const TopNavBrand = () => {
   return (
-    <strong>EventBike</strong>
+    <Link to="/"><strong>EventBike</strong></Link>
   )
 }
 

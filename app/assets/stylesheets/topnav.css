@@ -2,4 +2,8 @@ div.top-nav {
   display: flex;
   justify-content: space-between; }
 
+div.top-nav-right {
+  display: flex;
+  justify-content: space-between; }
+
 /*# sourceMappingURL=topnav.css.map */
