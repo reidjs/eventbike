@@ -4,7 +4,7 @@ body, html {
 div.hero-image {
   background-image: url("http://res.cloudinary.com/eventbike/image/upload/v1511497460/joe-neric-223562_okhigx.jpg");
   height: 50%;
-  padding: 200px 0;
+  padding: 140px 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
