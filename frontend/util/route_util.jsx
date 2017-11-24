@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Redirect, withRouter } from 'react-router-dom';
-import { flashMessage } from '../actions/ui_actions'
-
+// import { flashMessage } from '../actions/ui_actions'
+import { flashMessage } from 'redux-flash';
 const Auth = ({ component: Component, path, loggedIn }) => (
   <Route path={path} render={(props) => (
     !loggedIn ? (
@@ -22,7 +22,7 @@ const Protected = ({ component: Component, path, loggedIn}) => (
       <Component {...props} />
     ) : (
       <div>
-        {flash('You must be signed in to perform this action')}
+        {flash('Sorry, you must be signed in to perform this action')}
         <Redirect to="/signin" />
       </div>
     )

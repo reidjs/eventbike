@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store'
+import { flashMessage, getFlashMessages } from 'redux-flash'
 // import { logout } from './util/session_api_util'
 document.addEventListener('DOMContentLoaded', () => {
   const rootEl = document.getElementById('root');
@@ -13,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+  // const action = flashMessage('This is a test message!');
+  // store.dispatch(action);
+  // const state = store.getState();
+  // getFlashMessages(state)
+  // window.flash_messages = FlashMessages;  
   window.store = store 
   window.dispatch = store.dispatch
   // window.logout = logout

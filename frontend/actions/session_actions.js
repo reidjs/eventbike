@@ -10,7 +10,7 @@ export const RESET_POTENTIAL_USER = 'RESET_POTENTIAL_USER';
 export const RESET_ERRORS = 'RESET_POTENTIAL_USER';
 
 export const receiveCurrentUser = currentUser => {
-  console.log('receive current user', currentUser)
+  // console.log('receive current user', currentUser)
   return ({
   type: RECEIVE_CURRENT_USER,
   currentUser
@@ -61,11 +61,11 @@ export const login = user => dispatch => {
 )};
 
 export const logout = () => dispatch => {
-  console.log('logout user')
+  // console.log('logout user')
   return (
   SessionAPIUtil.logout()
   .then(res=> (dispatch(receiveCurrentUser(null))))
-  .fail(res => (console.log(res)))
+  .fail(res => (console.log('failed to logout')))
   // SessionAPIUtil.logout().then(res => {
   //   console.log('asdf')
   //   return (

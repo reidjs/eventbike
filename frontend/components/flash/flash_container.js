@@ -2,13 +2,14 @@ import { connect } from 'react-redux';
 
 import { flashMessage, clearFlash } from '../../actions/ui_actions';
 import Flash from './flash';
-
+import values from 'lodash/values';
 const mapStateToProps = (state) => {
   //may need ownprops
   // console.log(state.ui)
-
-  const messages = state.ui.flash
-  dispatch(clearFlash())
+  // console.log(state.flash.messages)
+  const messages = values(state.flash.messages)
+  // console.log(messages)
+  // dispatch(clearFlash())
   return {
     messages
   }

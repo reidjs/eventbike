@@ -7,11 +7,6 @@ import SessionModalForm from './session_modal_form';
 import values from 'lodash/values'
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(state)
-  // debugger
-  // console.log(ownProps)
-  // console.log("Errors:", state.errors)
-  console.log(state)
   return {
     loggedIn: Boolean(state.session.currentUser),
     ownProps: ownProps,

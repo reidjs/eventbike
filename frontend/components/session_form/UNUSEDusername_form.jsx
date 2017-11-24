@@ -28,7 +28,6 @@ class UsernameForm extends React.Component {
     //At this point we should link to the next form
     e.preventDefault();
     const username = this.state.username;
-    console.log('ere')
     // browserHistory.push('/test')
     this.props.lookup(username)
     fetchUserByUsername(username)
@@ -37,7 +36,6 @@ class UsernameForm extends React.Component {
         return this.setState({verifiedUsername: 1, submitAction: this.props.login})
       })
       .fail(err => {
-        console.log("Error: ",err)
         // if (erx/r.status === 404)
         this.props.history.push('/signin/signup')
         return this.setState({verifiedUsername: -1, submitAction: this.props.signup})
@@ -46,7 +44,6 @@ class UsernameForm extends React.Component {
   }
   handleSubmitLogin(e) {
     const user = {username: this.state.username, password: this.state.password}
-    console.log("login with ", user)
     this.props.login(user)
     
   }

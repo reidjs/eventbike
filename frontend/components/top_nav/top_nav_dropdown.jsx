@@ -9,9 +9,9 @@ class TopNavDropDown extends React.Component {
   }
   componentWillReceiveProps(newProps) {
     if (newProps.currentUser) {
-      console.log('user logged in')
+      // console.log('user logged in')
     } else {
-      console.log('user logged out')
+      // console.log('user logged out')
       
     }
   }
@@ -19,7 +19,6 @@ class TopNavDropDown extends React.Component {
   handleClick(e) {
     e.preventDefault();
     // console.log(logout);
-    console.log(this.props.logout)
     // console.log(login)
     this.props.logout()
   }

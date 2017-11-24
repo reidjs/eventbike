@@ -5,7 +5,6 @@ class SigninForm extends React.Component {
   constructor(props) {
     super(props);
     // this.username = props.username
-    console.log(props)
     this.state = ({username: ""});
     // this.demoText = props.ui.text
     this.demoUsername;
@@ -30,7 +29,6 @@ class SigninForm extends React.Component {
     
   }
   componentWillReceiveProps(newProps) {
-    console.log('here')
     if (newProps.ui.demoUser) {
       this.demoUsername = newProps.ui.demoUser.username;
       this.setText(this.demoUsername, 0);
