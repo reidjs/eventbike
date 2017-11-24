@@ -27,12 +27,12 @@ div.flash-container {
   color: white;
   border-radius: 10px;
   z-index: 1;
-  animation: sinkFromTop 0.5s;
+  animation: riseFromBottom 1s;
 }
 
-@keyframes sinkFromTop{
+@keyframes riseFromBottom{
   from {
-    transform: translate(0, -50px);
+    transform: translate(0, 100px);
   }
   to {
     transform: translate(0, 0);

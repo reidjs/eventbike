@@ -3,7 +3,9 @@
 div.top-nav span.nav-brand a{
   display: block;
   padding: 20px;
-  border-right: 1px solid black;
+  border-right: 1px solid $light-grey;
+  color: $color-orange;
+  // border-right: 1px solid black;
 }
 
 div.top-nav {
@@ -16,78 +18,86 @@ div.top-nav-right {
   justify-content: space-between;
 }
 div.user-dropdown {
-  background: blue;
+  // background: blue;
+  border-right: 1px solid $light-grey;
+  border-left: 1px solid $light-grey;
   // padding: 20px;
   // position: relative;
   // display: inline-block;
 }
 div.user-dropdown:hover {
-  background: grey;
+  background: $light-grey;
+  transition: background 0.2s linear;
 }
 div.user-dropdown:hover ul.user-dropdown-content {
   display: block;
+  background: white;
+  transition: visibility 0.8s linear;
 }
 //dropdown
-.user-dropdown > a{
-  border-right: 1px solid black;
-  padding: 20px;
-  display: block;
-  // padding: 20px;
-}
+
 div.top-nav-right > a{
-  background: magenta;
+  // background: magenta;
   padding: 20px;
+}
+//user nav button
+
+//browser events
+div.top-nav-right a:first-child {
+  border-left: 1px solid $light-grey;
+}
+//browse events hover
+div.top-nav-right > a:first-child:hover {
+  background: $light-grey;
+  transition: background 0.2s linear;
+}
+//create event
+div.top-nav-right > a:last-child {
+  color: $light-blue;
+  
+}
+//create event hover
+div.top-nav-right > a:last-child:hover {
+  color: $dark-blue;
+  transition: color 0.2s linear;
+  background: white; //override the hover background effect
 }
 
-ul.user-dropdown-content {
-  background: yellow;
-  display: none;
+div.top-nav-right a:nth-child(2):hover{
+  background: $light-grey;
 }
+
+// ul.user-dropdown-content 
+.user-dropdown > a{
+  padding: 20px;
+  display: block;
+}
+
 ul.user-dropdown-content li {
   padding: 10px 16px;
 }
+
+
+div.user-dropdown:hover ul.user-dropdown-content{
+  
+  animation: fadeIn 0.6s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+ul.user-dropdown-content li:hover {
+  background: $light-grey;
+  transition: background 0.2s linear;
+}
 .user-dropdown-content {
+  display: none;
+  // opacity: 1.0;
+  border-top: 1px solid black;
   z-index: 3;
   position: fixed;
+  
 }
 
-div.top-nav-right > a{
-  border-right: 1px solid grey;
-
-} 
-div.top-nav{
-  text-decoration: underline;
-}
-// div.user-dropdown{
-//   position: relative;
-//   display: inline-block;
-// }
-
-// div.user-dropdown{
-//   padding: 20px;
-//   display: block;
-//   border: 1px solid black;
-//   border-top: 0;
-//   border-bottom: 0;
-// }
-// .user-dropdown-content{
-//   // padding: 20px;
-
-//   display: none;
-//   // padding: 12px 16px;
-//   position: absolute;
-//   // margin: 10px;
-//   z-index: 1;
-// }
-
-// div.user-dropdown:hover .user-dropdown-content {
-//   display: block;
-
-// } 
-// ul.user-dropdown-content:hover {
-//   display: block;
-// }
-
-// div.top-nav-right a{
-//   padding: 20px;
-// }
