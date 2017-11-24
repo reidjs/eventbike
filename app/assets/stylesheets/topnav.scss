@@ -5,6 +5,9 @@ div.top-nav span.nav-brand a{
   padding: 20px;
   border-right: 1px solid $light-grey;
   color: $color-orange;
+  font-family: 'Kalam', cursive;
+  letter-spacing: 1px;  
+  font-size: 16px;
   // border-right: 1px solid black;
 }
 
@@ -80,12 +83,19 @@ ul.user-dropdown-content li {
 
 div.user-dropdown:hover ul.user-dropdown-content{
   
-  animation: fadeIn 0.6s;
+  animation: fadeIn 0.6s forwards;
 }
 
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
+}
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  99% { opacity: 0; }
+  100% { 
+    opacity: 0;
+    display: none; }
 }
 
 ul.user-dropdown-content li:hover {
@@ -98,6 +108,13 @@ ul.user-dropdown-content li:hover {
   border-top: 1px solid black;
   z-index: 3;
   position: fixed;
+  // animation: fadeOut 0.6s forwards;
+  // animation-fill-mode: forwards;
+  
   
 }
+ul.user-dropdown-content * {
+ 
+}
+
 

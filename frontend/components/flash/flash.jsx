@@ -1,4 +1,5 @@
 import React from 'react'
+import FlashItem from './flash_item'
 class Flash extends React.Component {
   constructor(props) {
     super(props);
@@ -22,9 +23,12 @@ class Flash extends React.Component {
 
   render() {
     // console.log(this.props.messages)
-    const flashItems = this.state.messages.map((message) => {
+    const flashItems = this.state.messages.map((flash) => {
       // console.log(message)
-      return (<li key={message.id}>{message.message}</li>)
+      return (<FlashItem 
+                key={flash.id} 
+                flash={flash} 
+                hideflash={this.props.hideflash}/>)
     })
     // console.log("flashitems: ", flashItems)
     // console.log(this.flashMessages, this.props.messages)

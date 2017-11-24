@@ -29,8 +29,8 @@ const App = () => {
   return (
     <div>
 
-        <Route path="/" component={TopNavContainer}/>
         <Route path="/" component={FlashContainer} />
+        <Route path="/" component={TopNavContainer}/>
         <div className="main">
           <Switch>
             <Route exact path="/" component={Greeting}/>

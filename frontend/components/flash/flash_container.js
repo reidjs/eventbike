@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
-
-import { flashMessage, clearFlash } from '../../actions/ui_actions';
+import { hideFlash } from '../../actions/ui_actions';
 import Flash from './flash';
 import values from 'lodash/values';
 const mapStateToProps = (state) => {
@@ -17,8 +16,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    flashMessage: (message) => dispatch(flashMessage(message)),
-    clearFlash: () => dispatch(clearFlash())
+    hideflash: (id) => dispatch(hideFlash(id))
   };
 };
 // processForm: user => dispatch(processForm(user)),

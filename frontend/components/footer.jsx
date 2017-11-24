@@ -7,7 +7,7 @@ const Footer = () => (
     
     <a href="#"><i className="fa fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
     <a href="#"><i className="fa fa-github"></i> GitHub</a>
-    <a href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Website</a>
+    <a href="#"><i className="fa fa-sign-out" aria-hidden="true"></i> Website</a>
     </div>
   </div>
 );
