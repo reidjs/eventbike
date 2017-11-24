@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
-import configureStore from './store/store'
-import { flashMessage, getFlashMessages } from 'redux-flash'
+import configureStore from './store/store';
+import { getEvents } from './actions/events_actions';
+// import { flashMessage, getFlashMessages } from 'redux-flash'
 // import { logout } from './util/session_api_util'
 document.addEventListener('DOMContentLoaded', () => {
   const rootEl = document.getElementById('root');
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // const state = store.getState();
   // getFlashMessages(state)
   // window.flash_messages = FlashMessages;  
+  window.events = getEvents;
   window.store = store 
   window.dispatch = store.dispatch
   // window.logout = logout

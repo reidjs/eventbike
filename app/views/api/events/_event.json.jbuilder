@@ -1,1 +1,1 @@
-json.extract! @event, :title, :details
+json.extract! event, :title, :details
