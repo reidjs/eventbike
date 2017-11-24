@@ -1,18 +1,22 @@
 /*
 Error: File to import not found or unreadable: font-awesome-sprockets.
        Load path: /Users/reidmat/Dropbox/appacademy/eventbike/app/assets/stylesheets
-        on line 16 of app/assets/stylesheets/application.css.scss
+        on line 18 of app/assets/stylesheets/application.css.scss
 
-11:  * It is generally better to create a new file per style scope.
-12:  *
-13:  *= require_tree .
-14:  *= require_self
-15:  *\/
-16:  @import "font-awesome-sprockets";
-17:  @import "font-awesome";
+13:  *
+14:  *= require_tree .
+15:  *= require_self
+16:  *\/
+17: 
+18:  @import "font-awesome-sprockets";
+19:  @import "font-awesome";
+20: //hides error message from font awesome
+21:  body:before {
+22:    display: none;
+23:  }
 
 Backtrace:
-app/assets/stylesheets/application.css.scss:16
+app/assets/stylesheets/application.css.scss:18
 /Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:45:in `import'
 /Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -57,4 +61,4 @@ app/assets/stylesheets/application.css.scss:16
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: font-awesome-sprockets.\A        Load path: /Users/reidmat/Dropbox/appacademy/eventbike/app/assets/stylesheets\A         on line 16 of app/assets/stylesheets/application.css.scss\A \A 11:  * It is generally better to create a new file per style scope.\A 12:  *\A 13:  *= require_tree .\A 14:  *= require_self\A 15:  */\A 16:  @import \"font-awesome-sprockets\";\A 17:  @import \"font-awesome\";"; }
+  content: "Error: File to import not found or unreadable: font-awesome-sprockets.\A        Load path: /Users/reidmat/Dropbox/appacademy/eventbike/app/assets/stylesheets\A         on line 18 of app/assets/stylesheets/application.css.scss\A \A 13:  *\A 14:  *= require_tree .\A 15:  *= require_self\A 16:  */\A 17: \A 18:  @import \"font-awesome-sprockets\";\A 19:  @import \"font-awesome\";\A 20: //hides error message from font awesome\A 21:  body:before {\A 22:    display: none;\A 23:  }"; }

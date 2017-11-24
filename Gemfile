@@ -30,6 +30,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'rails_12factor'
 gem "font-awesome-sass"
+gem 'sprockets'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
