@@ -47,6 +47,7 @@ ul.user-dropdown-content li {
   padding: 10px 16px;
 }
 .user-dropdown-content {
+  z-index: 3;
   position: fixed;
 }
 
