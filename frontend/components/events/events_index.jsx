@@ -1,9 +1,9 @@
-import React from 'react'
-
+import React from 'react';
+import EventsListItem from './events_list_item';
 class EventsIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.status = 0;
+    this.loading = true; //0: loading
     this.state={events: {}}
   }
   componentDidMount() {
@@ -13,15 +13,15 @@ class EventsIndex extends React.Component {
   }
   componentWillReceiveProps(nextProps) {
     const events = nextProps.events
-    this.status = 1;
+    this.loading = false;
     this.setState({events});
   }
   render() {
-    console.log(this.state.events)
+    // console.log(this.state.events)
     let myClass
-    this.status === 0 ? (myClass = "loader") : (myClass = "showEvents")
+    this.loading ? (myClass = "loader") : (myClass = "showEvents")
     let eventsList = this.props.events.map((event) => {
-      return <li>{event.title}</li>
+      return <EventsListItem key={event.title} event={event}/>
     })
     return (
       <div>
