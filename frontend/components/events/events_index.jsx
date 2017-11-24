@@ -1,7 +1,7 @@
 import React from 'react'
 
 class EventsIndex extends React.Component {
-  render() {
+  render({events}) {
     return (
       <div>
         Events index goes here

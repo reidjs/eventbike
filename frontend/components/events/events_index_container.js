@@ -7,6 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   // console.log("nav dropdown: ", session);
   return {
     //will be state.entities.events
+    events: state.entities.events
   }
 }
 
