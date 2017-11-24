@@ -28,6 +28,7 @@ const App = () => {
   //note you may be able to pass props to a route using standard method
   return (
     <div>
+
         <Route path="/" component={TopNavContainer}/>
         <Route path="/" component={FlashContainer} />
         <div className="main">

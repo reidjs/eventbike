@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'rails_12factor'
-gem "font-awesome-rails"
+gem "font-awesome-sass"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

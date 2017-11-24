@@ -6,8 +6,11 @@ import values from 'lodash/values' //convert to array
 const mapStateToProps = (state, ownProps) => {
   // console.log("nav dropdown: ", session);
   console.log(state)
+  //need to be able to check if the user has bookmarked or registered for event. 
+  
   return {
     //will be state.entities.events
+    
     events: values(state.entities.events)
   }
 }
@@ -15,6 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
   // console.log(getEvents)
   // debugger
+  //these only hit if the user is logged in
   return ({
   //will be bookmark and register 
     getevents: () => dispatch(getEvents()),
