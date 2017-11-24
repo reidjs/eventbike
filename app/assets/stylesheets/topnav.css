@@ -19,7 +19,7 @@ div.user-dropdown span {
   border-bottom: 0; }
 
 .user-dropdown-content {
-  display: none;
+  display: block;
   position: absolute;
   margin: 10px;
   z-index: 1; }

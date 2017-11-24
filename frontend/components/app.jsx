@@ -1,5 +1,4 @@
 import React from 'react';
-import NavDropDown from './test_dropdown/nav_drop_down';
 import SessionFormContainer from './session_form/session_form_container';
 import TopNavContainer from './top_nav/top_nav_container';
 import SessionModalForm from './session_form/session_modal_form';
