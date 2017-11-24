@@ -1,24 +1,21 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { logout, login } from '../../actions/session_actions';
-import TopNav from './top_nav';
+import EventsIndex from './events_index';
 
 const mapStateToProps = (state, ownProps) => {
   // console.log("nav dropdown: ", session);
   return {
-    location: ownProps.location,
-    currentUser: state.session.currentUser,
-    potentialUser: state.session.potentialUser
+    //will be state.entities.events
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout()),
-  login: (user) => dispatch(login(user))
+  //will be bookmark and register 
+  
 });
 
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps)
-(TopNav));
+(EventsIndex));

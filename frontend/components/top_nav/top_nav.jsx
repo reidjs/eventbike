@@ -10,9 +10,11 @@ const TopNav = ({currentUser, potentialUser, logout, location}) => {
   // console.log(currentUser);
   return (
     <div className="top-nav">
-      
-        <TopNavBrand />
+        <span className="nav-brand">
+          <TopNavBrand />
+        </span>
         <div className="top-nav-right">
+          <Link to="/events">Browse Events</Link>
           <TopNavDropDown 
             currentUser={currentUser} 
             potentialUser={potentialUser} 

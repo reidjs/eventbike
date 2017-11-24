@@ -1,5 +1,4 @@
 import React from 'react';
-import EventItem from './event_item';
 import NavDropDown from './test_dropdown/nav_drop_down';
 import SessionFormContainer from './session_form/session_form_container';
 import TopNavContainer from './top_nav/top_nav_container';
@@ -8,6 +7,8 @@ import NewEventForm from './event_form/new_event_form';
 import FlashContainer from './flash/flash_container';
 import Greeting from './greeting';
 import Footer from './footer';
+import EventsIndexContainer from './events/events_index_container';
+import UsersShowContainer from './users/users_show_container';
 import { 
   AuthRoute, 
   ProtectedRoute 
@@ -32,8 +33,10 @@ const App = () => {
         <Route path="/" component={FlashContainer} />
         <Switch>
           <Route exact path="/" component={Greeting}/>
+          <Route exact path="/events" component={EventsIndexContainer}/>
           <ProtectedRoute path="/events/new" component={NewEventForm}/>
           <AuthRoute path="/signin" component={SessionFormContainer} />
+          <ProtectedRoute path="/users/" component={UsersShowContainer}/>
         </Switch>
         <Route path="/" component={Footer} />
     </div>

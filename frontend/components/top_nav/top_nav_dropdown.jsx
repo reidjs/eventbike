@@ -30,14 +30,17 @@ class TopNavDropDown extends React.Component {
         <Link to="/signin">Sign in</Link>
       )
     } else {
+      const userId = this.props.currentUser.id
       return (
-        <ul>
-        {/* //These links should be their own components and display a circle representing their quantity */}
-          {this.props.currentUser.username}
-          <li><Link to="">Saved Events</Link></li>
-          <li><Link to="">Tickets</Link></li>
-          <li><button className="btn btn-primary" onClick={this.handleClick}>Logout </button></li>
-        </ul>
+        <div className="user-dropdown">
+          <span>{this.props.currentUser.username}</span>
+          <div className="user-dropdown-content">
+          {/* //These links should be their own components and display a circle representing their quantity */}
+            <Link to={`/users/${userId}/bookmarks`}>Saved Events</Link>
+            <Link to={`/users/${userId}/tickets`}>Tickets</Link>
+            <button className="btn btn-primary" onClick={this.handleClick}>Logout </button>
+          </div>
+        </div>
       )
     }
   }

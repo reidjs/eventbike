@@ -6,9 +6,9 @@ import values from 'lodash/values';
 const mapStateToProps = (state) => {
   //may need ownprops
   // console.log(state.ui)
-  // console.log(state.flash.messages)
+  // console.log(tate.flash.messages)
   const messages = values(state.flash.messages)
-  // console.log(messages)
+  // console.log(ssages)
   // dispatch(clearFlash())
   return {
     messages

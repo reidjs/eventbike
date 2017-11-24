@@ -21,12 +21,12 @@ class Flash extends React.Component {
   
 
   render() {
-    console.log(this.props.messages)
+    // console.log(this.props.messages)
     const flashItems = this.state.messages.map((message) => {
-      console.log(message)
+      // console.log(message)
       return (<li key={message.id}>{message.message}</li>)
     })
-    console.log("flashitems: ", flashItems)
+    // console.log("flashitems: ", flashItems)
     // console.log(this.flashMessages, this.props.messages)
     // this.props.clearFlash();
     // {flashItems}
