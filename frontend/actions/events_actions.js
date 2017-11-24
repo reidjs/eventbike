@@ -10,9 +10,9 @@ export const receiveEvents = (events) => {
     events
   })
 }
-
+//untested
 export const receiveErrors = (errors) => {
-  console.log('receivedL', errors)
+  // console.log('receivedL', errors)
   return ({
     type: RECEIVE_ERRORS,
     errors
@@ -20,7 +20,8 @@ export const receiveErrors = (errors) => {
 }
 
 export const getEvents = () => dispatch => (
-  EventsAPIUtil.fetchEvents().then(res => (
+  EventsAPIUtil.fetchEvents()
+  .then(res => (
     dispatch(receiveEvents(res))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
