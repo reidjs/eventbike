@@ -1,15 +1,35 @@
 div.flash-container {
+  padding: 10px;
+
+
 }
 .flash-container ul {
   height: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;  
   width: 100%;
   height: 20%; 
+  // opacity: 0.8;
 }
 .flash-container ul li{
+  // background: red;
+  opacity: 0.8;
   background: red;
+  width: 80%;
+  padding: 15px;
   color: white;
+  border-radius: 10px;
   z-index: 1;
+  animation: sinkFromTop 0.5s;
+}
+
+@keyframes sinkFromTop{
+  from {
+    transform: translate(0, -50px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
 }
