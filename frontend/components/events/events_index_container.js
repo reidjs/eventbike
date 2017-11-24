@@ -17,7 +17,9 @@ const mapDispatchToProps = dispatch => {
   // debugger
   return ({
   //will be bookmark and register 
-    getevents: () => dispatch(getEvents())
+    getevents: () => dispatch(getEvents()),
+    register: () => {},
+    bookmark: () => {}
   })
 };
 
