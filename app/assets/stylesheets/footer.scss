@@ -1,0 +1,12 @@
+div.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+div.footer a{
+  padding: 10px 20px;
+}
+
+div.footer a:hover {
+  background: grey;
+}

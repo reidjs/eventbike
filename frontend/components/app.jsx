@@ -30,13 +30,15 @@ const App = () => {
     <div>
         <Route path="/" component={TopNavContainer}/>
         <Route path="/" component={FlashContainer} />
-        <Switch>
-          <Route exact path="/" component={Greeting}/>
-          <Route exact path="/events" component={EventsIndexContainer}/>
-          <ProtectedRoute path="/events/new" component={NewEventForm}/>
-          <AuthRoute path="/signin" component={SessionFormContainer} />
-          <ProtectedRoute path="/users/" component={UsersShowContainer}/>
-        </Switch>
+        <div className="main">
+          <Switch>
+            <Route exact path="/" component={Greeting}/>
+            <Route exact path="/events" component={EventsIndexContainer}/>
+            <ProtectedRoute path="/events/new" component={NewEventForm}/>
+            <AuthRoute path="/signin" component={SessionFormContainer} />
+            <ProtectedRoute path="/users/" component={UsersShowContainer}/>
+          </Switch>
+        </div>
         <Route path="/" component={Footer} />
     </div>
   )
