@@ -17,8 +17,8 @@ export const postRegistration = (eventId, userId) => {
   return (
     $.ajax({
       method: 'POST',
-      url: `/api/registrations/${eventId}/register`,
-      data: userId
+      url: `/api/events/${eventId}/registrations`,
+      data: {user_id: userId}
     })
   )
 }
