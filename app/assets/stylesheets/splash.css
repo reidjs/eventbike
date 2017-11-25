@@ -2,32 +2,38 @@ body, html {
   height: 100%; }
 
 div.hero-container {
+  height: 50%;
+  padding: 0px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
   height: 300px;
   overflow: hidden; }
 
-div.hero-image img {
-  position: relative;
+span.hero-image img {
   height: auto;
-  width: 100%;
-  z-index: -1;
-  overflow: hidden; }
+  width: 700px; }
 
 @media only screen and (max-width: 500px) {
-  div.hero-image img {
+  span.hero-image img {
     height: auto;
-    width: 500px; } }
-@media only screen and (max-width: 800px) {
-  div.hero-image img {
-    height: auto;
-    width: 800px; } }
+    width: 500px; }
+
+  div.hero-text {
+    width: 400px;
+    height: 100px; } }
 div.hero-text {
   background: blue;
   display: block;
-  position: fixed;
+  position: absolute;
   border: 1px solid black;
-  width: 85%;
-  z-index: 1;
-  height: 200px; }
+  height: 200px;
+  width: 500px;
+  z-index: 1; }
 
 div.hero-text p {
   text-align: center;

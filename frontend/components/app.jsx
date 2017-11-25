@@ -4,10 +4,12 @@ import TopNavContainer from './top_nav/top_nav_container';
 import SessionModalForm from './session_form/session_modal_form';
 import NewEventForm from './event_form/new_event_form';
 import FlashContainer from './flash/flash_container';
-import Greeting from './greeting';
+// import Greeting from './greeting';
 import Footer from './footer';
 import EventsIndexContainer from './events/events_index_container';
 import UsersShowContainer from './users/users_show_container';
+import SplashContainer from './splash/splash_container';
+// import SplashEventsIndex from './splash_events_index';
 import { 
   AuthRoute, 
   ProtectedRoute 
@@ -33,7 +35,7 @@ const App = () => {
         <Route path="/" component={TopNavContainer}/>
         <div className="main">
           <Switch>
-            <Route exact path="/" component={Greeting}/>
+            <Route exact path="/" component={SplashContainer}/>
             <Route exact path="/events" component={EventsIndexContainer}/>
             <ProtectedRoute path="/events/new" component={NewEventForm}/>
             <AuthRoute path="/signin" component={SessionFormContainer} />
