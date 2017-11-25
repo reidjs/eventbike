@@ -54,7 +54,7 @@ div.show-username p{
 // edit button
 div.show-username button{
   margin-bottom: 40px;
-  width: 80px;
+  width: 40px;
   height: 25px;
   border-radius: 5px;
   text-align: center;
@@ -64,8 +64,9 @@ div.show-username button{
 div.show-username button:focus {
   outline: 0;
 }
+//edit button shadow
 div.show-username button:hover{
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 0px 3px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 // .modalForm label {
 //   font-size: 12px;

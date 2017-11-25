@@ -61,7 +61,8 @@ class LoginForm extends React.Component {
         <div className="show-username">
           <label>Username</label>
           <p>{this.props.username}</p>
-          <button onClick={this.handleBack}>Edit</button>
+          <button className="edit-button" onClick={this.handleBack}>Edit
+</button>
         </div>
         <div className="input-label">
           <label>Password</label>

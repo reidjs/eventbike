@@ -1,64 +1,18 @@
 /*
-Error: File to import not found or unreadable: font-awesome-sprockets.
-       Load path: /Users/reidmat/Dropbox/appacademy/eventbike/app/assets/stylesheets
-        on line 18 of app/assets/stylesheets/application.css.scss
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url(font-awesome.css);
 
-13:  *
-14:  *= require_tree .
-15:  *= require_self
-16:  *\/
-17: 
-18:  @import "font-awesome-sprockets";
-19:  @import "font-awesome";
-20: //hides error message from font awesome
-21:  body:before {
-22:    display: none;
-23:  }
-
-Backtrace:
-app/assets/stylesheets/application.css.scss:18
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:45:in `import'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Users/reidmat/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: font-awesome-sprockets.\A        Load path: /Users/reidmat/Dropbox/appacademy/eventbike/app/assets/stylesheets\A         on line 18 of app/assets/stylesheets/application.css.scss\A \A 13:  *\A 14:  *= require_tree .\A 15:  *= require_self\A 16:  */\A 17: \A 18:  @import \"font-awesome-sprockets\";\A 19:  @import \"font-awesome\";\A 20: //hides error message from font awesome\A 21:  body:before {\A 22:    display: none;\A 23:  }"; }
+/*# sourceMappingURL=application.css.css.map */

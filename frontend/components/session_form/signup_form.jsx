@@ -35,7 +35,8 @@ class SignupForm extends React.Component {
         <div className="show-username">
         <label>username</label><br/>
           <p>{this.props.username}</p>
-          <button onClick={this.handleBack}>Edit</button>
+          <button className="edit-button" onClick={this.handleBack}>Edit
+</button>
         </div>
         <div className="input-label">
           <label>Password</label>
