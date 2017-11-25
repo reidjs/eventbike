@@ -43,14 +43,10 @@ div.show-username button {
   width: 40px;
   height: 25px;
   border-radius: 5px;
-  text-align: center;
-  border: 1px solid black; }
+  text-align: center; }
 
 div.show-username button:focus {
   outline: 0; }
-
-div.show-username button:hover {
-  box-shadow: 0 0px 3px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
 
 div.input-textbox {
   display: flex;

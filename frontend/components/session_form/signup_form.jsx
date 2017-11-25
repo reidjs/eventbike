@@ -1,6 +1,8 @@
 //if state has a potential user and the 'new user flag' is up
 //pass this component the username and a dispatch action to signup user
 import React from 'react'
+import ModeEdit from 'material-ui-icons/ModeEdit';
+
 // import { Link } from 'react-router-dom';
 class SignupForm extends React.Component {
   constructor() {
@@ -35,7 +37,7 @@ class SignupForm extends React.Component {
         <div className="show-username">
         <label>username</label><br/>
           <p>{this.props.username}</p>
-          <button className="edit-button" onClick={this.handleBack}>Edit
+          <button className="edit-button" onClick={this.handleBack}><ModeEdit />
 </button>
         </div>
         <div className="input-label">

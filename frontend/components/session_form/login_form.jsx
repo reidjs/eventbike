@@ -1,5 +1,8 @@
-//If state has a potential user and their account exists 
+
 import React from 'react'
+//material-ui-icons
+import ModeEdit from 'material-ui-icons/ModeEdit';
+
 class LoginForm extends React.Component {
   constructor() {
     super();
@@ -61,8 +64,9 @@ class LoginForm extends React.Component {
         <div className="show-username">
           <label>Username</label>
           <p>{this.props.username}</p>
-          <button className="edit-button" onClick={this.handleBack}>Edit
+          <button className="edit-button" onClick={this.handleBack}><ModeEdit />
 </button>
+
         </div>
         <div className="input-label">
           <label>Password</label>
