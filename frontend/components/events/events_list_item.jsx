@@ -7,10 +7,11 @@ import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
 import Done from 'material-ui-icons/Done'; //registration button
 
 
-const EventsListItem = ({event, register, bookmark}) => {
+const EventsListItem = ({event, register, bookmark, currentUser}) => {
   const handleRegistration = (e) => {
     e.preventDefault();
-    register();
+    // debugger
+    register(event.id, currentUser.id);
     console.log('Register')
   }
   const handleBookmark = (e) => {

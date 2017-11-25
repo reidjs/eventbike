@@ -24,6 +24,7 @@ class EventsIndex extends React.Component {
       return <EventsListItem 
                 key={event.title} 
                 event={event} 
+                currentUser={this.props.currentUser}
                 register={this.props.register}
                 bookmark={this.props.bookmark}/>
     })

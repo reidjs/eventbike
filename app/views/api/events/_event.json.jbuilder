@@ -1,9 +1,10 @@
 # json.extract! event, :title, :details, event.attendees.each {|attendee| attendee.id}
+#get attendees as an array of user ids 
 attendees = [] 
 event.attendees.each do |attendee|
   attendees.push(attendee.id)
 end 
-p attendees
+json.id event.id
 json.title event.title
 json.details event.details
 json.attendees attendees

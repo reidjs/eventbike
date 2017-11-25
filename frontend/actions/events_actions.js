@@ -1,8 +1,9 @@
 import * as EventsAPIUtil from '../util/events_api_util'
 
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
+export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
-export const REGISTER_EVENT = "REGISTER_EVENT";
+// export const REGISTER_EVENT = "REGISTER_EVENT";
 
 
 export const receiveEvents = (events) => {
@@ -11,14 +12,21 @@ export const receiveEvents = (events) => {
     events
   })
 }
-//registration should have a userid and eventid
-//registration: {user_id: x, event_id: y}
-export const receiveRegistration = (registration) => {
+export const receiveEvent = (event) => {
+  console.log("event received",event)
   return ({
-    type: REGISTER_EVENT,
-    registration 
+    type: RECEIVE_EVENT,
+    event
   })
 }
+//registration should have a userid and eventid
+//registration: {user_id: x, event_id: y}
+// export const receiveRegistration = (registration) => {
+//   return ({
+//     type: REGISTER_EVENT,
+//     registration 
+//   })
+// }
 
 //untested
 export const receiveErrors = (errors) => {
@@ -29,7 +37,7 @@ export const receiveErrors = (errors) => {
   })
 }
 
-export const getEvents = () => dispatch => (
+export const getEvents = () => dispatch => ( 
   EventsAPIUtil.fetchEvents()
   .then(res => (
     dispatch(receiveEvents(res))
@@ -45,11 +53,10 @@ export const getEvent = (eventId) => dispatch => (
     ))
 );
 
-//get event first 
 
 export const requestRegistration = (eventId, userId) => dispatch => (
   EventsAPIUtil.postRegistration(eventId, userId)
     .then(res => (
-      dispatch(receiveRegistration(res))
+      dispatch(receiveEvent(res))
     ))
 );
