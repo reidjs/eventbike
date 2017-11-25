@@ -1,11 +1,12 @@
 div.top-nav span.nav-brand a {
   display: block;
-  padding: 16px;
+  padding: 0 16px;
+  padding-top: 0px;
   border-right: 1px solid #EFF2F5;
   color: #cd5120;
-  font-family: 'Kalam', cursive;
-  letter-spacing: 1px;
-  font-size: 16px; }
+  letter-spacing: 0.5px;
+  font-size: 36px;
+  font-family: 'Fugaz One'; }
 
 div.top-nav {
   display: flex;

@@ -56,17 +56,18 @@ class SigninForm extends React.Component {
 
     return(
       <form onSubmit={this.handleSubmit}>
-        <span className="brand">eB</span>
+        <span className="brand">B</span>
         <h1>Let's do this.</h1>
         <h2>Enter a username to sign up or log in.</h2>
         <div className="input-label">
           <label>Username</label><br/>
         </div>
-        <input type="text" placeholder="Enter your name." value={this.state.username} onChange={this.handleChange}/>
-        
-        <ul>
-          {errorList}
-        </ul>
+        <div className="input-textbox">
+          <input type="text" placeholder="Enter your name." value={this.state.username} onChange={this.handleChange}/>
+          <ul>
+            {errorList}
+          </ul>
+        </div>
         <input type="submit" value="Get Started" />
       </form>
     )

@@ -28,12 +28,6 @@ div.closeButton:hover {
   -o-transition: background-color 2s ease-out;
   transition: background-color 2s ease-out; }
 
-.modalForm ul {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  left: -150px; }
-
 div.show-username {
   width: 100%;
   align-content: left; }
@@ -58,6 +52,11 @@ div.show-username button:focus {
 div.show-username button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19); }
 
+div.input-textbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 div.input-label {
   font-size: 12px;
   margin-bottom: 10px;
@@ -65,7 +64,6 @@ div.input-label {
   align-content: left; }
 
 .modalForm ul li {
-  position: fixed;
   list-style-type: none;
   color: red; }
 
@@ -87,20 +85,18 @@ div.modalForm input {
   height: 40px;
   font-weight: 700; }
 
-input[type=text] {
+input[type=text], input[type=password] {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
   -o-transition: all 0.30s ease-in-out;
   outline: none;
-  padding: 3px 0px 3px 3px;
+  padding: 1px 0px 1px 1px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD; }
 
-div.modalForm input[type=text]:focus {
+div.modalForm input[type=text]:focus, div.modalForm input[type=password]:focus {
   box-shadow: 0 0 5px #51cbee;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
   border: 1px solid #51cbee; }
 
 .modalForm h1 {
@@ -115,14 +111,15 @@ span.brand {
   color: white;
   background: #cd5120;
   border-radius: 50px;
-  font-size: 32px;
-  padding: 10px 15px;
+  font-size: 24px;
+  padding: 7px 17px;
+  font-family: 'Fugaz One';
   margin-bottom: 20px;
   animation: bounce 0.1s;
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s; }
 
-div.modalForm input[type="submit"] {
+div.modalForm input[type="submit"], div.demo-button button {
   margin-top: 20px;
   border: none;
   background: #cd5120;
@@ -139,31 +136,7 @@ div.modalForm input[type="submit"] {
   -o-transition: background-color 2s ease-out;
   transition: background-color 2s ease-out; }
 
-div.demo-button {
-  align-content: center;
-  margin-top: 15px;
-  margin-right: 0;
-  display: flex;
-  justify-content: center; }
-
-.demo-button button {
-  align-self: center;
-  border: none;
-  background: #35180d;
-  display: block;
-  color: white;
-  fill: white;
-  padding: 10px;
-  width: 300px;
-  height: 20px;
-  border-radius: 25px;
-  text-align: center;
-  -webkit-transition: background-color 2s ease-out;
-  -moz-transition: background-color 2s ease-out;
-  -o-transition: background-color 2s ease-out;
-  transition: background-color 2s ease-out; }
-
-div.modalForm input[type="submit"]:hover {
+div.modalForm input[type="submit"]:hover, div.demo-button button:hover {
   background: red;
   cursor: pointer; }
 

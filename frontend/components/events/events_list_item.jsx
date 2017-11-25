@@ -16,6 +16,8 @@ const EventsListItem = ({event, register, bookmark}) => {
   const categoryGoesHere = "#";
   const categoryPath = `events/${categoryGoesHere}`
   const bookmarkPath = `events/${event.id}/bookmark`
+  const fillerDateTime = "Sun, Dec 5 6:00 PM"
+  const fillerVenue = "San Francisco Track"
   return (
     <li>
       <div className="event-container">
@@ -24,10 +26,14 @@ const EventsListItem = ({event, register, bookmark}) => {
 
           </div>
           <div className="event-container-body">
-            {event.title}
+            <div>
+            <h3>{fillerDateTime}</h3>
+            <h2>{event.title}</h2>
+            <h4>{fillerVenue}</h4>
+            </div>
             <div className="event-footer">
               <Link to={categoryPath}>#Category</Link>
-              <div className="bottom-right-buttons">
+              <div className="event-container-actions">
               <Link to={bookmarkPath}>BOomark</Link>
               <button onClick={handleBookmark}>BookmarkIcon</button>
             </div>

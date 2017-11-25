@@ -1,13 +1,17 @@
 @import "util/variables.scss";
-
+//brand
 div.top-nav span.nav-brand a{
   display: block;
-  padding: 16px;
+  padding: 0 16px;
+  padding-top: 0px;
   border-right: 1px solid $light-grey;
   color: $color-orange;
-  font-family: 'Kalam', cursive;
-  letter-spacing: 1px;  
-  font-size: 16px;
+  // font-weight: 700;
+  letter-spacing: 0.5px;  
+  font-size: 36px;
+  font-family: 'Fugaz One';
+  
+  
   // border-right: 1px solid black;
 }
 

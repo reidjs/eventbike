@@ -1,3 +1,27 @@
+div.event-container-body h4, h3, h2 {
+  margin: 0;
+  text-overflow: ellipsis;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300; }
+
+div.event-container-body h3 {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  padding-right: 20px; }
+
+div.event-container-body h2 {
+  font-size: 16px;
+  color: #45494E;
+  max-height: 40px;
+  width: 400px;
+  padding-bottom: 20px; }
+
+div.event-container-body h4 {
+  font-size: 12px;
+  color: #666A73; }
+
 div.events-sidenav {
   padding: 20px; }
 
@@ -10,19 +34,23 @@ div.events-index-container h1 {
   padding: 10px; }
 
 div.events-container {
-  display: flex; }
+  display: flex;
+  background: #f8f8fa; }
 
 div.event-container {
   padding: 10px;
   width: 80%;
   height: 150px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s cubic-bezier(0, 0.2, 0.4, 1); }
 
 div.event-container div.top-row {
   display: flex; }
 
 div.event-container-body {
+  padding: 0 20px;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -30,7 +58,8 @@ div.event-container-body {
 
 div.event-footer {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  border-top: 1px solid #EFF2F5; }
 
 div.event-container-img {
   width: 200px;
@@ -39,6 +68,10 @@ div.event-container-img {
   background-image: url("http://res.cloudinary.com/eventbike/image/upload/v1511497460/joe-neric-223562_okhigx.jpg");
   background-position: center;
   background-repeat: no-repeat; }
+
+div.events-index-container ul li {
+  background: white;
+  margin: 0 0 10px 0; }
 
 .loader {
   border: 16px solid #f3f3f3;
