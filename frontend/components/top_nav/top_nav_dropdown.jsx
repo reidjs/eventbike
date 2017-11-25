@@ -28,7 +28,7 @@ class TopNavDropDown extends React.Component {
     if (!this.props.currentUser) {
       return (
         <div className="user-dropdown">
-          <Link to="/signin">Sign in</Link>
+          <Link to="/signin">SIGN IN</Link>
         </div>
       )
     } else {

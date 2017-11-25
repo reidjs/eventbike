@@ -10,11 +10,14 @@ div.top-nav span.nav-brand a {
 div.top-nav {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid black;
+  letter-spacing: 0.5px;
+  color: #45494E; }
 
 div.top-nav-right {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  font-size: 12px; }
 
 div.user-dropdown {
   border-right: 1px solid #EFF2F5;
@@ -57,6 +60,9 @@ div.top-nav-right a:nth-child(2):hover {
 ul.user-dropdown-content li {
   padding: 10px 16px; }
 
+div.user-dropdown > a:first-child {
+  text-transform: uppercase; }
+
 div.user-dropdown:hover ul.user-dropdown-content {
   animation: fadeIn 0.6s forwards; }
 
@@ -79,7 +85,7 @@ ul.user-dropdown-content li:hover {
 
 .user-dropdown-content {
   display: none;
-  border-top: 1px solid black;
+  transform: translate(0, 4px);
   z-index: 3;
   position: fixed; }
 

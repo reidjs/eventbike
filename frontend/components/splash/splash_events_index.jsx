@@ -4,7 +4,7 @@ const SplashEventsIndex = () => {
   return (
     <div>
       <div className="hero-text">
-      <p>Welcome to event bike</p>
+      <p>Welcome to EventBike</p>
     </div>
       Lorem ipsum dolor sit amet, 
       consectetur adipiscing elit,

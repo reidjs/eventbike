@@ -26,21 +26,26 @@ span.hero-image img {
     width: 400px;
     height: 100px; } }
 div.hero-text {
-  background: blue;
+  background: white;
   display: block;
   position: absolute;
   border: 1px solid black;
   height: 200px;
-  width: 500px;
+  width: 85%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
   z-index: 1;
-  top: 50%;
+  top: 40%;
   left: 50%;
+  border-radius: 4px;
   transform: translate(-50%, -50%);
-  z-index: 2; }
+  z-index: 2;
+  transform: 2s ease-in-out; }
 
 div.hero-text p {
+  margin-top: 40px;
   text-align: center;
-  color: #792c2c; }
+  font-size: 45px;
+  color: #cd5120; }
 
 #cf4a img {
   animation-name: cf4FadeInOut;

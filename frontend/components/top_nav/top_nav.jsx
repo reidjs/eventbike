@@ -14,13 +14,13 @@ const TopNav = ({currentUser, potentialUser, logout, location}) => {
           <TopNavBrand />
         </span>
         <div className="top-nav-right">
-          <Link to="/events">Browse Events</Link>
+          <Link to="/events">BROWSE EVENTS</Link>
           <TopNavDropDown 
             currentUser={currentUser} 
             potentialUser={potentialUser} 
             logout={logout} 
             location={location} />
-        <Link to="/events/new">Create Event</Link>
+        <Link to="/events/new">CREATE EVENT</Link>
         </div>
     </div>
   )
