@@ -31,7 +31,7 @@ div.hero-text {
   position: absolute;
   border: 1px solid black;
   height: 200px;
-  width: 85%;
+  width: 95%;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
   z-index: 1;
   top: 40%;
@@ -45,6 +45,7 @@ div.hero-text p {
   margin-top: 40px;
   text-align: center;
   font-size: 45px;
+  font-weight: 200;
   color: #cd5120; }
 
 #cf4a img {
@@ -78,5 +79,21 @@ div.hero-text p {
 
 #cf4a img:nth-of-type(4) {
   animation-delay: 0; }
+
+div.splash-events-container h1 {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 24px; }
+
+div.flex-grid {
+  display: flex;
+  flex-wrap: wrap; }
+
+div.col {
+  flex: 1;
+  padding: 100px; }
+
+.flex-grid {
+  margin: 0 0 20px 0; }
 
 /*# sourceMappingURL=splash.css.map */

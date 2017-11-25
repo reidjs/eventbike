@@ -2,10 +2,39 @@ import React from 'react'
 
 const SplashEventsIndex = () => {
   return (
-    <div>
-      <div className="hero-text">
-      <p>Welcome to EventBike</p>
-    </div>
+    <div className="splash-events-container">
+      <h1>Cycle Events in San Francisco, Calfornia</h1>
+      <div className="flex-grid">
+        <div className="col">em ipsum dolor sit amet, 
+      consectetur adipiscing elit,
+       sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. 
+        Amet aliquam id di</div>
+        <div className="col">em ipsum dolor sit amet, 
+      consectetur adipiscing elit,
+       sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. 
+        Amet aliquam id di</div>
+        <div className="col">em ipsum dolor sit amet, 
+      consectetur adipiscing elit,
+       sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. 
+        Amet aliquam id di</div>
+        <div className="col">em ipsum dolor sit amet, 
+      consectetur adipiscing elit,
+       sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. 
+        Amet aliquam id di</div>
+        <div className="col">ectetur adipiscing elit,
+       sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. 
+        Amet aliquam id di</div>
+        <div className="col">ectetur adipiscing elit,
+       sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. 
+        Amet aliquam id di</div>
+      </div>
+      
       Lorem ipsum dolor sit amet, 
       consectetur adipiscing elit,
        sed do eiusmod tempor incididunt

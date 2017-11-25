@@ -48,7 +48,7 @@ div.hero-text {
   // padding: 100px;
   // transform: translate(0, 200px);
   height: 200px;
-  width: 85%;
+  width: 95%;
   box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
   z-index: 1;
   top: 40%;
@@ -64,6 +64,7 @@ div.hero-text p{
   margin-top: 40px;
   text-align: center;
   font-size: 45px;
+  font-weight: 200;
   // position: absolute;
   // background: white;
   // top: 50%;
@@ -111,4 +112,33 @@ div.hero-text p{
 }
 #cf4a img:nth-of-type(4) {
   animation-delay: 0;
+}
+
+div.splash-events-container h1 {
+  margin-top: 70px;
+  text-align: center;
+  font-size: 24px;
+}
+div.flex-grid {
+  display: flex;
+  // justify-content: space-between;
+  // flex-direction: column;
+  flex-wrap: wrap;
+}
+div.col {
+  // width: 32%;
+  flex: 1;
+  padding: 100px;
+}
+// @media (max-width: 400px) {
+//   .flex-grid{
+//     display: block;
+//     .col {
+//       width: 100%;
+//       margin: 0 0 10px 0;
+//     }
+//   }
+// }
+.flex-grid { 
+  margin: 0 0 20px 0;
 }

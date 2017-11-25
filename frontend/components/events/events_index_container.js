@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { getEvents }from '../../actions/events_actions'
-import EventsIndex from './events_index';
+import Events from './events';
 import values from 'lodash/values' //convert to array
 const mapStateToProps = (state, ownProps) => {
   // console.log("nav dropdown: ", session);
@@ -30,4 +30,4 @@ const mapDispatchToProps = dispatch => {
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps)
-(EventsIndex));
+(Events));
