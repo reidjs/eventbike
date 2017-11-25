@@ -12,6 +12,12 @@ class User < ApplicationRecord
   foreign_key: :creator_id
   # has_many :bookmarks
 
+  has_many :registrations,
+  class_name: :Registration,
+  primary_key: :id,
+  foreign_key: :user_id
+
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)

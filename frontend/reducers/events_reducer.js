@@ -12,6 +12,8 @@ const eventsReducer = (state = _nullEvents, action) => {
   switch(action.type) {
     case RECEIVE_EVENTS:
       return merge({}, action.events);
+    // case BOOKMARK_EVENT:
+
     default: 
       return state;
   }

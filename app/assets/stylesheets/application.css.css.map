@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACA;;;;;;;;;;;;;;GAcG;AAGM,6BAAkB",
+"mappings": "AACA;;;;;;;;;;;;;;;GAeG;AAGM,6BAAkB",
 "sources": ["application.css.scss"],
 "names": [],
 "file": "application.css.css"

@@ -2,6 +2,7 @@ import * as EventsAPIUtil from '../util/events_api_util'
 
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const REGISTER_EVENT = "REGISTER_EVENT";
 
 
 export const receiveEvents = (events) => {
@@ -10,6 +11,14 @@ export const receiveEvents = (events) => {
     events
   })
 }
+
+export const receiveRegistration = (userId) => {
+  return ({
+    type: REGISTER_EVENT,
+    userId 
+  })
+}
+
 //untested
 export const receiveErrors = (errors) => {
   // console.log('receivedL', errors)
@@ -26,4 +35,20 @@ export const getEvents = () => dispatch => (
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
   ))
+);
+
+export const getEvent = (eventId) => dispatch => (
+  EventsAPIUtil.fetchEvent(eventId)
+    .then(res => (
+      dispatch(receiveEvent(res))
+    ))
+);
+
+//get event first 
+
+export const requestRegistration = (eventId, userId) => dispatch => (
+  EventsAPIUtil.postRegistration(eventId, userId)
+    .then(res => (
+      dispatch(receiveRegistration(res))
+    ))
 );

@@ -13,4 +13,14 @@ export const fetchEvent = (eventId) => {
   }));
 };
 
+export const postRegistration = (eventId, userId) => {
+  return (
+    $.ajax({
+      method: 'POST',
+      url: `/api/registrations/${eventId}/register`,
+      data: userId
+    })
+  )
+}
+
 //fetch events by category 

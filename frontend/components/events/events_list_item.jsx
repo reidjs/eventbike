@@ -34,8 +34,8 @@ const EventsListItem = ({event, register, bookmark}) => {
             <div className="event-footer">
               <Link to={categoryPath}>#Category</Link>
               <div className="event-container-actions">
-              <Link to={bookmarkPath}>BOomark</Link>
-              <button onClick={handleBookmark}>BookmarkIcon</button>
+              
+              <button onClick={handleBookmark}><i class="material-icons">bookmark_border</i></button>
             </div>
           </div>
           </div>
