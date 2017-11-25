@@ -2,7 +2,6 @@ body, html {
   height: 100%; }
 
 div.hero-container {
-  height: 50%;
   padding: 0px 0;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +15,7 @@ div.hero-container {
 
 span.hero-image img {
   height: auto;
-  width: 700px; }
+  width: 100%; }
 
 @media only screen and (max-width: 500px) {
   span.hero-image img {
@@ -33,10 +32,46 @@ div.hero-text {
   border: 1px solid black;
   height: 200px;
   width: 500px;
-  z-index: 1; }
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; }
 
 div.hero-text p {
   text-align: center;
   color: #792c2c; }
+
+#cf4a img {
+  animation-name: cf4FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+  position: absolute;
+  left: 0; }
+
+/* http://css3.bradshawenterprises.com/cfimg/ */
+@keyframes cf4FadeInOut {
+  0% {
+    opacity: 1; }
+  17% {
+    opacity: 1; }
+  25% {
+    opacity: 0; }
+  92% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+#cf4a img:nth-of-type(1) {
+  animation-delay: 6s; }
+
+#cf4a img:nth-of-type(2) {
+  animation-delay: 4s; }
+
+#cf4a img:nth-of-type(3) {
+  animation-delay: 2s; }
+
+#cf4a img:nth-of-type(4) {
+  animation-delay: 0; }
 
 /*# sourceMappingURL=splash.css.map */

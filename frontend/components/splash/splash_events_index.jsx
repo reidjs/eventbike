@@ -3,6 +3,9 @@ import React from 'react'
 const SplashEventsIndex = () => {
   return (
     <div>
+      <div className="hero-text">
+      <p>Welcome to event bike</p>
+    </div>
       Lorem ipsum dolor sit amet, 
       consectetur adipiscing elit,
        sed do eiusmod tempor incididunt
