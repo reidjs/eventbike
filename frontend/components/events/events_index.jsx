@@ -28,7 +28,8 @@ class EventsIndex extends React.Component {
                 bookmark={this.props.bookmark}/>
     })
     return (
-      <div>
+      <div className="events-index-container">
+        <h1>Cycling events in San Francisco, California</h1>
         <div className={myClass}></div>
         <ul>
           {eventsList}

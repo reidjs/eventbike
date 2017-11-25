@@ -1,8 +1,10 @@
-import React from 'react'
-
+import React from 'react';
+import CategoriesDropDown from './categories_drop_down';
 const SideNav = () => {
   return (
-    <div>asdf</div>
+    <div className="events-sidenav">side nav here
+      <CategoriesDropDown />
+    </div>
   )
 }
 

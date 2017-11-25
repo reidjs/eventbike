@@ -5,7 +5,7 @@ import SideNav from './side_nav';
 class Events extends React.Component {
   render() {
     return (
-      <div>
+      <div className="events-container">
         <SideNav />
         <EventsIndex {...this.props}/>
       </div>
