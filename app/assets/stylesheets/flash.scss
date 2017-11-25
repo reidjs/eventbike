@@ -34,9 +34,9 @@ li.flash-item {
   display: flex;
   justify-content: space-between;
 }
-div.flash-item > button{
-  align-self: right;
-}
+// div.flash-item > button{
+//   align-self: right;
+// }
 @keyframes riseFromBottom{
   from {
     transform: translate(0, 100px);

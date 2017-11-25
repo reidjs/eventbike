@@ -1,26 +1,55 @@
 body, html {
   height: 100%;
 }
-div.hero-image {
-  background-image: url("http://res.cloudinary.com/eventbike/image/upload/v1511497460/joe-neric-223562_okhigx.jpg");
-  height: 50%;
-  // padding: 200px;
-  padding: 140px 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
+div.hero-container{
+  // background-image: url("http://res.cloudinary.com/eventbike/image/upload/v1511497460/joe-neric-223562_okhigx.jpg");
+  // height: 50%;
+  // // padding: 200px;
+  // padding: 140px 0;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // display: flex;
+  // justify-content: center;
   // position: relative;
+  height: 300px;
+  overflow: hidden;
 }
+div.hero-image img{
+  // height: 100%;
+  // width: 100%;
+  position: relative;
+  height: auto;
+  // max-height: 300px;
+  width: 100%;
+  // margin: 0 auto;
+  z-index: -1;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 500px) {
+  div.hero-image img{
+    height: auto;
+    
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  div.hero-image img{
+    height: auto;
+    width: 800px;
+  }
+}
+
 div.hero-text {
-  background: white;
+  background: blue;
   display: block;
   // padding: 100px;
-  position: relative;
+  position: fixed;
   border: 1px solid black;
-  transform: translate(0, 200px);
+  // transform: translate(0, 200px);
   width: 85%;
+  z-index: 1;
   
   height: 200px;
 }
