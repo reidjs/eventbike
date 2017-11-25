@@ -11,11 +11,12 @@ export const receiveEvents = (events) => {
     events
   })
 }
-
-export const receiveRegistration = (userId) => {
+//registration should have a userid and eventid
+//registration: {user_id: x, event_id: y}
+export const receiveRegistration = (registration) => {
   return ({
     type: REGISTER_EVENT,
-    userId 
+    registration 
   })
 }
 

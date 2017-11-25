@@ -18,9 +18,10 @@ div.top-nav span.nav-brand a{
 div.top-nav {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $light-grey;
   letter-spacing: 0.5px;
   color: $light-black;
+  font-family: 'Oxygen';
 }
 div.top-nav-right {
   display: flex;
@@ -85,7 +86,12 @@ div.top-nav-right a:nth-child(2):hover{
 }
 
 ul.user-dropdown-content li {
-  padding: 10px 16px;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid $light-grey;
+  border-top: none;
 }
 //username or sign in button
 div.user-dropdown > a:first-child {

@@ -2,17 +2,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ProtectedRoute } from '../../util/route_util';
-import EventsBookmarkButton from './events_bookmark_button'
-const handleRegister = (e) => {
-  e.preventDefault();
-  console.log('Register')
-}
-const handleBookmark = (e) => {
-  e.preventDefault();
-  
-  console.log('bookmark')
-}
+import EventsBookmarkButton from './events_bookmark_button';
+import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
+import Done from 'material-ui-icons/Done'; //registration button
+
+
 const EventsListItem = ({event, register, bookmark}) => {
+  const handleRegistration = (e) => {
+    e.preventDefault();
+    register();
+    console.log('Register')
+  }
+  const handleBookmark = (e) => {
+    e.preventDefault();
+    bookmark();
+    console.log('bookmark')
+  }
   const categoryGoesHere = "#";
   const categoryPath = `events/${categoryGoesHere}`
   const bookmarkPath = `events/${event.id}/bookmark`
@@ -34,8 +39,8 @@ const EventsListItem = ({event, register, bookmark}) => {
             <div className="event-footer">
               <Link to={categoryPath}>#Category</Link>
               <div className="event-container-actions">
-              
-              <button onClick={handleBookmark}><i class="material-icons">bookmark_border</i></button>
+              <button onClick={handleRegistration}><Done /></button>
+              <button onClick={handleBookmark}><BookmarkBorder /></button>
             </div>
           </div>
           </div>
