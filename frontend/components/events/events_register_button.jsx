@@ -43,11 +43,17 @@ class EventsRegisterButton extends React.Component {
     e.preventDefault();
     //logic here to make sure there is a logged in user 
     if (this.props.currentUser) {
-      this.props.register(this.props.event.id, this.props.currentUser.id);  
+      switch(this.userIsRegistered()) {
+        case false:
+          this.props.register(this.props.event.id, this.props.currentUser.id); 
+        case true:
+          this.props.unregister(this.props.event.id, this.props.currentUser.id); 
+      }
     } else {
       // render modal 
-      console.log(this.showModal)
-      this.showModal = false;
+      console.log('You must be logged in to register')
+      // console.log(this.showModal)
+      // this.showModal = false;
 
     }
     // console.log('Register')
@@ -56,13 +62,12 @@ class EventsRegisterButton extends React.Component {
   render() {
     let myClass
     this.userIsRegistered() ? myClass="active" : myClass = "";
-    let myTest = this.showModal ? "true" : null
-    console.log("test", myTest)
+    // let myTest = this.showModal ? "true" : null
+    // console.log("test", myTest)
     // debugger
     return (
       <span>
         <button className={myClass} onClick={this.handleRegistration}><Done /></button>
-        <EventsSigninModal open={myTest}/>
       </span>
     )
   }

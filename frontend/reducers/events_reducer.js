@@ -1,7 +1,8 @@
 import {
   RECEIVE_EVENTS,
   RECEIVE_EVENT,
-  REGISTER_EVENT
+  REGISTER_EVENT,
+  UNREGISTER_EVENT
 } from '../actions/events_actions'
 import merge from 'lodash/merge';
 
@@ -13,6 +14,7 @@ const _nullEvents = {
 const eventsReducer = (state = _nullEvents, action) => {
   Object.freeze(state);
   let newState;
+  let event_id;
   switch(action.type) {
     case RECEIVE_EVENTS:
       return merge({}, action.events);
@@ -22,11 +24,16 @@ const eventsReducer = (state = _nullEvents, action) => {
       return newState;
     case REGISTER_EVENT:
       // debugger
-      const event_id = action.registration.eventId;
+      event_id = action.registration.eventId;
       newState = merge({}, state)
       newState[event_id].attendees = [...action.registration.attendees] //update event
       // debugger;
       return newState;
+    case UNREGISTER_EVENT:
+      event_id = action.event.id;
+      newState = merge({}, state)  
+      newState[event_id] = action.event //update event      
+      return newState 
     default: 
       return state;
   }

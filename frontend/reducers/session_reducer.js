@@ -9,7 +9,8 @@ import {
 } from '../actions/session_actions';
 
 import {
-  REGISTER_EVENT
+  REGISTER_EVENT,
+  UNREGISTER_EVENT
 } from '../actions/events_actions'; //to update the user when they register
 
 const _nullUser = Object.freeze({
@@ -23,6 +24,7 @@ const sessionReducer = (state = _nullUser, action) => {
   let potentialUser;
   let newUserFlag;
   let newState;
+  let updated_events_attending
   switch(action.type) {
     case RESET_POTENTIAL_USER:
       // console.log('reset user!')
@@ -49,9 +51,26 @@ const sessionReducer = (state = _nullUser, action) => {
       // console.log('register session user')
       // debugger
       newState = merge({}, state)
-      const updated_events_attending = action.registration.attending_events 
+      updated_events_attending = action.registration.attending_events 
       newState.currentUser.attending_events = updated_events_attending;
       // debugger;
+      return newState;
+    //I suspect this may be unnecessary
+    case UNREGISTER_EVENT:
+      newState = merge({}, state)
+      //index to remove
+      const idx = newState
+                    .currentUser
+                    .attending_events
+                    .indexOf(action.event.id)
+      //remove the index of the event and store in variable
+      // debugger
+      updated_events_attending = newState
+                    .currentUser
+                    .attending_events
+                    .splice(idx, 1)
+      //update the events our user is attending
+      newState.currentUser.attending_events = [...updated_events_attending];
       return newState;
     default:
       return state;

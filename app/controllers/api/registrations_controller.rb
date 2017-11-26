@@ -26,9 +26,23 @@ class Api::RegistrationsController < ApplicationController
   end 
 
   def destroy 
-    #ask cynthia how she is deleting tags 
-    debugger
+    registration = Registration.find_by(user_id: params[:id], event_id: params[:event_id])
+    # debugger
+    if registration.nil?
+      # debugger
+      render json: ["Could not find registration"], status: 404
+      return 
+    end 
+    registration.destroy
+    #return the event details (event show page)
+    @event = Event.find_by(id: params[:event_id])
+    # redirect_to template: `events/show`
+    # redirect_to template: `events/#{@event.id}`
+    # render template: `api/events/show`
+    render :delete
+  end 
 
+  def delete
   end 
 
 end

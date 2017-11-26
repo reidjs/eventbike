@@ -14,6 +14,18 @@ class Api::EventsController < ApplicationController
   end 
 
   def create 
+    @event = Event.new(event_params)
+    if @event.save
+      render `api/events/#{@event.id}`
+    else 
+      render @event.errors.full_messages, status: 422
+    end 
+  end 
+
+  private
+
+  def event_params
+    params.require(:event).permit(:title, :details)
   end 
 
 end

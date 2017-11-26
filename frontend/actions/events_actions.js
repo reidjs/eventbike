@@ -4,6 +4,7 @@ export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const REGISTER_EVENT = "REGISTER_EVENT";
+export const UNREGISTER_EVENT = "UNREGISTER_EVENT";
 
 
 export const receiveEvents = (events) => {
@@ -13,7 +14,7 @@ export const receiveEvents = (events) => {
   })
 }
 export const receiveEvent = (event) => {
-  console.log("event received",event)
+  // console.log("event received",event)
   return ({
     type: RECEIVE_EVENT,
     event
@@ -26,6 +27,13 @@ export const receiveRegistration = (registration) => {
   return ({
     type: REGISTER_EVENT,
     registration 
+  })
+}
+
+export const unRegisterEvent = (event) => {
+  return ({
+    type: UNREGISTER_EVENT,
+    event
   })
 }
 
@@ -61,3 +69,9 @@ export const requestRegistration = (eventId, userId) => dispatch => (
       dispatch(receiveRegistration(res))
     ))
 );
+
+//The response has an event in it so it can tell the user the event they unregistered from.
+export const removeRegistration = (eventId, userId) => dispatch => (
+  EventsAPIUtil.deleteRegistration(eventId, userId)
+    .then(res => dispatch(unRegisterEvent(res)))
+)

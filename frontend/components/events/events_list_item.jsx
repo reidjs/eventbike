@@ -5,7 +5,7 @@ import EventsBookmarkButton from './events_bookmark_button';
 import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
 import EventsRegisterButton from './events_register_button';
 
-const EventsListItem = ({event, register, bookmark, currentUser}) => {
+const EventsListItem = ({event, unregister, register, bookmark, currentUser}) => {
   const handleBookmark = (e) => {
     e.preventDefault();
     bookmark();
@@ -35,6 +35,7 @@ const EventsListItem = ({event, register, bookmark, currentUser}) => {
               <EventsRegisterButton 
                                   event={event}
                                   register={register}
+                                  unregister={unregister}
                                   currentUser={currentUser}/>
               <button onClick={handleBookmark}><BookmarkBorder /></button>
             </div>
