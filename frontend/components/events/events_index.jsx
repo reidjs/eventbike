@@ -1,5 +1,6 @@
 import React from 'react';
-import EventsListItem from './events_list_item';
+// import EventsListItem from './events_list_item';
+import EventsShowContainer from './events_show_container';
 class EventsIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -21,12 +22,7 @@ class EventsIndex extends React.Component {
     let myClass
     this.loading ? (myClass = "loader") : (myClass = "showEvents")
     let eventsList = this.props.events.map((event) => {
-      return <EventsListItem 
-                key={event.title} 
-                event={event} 
-                currentUser={this.props.currentUser}
-                register={this.props.register}
-                bookmark={this.props.bookmark}/>
+      return <EventsShowContainer key={event.title} event={event} />
     })
     return (
       <div className="events-index-container">
@@ -39,5 +35,11 @@ class EventsIndex extends React.Component {
     )
   }
 }
+// return <EventsListItem 
+//           key={event.title} 
+//           event={event} 
+//           currentUser={this.props.currentUser}
+//           register={this.props.register}
+//           bookmark={this.props.bookmark}/>
 
 export default EventsIndex;

@@ -4,7 +4,9 @@ import { withRouter } from 'react-router-dom';
 import UsersShow from './users_show';
 
 const mapStateToProps = (state, ownProps) => {
+  const user = state.session.currentUser
   return {
+    user 
     //will be state.entities.user
   }
 }
