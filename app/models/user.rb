@@ -10,15 +10,23 @@ class User < ApplicationRecord
   class_name: :Event,
   primary_key: :id,
   foreign_key: :creator_id
-  # has_many :bookmarks
 
   has_many :registrations,
   class_name: :Registration,
   primary_key: :id,
   foreign_key: :user_id
 
+  has_many :bookmarks,
+  class_name: :Bookmark,
+  primary_key: :id,
+  foreign_key: :user_id
+
   has_many :attending_events,
   through: :registrations,
+  source: :event
+
+  has_many :bookmarked_events,
+  through: :bookmarks,
   source: :event
 
 

@@ -13,6 +13,16 @@ class Event < ApplicationRecord
   primary_key: :id,
   foreign_key: :event_id
 
+  has_many :bookmarks,
+  class_name: :Bookmark,
+  primary_key: :id,
+  foreign_key: :event_id
+
+  #this is probably unnecessary.
+  has_many :potential_attendees,
+  through: :bookmarks,
+  source: :user
+
   has_many :attendees,
   through: :registrations,
   source: :user

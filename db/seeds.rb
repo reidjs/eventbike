@@ -29,3 +29,11 @@ registration3 = Registration.new(user_id: user2.id, event_id: event1.id)
 registration1.save 
 registration2.save
 registration3.save
+#reidjs has bookmarked the first two events 
+#bob bookmarked the first event only
+bookmark1 = Bookmark.new(user_id: user1.id, event_id: event1.id)
+bookmark2 = Bookmark.new(user_id: user1.id, event_id: event2.id)
+bookmark3 = Bookmark.new(user_id: user2.id, event_id: event1.id)
+bookmark1.save
+bookmark2.save
+bookmark3.save
