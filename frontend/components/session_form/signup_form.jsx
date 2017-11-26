@@ -37,13 +37,13 @@ class SignupForm extends React.Component {
         <div className="show-username">
         <label>username</label><br/>
           <p>{this.props.username}</p>
-          <button className="edit-button" onClick={this.handleBack}><ModeEdit />
+          <button className="edit-button" type="reset" onClick={this.handleBack}><ModeEdit />
 </button>
         </div>
         <div className="input-label">
           <label>Password</label>
         </div>
-        <input type="password" placeholder="Enter your password." value={this.state.password} onChange={this.handleChange}/>
+        <input type="password" placeholder="Enter your password." value={this.state.password} onChange={this.handleChange} autoFocus/>
         <ul>
           {errorList}
         </ul>

@@ -1,5 +1,7 @@
 import React from 'react';
 import Done from 'material-ui-icons/Done';
+import { ProtectedFunction } from '../../util/route_util';
+import EventsSigninModal from './events_signin_modal';
 //warning: O(n) operation
 // const userAttendingEvent = (eventId, user) => {
 //   let numEvent = user.attending_events.length 
@@ -11,10 +13,11 @@ import Done from 'material-ui-icons/Done';
 class EventsRegisterButton extends React.Component {
   constructor(props){
     super(props)
+    
     // debugger
     this.userIsRegistered = this.userIsRegistered.bind(this);
     this.handleRegistration = this.handleRegistration.bind(this);
-    
+    this.showModal = true;    
   }
   userIsRegistered() {
 
@@ -38,15 +41,29 @@ class EventsRegisterButton extends React.Component {
   // }
   handleRegistration(e) {
     e.preventDefault();
-    // debugger
-    this.props.register(this.props.event.id, this.props.currentUser.id);  
+    //logic here to make sure there is a logged in user 
+    if (this.props.currentUser) {
+      this.props.register(this.props.event.id, this.props.currentUser.id);  
+    } else {
+      // render modal 
+      console.log(this.showModal)
+      this.showModal = false;
+
+    }
     // console.log('Register')
   }
+
   render() {
     let myClass
     this.userIsRegistered() ? myClass="active" : myClass = "";
+    let myTest = this.showModal ? "true" : null
+    console.log("test", myTest)
+    // debugger
     return (
-      <button className={myClass} onClick={this.handleRegistration}><Done /></button>
+      <span>
+        <button className={myClass} onClick={this.handleRegistration}><Done /></button>
+        <EventsSigninModal open={myTest}/>
+      </span>
     )
   }
 }

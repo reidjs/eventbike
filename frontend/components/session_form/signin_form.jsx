@@ -63,7 +63,7 @@ class SigninForm extends React.Component {
           <label>Username</label><br/>
         </div>
         <div className="input-textbox">
-          <input type="text" placeholder="Enter your name." value={this.state.username} onChange={this.handleChange}/>
+          <input type="text" placeholder="Enter your name." value={this.state.username} onChange={this.handleChange} autoFocus/>
           <ul>
             {errorList}
           </ul>

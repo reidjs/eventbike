@@ -1,7 +1,6 @@
 //This needs to be the show show container with basic information 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ProtectedRoute } from '../../util/route_util';
 import EventsBookmarkButton from './events_bookmark_button';
 import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
 import EventsRegisterButton from './events_register_button';

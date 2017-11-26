@@ -29,6 +29,14 @@ const Protected = ({ component: Component, path, loggedIn}) => (
   )} />
 );
 
+const ProtectedFunc = (func, loggedIn) => (
+  loggedIn ? (
+    func()
+  ) : (
+    flash('Sorry, you must be logged in to do that')
+  )
+) 
+
 
 
 const mapStateToProps = state => (
@@ -38,3 +46,7 @@ const mapStateToProps = state => (
 export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
 
 export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected));
+
+export const ProtectedFunction = connect(mapStateToProps, null)(ProtectedFunc)
+
+// export const ProtectedFunction = withRouter(connect(mapStateToProps, null)(ProtectedFunc))
