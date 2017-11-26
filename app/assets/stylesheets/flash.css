@@ -1,18 +1,16 @@
 div.flash-container {
   padding: 10px;
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
   z-index: 2;
-  width: 600px; }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
 
 .flash-container ul {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
+  width: 600px;
   height: 20%; }
 
 .flash-container ul li {
