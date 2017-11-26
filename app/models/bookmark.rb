@@ -5,3 +5,4 @@ class Bookmark < ApplicationRecord
   belongs_to :event
 
 end
+ 

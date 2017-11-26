@@ -75,3 +75,4 @@ export const removeRegistration = (eventId, userId) => dispatch => (
   EventsAPIUtil.deleteRegistration(eventId, userId)
     .then(res => dispatch(unRegisterEvent(res)))
 )
+

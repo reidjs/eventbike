@@ -5,7 +5,8 @@ import {
   RECEIVE_CURRENT_USER,
   RECEIVE_USERNAME, 
   RECEIVE_NEW_USERNAME,
-  RESET_POTENTIAL_USER
+  RESET_POTENTIAL_USER,
+  BOOKMARK_EVENT
 } from '../actions/session_actions';
 
 import {
@@ -24,7 +25,8 @@ const sessionReducer = (state = _nullUser, action) => {
   let potentialUser;
   let newUserFlag;
   let newState;
-  let updated_events_attending
+  let updated_events_attending;
+  let updated_bookmarks;
   switch(action.type) {
     case RESET_POTENTIAL_USER:
       // console.log('reset user!')
@@ -48,32 +50,20 @@ const sessionReducer = (state = _nullUser, action) => {
       potentialUser = action.username.username //refactor this
       return merge({}, { potentialUser });
     case REGISTER_EVENT:
-      // console.log('register session user')
-      // debugger
       newState = merge({}, state)
       updated_events_attending = action.registration.attending_events 
       newState.currentUser.attending_events = updated_events_attending;
-      // debugger;
       return newState;
-    //I suspect this may be unnecessary
     case UNREGISTER_EVENT:
       newState = merge({}, state)
-      //index to remove
-      // const idx = newState
-      //               .currentUser
-      //               .attending_events
-      //               .indexOf(action.event.id)
-      //remove the index of the event and store in variable
-      // debugger
-      // updated_events_attending = newState
-      //               .currentUser
-      //               .attending_events
-      //               .splice(idx, 1)
-      //update the events our user is attending
-      // debugger
-      // action.attending_events
       updated_events_attending = action.registration.attending_events       
       newState.currentUser.attending_events = updated_events_attending;
+      return newState;
+    case BOOKMARK_EVENT:
+      newState = merge({}, state)
+      //merge the updated bookmark array with the current user
+      updated_bookmarks = [...action.bookmarks];
+      newState.currentUser.bookmarked_events = updated_bookmarks;
       return newState;
     default:
       return state;

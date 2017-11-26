@@ -8,7 +8,7 @@ import EventsRegisterButton from './events_register_button';
 const EventsListItem = ({event, unregister, register, bookmark, currentUser}) => {
   const handleBookmark = (e) => {
     e.preventDefault();
-    bookmark();
+    bookmark(event.id);
     console.log('bookmark')
   }
   const categoryGoesHere = "#";

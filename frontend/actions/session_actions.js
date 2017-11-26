@@ -8,6 +8,7 @@ export const RECEIVE_USERNAME = 'RECEIVE_USERNAME';
 export const RECEIVE_NEW_USERNAME = 'RECEIVE_NEW_USERNAME';
 export const RESET_POTENTIAL_USER = 'RESET_POTENTIAL_USER';
 export const RESET_ERRORS = 'RESET_POTENTIAL_USER';
+export const BOOKMARK_EVENT = 'BOOKMARK_EVENT'
 
 export const receiveCurrentUser = currentUser => {
   // console.log('receive current user', currentUser)
@@ -15,8 +16,13 @@ export const receiveCurrentUser = currentUser => {
   type: RECEIVE_CURRENT_USER,
   currentUser
 })};
-
-
+//receives the current user's bookmarks 
+export const receiveBookmark = (bookmarks) => {
+  return ({
+    type: BOOKMARK_EVENT,
+    bookmarks
+  })
+}
 export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
@@ -89,4 +95,9 @@ export const lookup = (username) => dispatch => (
         )
       }
     })
+)
+
+export const requestBookmark = (event_id) => dispatch => (
+  SessionAPIUtil.bookmark(event_id)
+    .then(res => dispatch(receiveBookmark(res)))
 )
