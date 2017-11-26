@@ -2,6 +2,8 @@ import React from 'react';
 import Done from 'material-ui-icons/Done';
 import { ProtectedFunction } from '../../util/route_util';
 import EventsSigninModal from './events_signin_modal';
+import { flashMessage } from 'redux-flash';
+
 class EventsRegisterButton extends React.Component {
   constructor(props){
     super(props)
@@ -22,22 +24,7 @@ class EventsRegisterButton extends React.Component {
       return false;
     }
   }
-  componentWillUpdate(nextProps, nextState) {
-    console.log(this.props.eventsAttending);
-    console.log("nextState:", nextState)
-    console.log("nextProps:", nextProps.currentUser.attending_events);
-  }
 
-  // componentWillUpdate(nextProps, nextState) {
-  //   console.log('component will update')
-  //   this.userRegistered = this.userIsRegistered();
-    
-  // }
-  // componentWillReceiveProps(nextProps) {
-    // if (nextProps.currentUser.attending_events !== this.props.currentUser.attending_events) {
-    //   console.log('new props received')
-    // }
-  // }
   handleRegistration(e) {
     e.preventDefault();
     //logic here to make sure there is a logged in user 
@@ -53,7 +40,8 @@ class EventsRegisterButton extends React.Component {
       }
     } else {
       // render modal 
-      console.log('You must be logged in to register')
+      // console.log()
+      dispatch(flashMessage('You must be logged in to register'))
       // console.log(this.showModal)
       // this.showModal = false;
 
@@ -74,19 +62,5 @@ class EventsRegisterButton extends React.Component {
     )
   }
 }
-// const EventsRegisterButton = ({event, register, currentUser}) => {
-//   const handleRegistration = (e) => {
-//     e.preventDefault();
-//     // debugger
-//     register(event.id, currentUser.id);
-//     // console.log('Register')
-//   }
-//   //check if user is already registered 
-
-  
-//   return (
-//     <button onClick={handleRegistration}><Done /></button>
-//   )
-// }
 
 export default EventsRegisterButton;

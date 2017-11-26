@@ -54,7 +54,7 @@ class LoginForm extends React.Component {
   }
   render() {
     const errorList = this.props.errors.session.map((err) => {
-      return <li>{err}</li>
+      return <li key={err}>{err}</li>
     })
     return(
       <form onSubmit={this.handleSubmit}>
