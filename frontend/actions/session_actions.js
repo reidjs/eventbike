@@ -101,3 +101,8 @@ export const requestBookmark = (event_id) => dispatch => (
   SessionAPIUtil.bookmark(event_id)
     .then(res => dispatch(receiveBookmark(res)))
 )
+
+export const requestUnBookmark = (event_id) => dispatch => (
+  SessionAPIUtil.unbookmark(event_id)
+    .then(res => dispatch(receiveBookmark(res)))
+)

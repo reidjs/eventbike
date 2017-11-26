@@ -5,12 +5,12 @@ import EventsBookmarkButton from './events_bookmark_button';
 import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
 import EventsRegisterButton from './events_register_button';
 
-const EventsListItem = ({event, unregister, register, bookmark, currentUser}) => {
-  const handleBookmark = (e) => {
-    e.preventDefault();
-    bookmark(event.id);
-    console.log('bookmark')
-  }
+const EventsListItem = ({event, unregister, register, bookmark, unbookmark, currentUser}) => {
+  // const handleBookmark = (e) => {
+  //   e.preventDefault();
+  //   bookmark(event.id);
+  //   console.log('bookmark')
+  // }
   const categoryGoesHere = "#";
   const categoryPath = `events/${categoryGoesHere}`
   const bookmarkPath = `events/${event.id}/bookmark`
@@ -37,7 +37,11 @@ const EventsListItem = ({event, unregister, register, bookmark, currentUser}) =>
                                   register={register}
                                   unregister={unregister}
                                   currentUser={currentUser}/>
-              <button onClick={handleBookmark}><BookmarkBorder /></button>
+              <EventsBookmarkButton
+                                  event={event}
+                                  bookmark={bookmark}
+                                  unbookmark={unbookmark}
+                                  currentUser={currentUser}/>
             </div>
           </div>
           </div>
@@ -48,6 +52,7 @@ const EventsListItem = ({event, unregister, register, bookmark, currentUser}) =>
     </li>
   )
 }
+{/* <button onClick={handleBookmark}><BookmarkBorder /></button> */}
 {/* <ProtectedRoute path={bookmarkPath} component={EventsBookmarkButton}/> */}
 {/* <button onClick={handleRegister}>RegisterIcon</button> */}
 

@@ -11,11 +11,11 @@ class Api::BookmarksController < ApplicationController
 
   def destroy 
     if logged_in?
-      @bookmark = Bookmark.find_by(event_id: params[:id])
+      @bookmark = Bookmark.find_by(user_id: current_user.id, event_id: params[:id])
       if @bookmark 
         @event = @bookmark.event 
         @bookmark.destroy
-        render '/api/events/show'
+        render json: current_user.bookmarked_events.pluck(:id)
       else 
         render json: ['Could not find bookmark'], status: 404
       end 

@@ -50,8 +50,8 @@ export const unbookmark = (event_id) => {
   return (
     $.ajax({
       method: 'DELETE',
-      url: '/api/bookmarks',
-      data: {event_id}
+      url: `/api/bookmarks/${event_id}`,
+      
     })
   )
 }
