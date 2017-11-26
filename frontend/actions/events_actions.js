@@ -30,10 +30,10 @@ export const receiveRegistration = (registration) => {
   })
 }
 
-export const unRegisterEvent = (event) => {
+export const unRegisterEvent = (registration) => {
   return ({
     type: UNREGISTER_EVENT,
-    event
+    registration
   })
 }
 

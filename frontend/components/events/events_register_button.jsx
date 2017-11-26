@@ -2,18 +2,9 @@ import React from 'react';
 import Done from 'material-ui-icons/Done';
 import { ProtectedFunction } from '../../util/route_util';
 import EventsSigninModal from './events_signin_modal';
-//warning: O(n) operation
-// const userAttendingEvent = (eventId, user) => {
-//   let numEvent = user.attending_events.length 
-//   user.attending_events.forEach((event) => {
-//     if (event === eventId)
-//       return true 
-//   })
-// }
 class EventsRegisterButton extends React.Component {
   constructor(props){
     super(props)
-    
     // debugger
     this.userIsRegistered = this.userIsRegistered.bind(this);
     this.handleRegistration = this.handleRegistration.bind(this);
@@ -22,11 +13,19 @@ class EventsRegisterButton extends React.Component {
   userIsRegistered() {
 
     if (this.props.currentUser &&
-        this.props.currentUser.attending_events.indexOf(this.props.event.id) >= 0) {
+        this.props
+        .currentUser
+        .attending_events
+        .indexOf(this.props.event.id) >= 0) {
       return true;
     } else {
       return false;
     }
+  }
+  componentWillUpdate(nextProps, nextState) {
+    console.log(this.props.eventsAttending);
+    console.log("nextState:", nextState)
+    console.log("nextProps:", nextProps.currentUser.attending_events);
   }
 
   // componentWillUpdate(nextProps, nextState) {
@@ -45,9 +44,12 @@ class EventsRegisterButton extends React.Component {
     if (this.props.currentUser) {
       switch(this.userIsRegistered()) {
         case false:
-          this.props.register(this.props.event.id, this.props.currentUser.id); 
+          this.props
+            .register(this.props.event.id, this.props.currentUser.id); 
+          return
         case true:
           this.props.unregister(this.props.event.id, this.props.currentUser.id); 
+          return 
       }
     } else {
       // render modal 

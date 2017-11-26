@@ -35,11 +35,12 @@ class Api::RegistrationsController < ApplicationController
     end 
     registration.destroy
     #return the event details (event show page)
-    @event = Event.find_by(id: params[:event_id])
+    event = Event.find_by(id: params[:event_id])
+    user = User.find_by(id: params[:id])
     # redirect_to template: `events/show`
     # redirect_to template: `events/#{@event.id}`
     # render template: `api/events/show`
-    render :delete
+    render json: {"eventId": event.id, "attendees": event.attendees.pluck(:id), "attending_events": user.attending_events.pluck(:id)}
   end 
 
   def delete

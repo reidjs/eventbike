@@ -6,9 +6,11 @@ import EventsListItem from './events_list_item';
 const mapStateToProps = (state, ownProps) => {
   const currentUser = state.session.currentUser;
   const event = ownProps.event;
+  const eventsAttending = state.session.currentUser.events_attending;
   return {
     currentUser, 
-    event
+    event,
+    eventsAttending
   }
 };
 

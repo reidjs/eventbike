@@ -59,18 +59,21 @@ const sessionReducer = (state = _nullUser, action) => {
     case UNREGISTER_EVENT:
       newState = merge({}, state)
       //index to remove
-      const idx = newState
-                    .currentUser
-                    .attending_events
-                    .indexOf(action.event.id)
+      // const idx = newState
+      //               .currentUser
+      //               .attending_events
+      //               .indexOf(action.event.id)
       //remove the index of the event and store in variable
       // debugger
-      updated_events_attending = newState
-                    .currentUser
-                    .attending_events
-                    .splice(idx, 1)
+      // updated_events_attending = newState
+      //               .currentUser
+      //               .attending_events
+      //               .splice(idx, 1)
       //update the events our user is attending
-      newState.currentUser.attending_events = [...updated_events_attending];
+      // debugger
+      // action.attending_events
+      updated_events_attending = action.registration.attending_events       
+      newState.currentUser.attending_events = updated_events_attending;
       return newState;
     default:
       return state;

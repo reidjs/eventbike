@@ -30,9 +30,9 @@ const eventsReducer = (state = _nullEvents, action) => {
       // debugger;
       return newState;
     case UNREGISTER_EVENT:
-      event_id = action.event.id;
+      event_id = action.registration.eventId;
       newState = merge({}, state)  
-      newState[event_id] = action.event //update event      
+      newState[event_id].attendees = [...action.registration.attendees] //update event
       return newState 
     default: 
       return state;
