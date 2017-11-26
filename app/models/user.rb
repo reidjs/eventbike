@@ -16,10 +16,10 @@ class User < ApplicationRecord
   primary_key: :id,
   foreign_key: :user_id
 
-  has_many :bookmarks,
-  class_name: :Bookmark,
-  primary_key: :id,
-  foreign_key: :user_id
+  has_many :bookmarks
+  # class_name: :Bookmark,
+  # primary_key: :id,
+  # foreign_key: :user_id
 
   has_many :attending_events,
   through: :registrations,

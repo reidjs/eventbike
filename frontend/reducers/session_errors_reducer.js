@@ -6,13 +6,14 @@ import {
   RECEIVE_NEW_USERNAME,
   RESET_ERRORS
 } from '../actions/session_actions';
-
+//somehow undefined is getting in here as the action
 export default (state = [], action) => {
   // console.log(action, state)
   // debugger
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_SESSION_ERRORS:
+      debugger 
       return action.errors;
     case RECEIVE_CURRENT_USER:
       return []; //may cause issues
