@@ -26,6 +26,9 @@ class Api::RegistrationsController < ApplicationController
   end 
 
   def destroy 
+    #ask cynthia how she is deleting tags 
+    debugger
+
   end 
 
 end

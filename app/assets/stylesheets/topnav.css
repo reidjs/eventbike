@@ -35,6 +35,10 @@ div.user-dropdown:hover ul.user-dropdown-content {
   transition: visibility 0.8s linear; }
 
 div.submenu {
+  display: none; }
+
+div.user-dropdown:hover div.submenu {
+  display: block;
   opacity: 0;
   background: yellow;
   position: absolute;

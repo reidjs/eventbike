@@ -49,6 +49,11 @@ div.user-dropdown:hover ul.user-dropdown-content {
 //dropdown
 //to allow more forgiving mouse movement;
 div.submenu {
+  display: none;
+}
+
+div.user-dropdown:hover div.submenu {
+  display:block;
   opacity: 0;
   background: yellow;
   position: absolute;
@@ -116,6 +121,8 @@ div.user-dropdown > a:first-child {
 div.user-dropdown:hover ul.user-dropdown-content{
   animation: fadeIn 0.3s forwards;
 }
+
+
 
 @keyframes fadeIn {
   0% { opacity: 0; }

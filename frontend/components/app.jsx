@@ -2,7 +2,7 @@ import React from 'react';
 import SessionFormContainer from './session_form/session_form_container';
 import TopNavContainer from './top_nav/top_nav_container';
 import SessionModalForm from './session_form/session_modal_form';
-import NewEventForm from './event_form/new_event_form';
+import NewEventContainer from './events/new_events/new_event_container';
 import FlashContainer from './flash/flash_container';
 // import Greeting from './greeting';
 import Footer from './footer';
@@ -37,7 +37,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={SplashContainer}/>
             <Route exact path="/events" component={EventsIndexContainer}/>
-            <ProtectedRoute path="/events/new" component={NewEventForm}/>
+            <ProtectedRoute path="/events/new" component={NewEventContainer}/>
             <AuthRoute path="/signin" component={SessionFormContainer} />
             <ProtectedRoute path="/users/" component={UsersShowContainer}/>
           </Switch>

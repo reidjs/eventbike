@@ -23,4 +23,13 @@ export const postRegistration = (eventId, userId) => {
   )
 }
 
+export const deleteRegistration = (eventId, userId) => {
+  return (
+    $.ajax({
+      method:'DELETE',
+      url: `/api/events/${eventId}/registrations/${userId}`
+    })
+  )
+}
+
 //fetch events by category 
