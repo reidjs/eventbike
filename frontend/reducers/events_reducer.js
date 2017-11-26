@@ -24,7 +24,8 @@ const eventsReducer = (state = _nullEvents, action) => {
       // debugger
       const event_id = action.registration.eventId;
       newState = merge({}, state)
-      newState[event_id].event_attendees = action.registration.event_attendees //update event
+      newState[event_id].attendees = [...action.registration.attendees] //update event
+      // debugger;
       return newState;
     default: 
       return state;

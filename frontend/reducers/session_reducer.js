@@ -49,7 +49,7 @@ const sessionReducer = (state = _nullUser, action) => {
       // console.log('register session user')
       // debugger
       newState = merge({}, state)
-      const updated_events_attending = action.registration.user_attending_events 
+      const updated_events_attending = action.registration.attending_events 
       newState.currentUser.attending_events = updated_events_attending;
       // debugger;
       return newState;
