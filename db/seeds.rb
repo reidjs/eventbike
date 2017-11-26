@@ -11,11 +11,15 @@ user3 = User.new(username: 'charlie', password: '123456')
 user1.save
 user2.save
 user3.save
-#reidjs created both events
+#reidjs created first three events, bob created fourth
 event1 = Event.new(title: 'A fun event', creator_id: user1.id)
 event2 = Event.new(title: 'Another super boring event', creator_id: user1.id)
+event3 = Event.new(title: 'Another eve', creator_id: user1.id)
+event4 = Event.new(title: 'Another supdsf event asdf hi', creator_id: user2.id)
 event1.save
 event2.save
+event3.save
+event4.save
 #reidjs is registered for both events
 #bob is registered for the first event
 #charlie is registered for no events 

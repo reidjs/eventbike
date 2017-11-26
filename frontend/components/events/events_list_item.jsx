@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 import { ProtectedRoute } from '../../util/route_util';
 import EventsBookmarkButton from './events_bookmark_button';
 import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
-import Done from 'material-ui-icons/Done'; //registration button
-
+// import Done from 'material-ui-icons/Done'; //registration button
+import EventsRegisterButton from './events_register_button';
 
 const EventsListItem = ({event, register, bookmark, currentUser}) => {
-  const handleRegistration = (e) => {
-    e.preventDefault();
-    // debugger
-    register(event.id, currentUser.id);
-    console.log('Register')
-  }
+  // const handleRegistration = (e) => {
+  //   e.preventDefault();
+  //   // debugger
+  //   register(event.id, currentUser.id);
+  //   console.log('Register')
+  // }
   const handleBookmark = (e) => {
     e.preventDefault();
     bookmark();
@@ -40,7 +40,10 @@ const EventsListItem = ({event, register, bookmark, currentUser}) => {
             <div className="event-footer">
               <Link to={categoryPath}>#Category</Link>
               <div className="event-container-actions">
-              <button onClick={handleRegistration}><Done /></button>
+              <EventsRegisterButton 
+                                  event={event}
+                                  register={register}
+                                  currentUser={currentUser}/>
               <button onClick={handleBookmark}><BookmarkBorder /></button>
             </div>
           </div>

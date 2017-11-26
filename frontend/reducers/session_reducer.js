@@ -8,6 +8,10 @@ import {
   RESET_POTENTIAL_USER
 } from '../actions/session_actions';
 
+import {
+  REGISTER_EVENT
+} from '../actions/events_actions'; //to update the user when they register
+
 const _nullUser = Object.freeze({
   currentUser: null,
   potentialUser: null,
@@ -40,7 +44,15 @@ const sessionReducer = (state = _nullUser, action) => {
     case RECEIVE_USERNAME:
       // console.log("Received username", action.username.username)
       potentialUser = action.username.username //refactor this
-      return merge({}, { potentialUser })
+      return merge({}, { potentialUser });
+    case REGISTER_EVENT:
+      // console.log('register session user')
+      // debugger
+      newState = merge({}, state)
+      const updated_events_attending = action.registration.user_attending_events 
+      newState.currentUser.attending_events = updated_events_attending;
+      // debugger;
+      return newState;
     default:
       return state;
   }

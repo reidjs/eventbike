@@ -17,6 +17,10 @@ class User < ApplicationRecord
   primary_key: :id,
   foreign_key: :user_id
 
+  has_many :attending_events,
+  through: :registrations,
+  source: :event
+
 
   after_initialize :ensure_session_token
 
