@@ -36,6 +36,7 @@ class TopNavDropDown extends React.Component {
       return (
         <div className="user-dropdown">
           <Link to={`/users/${userId}`}>{this.props.currentUser.username}</Link>
+          <div className="submenu">{/*Hacky way to have more forgiving dropdown mouse movement*/}</div>
           <ul className="user-dropdown-content">
           {/* //These links should be their own components and display a circle representing their quantity */}
             <li><Link to={`/users/${userId}/bookmarks`}>Saved Events</Link></li>

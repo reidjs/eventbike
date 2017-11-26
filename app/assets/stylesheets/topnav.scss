@@ -47,6 +47,20 @@ div.user-dropdown:hover ul.user-dropdown-content {
   transition: visibility 0.8s linear;
 }
 //dropdown
+//to allow more forgiving mouse movement;
+div.submenu {
+  opacity: 0;
+  background: yellow;
+  position: absolute;
+  // float: left;
+  // top: 0;
+  // left: 20px;
+  
+  z-index: 3;
+  width: 225px;
+  height: 100px;
+  transform: translate(-40px);
+}
 
 div.top-nav-right > a{
   // background: magenta;

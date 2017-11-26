@@ -34,6 +34,15 @@ div.user-dropdown:hover ul.user-dropdown-content {
   background: white;
   transition: visibility 0.8s linear; }
 
+div.submenu {
+  opacity: 0;
+  background: yellow;
+  position: absolute;
+  z-index: 3;
+  width: 225px;
+  height: 100px;
+  transform: translate(-40px); }
+
 div.top-nav-right > a {
   padding: 20px; }
 

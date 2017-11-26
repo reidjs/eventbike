@@ -7,6 +7,7 @@ const EventsRegisterButton = ({event, register, currentUser}) => {
     register(event.id, currentUser.id);
     // console.log('Register')
   }
+  
   return (
     <button onClick={handleRegistration}><Done /></button>
   )
