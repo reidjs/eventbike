@@ -9,6 +9,14 @@ class Api::BookmarksController < ApplicationController
     end 
   end 
 
+  def index 
+    if logged_in?
+      render json: current_user.bookmarked_events
+    else 
+      render json: ["Sorry, must be logged in to retrieve your bookmarks"], status: 422
+    end 
+  end 
+
   def destroy 
     if logged_in?
       @bookmark = Bookmark.find_by(user_id: current_user.id, event_id: params[:id])

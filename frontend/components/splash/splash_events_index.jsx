@@ -1,6 +1,7 @@
 import React from 'react'
 // import EventsIndexContainer from '../events/events_index_container';
-import EventsShowContainer from '../events/events_show_container';
+// import EventsShowContainer from '../events/events_show_container';
+import GenericEventsShowList from '../generic_events_show_list';
 class SplashEventsIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -23,20 +24,18 @@ class SplashEventsIndex extends React.Component {
     // let myClass2;
     this.loading ? (myClass = "loader") : (myClass = "showEvents");
     // this.props.squares ? myClass2="events-list squares" : myClass2="events-list";
-    let eventsList = this.props.events.map((event) => {
-      return (
-        <div className="col">
-          <EventsShowContainer key={event.title} event={event} square={true} />
-        </div>
-      )
-    })
+    // let eventsList = this.props.events.map((event) => {
+    //   return (
+    //     <div className="col">
+    //       <EventsShowContainer key={event.title} event={event} square={true} />
+    //     </div>
+    //   )
+    // })
     return (
       <div className="splash-index-container">
         <h1>Cycling events in San Francisco, California</h1>
         <div className={myClass}></div>
-        <div className="flex-grid">
-          {eventsList}
-        </div>
+        <GenericEventsShowList events={this.props.events}/>
       </div>  
     )
   }

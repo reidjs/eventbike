@@ -6,28 +6,18 @@ import Details from './details';
 class ShowEvent extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props)
     this.loading = true;
   }
   componentWillMount() {
-    // this.props.getevent(this.props.eventId);
     this.props.getevent(this.props.eventId);
-    
-    // this.event = this.props.event
-    // this.loading = false;
   }
   componentWillReceiveProps(nextProps) {
-    // debugger
     if (!this.props.event || this.props.event.id != nextProps.eventId) {
-      // loading = true;
-      // debugger
-
       this.props.getevent(this.props.eventId);
       this.loading = true
     } else {
       this.loading = false;
     }
-    // this.event = nextProps.event;
   }
   isLoading() {
     return (this.props.eventId !== this.props.event.id)
