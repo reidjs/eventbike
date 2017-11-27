@@ -39,5 +39,9 @@ span.card-actions .active {
 
   div.card-top {
     flex-direction: column; } }
+div.col div.card {
+  width: 400px;
+  height: 300px;
+  flex-direction: column; }
 
 /*# sourceMappingURL=card.css.map */

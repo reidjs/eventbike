@@ -11,8 +11,8 @@ const EventsListItem = ({event, unregister, square, register, bookmark, unbookma
   //   bookmark(event.id);
   //   console.log('bookmark')
   // }
-  let itemClass; 
-  square ? itemClass = "events-list-item" : itemClass = "events-list-item square";
+  let cardClass; 
+  square ? cardClass = "card square" : cardClass = "card";
   const categoryGoesHere = "#";
   const categoryPath = `events/${categoryGoesHere}`
   const bookmarkPath = `events/${event.id}/bookmark`
@@ -20,7 +20,7 @@ const EventsListItem = ({event, unregister, square, register, bookmark, unbookma
   const fillerVenue = "San Francisco Track"
   // <li className={itemClass}>
   return (
-      <div className="card">
+      <div className={cardClass}>
         <div className="card-top">
           <div className="card-img">
           </div>

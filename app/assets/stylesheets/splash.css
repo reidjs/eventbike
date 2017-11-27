@@ -90,8 +90,7 @@ div.flex-grid {
   flex-wrap: wrap; }
 
 div.col {
-  flex: 1;
-  padding: 100px; }
+  flex: 1; }
 
 .flex-grid {
   margin: 0 0 20px 0; }
