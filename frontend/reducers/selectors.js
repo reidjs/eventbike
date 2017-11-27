@@ -11,3 +11,9 @@ export const selectEvent = ({ events }, id) => {
 export const getAllEvents = ({ events }) => (
 	Object.keys(events).map(id => events[id])
 );
+
+//for bookmarks and tickets 
+//selects events that are in the array
+export const getAllEventsInArray = ({ events }, arr) => {
+
+}

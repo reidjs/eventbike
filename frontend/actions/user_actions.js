@@ -1,14 +1,15 @@
 import * as UserAPIUtil from '../util/user_api_util';
+import { RECEIVE_EVENTS } from './events_actions';
 export const RECEIVE_BOOKMARKS = 'RECEIVE_BOOKMARKS';
 export const RECEIVE_TICKETS = 'RECEIVE_TICKETS';
 
-export const receiveBookmarks = (bookmarkedEvents) => ({
-  type: RECEIVE_BOOKMARKS,
-  bookmarkedEvents
+export const receiveBookmarks = (events) => ({
+  type: RECEIVE_EVENTS,
+  events
 });
-export const receiveTickets = (registeredEvents) => ({
-  type: RECEIVE_TICKETS,
-  registeredEvents
+export const receiveTickets = (events) => ({
+  type: RECEIVE_EVENTS,
+  events
 });
 
 export const getBookmarks = () => dispatch => (

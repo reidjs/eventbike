@@ -17,7 +17,7 @@ const eventsReducer = (state = _nullEvents, action) => {
   let event_id;
   switch(action.type) {
     case RECEIVE_EVENTS:
-      return merge({}, state, action.events);
+      return merge({}, action.events);
     //Receive event removes all the other events from memory. 
     case RECEIVE_EVENT:
       // newState = merge({}, state);
@@ -38,8 +38,8 @@ const eventsReducer = (state = _nullEvents, action) => {
       return newState;
     case UNREGISTER_EVENT:
       event_id = action.registration.eventId;
-      newState = merge({}, state)  
-      newState[event_id].attendees = [...action.registration.attendees] //update event
+      newState = merge({}, state);  
+      newState[event_id].attendees = [...action.registration.attendees]; //update event
       return newState 
     default: 
       return state;

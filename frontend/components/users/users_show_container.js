@@ -1,16 +1,17 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { getBookmarks, getTickets } from '../../actions/user_actions';
+import { getAllEvents } from '../../reducers/selectors';
 import UsersShow from './users_show';
 import values from 'lodash/values';
 const mapStateToProps = (state, ownProps) => {
   const user = state.session.currentUser
-  const bookmarkedEvents = values(state.entities.bookmarks)
-  const registeredEvents = values(state.entities.tickets)
+  // const bookmarkedEvents = values(state.entities.bookmarks)
+  // const registeredEvents = values(state.entities.tickets)
+  const events = values(state.entities.events);
   return {
     user,
-    bookmarkedEvents,
-    registeredEvents
+    events
     //will be state.entities.user
   }
 }

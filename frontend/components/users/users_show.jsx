@@ -4,7 +4,7 @@ import {
   Route,
   Redirect,
   Switch,
-  Link,
+  NavLink,
   HashRouter
 } from 'react-router-dom';
 import { 
@@ -14,34 +14,37 @@ import {
 class UsersShow extends React.Component {
   constructor(props) {
     super(props);
+    this.events = props.events
     // this.state={bookmarkedEvents:{}}
   }
   componentWillMount() {
     this.props.getbookmarks();
     this.props.gettickets();
   }
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps.events);
+    // this.props.getbookmarks();
+    // this.props.gettickets();
+  }
   render() {
-    this.props.user.attending_events.map((event) => {
-      // return <EventsListItem
-      //   key={event.title}
-      //   event={}
-      // />
-    })
-    // <GenericEventsShowList events={this.props.bookmarkedEvents}/>
-    // debugger
+    const bookmarkPath = `/users/${this.props.user.id}/bookmarks`;
+    const ticketsPath = `/users/${this.props.user.id}/tickets`;
+    const myEventsPath = `/users/${this.props.user.id}/myevents`;
     return (
-      <div>
-        {this.props.user.username}
-        <Route path='/users/:id/bookmarks' render={routeProps => 
+      <div className="users-show-container">
+        <h1>{this.props.user.username}</h1>
+        <div className="users-show-nav-links">
+          <NavLink to={bookmarkPath}>Bookmarks</NavLink>
+          <NavLink to={ticketsPath}>Tickets</NavLink>
+          <NavLink to={myEventsPath}>My Events</NavLink>
+        </div>
+        <Route path={bookmarkPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
-              events={this.props.bookmarkedEvents}/>} />
+              events={this.props.events}/>} />
 
-        <Route path='/users/:id/tickets' render={routeProps => 
+        <Route path={ticketsPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
-              events={this.props.registeredEvents}/>} />
-        {/*fetch events user is attending*/}
-        {this.props.user.attending_events}
-        User information goes here
+              events={this.props.events}/>} />
       </div>  
     )
   }

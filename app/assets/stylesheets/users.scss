@@ -4,4 +4,24 @@
 // * {
 //   background: yellow;
 // }
+@import "util/variables.scss";
 
+div.users-show-container > h1 {
+  margin-top: 10px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 35px;
+}
+a {
+  padding: 0 10px;
+  color: $dark-grey;
+}
+a.active {
+  color: $light-black;
+  border-bottom: 4px solid $light-blue;
+}
+
+div.users-show-nav-links {
+  display: flex;
+  justify-content: center;
+}

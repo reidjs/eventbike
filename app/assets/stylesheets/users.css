@@ -1,3 +1,19 @@
+div.users-show-container > h1 {
+  margin-top: 10px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 35px; }
 
+a {
+  padding: 0 10px;
+  color: #666A73; }
+
+a.active {
+  color: #45494E;
+  border-bottom: 4px solid #0085cc; }
+
+div.users-show-nav-links {
+  display: flex;
+  justify-content: center; }
 
 /*# sourceMappingURL=users.css.map */
