@@ -1,0 +1,55 @@
+div.card {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 200px;
+}
+div.card-top {
+  width: 100%;
+  // height: 150px;
+  display: flex;
+  align-items: center;
+  // align-content: center;
+}
+
+div.card-footer {
+  // padding: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.card-details { 
+
+}
+
+div.card-img {
+  width: 200px;
+  height: 130px;
+  padding: 10px;
+  background-image: url("http://res.cloudinary.com/eventbike/image/upload/v1511497460/joe-neric-223562_okhigx.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.card-img img {
+  // width: 50%;
+  // height: 50%;
+}
+
+span.card-attendees {
+
+}
+
+span.card-actions .active{
+  color: green;
+}
+
+@media (max-width: 600px) {
+  div.card {
+    width: 400px;
+    height: 400px;
+  }
+  div.card-top {
+    flex-direction: column;
+  }
+}

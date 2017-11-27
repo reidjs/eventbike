@@ -18,36 +18,36 @@ const EventsListItem = ({event, unregister, register, bookmark, unbookmark, curr
   const fillerVenue = "San Francisco Track"
   return (
     <li>
-      <div className="event-container">
-        <div className="top-row">
-          <div className="event-container-img">
-
+      <div className="card">
+        <div className="card-top">
+          <div className="card-img">
           </div>
-          <div className="event-container-body">
-            <div>
+          <span className="card-details">
             <h3>{fillerDateTime}</h3>
             <h2>{event.title}</h2>
             <h4>{fillerVenue}</h4>
-            </div>
-            <div className="event-footer">
-              <Link to={categoryPath}>#Category</Link>
-              <div className="event-container-actions">
-              <EventsRegisterButton 
-                                  event={event}
-                                  register={register}
-                                  unregister={unregister}
-                                  currentUser={currentUser}/>
-              <EventsBookmarkButton
-                                  event={event}
-                                  bookmark={bookmark}
-                                  unbookmark={unbookmark}
-                                  currentUser={currentUser}/>
-            </div>
-          </div>
-          </div>
+          </span>
         </div>
+        <div className="card-footer">
+          <span className="card-attendees">
 
-          
+          </span>
+          <span>
+            <Link to={categoryPath}>#Category</Link>
+          </span>
+          <span className="card-actions">
+            <EventsRegisterButton 
+                                event={event}
+                                register={register}
+                                unregister={unregister}
+                                currentUser={currentUser}/>
+            <EventsBookmarkButton
+                                event={event}
+                                bookmark={bookmark}
+                                unbookmark={unbookmark}
+                                currentUser={currentUser}/>
+          </span>
+        </div>
       </div>
     </li>
   )
