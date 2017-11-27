@@ -1,3 +1,4 @@
+//This is for the small show containers, not the full size one.
 import { connect } from 'react-redux';
 import { requestRegistration, removeRegistration } from '../../actions/events_actions'
 import { requestBookmark, requestUnBookmark } from '../../actions/session_actions'

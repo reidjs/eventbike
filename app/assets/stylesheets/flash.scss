@@ -1,10 +1,10 @@
 div.flash-container {
   padding: 10px;
-  position: absolute;
+  position: fixed;
   // left: 50%;
   // -webkit-transform: translateX(-50%);
   // transform: translateX(-50%);
-  z-index: 2;
+  z-index: 4;
   width: 100%;
   display: flex;
   justify-content: center;
