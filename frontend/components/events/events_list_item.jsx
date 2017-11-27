@@ -13,23 +13,26 @@ const EventsListItem = ({event, unregister, square, register, bookmark, unbookma
   // }
   let cardClass; 
   square ? cardClass = "card square" : cardClass = "card";
+  const eventShowPath = `events/${event.id}`;
   const categoryGoesHere = "#";
-  const categoryPath = `events/${categoryGoesHere}`
-  const bookmarkPath = `events/${event.id}/bookmark`
-  const fillerDateTime = "Sun, Dec 5 6:00 PM"
-  const fillerVenue = "San Francisco Track"
+  const categoryPath = `events/${categoryGoesHere}`;
+  const bookmarkPath = `events/${event.id}/bookmark`;
+  const fillerDateTime = "Sun, Dec 5 6:00 PM";
+  const fillerVenue = "San Francisco Track";
   // <li className={itemClass}>
   return (
       <div className={cardClass}>
-        <div className="card-top">
-          <div className="card-img">
+        <Link to={eventShowPath}>
+          <div className="card-top">
+            <div className="card-img">
+            </div>
+            <span className="card-details">
+              <h3>{fillerDateTime}</h3>
+              <h2>{event.title}</h2>
+              <h4>{fillerVenue}</h4>
+            </span>
           </div>
-          <span className="card-details">
-            <h3>{fillerDateTime}</h3>
-            <h2>{event.title}</h2>
-            <h4>{fillerVenue}</h4>
-          </span>
-        </div>
+        </Link>
         <div className="card-footer">
           <span className="card-attendees">
 
