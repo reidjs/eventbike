@@ -5,19 +5,21 @@ import EventsBookmarkButton from './events_bookmark_button';
 import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
 import EventsRegisterButton from './events_register_button';
 
-const EventsListItem = ({event, unregister, register, bookmark, unbookmark, currentUser}) => {
+const EventsListItem = ({event, unregister, square, register, bookmark, unbookmark, currentUser}) => {
   // const handleBookmark = (e) => {
   //   e.preventDefault();
   //   bookmark(event.id);
   //   console.log('bookmark')
   // }
+  let itemClass; 
+  square ? itemClass = "events-list-item" : itemClass = "events-list-item square";
   const categoryGoesHere = "#";
   const categoryPath = `events/${categoryGoesHere}`
   const bookmarkPath = `events/${event.id}/bookmark`
   const fillerDateTime = "Sun, Dec 5 6:00 PM"
   const fillerVenue = "San Francisco Track"
+  // <li className={itemClass}>
   return (
-    <li>
       <div className="card">
         <div className="card-top">
           <div className="card-img">
@@ -49,9 +51,9 @@ const EventsListItem = ({event, unregister, register, bookmark, unbookmark, curr
           </span>
         </div>
       </div>
-    </li>
   )
 }
+// </li>
 {/* <button onClick={handleBookmark}><BookmarkBorder /></button> */}
 {/* <ProtectedRoute path={bookmarkPath} component={EventsBookmarkButton}/> */}
 {/* <button onClick={handleRegister}>RegisterIcon</button> */}

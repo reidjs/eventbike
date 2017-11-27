@@ -37,22 +37,20 @@ div.event-container-body h4 {
 div.events-sidenav {
   padding: 20px;
 }
-//hide sidenav if screen is too small
-@media (max-width: 600px) {
-  div.events-sidenav {
-    display: none;
-  }
-}
+
 //cycling events in san francisco california
 div.events-index-container h1 {
   font-size: 24px;
   margin-top: 20px;
   padding: 10px;
+  margin: 0 auto;
 }
 //side nav and events index container
 div.events-container {
   display: flex;
   background: $background-grey;
+  align-items: center;
+  justify-content: space-around;
 }
 //singular event container
 div.event-container {
@@ -118,4 +116,11 @@ div.event-container-actions {
 
 div.event-container-actions .active{
   color: green;
+}
+
+//hide sidenav if screen is too small
+@media (max-width: 600px) {
+  div.events-sidenav {
+    display: none;
+  }
 }

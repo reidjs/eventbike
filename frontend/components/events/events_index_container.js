@@ -5,11 +5,12 @@ import Events from './events';
 import values from 'lodash/values' //convert to array
 const mapStateToProps = (state, ownProps) => {
   //need the current user so that we can register them for events and check if already registered
-
+  // console.log(ownProps)
   return {
     //will be state.entities.events
     currentUser: state.session.currentUser,
-    events: values(state.entities.events)
+    events: values(state.entities.events),
+    noSideNav: ownProps.noSideNav, //for splash index
   }
 }
 

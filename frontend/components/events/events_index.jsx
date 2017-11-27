@@ -4,7 +4,7 @@ import EventsShowContainer from './events_show_container';
 class EventsIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.loading = true; //0: loading
+    this.loading = true;
     this.state={events: {}}
   }
   componentDidMount() {
@@ -19,8 +19,10 @@ class EventsIndex extends React.Component {
   }
   render() {
     // console.log(this.state.events)
-    let myClass
-    this.loading ? (myClass = "loader") : (myClass = "showEvents")
+    let myClass;
+    // let myClass2;
+    this.loading ? (myClass = "loader") : (myClass = "showEvents");
+    // this.props.squares ? myClass2="events-list squares" : myClass2="events-list";
     let eventsList = this.props.events.map((event) => {
       return <EventsShowContainer key={event.title} event={event} />
     })
@@ -28,8 +30,8 @@ class EventsIndex extends React.Component {
       <div className="events-index-container">
         <h1>Cycling events in San Francisco, California</h1>
         <div className={myClass}></div>
-        <ul>
-          {eventsList}
+        <ul className="events-list">
+          <li className="events-list-item">{eventsList}</li>
         </ul>
       </div>  
     )

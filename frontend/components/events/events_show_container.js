@@ -7,9 +7,12 @@ import EventsListItem from './events_list_item';
 const mapStateToProps = (state, ownProps) => {
   const currentUser = state.session.currentUser;
   const event = ownProps.event;
+  const square = ownProps.square;
+  // debugger
   return {
     currentUser, 
-    event
+    event, 
+    square
   }
 };
 
