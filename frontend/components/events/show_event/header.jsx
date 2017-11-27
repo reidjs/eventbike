@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({title, image_url, date}) => {
   return (
-    <div></div>
+    <div>
+      {title}
+      {image_url}
+      {date}
+    </div>
   )
 }
 

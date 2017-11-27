@@ -28,13 +28,24 @@ class ShowEvent extends React.Component {
       const image_url = "temp image url";
       const date = "temp date";
       const details = event.details;
+      const bookmark = this.props.bookmark;
+      const unbookmark = this.props.unbookmark;
+      const register = this.props.register;
+      const unregister = this.props.unregister;
+      const currentUser = this.props.currentUser;
       return (
         <div className="event-show-container">
           <Header 
                 title={title} 
                 image_url={image_url} 
                 date={date}/>
-          <ActionBar />
+          <ActionBar 
+                event={event} 
+                currentUser={currentUser}
+                bookmark={bookmark}
+                unbookmark={unbookmark}
+                register={register}
+                unregister={unregister}/>
           <Details details={details}/>
         </div>
       )

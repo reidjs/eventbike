@@ -7,10 +7,12 @@ import values from 'lodash/values';
 
 const mapStateToProps = (state, ownProps) => {
   // console.log(ownProps)
-  const eventId = ownProps.match.params.id
-  const event = values(state.entities.events)[0]
+  const eventId = ownProps.match.params.id;
+  const currentUser = state.session.currentUser;
+  const event = values(state.entities.events)[0];
   return {
     eventId,
+    currentUser,
     event
   }
 }
