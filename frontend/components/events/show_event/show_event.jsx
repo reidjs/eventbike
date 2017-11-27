@@ -12,12 +12,16 @@ class ShowEvent extends React.Component {
     this.props.getevent(this.props.eventId);
   }
   componentWillReceiveProps(nextProps) {
+    // debugger
+    // console.log('here')
+    // debugger
     if (!this.props.event || this.props.event.id != nextProps.eventId) {
       this.props.getevent(this.props.eventId);
       this.loading = true
     } else {
       this.loading = false;
     }
+
   }
   isLoading() {
     return (this.props.eventId !== this.props.event.id)

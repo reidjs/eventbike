@@ -17,14 +17,18 @@ const eventsReducer = (state = _nullEvents, action) => {
   let event_id;
   switch(action.type) {
     case RECEIVE_EVENTS:
-      return merge({}, action.events);
+      return merge({}, state, action.events);
     //Receive event removes all the other events from memory. 
     case RECEIVE_EVENT:
       // newState = merge({}, state);
-      newState = merge({}, state, action.event)
+      const event = action.event 
+
+      return merge({}, state, {[event.id] : event});
+      
+      // newState = merge({}, state, action.event)
       // newState[action.event.id] = action.event
-      debugger
-      return newState;
+      // debugger
+      // return newState;
     case REGISTER_EVENT:
       // debugger
       event_id = action.registration.eventId;
