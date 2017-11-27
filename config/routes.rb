@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :events, only: [:show, :index, :create, :new] do 
       resources :registrations, only: [:create, :destroy]
     end 
+    resources :registrations, only: [:index]
     resources :users, only: [:new, :create, :show, :index]
     #bookmark index will be the current user's bookmarks
     resources :bookmarks, only: [:index, :create, :destroy]

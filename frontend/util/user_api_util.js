@@ -6,3 +6,11 @@ export const fetchBookmarkedEvents = () => {
     })
   )
 }
+export const fetchRegisteredEvents = () => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: '/api/registrations'
+    })
+  )
+}

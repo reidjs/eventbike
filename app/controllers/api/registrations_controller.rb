@@ -1,4 +1,11 @@
 class Api::RegistrationsController < ApplicationController
+  def index 
+    if logged_in?
+      render json: current_user.attending_events
+    else 
+      render json: ["Sorry, must be logged in to retrieve your tickets"], status: 422
+    end 
+  end 
   def create 
     user = User.find_by(id: params[:user_id])
     event = Event.find_by(id: params[:event_id])

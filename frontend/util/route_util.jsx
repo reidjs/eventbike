@@ -36,15 +36,30 @@ const Protected = ({ component: Component, path, loggedIn}) => (
 //     flash('Sorry, you must be logged in to do that')
 //   )
 // ) 
-
-
+//https://github.com/ReactTraining/react-router/issues/4105
+// const renderMergedProps = (component, ...rest) => {
+//   const finalProps = Object.assign({}, ...rest);
+//   return (
+//     React.createElement(component, finalProps)
+//   );
+// }
+// export const PropsRoute = ({ component, ...rest }) => {
+//   // debugger
+//   return (
+//     <Route {...rest} render={routeProps => {
+//       return renderMergedProps(component, routeProps, rest);
+//     }}/>
+//   );
+// }
 
 const mapStateToProps = state => (
   {loggedIn: Boolean(state.session.currentUser)}
 );
 
-export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
 
+
+export const AuthRoute = withRouter(connect(mapStateToProps, null)(Auth));
+// export const PropsRoute = withRouter(connect(mapStateToProps, null)(Props))
 export const ProtectedRoute = withRouter(connect(mapStateToProps, null)(Protected));
 
 // export const ProtectedFunction = connect(mapStateToProps, null)(ProtectedFunc)
