@@ -105,7 +105,6 @@ ul.user-dropdown-content li:hover {
 
 .user-dropdown-content {
   display: none;
-  transform: translate(0, 4px);
   z-index: 3;
   position: fixed; }
 

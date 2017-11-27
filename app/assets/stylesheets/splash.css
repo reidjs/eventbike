@@ -1,6 +1,9 @@
 body, html {
   height: 100%; }
 
+div.main-splash {
+  background: #EFF2F5; }
+
 div.hero-container {
   padding: 0px 0;
   background-position: center;

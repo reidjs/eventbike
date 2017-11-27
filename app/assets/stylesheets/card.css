@@ -10,7 +10,7 @@ div.card {
   flex-direction: column;
   width: 600px;
   background: white;
-  margin: 0;
+  padding: 10px;
   margin-bottom: 10px; }
 
 div.card:hover {
