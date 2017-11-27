@@ -8,7 +8,7 @@ li.events-list-item {
 div.card {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 600px;
   // height: 200px;
   margin: 0;
 }
@@ -71,8 +71,13 @@ span.card-actions .active{
 div.col div.card {
   width: 400px;
   height: 300px;
+  margin: auto;
+  // flex-direction: column;
+}
+div.card.square .card-top {
   flex-direction: column;
 }
+
 
 // div.card-top .square {
 //   flex-direction: column;

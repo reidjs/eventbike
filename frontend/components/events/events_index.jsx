@@ -30,9 +30,7 @@ class EventsIndex extends React.Component {
       <div className="events-index-container">
         <h1>Cycling events in San Francisco, California</h1>
         <div className={myClass}></div>
-        <ul className="events-list">
-          <li className="events-list-item">{eventsList}</li>
-        </ul>
+          {eventsList}
       </div>  
     )
   }
