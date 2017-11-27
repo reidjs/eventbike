@@ -19,7 +19,7 @@ class UsersShow extends React.Component {
     return (
       <div>
         {this.props.user.username}
-        <GenericEventsShowList events={this.props.bookmarkedEvents}/>
+          <GenericEventsShowList events={this.props.bookmarkedEvents}/>
 
         {/*fetch events user is attending*/}
         {this.props.user.attending_events}

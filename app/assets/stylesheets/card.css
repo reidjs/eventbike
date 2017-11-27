@@ -9,7 +9,13 @@ div.card {
   display: flex;
   flex-direction: column;
   width: 600px;
-  margin: 0; }
+  background: white;
+  margin: 0;
+  margin-bottom: 10px; }
+
+div.card:hover {
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s cubic-bezier(0, 0.2, 0.4, 1); }
 
 div.card-top {
   width: 100%;
@@ -33,14 +39,13 @@ span.card-actions .active {
   color: green; }
 
 @media (max-width: 600px) {
-  li.events-list-item {
-    width: 400px;
-    height: 300px; }
+  div.card {
+    width: 400px; }
 
   div.card-top {
     flex-direction: column; } }
 div.col div.card {
-  width: 400px;
+  width: 300px;
   height: 300px;
   margin: auto; }
 

@@ -29,6 +29,9 @@ div.hero-text {
   background: white;
   display: block;
   position: absolute;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 400px;
+  font-size: 36px;
   border: 1px solid black;
   height: 200px;
   width: 95%;
@@ -90,9 +93,17 @@ div.flex-grid {
   flex-wrap: wrap; }
 
 div.col {
-  flex: 1; }
+  flex: 1;
+  margin-bottom: 10px; }
 
 .flex-grid {
   margin: 0 0 20px 0; }
+
+div.splash-index-container > h1 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  margin: 90px auto;
+  text-align: center; }
 
 /*# sourceMappingURL=splash.css.map */

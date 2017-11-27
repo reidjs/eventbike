@@ -7,7 +7,7 @@ class EventsIndex extends React.Component {
     this.loading = true;
     this.state={events: {}}
   }
-  componentDidMount() {
+  componentWillMount() {
     // console.log(this.props.getevents)
     setTimeout(this.props.getevents, 0); //artificial delay
     //spinner now 
@@ -23,6 +23,8 @@ class EventsIndex extends React.Component {
     // let myClass2;
     this.loading ? (myClass = "loader") : (myClass = "showEvents");
     // this.props.squares ? myClass2="events-list squares" : myClass2="events-list";
+    // debugger
+    //if coming in from the show page, the array is coming in.
     let eventsList = this.props.events.map((event) => {
       return <EventsShowContainer key={event.title} event={event} />
     })

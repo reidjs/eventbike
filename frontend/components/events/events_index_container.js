@@ -6,6 +6,7 @@ import values from 'lodash/values' //convert to array
 const mapStateToProps = (state, ownProps) => {
   //need the current user so that we can register them for events and check if already registered
   // console.log(ownProps)
+  debugger
   return {
     //will be state.entities.events
     currentUser: state.session.currentUser,
@@ -18,8 +19,8 @@ const mapDispatchToProps = dispatch => {
   return ({
   //will be bookmark and register 
     getevents: () => dispatch(getEvents()),
-    register: (eventId, userId) => dispatch(requestRegistration(eventId, userId)),
-    bookmark: () => {}
+    // register: (eventId, userId) => dispatch(requestRegistration(eventId, userId)),
+    // bookmark: () => {}
   })
 };
 
