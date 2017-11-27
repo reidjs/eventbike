@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   // console.log(ownProps)
   const eventId = ownProps.match.params.id;
   const currentUser = state.session.currentUser;
-  const event = values(state.entities.events)[0];
+  const event = state.entities.events; //there should only be one in state
   return {
     eventId,
     currentUser,

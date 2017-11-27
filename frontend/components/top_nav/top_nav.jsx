@@ -20,7 +20,7 @@ const TopNav = ({currentUser, potentialUser, logout, location}) => {
             potentialUser={potentialUser} 
             logout={logout} 
             location={location} />
-        <Link to="/events/new">CREATE EVENT</Link>
+        <Link to="/create">CREATE EVENT</Link>
         </div>
     </div>
   )

@@ -6,24 +6,41 @@ import Details from './details';
 class ShowEvent extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props)
     this.loading = true;
-    this.state= {event: {}};
   }
   componentWillMount() {
+    // this.props.getevent(this.props.eventId);
     this.props.getevent(this.props.eventId);
+    
+    // this.event = this.props.event
+    // this.loading = false;
   }
   componentWillReceiveProps(nextProps) {
-    const event = nextProps.event;
-    this.loading = false;
-    this.setState({event});
+    // debugger
+    if (!this.props.event || this.props.event.id != nextProps.eventId) {
+      // loading = true;
+      // debugger
+
+      this.props.getevent(this.props.eventId);
+      this.loading = true
+    } else {
+      this.loading = false;
+    }
+    // this.event = nextProps.event;
   }
+  isLoading() {
+    return (this.props.eventId !== this.props.event.id)
+  }
+
   render() {
     if (this.loading) {
       return (
         <div className="loader"></div>
       )
     } else {
-      const event = this.state.event;
+      const event = this.props.event;
+      const id = event.id
       const title = event.title;
       const image_url = "temp image url";
       const date = "temp date";
@@ -36,6 +53,7 @@ class ShowEvent extends React.Component {
       return (
         <div className="event-show-container">
           <Header 
+                id={id}
                 title={title} 
                 image_url={image_url} 
                 date={date}/>

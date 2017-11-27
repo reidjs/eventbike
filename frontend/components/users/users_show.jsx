@@ -1,9 +1,8 @@
 import React from 'react'
-
 class UsersShow extends React.Component {
   constructor(props) {
     super(props);
-    
+
   }
   render() {
     this.props.user.attending_events.map((event) => {
