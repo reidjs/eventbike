@@ -34,8 +34,8 @@ class UsersShow extends React.Component {
       <div className="users-show-container">
         <h1>{this.props.user.username}</h1>
         <div className="users-show-nav-links">
-          <NavLink to={bookmarkPath}>Bookmarks</NavLink>
           <NavLink to={ticketsPath}>Tickets</NavLink>
+          <NavLink to={bookmarkPath}>Bookmarks</NavLink>
           <NavLink to={myEventsPath}>My Events</NavLink>
         </div>
         <Route path={bookmarkPath} render={routeProps => 

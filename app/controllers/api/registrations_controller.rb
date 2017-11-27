@@ -7,7 +7,7 @@ class Api::RegistrationsController < ApplicationController
     end 
   end 
   def create 
-    user = User.find_by(id: params[:user_id])
+    # user = User.find_by(id: params[:user_id])
     event = Event.find_by(id: params[:event_id])
     # if user.nil?
     #   render json: ["User not found"], status: 404
@@ -22,12 +22,16 @@ class Api::RegistrationsController < ApplicationController
     #   render json: ["User is already registered for this event"], status: 422
     #   return
     # end 
-    registration = Registration.new(user_id: user.id, event_id: event.id)
-    if registration.save
+    if logged_in?
+      registration = Registration.new(user_id: current_user.id, event_id: event.id)
+      if registration.save
       #send back the updated event
       render json: {"eventId": event.id, "attendees": event.attendees.pluck(:id), "attending_events": user.attending_events.pluck(:id)}
-    else 
-      render json: registration.errors.full_messages, status: 422
+      else 
+        render json: registration.errors.full_messages, status: 422
+      end 
+    else
+      render json: ["You must be logged in to register for events"], status: 422
     end 
 
   end 
