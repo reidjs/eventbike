@@ -6,8 +6,12 @@ import {
   RECEIVE_USERNAME, 
   RECEIVE_NEW_USERNAME,
   RESET_POTENTIAL_USER,
-  BOOKMARK_EVENT
 } from '../actions/session_actions';
+
+// import {
+//   BOOKMARK_EVENT,
+//   RECEIVE_TICKETS
+// } from '../actions/user_actions';
 
 import {
   REGISTER_EVENT,
@@ -51,20 +55,25 @@ const sessionReducer = (state = _nullUser, action) => {
       return merge({}, { potentialUser });
     case REGISTER_EVENT:
       newState = merge({}, state)
-      updated_events_attending = action.registration.attending_events 
-      newState.currentUser.attending_events = updated_events_attending;
+      // updated_events_attending = action.registration.attending_events 
+      // newState.currentUser.attending_events = updated_events_attending;
       return newState;
     case UNREGISTER_EVENT:
       newState = merge({}, state)
-      updated_events_attending = action.registration.attending_events       
-      newState.currentUser.attending_events = updated_events_attending;
+      // updated_events_attending = action.registration.attending_events       
+      // newState.currentUser.attending_events = updated_events_attending;
       return newState;
-    case BOOKMARK_EVENT:
-      newState = merge({}, state)
-      //merge the updated bookmark array with the current user
-      updated_bookmarks = [...action.bookmarks];
-      newState.currentUser.bookmarked_events = updated_bookmarks;
-      return newState;
+
+    // case BOOKMARK_EVENT:
+    //   newState = merge({}, state)
+    //   //merge the updated bookmark array with the current user
+    //   updated_bookmarks = [...action.bookmarks];
+    //   newState.currentUser.bookmarked_events = updated_bookmarks;
+    //   return newState;
+    // case RECEIVE_TICKETS:
+    //   newState = merge({}, state)
+    //   updated_attending_events = [...action.tickets];
+    //   newState.currentUser.attending_events = updated_attending_events
     default:
       return state;
   }

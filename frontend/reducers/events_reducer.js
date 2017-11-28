@@ -3,7 +3,12 @@ import {
   RECEIVE_EVENT,
   REGISTER_EVENT,
   UNREGISTER_EVENT
-} from '../actions/events_actions'
+} from '../actions/events_actions';
+
+import {
+  RECEIVE_BOOKMARK
+} from '../actions/user_actions';
+
 import merge from 'lodash/merge';
 
 const _nullEvents = {
@@ -15,13 +20,18 @@ const eventsReducer = (state = _nullEvents, action) => {
   Object.freeze(state);
   let newState;
   let event_id;
+  let event;
   switch(action.type) {
+    case RECEIVE_BOOKMARK: {
+      event = action.payload.event; 
+      return merge({}, state, {[event.id] : action.payload.event})
+    }
     case RECEIVE_EVENTS:
-      return merge({}, action.events);
+      return merge({}, state, action.events);
     //Receive event removes all the other events from memory. 
     case RECEIVE_EVENT:
       // newState = merge({}, state);
-      const event = action.event 
+      event = action.event 
 
       return merge({}, state, {[event.id] : event});
       
@@ -31,9 +41,9 @@ const eventsReducer = (state = _nullEvents, action) => {
       // return newState;
     case REGISTER_EVENT:
       // debugger
-      event_id = action.registration.eventId;
+      // event_id = action.registration.eventId;
       newState = merge({}, state)
-      newState[event_id].attendees = [...action.registration.attendees] //update event
+      // newState[event_id].attendees = [...action.registration.attendees] //update event
       // debugger;
       return newState;
     case UNREGISTER_EVENT:

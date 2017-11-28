@@ -3,7 +3,6 @@ import * as EventsAPIUtil from '../util/events_api_util'
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
-export const REGISTER_EVENT = "REGISTER_EVENT";
 export const UNREGISTER_EVENT = "UNREGISTER_EVENT";
 
 
@@ -22,11 +21,11 @@ export const receiveEvent = (event) => {
 }
 //registration should have user object and event object
 //registration: {event, user}
-export const receiveRegistration = (registration) => {
+export const receiveRegistration = (user) => {
   // debugger
   return ({
     type: REGISTER_EVENT,
-    registration 
+    user 
   })
 }
 
@@ -63,16 +62,16 @@ export const getEvent = (eventId) => dispatch => (
 );
 
 
-export const requestRegistration = (eventId, userId) => dispatch => (
-  EventsAPIUtil.postRegistration(eventId, userId)
-    .then(res => (
-      dispatch(receiveRegistration(res))
-    ))
-);
+// export const requestRegistration = (eventId) => dispatch => (
+//   EventsAPIUtil.postRegistration(eventId)
+//     .then(res => (
+//       dispatch(receiveRegistration(res))
+//     ))
+// );
 
-//The response has an event in it so it can tell the user the event they unregistered from.
-export const removeRegistration = (eventId, userId) => dispatch => (
-  EventsAPIUtil.deleteRegistration(eventId, userId)
-    .then(res => dispatch(unRegisterEvent(res)))
-)
+// //The response has an event in it so it can tell the user the event they unregistered from.
+// export const removeRegistration = (eventId) => dispatch => (
+//   EventsAPIUtil.deleteRegistration(eventId)
+//     .then(res => dispatch(unRegisterEvent(res)))
+// )
 

@@ -9,3 +9,8 @@ json.id event.id
 json.title event.title
 json.details event.details
 json.attendees attendees
+if logged_in? 
+  json.bookmarked current_user.bookmarked_events.pluck(:id).include?(event.id)
+else 
+  json.bookmarked false
+end 

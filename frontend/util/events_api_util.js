@@ -12,24 +12,3 @@ export const fetchEvent = (eventId) => {
     url: `/api/events/${eventId}`
   }));
 };
-
-export const postRegistration = (eventId, userId) => {
-  return (
-    $.ajax({
-      method: 'POST',
-      url: `/api/events/${eventId}/registrations`,
-      data: {user_id: userId}
-    })
-  )
-}
-
-export const deleteRegistration = (eventId, userId) => {
-  return (
-    $.ajax({
-      method:'DELETE',
-      url: `/api/events/${eventId}/registrations/${userId}`
-    })
-  )
-}
-
-//fetch events by category 

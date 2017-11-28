@@ -1,7 +1,7 @@
 //This needs to be the show show container with basic information 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EventsBookmarkButton from './events_bookmark_button';
+import EventsBookmarkContainer from './events_bookmark_container';
 import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
 import EventsRegisterButton from './events_register_button';
 
@@ -46,11 +46,8 @@ const EventsListItem = ({event, unregister, square, register, bookmark, unbookma
                                 register={register}
                                 unregister={unregister}
                                 currentUser={currentUser}/>
-            <EventsBookmarkButton
-                                event={event}
-                                bookmark={bookmark}
-                                unbookmark={unbookmark}
-                                currentUser={currentUser}/>
+            <EventsBookmarkContainer
+                                event={event}/>
           </span>
         </div>
       </div>
