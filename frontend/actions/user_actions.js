@@ -43,6 +43,11 @@ export const getBookmarks = () => dispatch => (
   UserAPIUtil.fetchBookmarkedEvents()
     .then(res => dispatch(receiveBookmark(res)))
 );
+
+export const getTickets = () => dispatch => (
+  UserAPIUtil.fetchRegisteredEvents() 
+    .then(res => dispatch(receiveRegistration(res)))
+)
 // export const getTickets = () => dispatch => (
 //   UserAPIUtil.fetchRegisteredEvents()
 //     .then(res => dispatch(receiveTickets(res)))

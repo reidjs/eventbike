@@ -49,8 +49,12 @@ const eventsReducer = (state = _nullEvents, action) => {
       // newState = merge({}, state)
       // newState[event_id].attendees = [...action.registration.attendees] //update event
       // debugger;
-      event = action.payload.event;
-      return merge({}, state, {[event.id] : event});
+      if (action.payload.event) {
+        event = action.payload.event;
+        return merge({}, state, {[event.id] : event});
+      } else {
+        return state;
+      }
     // case UNREGISTER_EVENT:
     //   event_id = action.registration.eventId;
     //   newState = merge({}, state);  

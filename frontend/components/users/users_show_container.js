@@ -12,11 +12,12 @@ const mapStateToProps = (state, ownProps) => {
   const events = values(state.entities.events);
   let bookmarkedEvents = getAllEventsInArray(state.entities.events, state.entities.bookmarks)
   // console.log('books', bookmarkedEvents)
-
+  let registeredEvents = getAllEventsInArray(state.entities.events, state.entities.registrations)
   return {
     user,
     events,
-    bookmarkedEvents
+    bookmarkedEvents,
+    registeredEvents
     //will be state.entities.user
   }
 }
@@ -25,7 +26,7 @@ const mapDispatchToProps = dispatch => ({
   getEvents: () => dispatch (getEvents()),
   //
   getbookmarks: () => dispatch(getBookmarks()),
-  // gettickets: () => dispatch(getTickets()) 
+  gettickets: () => dispatch(getTickets()) 
 });
 
 export default withRouter(connect(

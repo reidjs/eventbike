@@ -1,7 +1,7 @@
 class Api::RegistrationsController < ApplicationController
   def index 
     if logged_in?
-      render json: current_user.attending_events
+      render :index
     else 
       render json: ["Sorry, must be logged in to retrieve your tickets"], status: 422
     end 

@@ -25,8 +25,8 @@ class UsersShow extends React.Component {
   componentWillMount() {
     this.props.getEvents();
     this.props.getbookmarks();
-    
-    // this.props.gettickets();
+
+    this.props.gettickets();
   }
   componentWillReceiveProps(nextProps, nextState) {
     // if (nextProps.location.pathname !== this.props.location.pathname || 
@@ -81,7 +81,7 @@ class UsersShow extends React.Component {
 
         <Route path={ticketsPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
-              events={this.props.events}/>} />
+              events={this.props.registeredEvents}/>} />
         <Route path={myEventsPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
               events={this.myEvents}/>} />

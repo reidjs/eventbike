@@ -55,7 +55,6 @@ class EventsRegisterButton extends React.Component {
     let myClass;
     this.props.event.registered ? myClass="active" : myClass = "";
     // let myTest = this.showModal ? "true" : null
-    console.log("test", this.props)
     // debugger
     if (this.props.event.registered) {
       return (
