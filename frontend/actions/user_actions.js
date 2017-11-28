@@ -3,7 +3,7 @@ import { RECEIVE_EVENTS } from './events_actions';
 // export const RECEIVE_BOOKMARKS = 'RECEIVE_BOOKMARKS';
 // export const RECEIVE_TICKETS = 'RECEIVE_TICKETS';
 export const BOOKMARK_EVENT = 'BOOKMARK_EVENT'
-// export const REGISTER_EVENT = "REGISTER_EVENT";
+export const REGISTER_EVENT = "REGISTER_EVENT";
 export const RECEIVE_BOOKMARK = 'RECEIVE_BOOKMARK';
 // export const RECEIVE_MY_EVENTS = 'RECEIVE_MY_EVENTS';
 // export const receiveBookmark = (bookmarks) => {
@@ -13,11 +13,11 @@ export const RECEIVE_BOOKMARK = 'RECEIVE_BOOKMARK';
 //   })
 // }
 
-export const receiveRegistration = (user) => {
+export const receiveRegistration = (payload) => {
   // debugger
   return ({
     type: REGISTER_EVENT,
-    user 
+    payload 
   })
 }
 
@@ -60,7 +60,7 @@ export const requestUnBookmark = (event_id) => dispatch => (
     .then(res => dispatch(receiveBookmark(res)))
 )
 
-export const requestRegistration = (eventId) => dispatch => (
+export const requestRegister = (eventId) => dispatch => (
   UserAPIUtil.postRegistration(eventId)
     .then(res => (
       dispatch(receiveRegistration(res))

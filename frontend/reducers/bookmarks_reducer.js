@@ -1,6 +1,5 @@
 import {
   RECEIVE_BOOKMARK,
-  getBookmarks
 } from '../actions/user_actions';
 import merge from 'lodash/merge'
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';

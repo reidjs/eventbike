@@ -10,17 +10,18 @@ class Api::RegistrationsController < ApplicationController
   def create 
     @event = Event.find_by(id: params[:eventId])
     @user = current_user
-    tickets = 1
+    tickets = 1 #get from params
     if logged_in?
-      registration = Registration.new(user_id: current_user.id, event_id: @event.id)
-      if registration.save
+      @registration = Registration.new(user_id: current_user.id, event_id: @event.id)
+      @registration.tickets = tickets
+      if @registration.save
 
         #send back payload with 
         #event 
         #user 
-        render template: '/api/users/show'
+        render :show
       else 
-        render json: registration.errors.full_messages, status: 422
+        render json: @registration.errors.full_messages, status: 422
       end 
     else
       render json: ["You must be logged in to register for events"], status: 422

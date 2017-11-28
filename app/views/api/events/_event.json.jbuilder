@@ -13,6 +13,8 @@ json.image_url event.image_url
 json.attendees attendees
 if logged_in? 
   json.bookmarked current_user.bookmarked_events.pluck(:id).include?(event.id)
+  json.registered current_user.attending_events.pluck(:id).include?(event.id)
 else 
   json.bookmarked false
+  json.registered false
 end 

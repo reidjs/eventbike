@@ -19,6 +19,7 @@ class UsersShow extends React.Component {
     this.events = props.events;
     this.bookmarkedEvents = props.bookmarkedEvents;
     this.myEvents = [];
+    // console.log('my bookmarks',this.bookmarkedEvents)
     // this.bookmarkedEvents = props.bookmar
   }
   componentWillMount() {
@@ -28,13 +29,13 @@ class UsersShow extends React.Component {
     // this.props.gettickets();
   }
   componentWillReceiveProps(nextProps, nextState) {
-    if (nextProps.location.pathname !== this.props.location.pathname || 
-      nextProps.bookmarkedEvents.length !== this.bookmarkedEvents.length) {
-      this.props.getEvents();
+    // if (nextProps.location.pathname !== this.props.location.pathname || 
+    //   nextProps.bookmarkedEvents.length !== this.bookmarkedEvents.length) {
+    //   this.props.getEvents();
       // console.log(nextProps, nextState);
       // console.log('here', nextProps.bookmarkedEvents)
-      this.bookmarkedEvents = nextProps.bookmarkedEvents
-    }
+    //   this.bookmarkedEvents = nextProps.bookmarkedEvents
+    // }
     // console.log(nextProps.location.pathname)
     //get the last part of the url
     let path = nextProps.location.pathname.split('/').slice(-1)[0];
@@ -43,11 +44,18 @@ class UsersShow extends React.Component {
       // console.log('here')
       fetchMyEvents().then(
         (res) => {
-          console.log(res)
+          // console.log(res)
           this.myEvents = values(res)
         }
       )
     }
+    // if (path === 'bookmarks') {
+    //   fetchBookmarks().then(
+    //     (res) => {
+    //       this.myBookmarks = values(res)
+    //     }
+    //   )
+    // }
     // this.events = nextProps.events 
     // this.bookmarks = nextState.bookmarkedEvents
     // console.log(this.bookmarkedEvents)
@@ -59,6 +67,7 @@ class UsersShow extends React.Component {
     const bookmarkPath = `/users/${this.props.user.id}/bookmarks`;
     const ticketsPath = `/users/${this.props.user.id}/tickets`;
     const myEventsPath = `/users/${this.props.user.id}/myevents`;
+    console.log(this.props)
     return (
       <div className="users-show-container">
         <h1>{this.props.user.username}</h1>
@@ -69,7 +78,7 @@ class UsersShow extends React.Component {
         </div>
         <Route path={bookmarkPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
-              events={this.bookmarkedEvents}/>} />
+              events={this.props.bookmarkedEvents}/>} />
 
         <Route path={ticketsPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 

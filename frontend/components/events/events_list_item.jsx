@@ -2,8 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EventsBookmarkContainer from './events_bookmark_container';
-import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
-import EventsRegisterButton from './events_register_button';
+// import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
+import EventsRegisterContainer from './events_register_container';
 
 const EventsListItem = ({event, unregister, square, register, bookmark, unbookmark, currentUser}) => {
   // const handleBookmark = (e) => {
@@ -39,14 +39,11 @@ const EventsListItem = ({event, unregister, square, register, bookmark, unbookma
 
           </span>
           <span>
-            <Link to={categoryPath}>#{event.category}</Link>
+            <Link to={categoryPath}>{event.category}</Link>
           </span>
           <span className="card-actions">
-            <EventsRegisterButton 
-                                event={event}
-                                register={register}
-                                unregister={unregister}
-                                currentUser={currentUser}/>
+            <EventsRegisterContainer
+                                event={event}/>
             <EventsBookmarkContainer
                                 event={event}/>
           </span>

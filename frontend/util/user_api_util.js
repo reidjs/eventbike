@@ -57,6 +57,13 @@ export const unbookmark = (event_id) => {
   )
 }
 
+// export const fetchBookmarks = () => {
+//   return $.ajax({
+//     method: 'GET',
+//     url: `/api/bookmarks`
+//   })
+// }
+
 export const fetchMyEvents = () => {
   return $.ajax({
     method: 'GET',

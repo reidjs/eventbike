@@ -31,7 +31,7 @@ class EventsBookmarkButton extends React.Component {
           return
         case true:
           this.props
-          .unbookmark(this.props.event.id); 
+            .unbookmark(this.props.event.id); 
           return 
       }
     } else {
