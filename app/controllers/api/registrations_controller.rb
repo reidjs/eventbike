@@ -10,11 +10,14 @@ class Api::RegistrationsController < ApplicationController
   def create 
     @event = Event.find_by(id: params[:eventId])
     @user = current_user
+    tickets = 1
     if logged_in?
       registration = Registration.new(user_id: current_user.id, event_id: @event.id)
       if registration.save
 
-        #send back the user so the event knows who's attending
+        #send back payload with 
+        #event 
+        #user 
         render template: '/api/users/show'
       else 
         render json: registration.errors.full_messages, status: 422

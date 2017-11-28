@@ -15,7 +15,7 @@ export const fetchRegisteredEvents = () => {
   )
 }
 
-//pass down the number of tickets requested
+//pass down the number of tickets requested as well
 export const postRegistration = (eventId) => {
   return (
     $.ajax({
