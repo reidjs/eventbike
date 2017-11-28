@@ -10,10 +10,10 @@ class Api::RegistrationsController < ApplicationController
   def create 
     @event = Event.find_by(id: params[:eventId])
     @user = current_user
-    tickets = 1 #get from params
+    # tickets = 1 #get from params
     if logged_in?
       @registration = Registration.new(user_id: current_user.id, event_id: @event.id)
-      @registration.tickets = tickets
+      # @registration.tickets = tickets
       if @registration.save
 
         #send back payload with 
