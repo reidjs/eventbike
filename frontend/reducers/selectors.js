@@ -21,11 +21,11 @@ export const getAllEventsInArray = (events, arr) => {
   let result = []
   if (events === undefined)
     return result;
-  debugger
   arr.forEach((val, idx) => {
+    console.log('sl')
     result.push(events[val]);
-    debugger
-    if (idx === arr.length) {
+    if (idx === arr.length - 1) {
+      debugger
       return result ;
     }
     // debugger

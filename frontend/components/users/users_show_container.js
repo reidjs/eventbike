@@ -10,12 +10,11 @@ const mapStateToProps = (state, ownProps) => {
   // const bookmarkedEvents = values(state.entities.bookmarks)
   // const registeredEvents = values(state.entities.tickets)
   const events = values(state.entities.events);
-  const bookmarkedEvents = getAllEventsInArray(state.entities.events, state.entities.bookmarks)
-  // debugger
+  const bookmarks = state.entities.bookmarks;
   return {
     user,
     events,
-    bookmarkedEvents
+    bookmarks
     //will be state.entities.user
   }
 }
