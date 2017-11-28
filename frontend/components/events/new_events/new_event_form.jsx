@@ -3,6 +3,7 @@ import DropDown from './drop_down'
 class NewEventForm extends React.Component {
   constructor(props) {
     super(props);
+    this.waitingForConfirmation = false;
     this.state = ({title: "", details: "", category: "Social"});
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,6 +19,18 @@ class NewEventForm extends React.Component {
     e.preventDefault();
     // console.log('Submit new event!',this.state)
     this.props.submit(this.state)
+    //redirect 
+    // console.log(this.props)
+    this.waitingForConfirmation = true;
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors.length > 0 && this.waitingForConfirmation) {
+      //show errors, do not redirect 
+
+    } else {
+      console.log('no errors')
+      nextProps.history.push(`users/${this.props.user.id}/myevents`)
+    }
   }
   handleCategory(category) {
     // console.log('here',category)
@@ -25,16 +38,23 @@ class NewEventForm extends React.Component {
   }
   render() {
     return (
-      <form className="new-event" onSubmit={this.handleSubmit}>
-        Create new event 
-        Title
-        <input name="title" value={this.state.title} onChange={this.handleInputChange}/>
-        Details
-        <textarea name="details" value={this.state.details} onChange={this.handleInputChange}/>
-        Category 
-        <DropDown handleCategory={this.handleCategory} categories={this.props.categories}/>
-        <input type="submit" value="Create New Event" />
-      </form>
+      <div className="new-event-container">
+        <div>
+          <h1>Create An Event</h1>
+        </div>
+        <form className="new-event" onSubmit={this.handleSubmit}>
+          <div className="header">
+            <span className="big-number">1</span> <h2>Event Details</h2>
+          </div>
+          <h3>Event Title</h3><span className="red-asterisk">*</span>
+          <input name="title" placeholder="Give it a catchy name" value={this.state.title} onChange={this.handleInputChange}/>
+          <input name="Location" placeholder="Search for a venue or address"/>          
+          Details
+          <textarea name="details" value={this.state.details} onChange={this.handleInputChange}/>
+          <DropDown handleCategory={this.handleCategory} categories={this.props.categories}/>
+          <input type="submit" value="Create New Event" />
+        </form>
+      </div>
     )
   }
 }

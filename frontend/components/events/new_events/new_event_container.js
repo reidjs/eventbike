@@ -1,10 +1,16 @@
 import { connect } from 'react-redux';
 import NewEventForm from './new_event_form';
+import { withRouter } from 'react-router-dom';
+
 import { newEvent } from '../../../actions/events_actions';
 const mapStateToProps = (state) => {
-  const categories = ["Other", "Social", "Joyride"]
+  const categories = ["Other", "Social", "Joyride"];
+  const errors = state.errors.events;
+  const user = state.session.currentUser;
   return {
-    categories
+    user,
+    categories,
+    errors
   }
 }
 const mapDispatchToProps = (dispatch) => {
@@ -12,7 +18,7 @@ const mapDispatchToProps = (dispatch) => {
     submit: (eventDetails) => dispatch(newEvent(eventDetails))
   }
 }
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(NewEventForm);
+)(NewEventForm));

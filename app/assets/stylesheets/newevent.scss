@@ -1,3 +1,55 @@
 form.new-event input, form.new-event textarea {
   border: 1px solid black;
 }
+
+span.big-number {
+  font-size: 25px;
+  background: blue;
+  // padding: 20px;
+  color: white;
+}
+.header h2 {
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+h3 {
+  margin: 0;
+  display: inline-block;
+}
+
+div.header {
+  display: flex;
+
+}
+form.new-event > h1 {
+  font-size: 23px;
+}
+
+span.red-asterisk {
+  color: red;
+}
+
+.new-event-container input {
+  display: block;
+}
+
+div.dropdown-container {
+  border: 1px solid black;
+  display: block;
+  width: 200px;
+  text-align: center;
+}
+
+div.dropdown-container > button {
+  display: inline-block;
+}
+
+li.dropdown {
+  border: 1px solid blue;
+  
+}
+
+li.dropdown:hover {
+  color: green;
+}

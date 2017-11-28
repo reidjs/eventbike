@@ -33,6 +33,7 @@ gem 'font-awesome-sass', '~> 4.7.0'
 gem 'font-awesome-rails'
 gem 'sprockets'
 gem 'material_icons'
+gem 'aws-sdk', '< 3.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
