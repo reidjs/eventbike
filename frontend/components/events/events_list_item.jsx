@@ -13,9 +13,9 @@ const EventsListItem = ({event, unregister, square, register, bookmark, unbookma
   // }
   let cardClass; 
   square ? cardClass = "card square" : cardClass = "card";
-  const eventShowPath = `events/${event.id}`;
+  const eventShowPath = `/events/${event.id}`;
   const categoryGoesHere = "#";
-  const categoryPath = `events/${categoryGoesHere}`;
+  const categoryPath = `/events/${categoryGoesHere}`;
   const bookmarkPath = `events/${event.id}/bookmark`;
   const fillerDateTime = "Sun, Dec 5 6:00 PM";
   const fillerVenue = "San Francisco Track";

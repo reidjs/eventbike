@@ -18,32 +18,32 @@ export const getAllEventsInArray = (events, arr) => {
   // if (events)
   //   debugger
   // array of events that are 
-  console.log(events, arr)
+  // console.log(events, arr)
   let result = []
   let idx = 0;
   if (events === undefined) {
     // console.log(events)
-    console.log('events undef)')
+    // console.log('events undef)')
     return result;
   }
   arr.forEach((val) => {
     // console.log('sl')
     result.push(events[val]);
     idx += 1
-    if (idx === arr.length - 1) {
+    // if (idx === arr.length - 1) {
       // debugger
-      console.log("sending bookmarks: ", result)
+      // console.log("sending bookmarks: ", result)
       // return result;
-    }
+    // }
     if (result.length === arr.length) {
-      console.log('here')
+      // console.log('here')
       return result;
     }
     // return result;
     // debugger
   })
   if (result.length === arr.length) {
-    console.log('returning')
+    // console.log('returning')
     return result;
   }
   // return result;

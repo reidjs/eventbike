@@ -22,10 +22,10 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   getevent: (eventId) => dispatch(getEvent(eventId)),
-  register: (eventId, userId) => dispatch(requestRegistration(eventId, userId)),
-  unregister: (eventId, userId) => dispatch(removeRegistration(eventId, userId)),
-  bookmark: (eventId) => dispatch(requestBookmark(eventId)),
-  unbookmark: (eventId) => dispatch(requestUnBookmark(eventId))
+  // register: (eventId, userId) => dispatch(requestRegistration(eventId, userId)),
+  // unregister: (eventId, userId) => dispatch(removeRegistration(eventId, userId)),
+  // bookmark: (eventId) => dispatch(requestBookmark(eventId)),
+  // unbookmark: (eventId) => dispatch(requestUnBookmark(eventId))
 });
 export default connect(
   mapStateToProps,

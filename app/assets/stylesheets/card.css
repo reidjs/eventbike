@@ -29,7 +29,7 @@ div.card-img {
   background-repeat: no-repeat; }
 
 span.card-actions .active {
-  color: green; }
+  color: #288128; }
 
 @media (max-width: 600px) {
   div.card {
@@ -44,5 +44,13 @@ div.col div.card {
 
 div.card.square .card-top {
   flex-direction: column; }
+
+span.card-actions > button.active:hover {
+  color: #1a4d1a;
+  transition-delay: 2s;
+  -webkit-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out; }
 
 /*# sourceMappingURL=card.css.map */

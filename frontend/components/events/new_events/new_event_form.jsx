@@ -26,13 +26,14 @@ class NewEventForm extends React.Component {
     this.waitingForConfirmation = true;
   }
   componentWillReceiveProps(nextProps) {
-    if (nextProps.errors.length > 0 && this.waitingForConfirmation) {
+    if (nextProps.errors.length === 0 && this.waitingForConfirmation) {
       //show errors, do not redirect 
       this.waitingForConfirmation = false;
+      nextProps.history.push(`users/${this.props.user.id}/myevents`)
+      console.log('no errors')
       
     } else {
-      console.log('no errors')
-      nextProps.history.push(`users/${this.props.user.id}/myevents`)
+      this.waitingForConfirmation = false;
     }
   }
   handleCategory(category) {

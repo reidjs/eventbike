@@ -1,4 +1,5 @@
 import React from 'react'
+import { fetchMyEvents } from '../../util/user_api_util';
 import GenericEventsShowList from '../generic_events_show_list';
 import {
   Route,
@@ -11,17 +12,19 @@ import {
   AuthRoute, 
   ProtectedRoute,
 } from '../../util/route_util';
+import values from 'lodash/values'
 class UsersShow extends React.Component {
   constructor(props) {
     super(props);
     this.events = props.events;
     this.bookmarkedEvents = props.bookmarkedEvents;
-
+    this.myEvents = [];
     // this.bookmarkedEvents = props.bookmar
   }
   componentWillMount() {
     this.props.getEvents();
     this.props.getbookmarks();
+    
     // this.props.gettickets();
   }
   componentWillReceiveProps(nextProps, nextState) {
@@ -31,13 +34,26 @@ class UsersShow extends React.Component {
       // console.log(nextProps, nextState);
       // console.log('here', nextProps.bookmarkedEvents)
       this.bookmarkedEvents = nextProps.bookmarkedEvents
-      console.log(this.bookmarkedEvents)
+    }
+    // console.log(nextProps.location.pathname)
+    //get the last part of the url
+    let path = nextProps.location.pathname.split('/').slice(-1)[0];
+    // console.log(path)
+    if (path === 'myevents') {
+      // console.log('here')
+      fetchMyEvents().then(
+        (res) => {
+          console.log(res)
+          this.myEvents = values(res)
+        }
+      )
     }
     // this.events = nextProps.events 
     // this.bookmarks = nextState.bookmarkedEvents
     // console.log(this.bookmarkedEvents)
     // this.props.getbookmarks();
     // this.props.gettickets();
+    // if (nextProps.location.pathname === )
   }
   render() {
     const bookmarkPath = `/users/${this.props.user.id}/bookmarks`;
@@ -53,11 +69,14 @@ class UsersShow extends React.Component {
         </div>
         <Route path={bookmarkPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
-              events={this.props.bookmarkedEvents}/>} />
+              events={this.bookmarkedEvents}/>} />
 
         <Route path={ticketsPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
               events={this.props.events}/>} />
+        <Route path={myEventsPath} render={routeProps => 
+              <GenericEventsShowList {...routeProps} 
+              events={this.myEvents}/>} />
       </div>  
     )
   }

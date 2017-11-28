@@ -1,5 +1,6 @@
 import React from 'react';
 import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
+import Bookmark from 'material-ui-icons/Bookmark';
 import { flashMessage } from 'redux-flash';
 
 class EventsBookmarkButton extends React.Component {
@@ -39,12 +40,15 @@ class EventsBookmarkButton extends React.Component {
   }
   
   render() {
+    let myButton;
     let myClass;
     this.props.event.bookmarked ? myClass="active" : myClass = "";
-    
-    return (
-      <button className={myClass} onClick={this.handleBookmark}><BookmarkBorder /></button>
-    )
+    if (this.props.event.bookmarked) {
+      return <button className={myClass} onClick={this.handleBookmark}><Bookmark/></button>
+    } else {
+      return <button className={myClass} onClick={this.handleBookmark}><BookmarkBorder/></button>
+      
+    }
   }
 }
 

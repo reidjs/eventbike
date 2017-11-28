@@ -1,5 +1,6 @@
 //singular event item card 
 //square class gives it the scrunched up orientation
+@import "util/variables.scss";
 
 // li.events-list-item {
 //   margin: 0;
@@ -66,7 +67,7 @@ span.card-attendees {
 }
 
 span.card-actions .active{
-  color: green;
+  color: $light-green;
 }
 
 @media (max-width: 600px) {
@@ -97,6 +98,16 @@ div.col div.card {
 div.card.square .card-top {
   flex-direction: column;
 }
+//hover effect for bookmark button
+span.card-actions > button.active:hover {
+  color: $dark-green;
+  transition-delay: 2s;
+  -webkit-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+}
+
 
 
 // div.card-top .square {

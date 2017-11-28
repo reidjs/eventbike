@@ -5,6 +5,7 @@ import { RECEIVE_EVENTS } from './events_actions';
 export const BOOKMARK_EVENT = 'BOOKMARK_EVENT'
 // export const REGISTER_EVENT = "REGISTER_EVENT";
 export const RECEIVE_BOOKMARK = 'RECEIVE_BOOKMARK';
+// export const RECEIVE_MY_EVENTS = 'RECEIVE_MY_EVENTS';
 // export const receiveBookmark = (bookmarks) => {
 //   return ({
 //     type: BOOKMARK_EVENT,
@@ -19,6 +20,14 @@ export const receiveRegistration = (user) => {
     user 
   })
 }
+
+// export const receiveMyEvents = (payload) => {
+//   return ({
+//     type: RECEIVE_MY_EVENTS,
+//     payload
+//   })
+// }
+
 //payload has user.bookmarked_events and the event object 
 export const receiveBookmark = (payload) => ({
   type: RECEIVE_BOOKMARK,
@@ -57,4 +66,12 @@ export const requestRegistration = (eventId) => dispatch => (
       dispatch(receiveRegistration(res))
     ))
 );
+
+// export const requestMyEvents = () => dispatch => (
+//   UserAPIUtil.fetchMyEvents()
+//   .then(res => (
+//     dispatch(receiveMyEvents(res))
+//   ))
+// )
+
 //also created events
