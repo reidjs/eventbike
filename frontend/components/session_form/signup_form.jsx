@@ -43,7 +43,8 @@ class SignupForm extends React.Component {
         <div className="input-label">
           <label>Password</label>
         </div>
-        <input type="password" placeholder="Enter your password." value={this.state.password} onChange={this.handleChange} autoFocus/>
+        <input type="email" placeholder="Enter your email (optional)."/>
+        <input type="password" placeholder="Enter a password (minimum 6 letters)." value={this.state.password} onChange={this.handleChange} autoFocus/>
         <ul>
           {errorList}
         </ul>

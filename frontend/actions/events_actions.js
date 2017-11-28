@@ -61,6 +61,15 @@ export const getEvent = (eventId) => dispatch => (
     ))
 );
 
+export const newEvent = (event) => dispatch => (
+  EventsAPIUtil.postEvent(event)
+    .then(res => (
+      dispatch(receiveEvent(res))
+    ), err => (
+      dispatch(receiveErrors(err.responseJSON))
+    ))
+);
+
 
 // export const requestRegistration = (eventId) => dispatch => (
 //   EventsAPIUtil.postRegistration(eventId)

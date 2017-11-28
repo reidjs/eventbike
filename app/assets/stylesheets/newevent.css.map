@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,6CAA8C;EAC5C,MAAM,EAAE,eAAe",
+"sources": ["newevent.scss"],
+"names": [],
+"file": "newevent.css"
+}

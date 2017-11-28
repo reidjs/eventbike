@@ -16,45 +16,56 @@ user3.save
 user4.save
 user5.save
 #reidjs created first three events, bob created fourth
+
 event1 = Event.new(
-  title: 'moto', 
+  title: 'moto event numba 1', 
   creator_id: user1.id,
+  category: "Social",
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840424/joe-neric-223563_kjcucx.jpg")
 event2 = Event.new(
   title: 'Another super boring event', 
   creator_id: user1.id,
+  category: "Social",
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840485/mohamed-nohassi-202199_exn3um.jpg")
 event3 = Event.new(
   title: 'Another eve', 
   creator_id: user1.id,
+  category: "Social",
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840548/cameron-kirby-105242_ydaau2.jpg" )
 event4 = Event.new(
   title: 'Another supdsf event asdf hi', 
   creator_id: user2.id,
+  category: "Social",
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840796/markus-spiske-265590_u0npvf.jpg")
 event5 = Event.new(
   title: 'Another supdsf event asdf hi', 
   creator_id: user2.id,
+  category: "Race",
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497455/james-pond-103321_g3yjqc.jpg" )
 event6 = Event.new(
   title: 'Another supdsf event asdf hi', 
   creator_id: user2.id,
+  category: "Race",
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840845/nicolas-picard-317919_tb1cdi.jpg")
 event7 = Event.new(
   title: 'Another supdsf event asdf hi', 
   creator_id: user2.id,
+  category: "Race",
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497474/tim-cook-98503_zr4fbc.jpg")
 event8 = Event.new(
   title: 'Another supdsf event asdf hi', 
   creator_id: user2.id,
+  category: "Joyride",
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497437/davide-ragusa-27505_wqtwiy.jpg")
 event9 = Event.new(
   title: 'Another supdsf event asdf hi', 
   creator_id: user2.id,
+  category: "Joyride",
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497423/adils-photography-419425_uk3fif.jpg" )
 event10 = Event.new(
   title: 'Another supdsf event asdf hi', 
   creator_id: user2.id,
+  category: "Joyride",
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497438/chris-knight-434457_hqw9nz.jpg")
 event1.save
 event2.save

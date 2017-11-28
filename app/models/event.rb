@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+  validates :title, presence: true
   belongs_to :creator,
   class_name: :User,
   primary_key: :id,

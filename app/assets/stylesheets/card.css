@@ -1,14 +1,7 @@
-li.events-list-item {
-  margin: 0;
-  width: 600px;
-  height: 200px;
-  align-items: center;
-  margin-bottom: 10px; }
-
 div.card {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 450px;
   background: white;
   padding: 10px;
   margin-bottom: 10px; }
@@ -31,7 +24,7 @@ div.card-img {
   width: 200px;
   height: 130px;
   padding: 10px;
-  background-image: url("http://res.cloudinary.com/eventbike/image/upload/v1511497460/joe-neric-223562_okhigx.jpg");
+  overflow: hidden;
   background-position: center;
   background-repeat: no-repeat; }
 
@@ -40,12 +33,12 @@ span.card-actions .active {
 
 @media (max-width: 600px) {
   div.card {
-    width: 400px; }
+    width: 350px; }
 
   div.card-top {
     flex-direction: column; } }
 div.col div.card {
-  width: 300px;
+  width: 250px;
   height: 300px;
   margin: auto; }
 

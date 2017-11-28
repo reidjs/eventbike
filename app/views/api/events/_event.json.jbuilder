@@ -8,6 +8,8 @@ end
 json.id event.id
 json.title event.title
 json.details event.details
+json.category event.category 
+json.image_url event.image_url
 json.attendees attendees
 if logged_in? 
   json.bookmarked current_user.bookmarked_events.pluck(:id).include?(event.id)

@@ -11,6 +11,7 @@ const mapStateToProps = (state, ownProps) => {
   // const registeredEvents = values(state.entities.tickets)
   const events = values(state.entities.events);
   const bookmarks = state.entities.bookmarks;
+  
   return {
     user,
     events,

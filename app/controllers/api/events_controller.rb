@@ -15,17 +15,18 @@ class Api::EventsController < ApplicationController
 
   def create 
     @event = Event.new(event_params)
+    @event.creator_id = current_user.id
     if @event.save
-      render `api/events/#{@event.id}`
+      render :show
     else 
-      render @event.errors.full_messages, status: 422
+      render json: @event.errors.full_messages, status: 422
     end 
   end 
 
   private
 
   def event_params
-    params.require(:event).permit(:title, :details)
+    params.require(:event).permit(:title, :details, :image_url, :category)
   end 
 
 end

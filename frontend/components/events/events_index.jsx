@@ -26,7 +26,7 @@ class EventsIndex extends React.Component {
     // debugger
     //if coming in from the show page, the array is coming in.
     let eventsList = this.props.events.map((event) => {
-      return <EventsShowContainer key={event.title} event={event} />
+      return <EventsShowContainer key={event.id} event={event} />
     })
     return (
       <div className="events-index-container">

@@ -25,6 +25,7 @@ const EventsListItem = ({event, unregister, square, register, bookmark, unbookma
         <Link to={eventShowPath}>
           <div className="card-top">
             <div className="card-img">
+              <img src={event.image_url} />
             </div>
             <span className="card-details">
               <h3>{fillerDateTime}</h3>
@@ -38,7 +39,7 @@ const EventsListItem = ({event, unregister, square, register, bookmark, unbookma
 
           </span>
           <span>
-            <Link to={categoryPath}>#Category</Link>
+            <Link to={categoryPath}>#{event.category}</Link>
           </span>
           <span className="card-actions">
             <EventsRegisterButton 

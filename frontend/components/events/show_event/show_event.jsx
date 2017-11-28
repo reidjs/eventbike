@@ -36,7 +36,7 @@ class ShowEvent extends React.Component {
       const event = this.props.event;
       const id = event.id
       const title = event.title;
-      const image_url = "temp image url";
+      const image_url = event.image_url;
       const date = "temp date";
       const details = event.details;
       const bookmark = this.props.bookmark;
