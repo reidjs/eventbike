@@ -9,7 +9,7 @@ const registrationsReducer = (state = _nullRegistrations, action) => {
   Object.freeze(state);
   switch(action.type) {
     case REGISTER_EVENT:
-      return merge({}, action.payload.registration);
+      return [...action.payload.registrations]
     default:
       return state;
   }

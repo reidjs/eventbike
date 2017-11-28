@@ -1,12 +1,12 @@
 import {
   RECEIVE_EVENTS,
   RECEIVE_EVENT,
-  REGISTER_EVENT,
-  UNREGISTER_EVENT
 } from '../actions/events_actions';
 
+
 import {
-  RECEIVE_BOOKMARK
+  RECEIVE_BOOKMARK,
+  REGISTER_EVENT
 } from '../actions/user_actions';
 
 import merge from 'lodash/merge';
@@ -44,7 +44,6 @@ const eventsReducer = (state = _nullEvents, action) => {
       // debugger
       // return newState;
     case REGISTER_EVENT:
-      // debugger
       // event_id = action.registration.eventId;
 
       // newState = merge({}, state)
@@ -52,11 +51,11 @@ const eventsReducer = (state = _nullEvents, action) => {
       // debugger;
       event = action.payload.event;
       return merge({}, state, {[event.id] : event});
-    case UNREGISTER_EVENT:
-      event_id = action.registration.eventId;
-      newState = merge({}, state);  
-      newState[event_id].attendees = [...action.registration.attendees]; //update event
-      return newState 
+    // case UNREGISTER_EVENT:
+    //   event_id = action.registration.eventId;
+    //   newState = merge({}, state);  
+    //   newState[event_id].attendees = [...action.registration.attendees]; //update event
+    //   return newState 
     default: 
       return state;
   }

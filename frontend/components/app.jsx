@@ -7,7 +7,7 @@ import FlashContainer from './flash/flash_container';
 import ShowEventContainer from './events/show_event/show_event_container';
 // import Greeting from './greeting';
 import Footer from './footer';
-import EventsIndexContainer from './events/events_index_container';
+import EventsContainer from './events/events_container';
 import UsersShowContainer from './users/users_show_container';
 import SplashContainer from './splash/splash_container';
 // import SplashEventsIndex from './splash_events_index';
@@ -37,7 +37,7 @@ const App = () => {
         <div className="main">
           <Switch>
             <Route exact path="/" component={SplashContainer}/>
-            <Route exact path="/events" component={EventsIndexContainer}/>
+            <Route exact path="/events" component={EventsContainer}/>
             <Route path="/events/:id" component={ShowEventContainer}/>
             <ProtectedRoute exact path="/create" component={NewEventContainer}/>
             <AuthRoute path="/signin" component={SessionFormContainer} />

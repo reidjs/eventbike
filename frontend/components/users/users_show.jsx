@@ -67,7 +67,6 @@ class UsersShow extends React.Component {
     const bookmarkPath = `/users/${this.props.user.id}/bookmarks`;
     const ticketsPath = `/users/${this.props.user.id}/tickets`;
     const myEventsPath = `/users/${this.props.user.id}/myevents`;
-    console.log(this.props)
     return (
       <div className="users-show-container">
         <h1>{this.props.user.username}</h1>

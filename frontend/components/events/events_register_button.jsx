@@ -1,5 +1,6 @@
 import React from 'react';
 import Done from 'material-ui-icons/Done';
+import Add from 'material-ui-icons/Add';
 import { ProtectedFunction } from '../../util/route_util';
 import EventsSigninModal from './events_signin_modal';
 import { flashMessage } from 'redux-flash';
@@ -53,13 +54,22 @@ class EventsRegisterButton extends React.Component {
     let myClass;
     this.props.event.registered ? myClass="active" : myClass = "";
     // let myTest = this.showModal ? "true" : null
-    // console.log("test", myTest)
+    console.log("test", this.props)
     // debugger
-    return (
-      <span>
-        <button className={myClass} onClick={this.handleRegistration}><Done /></button>
-      </span>
-    )
+    if (this.props.event.registered) {
+      return (
+        <span>
+          <button className={myClass} onClick={this.handleRegistration}><Done /></button>
+        </span>
+      )
+    } else {
+      return (
+        <span>
+          <button className={myClass} onClick={this.handleRegistration}><Add /></button>
+        </span>
+      )
+    }
+    
   }
 }
 

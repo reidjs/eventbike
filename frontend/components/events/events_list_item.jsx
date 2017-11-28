@@ -5,7 +5,7 @@ import EventsBookmarkContainer from './events_bookmark_container';
 // import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
 import EventsRegisterContainer from './events_register_container';
 
-const EventsListItem = ({event, unregister, square, register, bookmark, unbookmark, currentUser}) => {
+const EventsListItem = ({event, square}) => {
   // const handleBookmark = (e) => {
   //   e.preventDefault();
   //   bookmark(event.id);
@@ -14,8 +14,8 @@ const EventsListItem = ({event, unregister, square, register, bookmark, unbookma
   let cardClass; 
   square ? cardClass = "card square" : cardClass = "card";
   const eventShowPath = `/events/${event.id}`;
-  const categoryGoesHere = "#";
-  const categoryPath = `/events/${categoryGoesHere}`;
+  // const categoryGoesHere = "#";
+  const categoryPath = `/events/${event.category}`;
   const bookmarkPath = `events/${event.id}/bookmark`;
   const fillerDateTime = "Sun, Dec 5 6:00 PM";
   const fillerVenue = "San Francisco Track";
