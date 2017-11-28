@@ -27,4 +27,5 @@ class Event < ApplicationRecord
   has_many :attendees,
   through: :registrations,
   source: :user
+
 end

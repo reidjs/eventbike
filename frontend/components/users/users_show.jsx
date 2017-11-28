@@ -15,20 +15,25 @@ class UsersShow extends React.Component {
   constructor(props) {
     super(props);
     this.events = props.events;
-    this.state={bookmarkedEvents:{}}
+    this.bookmarkedEvents = props.bookmarkedEvents;
+
+    // this.bookmarkedEvents = props.bookmar
   }
   componentWillMount() {
     this.props.getEvents();
-    // this.props.getbookmarks();
+    this.props.getbookmarks();
     // this.props.gettickets();
   }
   componentWillReceiveProps(nextProps, nextState) {
-    if (nextProps.location.pathname !== this.props.location.pathname) {
+    if (nextProps.location.pathname !== this.props.location.pathname || 
+      nextProps.bookmarkedEvents.length !== this.bookmarkedEvents.length) {
       this.props.getEvents();
-      console.log(nextProps, nextState);
-      console.log('here')
+      // console.log(nextProps, nextState);
+      // console.log('here', nextProps.bookmarkedEvents)
+      this.bookmarkedEvents = nextProps.bookmarkedEvents
+      console.log(this.bookmarkedEvents)
     }
-    this.events = nextProps.events 
+    // this.events = nextProps.events 
     // this.bookmarks = nextState.bookmarkedEvents
     // console.log(this.bookmarkedEvents)
     // this.props.getbookmarks();
@@ -48,7 +53,7 @@ class UsersShow extends React.Component {
         </div>
         <Route path={bookmarkPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
-              events={this.props.events}/>} />
+              events={this.props.bookmarkedEvents}/>} />
 
         <Route path={ticketsPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 

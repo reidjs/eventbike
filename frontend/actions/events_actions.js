@@ -2,8 +2,9 @@ import * as EventsAPIUtil from '../util/events_api_util'
 
 export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
-export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const RECEIVE_EVENT_ERRORS = "RECEIVE_ERRORS";
 export const UNREGISTER_EVENT = "UNREGISTER_EVENT";
+export const RESET_EVENT_ERRORS = "RESET_EVENT_ERRORS";
 
 
 export const receiveEvents = (events) => {
@@ -36,14 +37,21 @@ export const unRegisterEvent = (registration) => {
   })
 }
 
-//untested
-export const receiveErrors = (errors) => {
-  // console.log('receivedL', errors)
+export const receiveEventErrors = (errors) => {
   return ({
-    type: RECEIVE_ERRORS,
+    type: RECEIVE_EVENT_ERRORS,
     errors
   })
 }
+
+export const resetEventErrors = () => {
+
+  return ({
+    type: RESET_EVENT_ERRORS
+  })
+}
+
+
 
 export const getEvents = () => dispatch => ( 
   EventsAPIUtil.fetchEvents()
@@ -66,7 +74,7 @@ export const newEvent = (event) => dispatch => (
     .then(res => (
       dispatch(receiveEvent(res))
     ), err => (
-      dispatch(receiveErrors(err.responseJSON))
+      dispatch(receiveEventErrors(err.responseJSON))
     ))
 );
 

@@ -2,7 +2,7 @@ import React from 'react';
 import EventsShowContainer from './events/events_show_container';
 
 const GenericEventsShowList = ({events}) => {
-  if (events === undefined)
+  if (events === undefined || events.length === 0 || events[0] === undefined)
     return (<div></div>)
   let eventsList = events.map((event) => {
     return (

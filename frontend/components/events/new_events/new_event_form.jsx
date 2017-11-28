@@ -13,6 +13,8 @@ class NewEventForm extends React.Component {
     const target = e.target;
     const value = target.value;
     const name = target.name;
+    if (this.props.errors.length > 0)
+      this.props.reseterrors();
     this.setState({[name]: value})
   }
   handleSubmit(e) {
@@ -26,7 +28,8 @@ class NewEventForm extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors.length > 0 && this.waitingForConfirmation) {
       //show errors, do not redirect 
-
+      this.waitingForConfirmation = false;
+      
     } else {
       console.log('no errors')
       nextProps.history.push(`users/${this.props.user.id}/myevents`)

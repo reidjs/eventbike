@@ -17,20 +17,34 @@ export const getAllEvents = ({ events }) => (
 export const getAllEventsInArray = (events, arr) => {
   // if (events)
   //   debugger
-  //array of events that are 
+  // array of events that are 
+  console.log(events, arr)
   let result = []
-  if (events === undefined)
+  let idx = 0;
+  if (events === undefined) {
+    // console.log(events)
+    console.log('events undef)')
     return result;
-  arr.forEach((val, idx) => {
-    console.log('sl')
+  }
+  arr.forEach((val) => {
+    // console.log('sl')
     result.push(events[val]);
+    idx += 1
     if (idx === arr.length - 1) {
-      debugger
-      return result ;
+      // debugger
+      console.log("sending bookmarks: ", result)
+      // return result;
     }
+    if (result.length === arr.length) {
+      console.log('here')
+      return result;
+    }
+    // return result;
     // debugger
   })
-  // return (
-  //   Object.keys(events).map((id) => )
-  // );
+  if (result.length === arr.length) {
+    console.log('returning')
+    return result;
+  }
+  // return result;
 }

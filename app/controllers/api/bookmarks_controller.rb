@@ -14,7 +14,7 @@ class Api::BookmarksController < ApplicationController
 
   def index 
     if logged_in?
-      render json: current_user.bookmarked_events.pluck(:id)
+      render :index
     else 
       render json: ["Sorry, must be logged in to retrieve your bookmarks"], status: 422
     end 

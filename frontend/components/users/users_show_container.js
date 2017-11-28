@@ -10,20 +10,21 @@ const mapStateToProps = (state, ownProps) => {
   // const bookmarkedEvents = values(state.entities.bookmarks)
   // const registeredEvents = values(state.entities.tickets)
   const events = values(state.entities.events);
-  const bookmarks = state.entities.bookmarks;
-  
+  let bookmarkedEvents = getAllEventsInArray(state.entities.events, state.entities.bookmarks)
+  // console.log('books', bookmarkedEvents)
+
   return {
     user,
     events,
-    bookmarks
+    bookmarkedEvents
     //will be state.entities.user
   }
 }
 
 const mapDispatchToProps = dispatch => ({
-  getEvents: () => dispatch (getEvents())
+  getEvents: () => dispatch (getEvents()),
   //
-  // getbookmarks: () => dispatch(getBookmarks()),
+  getbookmarks: () => dispatch(getBookmarks()),
   // gettickets: () => dispatch(getTickets()) 
 });
 

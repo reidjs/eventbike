@@ -23,8 +23,12 @@ const eventsReducer = (state = _nullEvents, action) => {
   let event;
   switch(action.type) {
     case RECEIVE_BOOKMARK: {
-      event = action.payload.event; 
-      return merge({}, state, {[event.id] : action.payload.event})
+      if (action.payload.event) {
+        event = action.payload.event; 
+        return merge({}, state, {[event.id] : action.payload.event})
+      } else { 
+        return state;
+      }
     }
     case RECEIVE_EVENTS:
       return merge({}, state, action.events);
