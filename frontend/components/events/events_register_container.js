@@ -18,7 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     register: (eventId) => dispatch(requestRegister(eventId)),
-    unregister: (eventId) => {}
+    unregister: (eventId) => dispatch(requestUnRegister(eventId))
   };
 };
 // processForm: user => dispatch(processForm(user)),

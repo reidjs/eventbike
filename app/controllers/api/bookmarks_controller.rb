@@ -22,6 +22,7 @@ class Api::BookmarksController < ApplicationController
 
   def destroy 
     if logged_in?
+      
       @bookmark = Bookmark.find_by(user_id: current_user.id, event_id: params[:id])
       if @bookmark 
         @event = @bookmark.event 

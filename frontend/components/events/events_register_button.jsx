@@ -36,7 +36,8 @@ class EventsRegisterButton extends React.Component {
             .register(this.props.event.id, this.props.currentUser.id); 
           return
         case true:
-          this.props.unregister(this.props.event.id, this.props.currentUser.id); 
+          this.props
+            .unregister(this.props.event.id, this.props.currentUser.id); 
           return 
       }
     } else {

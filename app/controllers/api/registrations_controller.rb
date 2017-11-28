@@ -29,19 +29,23 @@ class Api::RegistrationsController < ApplicationController
   end 
 
   def destroy 
-    @event = Event.find_by(event_id: params[:eventId])
-    if @event
-      @registration = Registration.find_by(user_id: current_user.id, event_id: @event.id) 
+    if logged_in? 
+      @event = Event.find_by(id: params[:id])
+      if @event
+        @registration = Registration.find_by(user_id: current_user.id, event_id: @event.id) 
+      end 
+
+      if @registration.nil? || @event.nil?
+        # debugger
+        render json: ["Could not find registration"], status: 404
+        return 
+      end 
+      @user = current_user
+      @registration.destroy
+      render :show
     end 
-    # debugger
-    if @registration.nil? || @event.nil?
-      # debugger
-      render json: ["Could not find registration"], status: 404
-      return 
-    end 
-    @registration.destroy
     #return the event details (event show page)
-    render template: '/api/events/show'
+    # render template: '/api/events/show'
   end 
 
 end

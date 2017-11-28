@@ -66,6 +66,12 @@ export const requestRegister = (eventId) => dispatch => (
       dispatch(receiveRegistration(res))
     ))
 );
+export const requestUnRegister = (eventId) => dispatch => (
+  UserAPIUtil.deleteRegistration(eventId)
+    .then(res => (
+      dispatch(receiveRegistration(res))
+    ))
+);
 
 // export const requestMyEvents = () => dispatch => (
 //   UserAPIUtil.fetchMyEvents()
