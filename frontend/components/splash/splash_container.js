@@ -5,7 +5,9 @@ import { getEvents } from '../../actions/events_actions'
 
 import values from 'lodash/values'
 const mapStateToProps = (state, ownProps) => {
+
   return {
+    ownProps,
     events: values(state.entities.events)
   }
 }

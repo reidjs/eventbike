@@ -10,7 +10,7 @@ class Splash extends React.Component {
     return (
       <div className="main-splash">
         <Greeting />
-        <QueryBox />
+        <QueryBox ownProps={this.props.ownProps}/>
         <SplashEventsIndex {...this.props}/>
       </div>
     )

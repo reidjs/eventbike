@@ -27,7 +27,7 @@ class CategoriesDropDown extends React.Component {
   
   handleOutsideClick(e) {
     // ignore clicks on the component itself
-    if (this.node.contains(e.target)) {
+    if (this.node && this.node.contains(e.target)) {
       return;
     }
     
