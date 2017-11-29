@@ -1,0 +1,1 @@
+json.categories Event.categories

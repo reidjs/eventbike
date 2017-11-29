@@ -1,5 +1,12 @@
 class Event < ApplicationRecord
   validates :title, presence: true
+  def self.categories
+    ['Social', 'Race', 'Other', 'Joyride']
+  end 
+  
+
+  validates :category, 
+    :inclusion => { in: self.categories}
   belongs_to :creator,
   class_name: :User,
   primary_key: :id,
@@ -27,5 +34,8 @@ class Event < ApplicationRecord
   has_many :attendees,
   through: :registrations,
   source: :user
+
+
+
 
 end

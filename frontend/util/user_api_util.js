@@ -70,4 +70,6 @@ export const fetchMyEvents = () => {
     url: `/api/my_events/`
   }) 
 }
+
+
 //fetch events by category 
