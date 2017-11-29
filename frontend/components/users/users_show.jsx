@@ -23,7 +23,7 @@ class UsersShow extends React.Component {
     // this.bookmarkedEvents = props.bookmar
   }
   componentWillMount() {
-    this.props.getEvents();
+    this.props.getmyevents();
     this.props.getbookmarks();
 
     this.props.gettickets();
@@ -38,17 +38,17 @@ class UsersShow extends React.Component {
     // }
     // console.log(nextProps.location.pathname)
     //get the last part of the url
-    let path = nextProps.location.pathname.split('/').slice(-1)[0];
+    // let path = nextProps.location.pathname.split('/').slice(-1)[0];
     // console.log(path)
-    if (path === 'myevents') {
-      // console.log('here')
-      fetchMyEvents().then(
-        (res) => {
-          // console.log(res)
-          this.myEvents = values(res)
-        }
-      )
-    }
+    // if (path === 'myevents') {
+    //   // console.log('here')
+    //   fetchMyEvents().then(
+    //     (res) => {
+    //       // console.log(res)
+    //       this.myEvents = values(res)
+    //     }
+    //   )
+    // }
     // if (path === 'bookmarks') {
     //   fetchBookmarks().then(
     //     (res) => {
@@ -84,7 +84,7 @@ class UsersShow extends React.Component {
               events={this.props.registeredEvents}/>} />
         <Route path={myEventsPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
-              events={this.myEvents}/>} />
+              events={this.props.myevents}/>} />
       </div>  
     )
   }

@@ -1,5 +1,5 @@
 import * as UserAPIUtil from '../util/user_api_util';
-import { RECEIVE_EVENTS } from './events_actions';
+// import { receiveEvents } from './events_actions';
 // export const RECEIVE_BOOKMARKS = 'RECEIVE_BOOKMARKS';
 // export const RECEIVE_TICKETS = 'RECEIVE_TICKETS';
 export const BOOKMARK_EVENT = 'BOOKMARK_EVENT'
@@ -77,6 +77,7 @@ export const requestUnRegister = (eventId) => dispatch => (
       dispatch(receiveRegistration(res))
     ))
 );
+
 
 // export const requestMyEvents = () => dispatch => (
 //   UserAPIUtil.fetchMyEvents()

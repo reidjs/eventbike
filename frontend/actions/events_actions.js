@@ -85,6 +85,12 @@ export const getCategory = (category) => dispatch => (
     ))
 )
 
+export const getUserEvents = () => dispatch => (
+  EventsAPIUtil.fetchUserEvents()
+    .then(res => (
+      dispatch(receiveEvents(res))
+    ))
+);
 
 // export const requestRegistration = (eventId) => dispatch => (
 //   EventsAPIUtil.postRegistration(eventId)

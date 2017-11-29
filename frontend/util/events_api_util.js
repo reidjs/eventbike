@@ -49,3 +49,10 @@ export const fetchCategory = (category) => {
     })
   )
 }
+
+export const fetchUserEvents = () => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/my_events/`
+  }) 
+}

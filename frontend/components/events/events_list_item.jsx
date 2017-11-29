@@ -15,7 +15,7 @@ const EventsListItem = ({event, square}) => {
   square ? cardClass = "card square" : cardClass = "card long";
   const eventShowPath = `/events/${event.id}`;
   // const categoryGoesHere = "#";
-  const categoryPath = `/events/${event.category}`;
+  const categoryPath = `/categories/${event.category}`;
   const bookmarkPath = `events/${event.id}/bookmark`;
   const fillerDateTime = "Sun, Dec 5 6:00 PM";
   const fillerVenue = "San Francisco Track";

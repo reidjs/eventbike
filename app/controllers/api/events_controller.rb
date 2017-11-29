@@ -29,6 +29,11 @@ class Api::EventsController < ApplicationController
     render :index
   end 
 
+  def user_events 
+    @events = Event.where(creator: current_user)
+    render :index
+  end   
+
   private
 
   def event_params

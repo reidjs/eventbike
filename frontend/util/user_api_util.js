@@ -64,12 +64,6 @@ export const unbookmark = (event_id) => {
 //   })
 // }
 
-export const fetchMyEvents = () => {
-  return $.ajax({
-    method: 'GET',
-    url: `/api/my_events/`
-  }) 
-}
 
 
 //fetch events by category 

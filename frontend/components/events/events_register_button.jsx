@@ -72,13 +72,13 @@ class EventsRegisterButton extends React.Component {
     if (!this.props.currentUser) {
       return (
         <span className="register-button">
-          <button className={myClass} onClick={this.handleRegistration}>Log in to get tickets</button>
+          <button className={myClass} onClick={this.handleRegistration}>Log in to register</button>
         </span>
       )
     } else {
       return (
         <div>
-        <button className="open-register-modal" onClick={this.openModal}>Tickets</button>
+        <button className="open-register-modal" onClick={this.openModal}>Register</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -98,7 +98,8 @@ class EventsRegisterButton extends React.Component {
           <div className="closeButton small" onClick={this.closeModal}> 
             <span className="closeButton">&times;</span>
           </div>
-          <h2>Buy Ticket</h2>
+          <h2>{this.props.event.title}</h2>
+          <p>{this.props.event.details}</p>
           <form>
             <input type="number"/>
             

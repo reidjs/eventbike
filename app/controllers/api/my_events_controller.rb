@@ -1,6 +1,6 @@
 class Api::MyEventsController < ApplicationController
   def index
-    @events = current_user.events
+    @events = Events.where(creator: current_user)
     render template: '/api/events/index'
   end 
 end
