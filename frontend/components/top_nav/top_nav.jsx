@@ -2,6 +2,8 @@ import React from 'react'
 import TopNavBrand from './top_nav_brand';
 import TopNavDropDown from './top_nav_dropdown';
 import { Link } from 'react-router-dom';
+// import FlashContainer from '../flash/flash_container';
+
 
 const TopNav = ({currentUser, potentialUser, logout, location}) => {
   // console.log(currentUser)

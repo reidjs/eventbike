@@ -4,12 +4,14 @@ import EventsShowContainer from './events/events_show_container';
 const GenericEventsShowList = ({events}) => {
   if (events === undefined || events.length === 0 || events[0] === undefined)
     return (<div></div>)
-  console.log(events)
+  // console.log(events)
   let eventsList = events.map((event) => {
     // console.log(event)
     return (
       <div className="col">
+        {(event) &&
         <EventsShowContainer key={event.id} event={event} square={true} />
+        }
       </div>
     )
   })

@@ -6,7 +6,10 @@ import TopNav from './top_nav';
 
 const mapStateToProps = (state, ownProps) => {
   // console.log("nav dropdown: ", session);
+  const flash = Boolean(state.flash.messages.length > 0)
+  console.log(flash)
   return {
+    flash: flash, 
     location: ownProps.location,
     currentUser: state.session.currentUser,
     potentialUser: state.session.potentialUser

@@ -97,6 +97,10 @@ div.top-nav-right a:nth-child(2):hover{
   background: $light-grey;
   // margin-bottom: 2px;
 }
+div.top-nav-right a:nth-child(2).flash{
+  background: green;
+  // margin-bottom: 2px;
+}
 
 // ul.user-dropdown-content 
 .user-dropdown > a{
@@ -121,6 +125,7 @@ div.user-dropdown > a:first-child {
 div.user-dropdown:hover ul.user-dropdown-content{
   animation: fadeIn 0.3s forwards;
 }
+
 
 
 

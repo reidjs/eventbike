@@ -3,7 +3,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import TopNavContainer from './top_nav/top_nav_container';
 import SessionModalForm from './session_form/session_modal_form';
 import NewEventContainer from './events/new_events/new_event_container';
-import FlashContainer from './flash/flash_container';
+// import FlashContainer from './flash/flash_container';
 import ShowEventContainer from './events/show_event/show_event_container';
 // import Greeting from './greeting';
 import Footer from './footer';
@@ -32,8 +32,8 @@ const App = () => {
   return (
     <div>
 
-        <Route path="/" component={FlashContainer} />
         <Route path="/" component={TopNavContainer}/>
+        {/* <Route path="/" component={FlashContainer} /> */}
         <div className="main">
           <Switch>
             <Route exact path="/" component={SplashContainer}/>

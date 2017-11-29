@@ -68,6 +68,9 @@ div.top-nav-right > a:last-child:hover {
 div.top-nav-right a:nth-child(2):hover {
   background: #EFF2F5; }
 
+div.top-nav-right a:nth-child(2).flash {
+  background: green; }
+
 .user-dropdown > a {
   padding: 20px;
   display: block; }

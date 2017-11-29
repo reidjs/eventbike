@@ -1,19 +1,27 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom';
+import FlashContainer from '../flash/flash_container';
 // import SessionFormContainer from '../session_form/session_form_container'
 
 class TopNavDropDown extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.handleClick = this.handleClick.bind(this)
+    this.flash = props.flash
+    this.state = {flash: props.flash}
   }
-  componentWillReceiveProps(newProps) {
-    if (newProps.currentUser) {
-      // console.log('user logged in')
-    } else {
-      // console.log('user logged out')
+  componentWillReceiveProps(nextProps) {
+    // if (newProps.currentUser) {
+    //   // console.log('user logged in')
+    // } else {
+    //   // console.log('user logged out')
       
-    }
+    // }
+    // console.log(newProps.flash)
+    console.log(nextProps)
+    const flash = nextProps.flash;
+    this.setState({flash})
+
   }
 
   handleClick(e) {
@@ -25,10 +33,14 @@ class TopNavDropDown extends React.Component {
   
 
   render() {
+    let myClass; 
+    this.state.flash ? myClass="flash" : myClass = "";
     if (!this.props.currentUser) {
       return (
-        <div className="user-dropdown">
+        <div className={`user-dropdown ${myClass}`}>
           <Link to="/signin">SIGN IN</Link>
+          <FlashContainer />
+
         </div>
       )
     } else {
@@ -36,6 +48,8 @@ class TopNavDropDown extends React.Component {
       return (
         <div className="user-dropdown">
           <Link to={`/users/${userId}/bookmarks`}>{this.props.currentUser.username}</Link>
+          <FlashContainer />
+
           <div className="submenu">{/*Hacky way to have more forgiving dropdown mouse movement*/}</div>
           <ul className="user-dropdown-content">
           {/* //These links should be their own components and display a circle representing their quantity */}
