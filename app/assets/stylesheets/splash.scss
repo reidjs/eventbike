@@ -68,7 +68,9 @@ div.hero-text {
   
   // transfo÷rm: translate(50%, 50%);
 }
-div.hero-text p{
+div.hero-text h1{
+  font-family: "Kalam";
+  
   margin-top: 40px;
   text-align: center;
   font-size: 45px;
@@ -78,8 +80,15 @@ div.hero-text p{
   // top: 50%;
   // left: 50%;
   // transform: translate(-50%, -50%);
-  color: $color-orange;
+  color: $dark-blue;
 }
+
+// div.hero-text a{
+//   background: $dark-green;
+//   border-radius: 15px;
+//   font-size: 16px;
+//   color: white;
+// }
 
 #cf4a img{
   animation-name: cf4FadeInOut;
@@ -151,9 +160,11 @@ div.flex-grid {
 }
 
 div.splash-index-container > h1 {
-  font-family: 'Open Sans Condensed', sans-serif;
+  // font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 300;
   font-size: 25px;
-  margin: 90px auto;
+  margin: 80px auto;
+  margin-bottom: 10px;
   text-align: center;
+  font-family: "Oxygen";
 }
