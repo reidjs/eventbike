@@ -36,7 +36,8 @@ span.card-attendees {
 div.card-details {
   font-family: "Oxygen";
   display: block;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
 
 div.card-details h3 {
   font-size: 12px; }
@@ -50,6 +51,16 @@ div.card-details h4 {
   font-size: 10px;
   margin: 0 auto;
   margin-bottom: 5px; }
+
+div.card.square div.card-details h2 {
+  width: 80%;
+  font-weight: 700;
+  margin: 5px auto; }
+
+div.card.square div.card-details {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 div.card-top:hover {
   box-shadow: 3px -6px 4px rgba(0, 0, 0, 0.1);

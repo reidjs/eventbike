@@ -16,11 +16,15 @@ class Api::EventsController < ApplicationController
 
   def create 
     @event = Event.new(event_params)
-    @event.creator_id = current_user.id
-    if @event.save
-      render :show
+    if logged_in?
+      @event.creator_id = current_user.id
+      if @event.save
+        render :show
+      else 
+        render json: @event.errors.full_messages, status: 422
+      end 
     else 
-      render json: @event.errors.full_messages, status: 422
+      render json: ["You must be logged in to create events"], status: 422
     end 
   end 
 

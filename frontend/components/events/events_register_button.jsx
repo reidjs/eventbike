@@ -13,6 +13,7 @@ class EventsRegisterButton extends React.Component {
     // this.userIsRegistered = this.userIsRegistered.bind(this);
     this.handleRegistration = this.handleRegistration.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.pushUserToPath = this.pushUserToPath.bind(this);
     this.state = {
       modalIsOpen: false
     };
@@ -41,10 +42,12 @@ class EventsRegisterButton extends React.Component {
         case false:
           this.props
             .register(this.props.event.id, this.props.currentUser.id); 
+          this.pushUserToPath("tickets")
           return
         case true:
           this.props
             .unregister(this.props.event.id, this.props.currentUser.id); 
+          this.pushUserToPath("tickets")
           return 
       }
     } else {
@@ -61,9 +64,14 @@ class EventsRegisterButton extends React.Component {
     // console.log('Register')
   }
 
+  pushUserToPath(path) {
+    this.props.history.push(`/users/${this.props.currentUser.id}/${path}`)
+  }
+
   handleDelete() {
     deleteevent();
-    this.props.history.push(`/users/${this.props.currentUser.id}/myevents`)
+    // this.props.history.push(`/users/${this.props.currentUser.id}/myevents`)
+    this.pushUserToPath("myevents")
     
   }
 
@@ -71,6 +79,7 @@ class EventsRegisterButton extends React.Component {
     let myClass = "active"
     let buttonText;
     this.props.event.registered ? buttonText="Cancel" : buttonText = "Register";
+    this.props.event.registered ? myClass="cancel" : myClass = "register";
 
     // if (this.props.customClass)
     //   myClass = this.props.customClass;
@@ -97,7 +106,7 @@ class EventsRegisterButton extends React.Component {
     else {
       return (
         <div>
-        <button className="open-register-modal" onClick={this.openModal}>Register</button>
+        <button className={`open-register-modal ${myClass}`} onClick={this.openModal}>{buttonText}</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -117,16 +126,13 @@ class EventsRegisterButton extends React.Component {
           <div className="closeButton small" onClick={this.closeModal}> 
             <span className="closeButton">&times;</span>
           </div>
-          <h2>{this.props.event.title}</h2>
-          <p>{this.props.event.details}</p>
-          <form>
-            <input type="number"/>
-            
-            <span className="register-button">
-            <button className={myClass} onClick={this.handleRegistration}>{buttonText}</button>
-            </span>
-            
-          </form>
+          <div className="register-modal-text">
+            <h2>{this.props.event.title}</h2>
+            <p class="overflow-ellipsis">{this.props.event.details}</p>  
+            <div className="register-button">
+              <button className={myClass} onClick={this.handleRegistration}>{buttonText}</button>
+            </div>
+          </div>
           
         </Modal>
       </div>
