@@ -18,3 +18,38 @@ div.action-bar > span.bookmark-button {
   font-size: 35px;
   padding: 20px;
 }
+
+div.register-modal {
+  background: white;
+}
+
+div.register-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  height: 40%;
+  background: white;
+  padding: 20px;
+  margin: 100px auto;
+  border: 1px solid black;
+  animation: bounce 0.5s;
+}
+.register-modalOverlay_after-open{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(16, 14, 14, 0.75);
+}
+
+div.closeButton.small {
+  width: 24px;
+  height: 24px;
+  
+}
+div.closeButton.small > span.closeButton{
+  font-size: 14px;
+  
+}

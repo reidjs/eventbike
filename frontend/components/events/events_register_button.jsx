@@ -5,16 +5,6 @@ import { ProtectedFunction } from '../../util/route_util';
 import EventsSigninModal from './events_signin_modal';
 import { flashMessage } from 'redux-flash';
 import Modal from 'react-modal';
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
-};
 
 class EventsRegisterButton extends React.Component {
   constructor(props){
@@ -36,7 +26,6 @@ class EventsRegisterButton extends React.Component {
 
   afterOpenModal() {
     // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00';
   }
 
   closeModal() {
@@ -102,17 +91,19 @@ class EventsRegisterButton extends React.Component {
           }}
           contentLabel="Register Modal"
         >
-
-          <h2 ref={subtitle => this.subtitle = subtitle}>Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
+          <div className="closeButton small" onClick={this.closeModal}> 
+            <span className="closeButton">&times;</span>
+          </div>
+          <h2>Buy Ticket</h2>
           <form>
             <input type="number"/>
             
             <span className="register-button">
-            <button className={myClass} onClick={this.handleRegistration}><Add /></button>
+            <button className={myClass} onClick={this.handleRegistration}>Purchase</button>
             </span>
+            
           </form>
+          
         </Modal>
       </div>
         

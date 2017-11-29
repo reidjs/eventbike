@@ -8,6 +8,7 @@ import EventsRegisterButton from './events_register_button';
 const mapStateToProps = (state, ownProps) => {
   const event = ownProps.event;
   const currentUser = state.session.currentUser;
+  if (ownProps.customButton)
   // const square = ownProps.square;
   return {
     currentUser, 
