@@ -10,6 +10,7 @@ class Events extends React.Component {
     // console.log(this.props.noSideNav)
     return (
       <div className="events-container">
+        
         {this.props.noSideNav === undefined && 
           <SideNav />
         }

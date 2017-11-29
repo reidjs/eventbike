@@ -44,9 +44,11 @@ class EventsBookmarkButton extends React.Component {
     let myClass;
     this.props.event.bookmarked ? myClass="active" : myClass = "";
     if (this.props.event.bookmarked) {
-      return <button className={myClass} onClick={this.handleBookmark}><Bookmark/></button>
+      return (
+      <span className="bookmark-button"><button className={myClass} onClick={this.handleBookmark}><Bookmark/></button></span>
+      )
     } else {
-      return <button className={myClass} onClick={this.handleBookmark}><BookmarkBorder/></button>
+      return <span className="bookmark-button"> <button className={myClass} onClick={this.handleBookmark}><BookmarkBorder/></button></span>
       
     }
   }

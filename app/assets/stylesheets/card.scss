@@ -55,24 +55,23 @@ div.card-details {
 
 div.card-img {
   // width: 100%;
-  width: 200px;
+  width: 250px;
   height: 130px;
-  padding: 10px;
+  padding: 0;
   overflow: hidden;
   // background-image: url("http://res.cloudinary.com/eventbike/image/upload/v1511497460/joe-neric-223562_okhigx.jpg");
   background-position: center;
   background-repeat: no-repeat;
 }
 span.card-details {
-  
-}
-div.card-img img {
-  // width: 50%;
-  // height: 50%;
+  width: 200px;
 }
 
 span.card-attendees {
 
+}
+div.card-top {
+  background:white;
 }
 
 span.card-actions .active{
@@ -122,9 +121,7 @@ span.card-actions > button.active:hover {
   -o-transition: color 0.5s ease-out;
   transition: color 0.5s ease-out;
 }
-div.card-img {
-  padding: 0;
-}
+
 div.col {
   // width: 32%;
   background: $light-grey;

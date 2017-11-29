@@ -1,7 +1,6 @@
 div.events-sidenav {
   padding: 20px;
-  height: 800px;
-  transform: translate(0, -200px); }
+  height: 800px; }
 
 div.events-index-container h1 {
   font-size: 24px;
@@ -12,7 +11,6 @@ div.events-index-container h1 {
 div.events-container {
   display: flex;
   background: #f8f8fa;
-  align-items: center;
   justify-content: space-around; }
 
 .loader {

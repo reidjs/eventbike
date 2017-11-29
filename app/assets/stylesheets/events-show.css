@@ -1,0 +1,17 @@
+div.event-show-header {
+  display: flex; }
+
+div.event-show-hero-img {
+  width: 65%;
+  height: 300px;
+  overflow: hidden; }
+
+div.event-show-details {
+  width: 35%;
+  background: #EFF2F5; }
+
+div.action-bar > span.bookmark-button {
+  font-size: 35px;
+  padding: 20px; }
+
+/*# sourceMappingURL=events-show.css.map */

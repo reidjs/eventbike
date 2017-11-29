@@ -42,8 +42,8 @@ const EventsListItem = ({event, square}) => {
             <Link to={categoryPath}>{event.category}</Link>
           </span>
           <span className="card-actions">
-            <EventsRegisterContainer
-                                event={event}/>
+            {/* <EventsRegisterContainer
+                                event={event}/> */}
             <EventsBookmarkContainer
                                 event={event}/>
           </span>

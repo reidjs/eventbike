@@ -23,12 +23,18 @@ div.card-footer {
   background: white; }
 
 div.card-img {
-  width: 200px;
+  width: 250px;
   height: 130px;
-  padding: 10px;
+  padding: 0;
   overflow: hidden;
   background-position: center;
   background-repeat: no-repeat; }
+
+span.card-details {
+  width: 200px; }
+
+div.card-top {
+  background: white; }
 
 span.card-actions .active {
   color: #288128; }
@@ -57,9 +63,6 @@ span.card-actions > button.active:hover {
   -moz-transition: color 0.5s ease-out;
   -o-transition: color 0.5s ease-out;
   transition: color 0.5s ease-out; }
-
-div.card-img {
-  padding: 0; }
 
 div.col {
   background: #EFF2F5;
