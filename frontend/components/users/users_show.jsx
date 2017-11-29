@@ -17,6 +17,7 @@ class UsersShow extends React.Component {
   constructor(props) {
     super(props);
     this.events = props.events;
+    this.getEventsFromPath = this.getEventsFromPath.bind(this);
     // console.log('my bookmarks',this.bookmarkedEvents)
     // this.bookmarkedEvents = props.bookmar
   }
@@ -26,51 +27,27 @@ class UsersShow extends React.Component {
 
     this.props.gettickets();
   }
+  getEventsFromPath(path) {
+    if (path === "myevents") {
+      this.props.getmyevents();
+      // console.log('here')
+    }
+    if (path === "bookmarks") {
+      this.props.getbookmarks();
+      // console.log('here')
+    }
+    if (path === "tickets") {
+      this.props.gettickets();
+      // console.log('here')
+    }
+  }
   componentWillReceiveProps(nextProps, nextState) {
-    // if (nextProps.location.pathname !== this.props.location.pathname || 
-    //   nextProps.bookmarkedEvents.length !== this.bookmarkedEvents.length) {
-    //   this.props.getEvents();
-      // console.log(nextProps, nextState);
-      // console.log('here', nextProps.bookmarkedEvents)
-    //   this.bookmarkedEvents = nextProps.bookmarkedEvents
-    // }
-    // console.log(nextProps.location.pathname)
-    //get the last part of the url
-    // let path = nextProps.location.pathname.split('/').slice(-1)[0];
-    // console.log(path)
-    // if (path === 'myevents') {
-    //   // console.log('here')
-    //   fetchMyEvents().then(
-    //     (res) => {
-    //       // console.log(res)
-    //       this.myEvents = values(res)
-    //     }
-    //   )
-    // }
-    // if (path === 'bookmarks') {
-    //   fetchBookmarks().then(
-    //     (res) => {
-    //       this.myBookmarks = values(res)
-    //     }
-    //   )
-    // }
-    // this.events = nextProps.events 
-    // this.bookmarks = nextState.bookmarkedEvents
-    // console.log(this.bookmarkedEvents)
-    // this.props.getbookmarks();
-    // this.props.gettickets();
-    // if (nextProps.location.pathname === )
-    console.log(nextProps);
+
+    // console.log(nextProps);
     // const path = nextProps.pathname
     if (nextProps.pathname !== this.props.pathname) {
-      if (nextProps.pathname === "myevents") {
-        this.props.getmyevents();
-        // console.log('here')
-      }
-      if (nextProps.pathname === "bookmarks") {
-        this.props.getbookmarks();
-        // console.log('here')
-      }
+      this.getEventsFromPath(nextProps.pathname);
+      
       // this.props.getmyevents();
 
       // console.log('get my events')
