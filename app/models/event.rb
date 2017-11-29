@@ -7,6 +7,7 @@ class Event < ApplicationRecord
 
   validates :category, 
     :inclusion => { in: self.categories}
+  validates_uniqueness_of :title, :case_sensitive => false
   belongs_to :creator,
   class_name: :User,
   primary_key: :id,

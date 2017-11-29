@@ -29,7 +29,7 @@ class Api::EventsController < ApplicationController
   end 
 
   def query
-    @events = Event.where("title like ?", "%#{params[:id]}%" )
+    @events = Event.where("title ILIKE ? OR details ILIKE ?", "%#{params[:id]}%", "%#{params[:id]}%" )
     render :index
   end 
 
