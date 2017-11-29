@@ -19,22 +19,10 @@ class SplashEventsIndex extends React.Component {
     this.setState({events});
   }
   render() {
-    // console.log(this.state.events)
-    let myClass;
-    // let myClass2;
-    this.loading ? (myClass = "loader") : (myClass = "showEvents");
-    // this.props.squares ? myClass2="events-list squares" : myClass2="events-list";
-    // let eventsList = this.props.events.map((event) => {
-    //   return (
-    //     <div className="col">
-    //       <EventsShowContainer key={event.title} event={event} square={true} />
-    //     </div>
-    //   )
-    // })
+    
     return (
       <div className="splash-index-container">
         <h1>Cycling events in San Francisco, California</h1>
-        <div className={myClass}></div>
         <GenericEventsShowList events={this.props.events}/>
       </div>  
     )

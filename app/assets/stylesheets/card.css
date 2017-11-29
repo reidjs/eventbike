@@ -8,19 +8,52 @@ div.card {
   padding: 10px;
   margin-bottom: 10px; }
 
-div.card-footer:hover {
-  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.2s cubic-bezier(0, 0.2, 0.4, 1); }
-
 div.card-top {
   display: flex;
   align-items: center;
   width: 100%; }
 
 div.card-footer {
+  border-top: 1px solid #EFF2F5;
+  font-family: "Kalam";
   display: flex;
   justify-content: space-between;
   background: white; }
+
+div.card-footer a {
+  padding-left: 5px; }
+
+div.card-footer a:hover {
+  color: #0085cc;
+  -webkit-transition: color 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out;
+  -o-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out; }
+
+span.card-attendees {
+  color: #666A73; }
+
+div.card-details {
+  font-family: "Oxygen";
+  display: block;
+  text-align: center; }
+
+div.card-details h3 {
+  font-size: 12px; }
+
+div.card-details h2 {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #45494E; }
+
+div.card-details h4 {
+  font-size: 10px;
+  margin: 0 auto;
+  margin-bottom: 5px; }
+
+div.card-top:hover {
+  box-shadow: 3px -6px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s cubic-bezier(0, 0.2, 0.4, 1); }
 
 div.card-img {
   width: 250px;
@@ -31,10 +64,17 @@ div.card-img {
   background-repeat: no-repeat; }
 
 span.card-details {
-  width: 200px; }
+  width: 200px;
+  padding: 15px; }
 
 div.card-top {
   background: white; }
+
+div.card.long div.card-top {
+  width: 500px; }
+
+div.card.long div.card-footer {
+  width: 500px; }
 
 span.card-actions .active {
   color: #288128; }
@@ -45,6 +85,9 @@ span.card-actions .active {
 
   div.card-top {
     flex-direction: column; } }
+div.card-footer span {
+  margin-top: 5px; }
+
 div.col div.card {
   width: 250px;
   height: 300px;
@@ -64,9 +107,15 @@ span.card-actions > button.active:hover {
   -o-transition: color 0.5s ease-out;
   transition: color 0.5s ease-out; }
 
+span.card-actions {
+  padding-right: 5px; }
+
 div.col {
   background: #EFF2F5;
   flex: 1;
   margin-bottom: 10px; }
+
+div.card.long div.card-details {
+  text-align: left; }
 
 /*# sourceMappingURL=card.css.map */

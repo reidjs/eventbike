@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EventsBookmarkContainer from './events_bookmark_container';
-// import BookmarkBorder from 'material-ui-icons/BookmarkBorder';
+import AccountCircle from 'material-ui-icons/AccountCircle';
 import EventsRegisterContainer from './events_register_container';
 
 const EventsListItem = ({event, square}) => {
@@ -12,7 +12,7 @@ const EventsListItem = ({event, square}) => {
   //   console.log('bookmark')
   // }
   let cardClass; 
-  square ? cardClass = "card square" : cardClass = "card";
+  square ? cardClass = "card square" : cardClass = "card long";
   const eventShowPath = `/events/${event.id}`;
   // const categoryGoesHere = "#";
   const categoryPath = `/events/${event.category}`;
@@ -35,11 +35,11 @@ const EventsListItem = ({event, square}) => {
           </div>
         </Link>
         <div className="card-footer">
-          <span className="card-attendees">
-
-          </span>
           <span>
             <Link to={categoryPath}>{event.category}</Link>
+          </span>
+          <span className="card-attendees">
+            <AccountCircle />{event.attendees}
           </span>
           <span className="card-actions">
             {/* <EventsRegisterContainer
