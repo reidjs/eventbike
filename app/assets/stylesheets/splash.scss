@@ -65,8 +65,14 @@ div.hero-text {
   transform: translate(-50%, -25%);
   z-index: 2;
   transform: 2s ease-in-out;
-  
+  display:flex;
+  flex-direction: column;
+  align-items: center;
   // transfo÷rm: translate(50%, 50%);
+}
+
+div.hero-text form {
+
 }
 div.hero-text h1{
   font-family: "Kalam";
@@ -166,5 +172,20 @@ div.splash-index-container > h1 {
   margin: 120px auto;
   margin-bottom: 10px;
   text-align: center;
+  font-family: "Oxygen";
+}
+
+span.magnifier {
+  position: absolute;
+  transform: translate(0, 5px );
+  // left: -20px;
+}
+div.hero-text > form > input {
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 30px;
+  height: 36px;
+  font-size: 20px;
+  width: 400px;
   font-family: "Oxygen";
 }

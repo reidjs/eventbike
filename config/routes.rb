@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     get 'query/:id', to: 'events#query'
     get 'my_events/', to: 'events#user_events'
+    get 'my_tickets/', to: 'events#user_tickets'
+    get 'my_bookmarks/', to: 'events#user_bookmarks'
     resources :events, only: [:show, :index, :create, :new]
     resources :registrations, only: [:index, :create, :destroy]
     resources :users, only: [:new, :create, :show, :index] 

@@ -17,8 +17,6 @@ class UsersShow extends React.Component {
   constructor(props) {
     super(props);
     this.events = props.events;
-    this.bookmarkedEvents = props.bookmarkedEvents;
-    this.myEvents = [];
     // console.log('my bookmarks',this.bookmarkedEvents)
     // this.bookmarkedEvents = props.bookmar
   }
@@ -62,6 +60,24 @@ class UsersShow extends React.Component {
     // this.props.getbookmarks();
     // this.props.gettickets();
     // if (nextProps.location.pathname === )
+    console.log(nextProps);
+    // const path = nextProps.pathname
+    if (nextProps.pathname !== this.props.pathname) {
+      if (nextProps.pathname === "myevents") {
+        this.props.getmyevents();
+        // console.log('here')
+      }
+      if (nextProps.pathname === "bookmarks") {
+        this.props.getbookmarks();
+        // console.log('here')
+      }
+      // this.props.getmyevents();
+
+      // console.log('get my events')
+    }
+    if (this.props.events !== nextProps.events) {
+      this.events = nextProps.events;
+    }
   }
   render() {
     const bookmarkPath = `/users/${this.props.user.id}/bookmarks`;
@@ -75,7 +91,8 @@ class UsersShow extends React.Component {
           <NavLink to={bookmarkPath}>Bookmarks</NavLink>
           <NavLink to={myEventsPath}>My Events</NavLink>
         </div>
-        <Route path={bookmarkPath} render={routeProps => 
+        <GenericEventsShowList events={this.events}/>
+        {/* <Route path={bookmarkPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
               events={this.props.bookmarkedEvents}/>} />
 
@@ -84,7 +101,7 @@ class UsersShow extends React.Component {
               events={this.props.registeredEvents}/>} />
         <Route path={myEventsPath} render={routeProps => 
               <GenericEventsShowList {...routeProps} 
-              events={this.props.myevents}/>} />
+              events={this.props.myevents}/>} /> */}
       </div>  
     )
   }

@@ -56,3 +56,15 @@ export const fetchUserEvents = () => {
     url: `/api/my_events/`
   }) 
 }
+export const fetchRegisteredEvents = () => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/my_tickets/`
+  }) 
+}
+export const fetchBookmarkedEvents = () => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/my_bookmarks/`
+  }) 
+}

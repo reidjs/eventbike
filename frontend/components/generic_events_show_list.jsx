@@ -7,13 +7,15 @@ const GenericEventsShowList = ({events}) => {
   // console.log(events)
   let eventsList = events.map((event) => {
     // console.log(event)
-    return (
-      <div className="col">
-        {(event) &&
-        <EventsShowContainer key={event.id} event={event} square={true} />
-        }
-      </div>
-    )
+    if (event) {
+      return (
+        <div className="col">
+          <EventsShowContainer key={event.id} event={event} square={true} />
+        </div>
+      )
+    } else {
+      return (<div></div>)
+    }
   })
   return (
     <div className="flex-grid">

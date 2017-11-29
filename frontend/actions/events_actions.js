@@ -91,7 +91,18 @@ export const getUserEvents = () => dispatch => (
       dispatch(receiveEvents(res))
     ))
 );
-
+export const getRegisteredEvents = () => dispatch => (
+  EventsAPIUtil.fetchRegisteredEvents()
+    .then(res => (
+      dispatch(receiveEvents(res))
+    ))
+)
+export const getBookmarkedEvents = () => dispatch => (
+  EventsAPIUtil.fetchBookmarkedEvents()
+    .then(res => (
+      dispatch(receiveEvents(res))
+    ))
+)
 // export const requestRegistration = (eventId) => dispatch => (
 //   EventsAPIUtil.postRegistration(eventId)
 //     .then(res => (

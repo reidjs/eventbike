@@ -37,6 +37,15 @@ class Api::EventsController < ApplicationController
     @events = Event.where(creator: current_user)
     render :index
   end   
+  def user_tickets
+    
+    @events = current_user.attending_events 
+    render :index
+  end   
+  def user_bookmarks
+    @events = current_user.bookmarked_events
+    render :index
+  end   
 
   private
 
