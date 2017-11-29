@@ -12,6 +12,7 @@ class EventsRegisterButton extends React.Component {
     // debugger
     // this.userIsRegistered = this.userIsRegistered.bind(this);
     this.handleRegistration = this.handleRegistration.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
     this.state = {
       modalIsOpen: false
     };
@@ -50,6 +51,7 @@ class EventsRegisterButton extends React.Component {
       // render modal 
       // console.log()
       //push to login screen
+      
       this.props.history.push('/signin')
       // dispatch(flashMessage('You must be logged in to register'))
       // console.log(this.showModal)
@@ -59,23 +61,40 @@ class EventsRegisterButton extends React.Component {
     // console.log('Register')
   }
 
+  handleDelete() {
+    deleteevent();
+    this.props.history.push(`/users/${this.props.currentUser.id}/myevents`)
+    
+  }
+
   render() {
     let myClass = "active"
     let buttonText;
     this.props.event.registered ? buttonText="Cancel" : buttonText = "Register";
+
     // if (this.props.customClass)
     //   myClass = this.props.customClass;
 
     // let myTest = this.showModal ? "true" : null
     // debugger
     // if (this.props.event.registered) {
+      console.log(this.props)
     if (!this.props.currentUser) {
       return (
         <span className="register-button">
           <button className={myClass} onClick={this.handleRegistration}>Log in to register</button>
         </span>
       )
-    } else {
+    }
+    //TODO: Delete events
+    // } else if (this.props.event.creator === this.props.currentUser.id) {
+    //   return (
+    //     <span className="register-button">
+    //       <button className={myClass} onClick={this.handleDelete}>Delete my event</button>
+    //     </span>
+    //   )
+    // } 
+    else {
       return (
         <div>
         <button className="open-register-modal" onClick={this.openModal}>Register</button>

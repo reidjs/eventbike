@@ -70,11 +70,8 @@ span.card-details {
 div.card-top {
   background: white; }
 
-div.card.long div.card-top {
-  width: 500px; }
-
-div.card.long div.card-footer {
-  width: 500px; }
+div.card.long div.card-top, div.card.long div.card-footer {
+  width: 700px; }
 
 span.card-actions .active {
   color: #288128; }
@@ -116,6 +113,7 @@ div.col {
   margin-bottom: 10px; }
 
 div.card.long div.card-details {
-  text-align: left; }
+  text-align: left;
+  margin-left: 50px; }
 
 /*# sourceMappingURL=card.css.map */

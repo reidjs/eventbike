@@ -17,7 +17,7 @@ end
 
 def body2
   <<~HERDOC
-  Racing gets underway on Thursday, May 17 at 9am, with some of the best amateurs in the country doing battle. In the afternoon, the top pros will be riding on the track for their series media day. Later on Thursday night, join us at the Palladio Mall in Folsom from 5 - 7pm for a Hangtown pre-party. Amateur racing continues on Friday, May 18 at 9am, when the top experts and Pro Am's compete for pro points, which leads to a professional license in the premier professional series. 
+  Racing gets underway at 9am, with some of the best amateurs in the country doing battle. In the afternoon, the top pros will be riding on the track for their series media day. Later on Thursday night, join us at the Palladio Mall in Folsom from 5 - 7pm for a Hangtown pre-party. Amateur racing continues on Friday, May 18 at 9am, when the top experts and Pro Am's compete for pro points, which leads to a professional license in the premier professional series. 
   HERDOC
 end 
 
@@ -56,7 +56,16 @@ def randomizer(*args)
 end 
 
 def randomizerbody(*args)
-  args.sample
+  deets = args.sample
+  # deets.gsub!("/\n/", "")
+  deets.slice! '\n'
+  deets.slice! '\\'
+  deets.slice! '"'
+  deets.slice! "'"
+  deets.slice! "‘"
+  deets.slice! "“"
+  deets.slice! "”"
+  deets.gsub("/\n?/", "")
 end 
 
 p randomizer(a0, a1, a2, a3, a4, a5, a6)

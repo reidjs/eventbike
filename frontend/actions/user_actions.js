@@ -78,6 +78,13 @@ export const requestUnRegister = (eventId) => dispatch => (
     ))
 );
 
+//this will cause issues with registrations
+// export const requestModifyEvent = (eventId) => dispatch => (
+//   UserAPIUtil.deleteEvent(eventId)
+//     .then(res => (
+//       dispatch(receiveEvent())
+//     ))
+// )
 
 // export const requestMyEvents = () => dispatch => (
 //   UserAPIUtil.fetchMyEvents()

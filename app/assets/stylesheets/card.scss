@@ -116,12 +116,8 @@ div.card-top {
   // width: 500px;
 }
 
-div.card.long div.card-top {
-  width: 500px;
-}
-
-div.card.long div.card-footer {
-  width: 500px;
+div.card.long div.card-top, div.card.long div.card-footer {
+  width: 700px;
 }
 
 span.card-actions .active{
@@ -187,6 +183,7 @@ div.col {
 div.card.long div.card-details {
   // color: red;
   text-align: left;
+  margin-left: 50px;
 }
 
 // div.card-footer span:nth-child(2) {
