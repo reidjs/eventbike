@@ -2,26 +2,46 @@ import React from 'react';
 // import EventsListItem from './events_list_item';
 import EventsShowContainer from './events_show_container';
 import Modal from 'react-modal';
-
+// import { getCategory } from '../../actions/events_actions';
 class EventsIndex extends React.Component {
   constructor(props) {
     super(props);
     this.loading = true;
     this.state={events: {}, modalIsOpen: true}
     this.closeModal = this.closeModal.bind(this);
-    
+    this.getEventsFromURL = this.getEventsFromURL.bind(this);
   }
+  //we should only send down specific 
   componentWillMount() {
+    // console.log(firstpart)
+    // debugger
+    this.getEventsFromURL(this.props.path);
+    
     // console.log(this.props.getevents)
-    setTimeout(this.props.getevents, 0); //artificial delay
+    // setTimeout(this.props.getevents, 0); //artificial delay
     //spinner now 
   }
+  getEventsFromURL(path) {
+    const firstpart = path.split('/')[1]
+    console.log()
+    if (firstpart === "categories") {
+      // console.log('here')
+      this.props.getcategory(path.split('/')[2]);
+    } else {
+      // this.props.getevents();
+      setTimeout(this.props.getevents, 0)
+    }
+  }
   componentWillReceiveProps(nextProps) {
+    if (nextProps.path !== this.props.path) {
+      this.getEventsFromURL(nextProps.path);
+    }
     const events = nextProps.events
     this.loading = false;
     const modalIsOpen = false;
     this.closeModal();
     this.setState({events});
+
   }
   closeModal() {
     this.setState({modalIsOpen: false});

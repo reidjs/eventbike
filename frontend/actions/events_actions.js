@@ -78,6 +78,13 @@ export const newEvent = (event) => dispatch => (
     ))
 );
 
+export const getCategory = (category) => dispatch => (
+  EventsAPIUtil.fetchCategory(category)
+    .then(res => (
+      dispatch(receiveEvents(res))
+    ))
+)
+
 
 // export const requestRegistration = (eventId) => dispatch => (
 //   EventsAPIUtil.postRegistration(eventId)

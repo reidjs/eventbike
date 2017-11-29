@@ -58,7 +58,7 @@ div.hero-text h1 {
   animation-name: cf4FadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 15s;
+  animation-duration: 20s;
   position: absolute;
   left: 0; }
 

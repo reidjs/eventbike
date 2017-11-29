@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     resources :registrations, only: [:index, :create, :destroy]
     resources :users, only: [:new, :create, :show, :index] 
     resources :my_events, only: [:index]
-    resources :categories, only: [:index] #sends up index of categories
+    #show for category sends up events that match that category
+    resources :categories, only: [:index, :show] #sends up index of categories
     #bookmark index will be the current user's bookmarks
     resources :bookmarks, only: [:index, :create, :destroy]
     resource :session, only: [:new, :create, :destroy]

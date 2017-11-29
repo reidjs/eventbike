@@ -31,3 +31,12 @@ export const fetchCategories = () => {
     })
   )
 }
+//sends up events matching category. CASE SENSITIVE
+export const fetchCategory = (category) => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: `/api/categories/${category}`
+    })
+  )
+}

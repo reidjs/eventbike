@@ -31,7 +31,7 @@ const eventsReducer = (state = _nullEvents, action) => {
       }
     }
     case RECEIVE_EVENTS:
-      return merge({}, state, action.events);
+      return merge({}, action.events);
     //Receive event removes all the other events from memory. 
     case RECEIVE_EVENT:
       // newState = merge({}, state);

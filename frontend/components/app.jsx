@@ -38,6 +38,7 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={SplashContainer}/>
             <Route exact path="/events" component={EventsContainer}/>
+            <Route exact path="/categories/:id" component={EventsContainer} /> 
             <Route path="/events/:id" component={ShowEventContainer}/>
             <ProtectedRoute exact path="/create" component={NewEventContainer}/>
             <AuthRoute path="/signin" component={SessionFormContainer} />

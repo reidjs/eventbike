@@ -10,7 +10,7 @@ class SideNav extends React.Component {
     fetchCategories()
       .then(res => {
         const categories = res.categories;
-        console.log(categories);
+        // console.log(categories);
         this.setState({categories})
       })
   }
