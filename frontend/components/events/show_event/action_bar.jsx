@@ -7,8 +7,7 @@ const ActionBar = ({event, register, unregister, bookmark, unbookmark, currentUs
       <EventsBookmarkContainer
                           event={event}/>
       <EventsRegisterContainer 
-                              customClass={"green-button"}
-                              event={event}/>
+                             event={event}/>
     </div>
   )
 }

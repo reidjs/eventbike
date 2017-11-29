@@ -74,7 +74,7 @@ class EventsRegisterButton extends React.Component {
     } else {
       return (
         <div>
-        <button onClick={this.openModal}>Tickets</button>
+        <button className="open-register-modal" onClick={this.openModal}>Tickets</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}

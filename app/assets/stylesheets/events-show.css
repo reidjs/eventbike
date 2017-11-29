@@ -11,8 +11,9 @@ div.event-show-details {
   background: #EFF2F5; }
 
 div.action-bar > span.bookmark-button {
+  margin: 20px;
   font-size: 35px;
-  padding: 20px; }
+  padding-left: 30px; }
 
 div.register-modal {
   background: white; }
@@ -43,5 +44,27 @@ div.closeButton.small {
 
 div.closeButton.small > span.closeButton {
   font-size: 14px; }
+
+div.action-bar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #EFF2F5; }
+
+button.open-register-modal {
+  background: #288128;
+  width: 150px;
+  height: 20px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  margin: 20px; }
+
+button.open-register-modal:hover {
+  background: #1a4d1a;
+  transition-delay: 2s;
+  -webkit-transition: background 0.5s ease-out;
+  -moz-transition: background 0.5s ease-out;
+  -o-transition: background 0.5s ease-out;
+  transition: background 0.5s ease-out; }
 
 /*# sourceMappingURL=events-show.css.map */

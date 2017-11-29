@@ -15,8 +15,10 @@ div.event-show-details {
 }
 
 div.action-bar > span.bookmark-button {
+  margin: 20px;
   font-size: 35px;
-  padding: 20px;
+  padding-left: 30px;
+  // padding: 20px;
 }
 
 div.register-modal {
@@ -53,3 +55,30 @@ div.closeButton.small > span.closeButton{
   font-size: 14px;
   
 }
+div.action-bar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $light-grey;
+}
+button.open-register-modal {
+  background: $light-green;
+  width: 150px;
+  height: 20px;
+  padding: 5px;
+  color: white;
+  text-align: center;
+  // margin-top: 20px;
+  // margin-bottom: 20px;
+  margin: 20px;
+
+}
+button.open-register-modal:hover {
+  background: $dark-green;
+  transition-delay: 2s;
+  -webkit-transition: background 0.5s ease-out;
+  -moz-transition: background 0.5s ease-out;
+  -o-transition: background 0.5s ease-out;
+  transition: background 0.5s ease-out;
+
+}
+

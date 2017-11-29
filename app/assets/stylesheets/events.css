@@ -16,11 +16,11 @@ div.events-container {
 .loader {
   border: 16px solid #f3f3f3;
   /* Light grey */
-  border-top: 16px solid #3498db;
+  border-top: 16px solid #cd5120;
   /* Blue */
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 60px;
+  height: 60px;
   animation: spin 2s linear infinite; }
 
 @keyframes spin {
@@ -34,5 +34,21 @@ div.event-container-actions .active {
 @media (max-width: 600px) {
   div.events-sidenav {
     display: none; } }
+div.loading-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 30%;
+  padding: 20px;
+  margin: 100px auto; }
+
+.loading-modalOverlay_after-open {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(85, 83, 83, 0.75); }
 
 /*# sourceMappingURL=events.css.map */

@@ -1,11 +1,15 @@
 import React from 'react';
 // import EventsListItem from './events_list_item';
 import EventsShowContainer from './events_show_container';
+import Modal from 'react-modal';
+
 class EventsIndex extends React.Component {
   constructor(props) {
     super(props);
     this.loading = true;
-    this.state={events: {}}
+    this.state={events: {}, modalIsOpen: true}
+    this.closeModal = this.closeModal.bind(this);
+    
   }
   componentWillMount() {
     // console.log(this.props.getevents)
@@ -15,7 +19,12 @@ class EventsIndex extends React.Component {
   componentWillReceiveProps(nextProps) {
     const events = nextProps.events
     this.loading = false;
+    const modalIsOpen = false;
+    this.closeModal();
     this.setState({events});
+  }
+  closeModal() {
+    this.setState({modalIsOpen: false});
   }
   render() {
     // console.log(this.state.events)
@@ -28,13 +37,33 @@ class EventsIndex extends React.Component {
     let eventsList = this.props.events.map((event) => {
       return <EventsShowContainer key={event.id} event={event} />
     })
-    return (
-      <div className="events-index-container">
-        <h1>Cycling events in San Francisco, California</h1>
-        <div className={myClass}></div>
-          {eventsList}
-      </div>  
-    )
+    if (this.loading) {
+      return (
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          className={{
+            base: 'loading-modal'
+          }}
+          overlayClassName={{
+            afterOpen: 'loading-modalOverlay_after-open'
+          }}
+          contentLabel="loading Modal"
+        >
+          <div className="loader"></div>
+          
+        </Modal>
+      )
+    } else {
+      return (
+        <div className="events-index-container">
+          <h1>Cycling events in San Francisco, California</h1>
+          <div className="showEvents"></div>
+            {eventsList}
+        </div>  
+      )
+    }
   }
 }
 // return <EventsListItem 
