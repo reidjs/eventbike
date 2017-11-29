@@ -1,5 +1,6 @@
 class Api::EventsController < ApplicationController
   def index
+    # debugger
     @events = Event.all
   end 
 
@@ -21,6 +22,11 @@ class Api::EventsController < ApplicationController
     else 
       render json: @event.errors.full_messages, status: 422
     end 
+  end 
+
+  def query
+    @events = Event.where("title like ?", "%#{params[:id]}%" )
+    render :index
   end 
 
   private

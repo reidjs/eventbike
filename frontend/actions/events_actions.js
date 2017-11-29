@@ -53,8 +53,8 @@ export const resetEventErrors = () => {
 
 
 
-export const getEvents = () => dispatch => ( 
-  EventsAPIUtil.fetchEvents()
+export const getEvents = (query) => dispatch => ( 
+  EventsAPIUtil.fetchEvents(query)
   .then(res => (
     dispatch(receiveEvents(res))
   ), err => (

@@ -1,9 +1,18 @@
-export const fetchEvents = () => {
-  return (
-    $.ajax({
-    method: 'GET',
-    url: '/api/events'
-  }));
+export const fetchEvents = (query) => {
+  if (query === undefined) {
+    return (
+      $.ajax({
+      method: 'GET',
+      url: `/api/events`
+    }));
+  } else {
+    return (
+      $.ajax({
+      method: 'GET',
+      url: `/api/query/${query}`
+    }));
+  }
+  
 };
 export const fetchEvent = (eventId) => {
   return (

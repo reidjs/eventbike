@@ -21,7 +21,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return ({
-    getevents: () => dispatch(getEvents()),
+    getevents: (query) => dispatch(getEvents(query)),
     getcategory: (category) => dispatch(getCategory(category))
   })
 };

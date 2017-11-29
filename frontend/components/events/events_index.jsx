@@ -27,9 +27,11 @@ class EventsIndex extends React.Component {
     if (firstpart === "categories") {
       // console.log('here')
       this.props.getcategory(path.split('/')[2]);
-    } else {
+    } else if (firstpart === "query") {
       // this.props.getevents();
-      setTimeout(this.props.getevents, 0)
+      this.props.getevents(path.split('/')[2]);
+    } else {
+      this.props.getevents();
     }
   }
   componentWillReceiveProps(nextProps) {
