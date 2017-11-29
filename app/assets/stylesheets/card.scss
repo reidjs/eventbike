@@ -9,11 +9,14 @@
 //   align-items: center;
 //   margin-bottom: 10px;
 // }
+div.card a{
+  padding: 0;
+}
 div.card {
   display: flex;
   flex-direction: column;
   width: 450px;
-  background: white;
+  // background: white;
   // box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
   // transition: box-shadow .2s cubic-bezier(0,.2,.4,1);
   // height: 200px;
@@ -23,17 +26,19 @@ div.card {
   margin-bottom: 10px;
 }
 
-div.card:hover {
+div.card-footer:hover {
   box-shadow: 0 3px 0 0 rgba(0,0,0,.1);
   transition: box-shadow .2s cubic-bezier(0,.2,.4,1);
 }
 
 div.card-top {
-  width: 100%;
-  height: 70%;
+  // width: 100%;
+  // height: 70%;
   // height: 150px;
   display: flex;
   align-items: center;
+  width: 100%;
+  // background: white;
   // align-content: center;
 }
 
@@ -41,6 +46,7 @@ div.card-footer {
   // padding: 500px;
   display: flex;
   justify-content: space-between;
+  background: white;
 }
 
 div.card-details { 
@@ -48,6 +54,7 @@ div.card-details {
 }
 
 div.card-img {
+  // width: 100%;
   width: 200px;
   height: 130px;
   padding: 10px;
@@ -56,7 +63,9 @@ div.card-img {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+span.card-details {
+  
+}
 div.card-img img {
   // width: 50%;
   // height: 50%;
@@ -98,6 +107,12 @@ div.col div.card {
 div.card.square .card-top {
   flex-direction: column;
 }
+div.card.square {
+  background: $light-grey;
+}
+// div.card .card-top {
+//   background: white;
+// }
 //hover effect for bookmark button
 span.card-actions > button.active:hover {
   color: $dark-green;
@@ -106,6 +121,16 @@ span.card-actions > button.active:hover {
   -moz-transition: color 0.5s ease-out;
   -o-transition: color 0.5s ease-out;
   transition: color 0.5s ease-out;
+}
+div.card-img {
+  padding: 0;
+}
+div.col {
+  // width: 32%;
+  background: $light-grey;
+  flex: 1;
+  // padding:   100px;
+  margin-bottom: 10px;
 }
 
 

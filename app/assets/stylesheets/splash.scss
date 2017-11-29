@@ -43,7 +43,7 @@ span.hero-image img{
 
 
 div.hero-text {
-  background: white;
+  background: linear-gradient( rgba(255, 255, 255, 0.9) 0%, white 25%);
   display: block;
   // padding: 100px;
   position: absolute;
@@ -52,7 +52,7 @@ div.hero-text {
   font-size: 36px;
   // top: 300px;
   // margin: 0 auto;
-  border: 1px solid black;
+  // border: 1px solid black;
   // padding: 100px;
   // transform: translate(0, 200px);
   height: 200px;
@@ -85,7 +85,7 @@ div.hero-text p{
   animation-name: cf4FadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 8s;
+  animation-duration: 15s;
   position: absolute;
   left: 0;
 }
@@ -110,13 +110,13 @@ div.hero-text p{
 }
 
 #cf4a img:nth-of-type(1) {
-  animation-delay: 6s;
+  animation-delay: 15s;
 }
 #cf4a img:nth-of-type(2) {
-  animation-delay: 4s;
+  animation-delay: 10s;
 }
 #cf4a img:nth-of-type(3) {
-  animation-delay: 2s;
+  animation-delay: 5s;
 }
 #cf4a img:nth-of-type(4) {
   animation-delay: 0;
@@ -132,14 +132,11 @@ div.flex-grid {
   // justify-content: space-between;
   // flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-around;
   
 }
-div.col {
-  // width: 32%;
-  flex: 1;
-  // padding:   100px;
-  margin-bottom: 10px;
-}
+
+
 // @media (max-width: 400px) {
 //   .flex-grid{
 //     display: block;
@@ -150,7 +147,7 @@ div.col {
 //   }
 // }
 .flex-grid { 
-  margin: 0 0 20px 0;
+  // margin: 0 0 20px 0;
 }
 
 div.splash-index-container > h1 {

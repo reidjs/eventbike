@@ -29,13 +29,12 @@ span.hero-image img {
     width: 400px;
     height: 100px; } }
 div.hero-text {
-  background: white;
+  background: linear-gradient(rgba(255, 255, 255, 0.9) 0%, white 25%);
   display: block;
   position: absolute;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: 400px;
   font-size: 36px;
-  border: 1px solid black;
   height: 200px;
   width: 95%;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
@@ -58,7 +57,7 @@ div.hero-text p {
   animation-name: cf4FadeInOut;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 8s;
+  animation-duration: 15s;
   position: absolute;
   left: 0; }
 
@@ -75,13 +74,13 @@ div.hero-text p {
   100% {
     opacity: 1; } }
 #cf4a img:nth-of-type(1) {
-  animation-delay: 6s; }
+  animation-delay: 15s; }
 
 #cf4a img:nth-of-type(2) {
-  animation-delay: 4s; }
+  animation-delay: 10s; }
 
 #cf4a img:nth-of-type(3) {
-  animation-delay: 2s; }
+  animation-delay: 5s; }
 
 #cf4a img:nth-of-type(4) {
   animation-delay: 0; }
@@ -93,14 +92,8 @@ div.splash-events-container h1 {
 
 div.flex-grid {
   display: flex;
-  flex-wrap: wrap; }
-
-div.col {
-  flex: 1;
-  margin-bottom: 10px; }
-
-.flex-grid {
-  margin: 0 0 20px 0; }
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
 div.splash-index-container > h1 {
   font-family: 'Open Sans Condensed', sans-serif;

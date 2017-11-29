@@ -27,11 +27,11 @@ const EventsListItem = ({event, square}) => {
             <div className="card-img">
               <img src={event.image_url} />
             </div>
-            <span className="card-details">
+            <div className="card-details">
               <h3>{fillerDateTime}</h3>
               <h2>{event.title}</h2>
               <h4>{fillerVenue}</h4>
-            </span>
+            </div>
           </div>
         </Link>
         <div className="card-footer">

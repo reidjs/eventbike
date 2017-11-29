@@ -30,6 +30,7 @@ class LoginForm extends React.Component {
   handleBack(e) {
     this.props.history.push('/signin')
     this.props.reset()
+
   }
   componentDidMount() {
     if (this.props.ui.demoUser) {
@@ -46,7 +47,8 @@ class LoginForm extends React.Component {
           return this.setText(text, index+1)
         } else {
           //reset demo user here
-          this.handleSubmit()
+          // this.handleSubmit()
+          this.props.login({username: 'reidjs', password: '123456'})
           return ""
         }
       })
