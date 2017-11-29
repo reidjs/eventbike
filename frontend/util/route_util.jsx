@@ -22,7 +22,7 @@ const Protected = ({ component: Component, path, loggedIn}) => (
       <Component {...props} />
     ) : (
       <div>
-        {flash('Sorry, you must be signed in to perform this action')}
+        {/* {flash('Sorry, you must be signed in to perform this action')} */}
         <Redirect to="/signin" />
       </div>
     )
