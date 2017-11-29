@@ -49,7 +49,9 @@ class EventsRegisterButton extends React.Component {
     } else {
       // render modal 
       // console.log()
-      dispatch(flashMessage('You must be logged in to register'))
+      //push to login screen
+      this.props.history.push('/signin')
+      // dispatch(flashMessage('You must be logged in to register'))
       // console.log(this.showModal)
       // this.showModal = false;
 
@@ -58,17 +60,19 @@ class EventsRegisterButton extends React.Component {
   }
 
   render() {
-    let myClass;
-    this.props.event.registered ? myClass="active" : myClass = "";
+    let myClass = "active"
+    let buttonText;
+    this.props.event.registered ? buttonText="Cancel" : buttonText = "Register";
     // if (this.props.customClass)
     //   myClass = this.props.customClass;
 
     // let myTest = this.showModal ? "true" : null
     // debugger
-    if (this.props.event.registered) {
+    // if (this.props.event.registered) {
+    if (!this.props.currentUser) {
       return (
         <span className="register-button">
-          <button className={myClass} onClick={this.handleRegistration}>Cancel Registration</button>
+          <button className={myClass} onClick={this.handleRegistration}>Log in to get tickets</button>
         </span>
       )
     } else {
@@ -99,7 +103,7 @@ class EventsRegisterButton extends React.Component {
             <input type="number"/>
             
             <span className="register-button">
-            <button className={myClass} onClick={this.handleRegistration}>Purchase</button>
+            <button className={myClass} onClick={this.handleRegistration}>{buttonText}</button>
             </span>
             
           </form>
