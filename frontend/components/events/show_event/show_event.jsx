@@ -53,9 +53,9 @@ class ShowEvent extends React.Component {
                   id={id}
                   title={title} 
                   image_url={image_url} 
-                  month={month}
+                  month={event.fancymonth}
                   creator_name={creator_name}
-                  day={day}/>
+                  day={event.fancyday}/>
             <ActionBar 
                   event={event}
                   category={event.category} />

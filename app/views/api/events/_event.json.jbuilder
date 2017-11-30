@@ -14,7 +14,14 @@ json.attendees event.attendees.count
 json.creator event.creator.id
 json.creator_name event.creator.username
 json.day event.date.day 
-json.month Date::MONTHNAMES[event.date.month]
+
+if event.date.day < 10 
+  json.fancyday '0' + event.date.day.to_s
+else 
+  json.fancyday event.date.day.to_s 
+end 
+json.month event.date.month
+json.fancymonth Date::MONTHNAMES[event.date.month][0...3].upcase
 json.location event.location
 if logged_in? 
   json.bookmarked current_user.bookmarked_events.pluck(:id).include?(event.id)

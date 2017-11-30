@@ -28,7 +28,7 @@ const EventsListItem = ({event, square}) => {
               <img src={event.image_url} />
             </div>
             <div className="card-details">
-              <h3>{event.month}, {event.day}</h3>
+              <h3>{event.fancymonth}, {event.fancyday}</h3>
               <h2>{event.title}</h2>
               <h4>{event.location}</h4>
             </div>

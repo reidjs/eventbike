@@ -27,6 +27,7 @@ div.event-show-hero-img img {
 div.event-show-details {
   width: 35%;
   background: $light-grey;
+  padding: 20px;
 }
 
 
@@ -84,6 +85,12 @@ div.action-bar {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid $light-grey;
+}
+div.event-show-details h1 {
+  font-family: "Oxygen, sans-serif";
+  font-weight: 700;
+  font-size: 24px;
+  color: $light-black;
 }
 button.open-register-modal, span.register-button button.register {
   background: $light-green;
@@ -214,4 +221,71 @@ div.event-show-container img.background-img {
   position: absolute;
   right: 0;
   z-index: -3;
+}
+
+div.date-header {
+  padding: 30px;
+  padding-left: 20px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  font-family: "Oxygen", sans-serif;
+  color: $dark-grey;
+  font-weight: 400;
+}
+div.date-header span:first-child {
+  font-size: 14px;
+  font-family: "Oxygen";
+  display: inline;
+  
+}
+div.date-header span:last-child {
+  font-size: 24px;
+  display: inline;
+  letter-spacing :4px;
+}
+
+div.event-show-details h3 {
+  font-size: 14px;
+  margin-top: 30px;
+  color: $dark-grey;
+  font-family: "Oxygen";
+}
+
+div.action-bar h3 {
+  // margin: auto;
+}
+
+div.action-bar a {
+  margin-left: 50px;
+  font-family: "Kalam";
+  align-self: center;
+}
+
+section.main {
+  padding: 40px;
+  padding-right: 50px;
+  hyphens: auto;
+  font-size: 21px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+section.other {
+  padding: 40px;
+  padding-top: 50px;
+  font-family: 'Roboto';
+  
+}
+section.other h3 {
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 20px;
+}
+section.other h4 {
+  padding-left: 15px;
+  font-size: 16px;
+  margin: 0;
 }

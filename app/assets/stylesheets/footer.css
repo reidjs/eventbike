@@ -7,6 +7,12 @@ div.footer a {
   padding: 10px 20px; }
 
 div.footer a:hover {
-  background: grey; }
+  color: #42b1ed;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  /* ...and now for the proper property */
+  transition: .5s; }
 
 /*# sourceMappingURL=footer.css.map */

@@ -10,5 +10,12 @@ div.footer a{
 }
 
 div.footer a:hover {
-  background: grey;
+  // background: grey;
+  color: rgb(66, 177, 237);
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
 }

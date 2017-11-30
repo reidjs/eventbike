@@ -13,16 +13,16 @@ class CategoriesDropDown extends React.Component {
 
   }
   handleClick() {
-    if (!this.state.popupVisible) {
-      // attach/remove event handler
-      document.addEventListener('click', this.handleOutsideClick, false);
-    } else {
-      document.removeEventListener('click', this.handleOutsideClick, false);
-    }
+    // if (!this.state.popupVisible) {
+    //   // attach/remove event handler
+    //   document.addEventListener('click', this.handleOutsideClick, false);
+    // } else {
+    //   document.removeEventListener('click', this.handleOutsideClick, false);
+    // }
 
-    this.setState(prevState => ({
-       popupVisible: !prevState.popupVisible,
-    }));
+    // this.setState(prevState => ({
+    //    popupVisible: !prevState.popupVisible,
+    // }));
   }
   
   handleOutsideClick(e) {

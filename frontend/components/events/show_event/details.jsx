@@ -1,5 +1,9 @@
 import React from 'react';
-
+const randomHour = () => (Math.floor(Math.random()*12 + 1))
+const randomAMPM = () => {
+  return Math.random() < 0.5 ? "PM" : "AM" ;
+}
+// const randomDay = () => (Math.floor(Math.random(0, 27)))
 const Details = ({details, location, day, month}) => {
   return (
     <div className="details">
@@ -7,9 +11,13 @@ const Details = ({details, location, day, month}) => {
         {details}
       </section>
       <section className="other">
-        {location}
-        {day}
-        {month}
+
+        <h3>Date and Time </h3>
+        <h4>{month}/{day}/2018</h4>
+        <h4>at {randomHour()}{randomAMPM()}</h4>
+        <h3>Location</h3>
+        <h4>{location}</h4>
+
       </section>
     </div>
   )
