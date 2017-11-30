@@ -17,6 +17,8 @@ div.event-show-details {
 div.action-bar > span.bookmark-button {
   margin: 20px;
   font-size: 35px;
+  width: 100%;
+  height: auto;
   padding-left: 30px;
   // padding: 20px;
 }
@@ -35,7 +37,7 @@ div.register-modal {
   padding: 20px;
   margin: 100px auto;
   border: 1px solid black;
-  animation: bounce 0.5s;
+  animation: bounce 0.2s;
 }
 .register-modalOverlay_after-open{
   position: fixed;
@@ -60,7 +62,7 @@ div.action-bar {
   justify-content: space-between;
   border-bottom: 1px solid $light-grey;
 }
-button.open-register-modal {
+button.open-register-modal, span.register-button button.register {
   background: $light-green;
   width: 150px;
   height: 20px;
@@ -72,7 +74,7 @@ button.open-register-modal {
   margin: 20px;
 
 }
-button.open-register-modal:hover {
+button.open-register-modal:hover, span.register-button button.register {
   background: $dark-green;
   transition-delay: 2s;
   -webkit-transition: background 0.5s ease-out;
@@ -121,7 +123,7 @@ div.register-modal-text div.register-button {
   
 } 
 div.register-button button{
-  background: green;
+  background: $dark-green;
   width: 100px;
   // height: 10px;
   color: white;

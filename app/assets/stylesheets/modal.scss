@@ -168,7 +168,9 @@ span.brand {
   -webkit-animation-delay: 0.3s;
 }
 //get started button
-div.modalForm input[type="submit"], div.demo-button button{
+//log in to register button on show page
+div.modalForm input[type="submit"], 
+div.demo-button button {
   margin-top: 20px;
   border: none;
   background: $color-orange;

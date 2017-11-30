@@ -115,7 +115,8 @@ span.brand {
   animation-delay: 0.3s;
   -webkit-animation-delay: 0.3s; }
 
-div.modalForm input[type="submit"], div.demo-button button {
+div.modalForm input[type="submit"],
+div.demo-button button {
   margin-top: 20px;
   border: none;
   background: #cd5120;

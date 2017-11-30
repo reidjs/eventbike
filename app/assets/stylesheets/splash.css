@@ -136,6 +136,9 @@ ul.query-match li {
   text-overflow: ellipsis;
   padding: 5px 10px; }
 
+ul.query-match li:hover {
+  background: #EFF2F5; }
+
 ul.query-match li a {
   text-overflow: ellipsis;
   color: #0085cc; }

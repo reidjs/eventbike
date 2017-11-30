@@ -209,6 +209,10 @@ ul.query-match li{
   padding: 5px 10px;
 }
 
+ul.query-match li:hover {
+  background: $light-grey;
+}
+
 ul.query-match li a{
   text-overflow: ellipsis;
   

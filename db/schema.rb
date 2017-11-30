@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130002213) do
+ActiveRecord::Schema.define(version: 20171130012725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20171130002213) do
     t.string "creator_id"
     t.string "category", default: "Other", null: false
     t.string "image_url", default: "http://res.cloudinary.com/eventbike/image/upload/v1511497420/alexa-wirth-6076_ltiq7z.jpg", null: false
-    t.datetime "date"
-    t.string "location"
+    t.datetime "date", null: false
+    t.string "location", null: false
   end
 
   create_table "registrations", force: :cascade do |t|

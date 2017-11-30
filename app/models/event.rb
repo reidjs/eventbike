@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  validates :title, presence: true
+  validates :title, :date, :location, presence: true
   def self.categories
     ['Social', 'Race', 'Other', 'Joyride']
   end 
