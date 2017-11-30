@@ -16,7 +16,15 @@ json.creator_name event.creator.username
 json.day event.date.day 
 json.lat event.lat 
 json.lng event.lng
+json.hour event.date.hour % 12 + 1
+# json.minute event.date.minutes 
+if event.date.hour >= 12
+  json.ampm "pm"
+else 
+  json.ampm "am"
+end 
 
+json.wordmonth Date::MONTHNAMES[event.date.month]
 if event.date.day < 10 
   json.fancyday '0' + event.date.day.to_s
 else 

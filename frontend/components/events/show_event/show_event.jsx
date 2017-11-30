@@ -64,6 +64,9 @@ class ShowEvent extends React.Component {
               location={location}
               day={day} 
               month={month}
+              hour={event.hour}
+              minute={event.minute}
+              ampm={event.ampm}
               />
             </div>
         </div>

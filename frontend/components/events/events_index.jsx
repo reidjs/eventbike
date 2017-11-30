@@ -63,7 +63,7 @@ class EventsIndex extends React.Component {
     // debugger
     //if coming in from the show page, the array is coming in.
     let eventsList = this.props.events.map((event) => {
-      return <EventsShowContainer key={event.id} event={event} />
+      return <EventsShowContainer key={event.id} event={event} currentUser={currentUser} />
     })
     let pages = [1,2,3,4]
     let pageList = pages.map((page) => {

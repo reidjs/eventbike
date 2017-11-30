@@ -3,9 +3,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import EventsBookmarkContainer from './events_bookmark_container';
 import AccountCircle from 'material-ui-icons/AccountCircle';
+import Done from 'material-ui-icons/Done';
 import EventsRegisterContainer from './events_register_container';
-
-const EventsListItem = ({event, square}) => {
+import DeleteEventModal from './delete_event_modal';
+const EventsListItem = ({event, square, currentUser}) => {
   // const handleBookmark = (e) => {
   //   e.preventDefault();
   //   bookmark(event.id);
@@ -14,6 +15,7 @@ const EventsListItem = ({event, square}) => {
   let cardClass; 
   square ? cardClass = "card square" : cardClass = "card long";
   const eventShowPath = `/events/${event.id}`;
+  const userEventPath = currentUser ? `/users/${currentUser.id}/tickets` : "/";
   // const categoryGoesHere = "#";
   const categoryPath = `/categories/${event.category}`;
   const bookmarkPath = `events/${event.id}/bookmark`;
@@ -22,13 +24,23 @@ const EventsListItem = ({event, square}) => {
   // <li className={itemClass}>
   return (
       <div className={cardClass}>
+          {currentUser && event.creator === currentUser.id &&
+            <div class="delete-event">
+              <DeleteEventModal event={event} />
+            </div>
+          }
         <Link to={eventShowPath}>
           <div className="card-top">
+            {event.registered &&
+              <div class="starburst checkmark" id="user-registered-checkmark">
+                <Link to={userEventPath}><Done /></Link>
+              </div>
+            }
             <div className="card-img">
               <img src={event.image_url} />
             </div>
             <div className="card-details">
-              <h3>{event.fancymonth}, {event.fancyday}</h3>
+              <h3>{event.wordmonth}, {event.day}</h3>
               <h2>{event.title}</h2>
               <h4>{event.location}</h4>
             </div>
