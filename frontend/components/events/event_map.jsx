@@ -22,7 +22,8 @@ class EventMap extends React.Component {
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     
     this.registerListeners();
-    fetchAllEvents().then(res => 
+    fetchAllEvents()
+    .then(res => 
       this.MarkerManager.updateMarkers(values(res)));
   }
   handleMarkerClick(event) {

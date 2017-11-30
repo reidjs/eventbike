@@ -114,11 +114,12 @@ span.magnifier {
 div.hero-text > form > input {
   border-radius: 5px;
   padding: 5px;
-  padding-left: 30px;
+  padding-left: 60px;
   height: 36px;
   font-size: 20px;
   width: 400px;
-  font-family: "Oxygen"; }
+  font-family: "Oxygen", sans-serif;
+  color: #45494E; }
 
 ul.query-match {
   position: absolute;
@@ -129,19 +130,22 @@ ul.query-match {
 
 ul.query-match li {
   background: white;
-  font-family: 'Oxygen, sans-serif';
+  font-family: "Oxygen", sans-serif;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 17px;
+  font-size: 20px;
   border: 1px solid #EFF2F5;
   text-overflow: ellipsis;
-  padding: 5px 10px; }
+  padding: 14px 20px; }
 
 ul.query-match li:hover {
   background: #EFF2F5; }
 
 ul.query-match li a {
   text-overflow: ellipsis;
-  color: #0085cc; }
+  color: #45494E; }
+
+span.magnifier > svg {
+  transform: translate(20px); }
 
 /*# sourceMappingURL=splash.css.map */

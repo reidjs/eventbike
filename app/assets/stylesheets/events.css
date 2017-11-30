@@ -151,4 +151,24 @@ div.header-txt {
   margin: 0 auto;
   margin-bottom: 20px; }
 
+div.delete {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0 auto; }
+
+button.delete:hover {
+  background: red;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out; }
+
+button.delete {
+  background: #5e0000;
+  color: white;
+  width: 150px;
+  height: 50px;
+  text-align: center; }
+
 /*# sourceMappingURL=events.css.map */

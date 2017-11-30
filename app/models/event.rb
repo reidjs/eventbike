@@ -57,7 +57,7 @@ class Event < ApplicationRecord
   through: :registrations,
   source: :user
 
-
+  
 
 
 end
