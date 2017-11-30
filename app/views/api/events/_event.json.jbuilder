@@ -14,6 +14,8 @@ json.attendees event.attendees.count
 json.creator event.creator.id
 json.creator_name event.creator.username
 json.day event.date.day 
+json.lat event.lat 
+json.lng event.lng
 
 if event.date.day < 10 
   json.fancyday '0' + event.date.day.to_s

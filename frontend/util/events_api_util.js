@@ -20,8 +20,16 @@ export const fetchEvents = (query) => {
       url: `/api/query/${query}`
     }));
   }
-  
 };
+export const fetchAllEvents = () => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: `/api/events`
+    })
+  )
+}
+
 export const fetchEvent = (eventId) => {
   return (
     $.ajax({

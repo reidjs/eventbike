@@ -22,7 +22,9 @@ event1 = Event.new(
   details: "Its not just any motocross race, but the oldest and one of the most prestigious in the United States. Hangtown is the opening round of the 12-race Lucas Oil Pro Motocross Championship sanctioned by the AMA.\nEvery year, there is a new battle to witness, and new champions to crown. Perhaps its the mystique of 50 years of racing, dating back before the series was even established, that makes Hangtown racing legendary. Many people say that attending Hangtown is a way to be a part of motorcross history.",
   creator_id: user1.id,
   category: "Social",
-  location: "Oakland Track",  
+  location: "Oakland Track", 
+  lat: 37.773972,
+  lng: -122.431297,
   date: Date.new(2018, 1, 1),
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840424/joe-neric-223563_kjcucx.jpg")
 event2 = Event.new(
@@ -31,6 +33,8 @@ event2 = Event.new(
   creator_id: user1.id,
   category: "Social",
   location: "SF Moto Club",
+  lat: 37.7732,
+  lng: -122.39,
   date: Date.new(2018, 4, 1),
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840485/mohamed-nohassi-202199_exn3um.jpg")
 event3 = Event.new(
@@ -38,6 +42,8 @@ event3 = Event.new(
   details: "Racing gets underway at 9am, with some of the best amateurs in the country doing battle. In the afternoon, the top pros will be riding on the track for their series media day. Later on Thursday night, join us at the Palladio Mall in Folsom from 5 - 7pm for a Hangtown pre-party. Amateur racing continues on Friday, May 18 at 9am, when the top experts and Pro Ams compete for pro points, which leads to a professional license in the premier professional series.", 
   creator_id: user1.id,
   category: "Race",
+  lat: 37.723972,
+  lng: -122.397,
   location: "San Fran Raceway",
   date: Date.new(2018, 1, 18),
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840548/cameron-kirby-105242_ydaau2.jpg" )
@@ -47,6 +53,8 @@ event4 = Event.new(
   creator_id: user2.id,
   category: "Social",
   location: "East Bay",
+  lat: 37.743972,
+  lng: -122.45,
   date: Date.new(2018, 1, 30),
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840796/markus-spiske-265590_u0npvf.jpg")
 event5 = Event.new(
@@ -55,6 +63,8 @@ event5 = Event.new(
   creator_id: user2.id,
   category: "Race",
   location: "East Bay Track",
+  lat: 37.673972,
+  lng: -122.931297,
   date: Date.new(2018, 2, 8),
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497455/james-pond-103321_g3yjqc.jpg" )
 event6 = Event.new(
@@ -62,6 +72,8 @@ event6 = Event.new(
   details: "Racing gets underway at 9am, with some of the best amateurs in the country doing battle. In the afternoon, the top pros will be riding on the track for their series media day. Later on Thursday night, join us at the Palladio Mall in Folsom from 5 - 7pm for a Hangtown pre-party. Amateur racing continues on Friday, May 18 at 9am, when the top experts and Pro Ams compete for pro points, which leads to a professional license in the premier professional series.", 
   creator_id: user2.id,
   category: "Social",
+  lat: 37.733972,
+  lng: -122.451297,
   location: "SF Moto Club Lake Merritt",
   date: Date.new(2018, 3, 18),
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840845/nicolas-picard-317919_tb1cdi.jpg")
@@ -70,6 +82,8 @@ event7 = Event.new(
   details: "To get tickets and full race information about the Hangtown Motocross Classic, go to www.hangtownmx.com and click on tickets.\" In addition to General Admission tickets, the Hangtown Motocross Classic has some of the finest high-end hospitality areas in the entire series.", 
   creator_id: user2.id,
   category: "Race",
+  lat: 37.743972,
+  lng: -122.411297,
   location: "Laguna Seca Raceway",
   date: Date.new(2018, 3, 4),
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497474/tim-cook-98503_zr4fbc.jpg")
@@ -78,6 +92,8 @@ event8 = Event.new(
   details: "Its not just any motocross race, but the oldest and one of the most prestigious in the United States. Hangtown is the opening round of the 12-race Lucas Oil Pro Motocross Championship sanctioned by the AMA.\nEvery year, there is a new battle to witness, and new champions to crown. Perhaps its the mystique of 50 years of racing, dating back before the series was even established, that makes Hangtown racing legendary. Many people say that attending Hangtown is a way to be a part of motorcross history.", 
   creator_id: user2.id,
   category: "Joyride",
+  lat: 37.723972,
+  lng: -122.461297,
   location: "East Bay Track Meet",
   date: Date.new(2018, 4, 4),
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497437/davide-ragusa-27505_wqtwiy.jpg")
@@ -86,6 +102,8 @@ event9 = Event.new(
   details: "Over the last few years Family Off-Road Adventures has raised and donated THOUSANDS of dollars to the Blue Ribbon Coalition, a non-profit organization that works to keep the trails open.\nDuring the Saturday evening Family BBQ we will award prizes and raffle THOUSHANDS in donations from motorcycle dealerships and product retailers.", 
   creator_id: user2.id,
   category: "Other",
+  lat: 37.783972,
+  lng: -122.4431297,
   location: "Laguna Seca (The other one)",
   date: Date.new(2018, 2, 1),
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497423/adils-photography-419425_uk3fif.jpg" )

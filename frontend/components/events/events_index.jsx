@@ -2,6 +2,8 @@ import React from 'react';
 // import EventsListItem from './events_list_item';
 import EventsShowContainer from './events_show_container';
 import Modal from 'react-modal';
+import EventMap from './event_map';
+import values from 'lodash/values';
 // import { getCategory } from '../../actions/events_actions';
 class EventsIndex extends React.Component {
   constructor(props) {
@@ -87,12 +89,14 @@ class EventsIndex extends React.Component {
         </Modal>
       )
     } else {
+      // const testEvents = [{lat: 37.773972, lng: -122.431297, id: 1}]
       return (
         <div className="events-index-container">
           <div id="events-index-header">
             {/* <img className="header-img" src="https://res.cloudinary.com/eventbike/image/upload/v1512048569/joseph-barrientos-49318_gnijyi.jpg" /> */}
             <div className="header-txt">San Francisco</div>
           </div>
+            <EventMap events={values(this.props.events)}/>
           <div className="showEvents"></div>
             {eventsList}
             <div id="pages"> 

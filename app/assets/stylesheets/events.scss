@@ -189,7 +189,8 @@ div.header-txt {
   z-index: 4;
   // background: white;
   font-size: 36px;
-  padding: 50px;
+  padding: 20px;
+  padding-bottom: 10px;
   // position: absolute;
   // top: 50%;
   // left: 50%;
@@ -197,4 +198,14 @@ div.header-txt {
   font-family: "Roboto";
   // transform: translate(-50%, -50%);
   // text-shadow: 0px 0px 3px black;
+}
+
+#map-container {
+  width: 500px;
+  height: 300px;
+  padding-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
