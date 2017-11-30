@@ -189,3 +189,29 @@ div.hero-text > form > input {
   width: 400px;
   font-family: "Oxygen";
 }
+
+ul.query-match {
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 400px;
+  padding-left: 30px;
+  // background: white;
+}
+
+ul.query-match li{
+  background: white;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 20px;
+  border: 1px solid $light-grey;
+  text-overflow: ellipsis;
+  padding: 5px 10px;
+}
+
+ul.query-match li a{
+  text-overflow: ellipsis;
+  
+  // padding: 5px;
+  color: $light-blue;
+}
