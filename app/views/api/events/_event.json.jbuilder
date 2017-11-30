@@ -12,6 +12,10 @@ json.category event.category
 json.image_url event.image_url
 json.attendees event.attendees.count
 json.creator event.creator.id
+json.creator_name event.creator.username
+json.day event.date.day 
+json.month Date::MONTHNAMES[event.date.month]
+json.location event.location
 if logged_in? 
   json.bookmarked current_user.bookmarked_events.pluck(:id).include?(event.id)
   json.registered current_user.attending_events.pluck(:id).include?(event.id)

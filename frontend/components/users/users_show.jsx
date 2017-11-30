@@ -22,10 +22,7 @@ class UsersShow extends React.Component {
     // this.bookmarkedEvents = props.bookmar
   }
   componentWillMount() {
-    this.props.getmyevents();
-    this.props.getbookmarks();
-
-    this.props.gettickets();
+    this.getEventsFromPath(this.props.pathname)
   }
   getEventsFromPath(path) {
     if (path === "myevents") {

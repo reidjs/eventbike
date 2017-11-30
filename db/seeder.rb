@@ -46,6 +46,8 @@ def body6
   HEREDOC
 end 
 
+locations = %w(San\ Fran\ Raceway SF\ Moto\ Club The\ Track East\ Bay Oakland\ Track Laguna\ Seca)
+
 
 def randomizer(*args)
   result = []
@@ -68,5 +70,6 @@ def randomizerbody(*args)
   deets.gsub("/\n?/", "")
 end 
 
-p randomizer(a0, a1, a2, a3, a4, a5, a6)
-p randomizerbody(body1, body2, body3, body4, body5, body6)
+# p randomizer(a0, a1, a2, a3, a4, a5, a6)
+# p randomizerbody(body1, body2, body3, body4, body5, body6)
+p randomizer(locations)

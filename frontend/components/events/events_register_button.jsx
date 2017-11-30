@@ -45,9 +45,10 @@ class EventsRegisterButton extends React.Component {
           this.pushUserToPath("tickets")
           return
         case true:
+          //there was an issue with the update not working instantly, so push to bookmarks instead
           this.props
             .unregister(this.props.event.id, this.props.currentUser.id); 
-          this.pushUserToPath("tickets")
+          this.pushUserToPath("bookmarks")
           return 
       }
     } else {
