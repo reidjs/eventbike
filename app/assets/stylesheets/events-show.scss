@@ -2,32 +2,50 @@
 
 div.event-show-header {
   display: flex;
+  height: 407px
 }
 div.event-show-hero-img {
   width: 65%;
-  height: 300px;
+  height: 407px;
+  // display:flex;
+  
   overflow: hidden;
+  background: $light-grey;
+  position: relative;
 
+}
+div.event-show-hero-img img {
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // width: 50%;
+  // height: 30%;
+  margin: auto;
 }
 div.event-show-details {
   width: 35%;
   background: $light-grey;
 }
 
+
 div.action-bar > span.bookmark-button {
   margin: 10px;
-  font-size: 35px;
-  padding-left: 300px;
-  width: 50px;
+  // font-size: 35px;
+  padding-left: 50px;
+  width: 40px;
   // padding: 20px;
 }
 //bookmark button on show page
 div.action-bar > span.bookmark-button > button >  svg {
-  color: green;
+  color: $light-blue;
   width: 100%;
   height: auto;
 }
-
+div.action-bar {
+  background:white;
+}
 div.register-modal {
   background: white;
 }
@@ -77,6 +95,7 @@ button.open-register-modal, span.register-button button.register {
   // margin-top: 20px;
   // margin-bottom: 20px;
   margin: 20px;
+  margin-right: 47px;
 
 }
 button.open-register-modal:hover, span.register-button button.register {
@@ -161,4 +180,38 @@ section.main {
 }
 section.other {
   width: 35%;
+}
+div.event-show-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+div.background-img-container {
+  width:100%;
+  height: 500px;
+  // flex: 0;
+  // display:float;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+div.event-show-content {
+  margin-top: 42px;
+  width: 74%;
+}
+
+div.event-show-container img.background-img {
+  margin: 0 auto;
+  background-size: cover;
+  width: 100%;
+  display: block;
+  filter: blur(9px);
+  -webkit-filter: blur(9px);
+  height: 100%;
+  left: 0;
+  // top: 80px;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  z-index: -3;
 }

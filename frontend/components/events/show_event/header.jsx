@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = ({id,title, image_url, date}) => {
+const Header = ({id,title, image_url, date, creator_name, month, day}) => {
   return (
     <div className="event-show-header">
       <div className="event-show-hero-img">

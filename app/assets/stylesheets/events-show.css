@@ -1,10 +1,21 @@
 div.event-show-header {
-  display: flex; }
+  display: flex;
+  height: 407px; }
 
 div.event-show-hero-img {
   width: 65%;
-  height: 300px;
-  overflow: hidden; }
+  height: 407px;
+  overflow: hidden;
+  background: #EFF2F5;
+  position: relative; }
+
+div.event-show-hero-img img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
 
 div.event-show-details {
   width: 35%;
@@ -12,14 +23,16 @@ div.event-show-details {
 
 div.action-bar > span.bookmark-button {
   margin: 10px;
-  font-size: 35px;
-  padding-left: 300px;
-  width: 50px; }
+  padding-left: 50px;
+  width: 40px; }
 
 div.action-bar > span.bookmark-button > button > svg {
-  color: green;
+  color: #0085cc;
   width: 100%;
   height: auto; }
+
+div.action-bar {
+  background: white; }
 
 div.register-modal {
   background: white; }
@@ -63,7 +76,8 @@ button.open-register-modal, span.register-button button.register {
   padding: 5px;
   color: white;
   text-align: center;
-  margin: 20px; }
+  margin: 20px;
+  margin-right: 47px; }
 
 button.open-register-modal:hover, span.register-button button.register {
   background: #1a4d1a;
@@ -121,5 +135,35 @@ section.main {
 
 section.other {
   width: 35%; }
+
+div.event-show-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+div.background-img-container {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+div.event-show-content {
+  margin-top: 42px;
+  width: 74%; }
+
+div.event-show-container img.background-img {
+  margin: 0 auto;
+  background-size: cover;
+  width: 100%;
+  display: block;
+  filter: blur(9px);
+  -webkit-filter: blur(9px);
+  height: 100%;
+  left: 0;
+  opacity: 0.8;
+  position: absolute;
+  right: 0;
+  z-index: -3; }
 
 /*# sourceMappingURL=events-show.css.map */

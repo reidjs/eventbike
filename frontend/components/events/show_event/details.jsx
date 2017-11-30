@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Details = ({details, location, date}) => {
+const Details = ({details, location, day, month}) => {
   return (
     <div className="details">
       <section className="main">
@@ -8,7 +8,8 @@ const Details = ({details, location, date}) => {
       </section>
       <section className="other">
         {location}
-        {date}
+        {day}
+        {month}
       </section>
     </div>
   )
