@@ -82,7 +82,7 @@ class Api::EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:title, :details, :image_url, :category)
+    params.require(:event).permit(:title, :details, :image_url, :category, :date, :location)
   end 
 
 end

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-// import { getEvents } from './actions/events_actions';
+// import { getAddress } from './util/events_api_util';
 // import { flashMessage, getFlashMessages } from 'redux-flash'
 // import { logout } from './util/session_api_util'
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.events = getEvents;
   window.store = store 
   window.dispatch = store.dispatch
+  // window.getAddress = getAddress;
   // window.logout = logout
   ReactDOM.render(<Root store={store}/>, rootEl);
 });

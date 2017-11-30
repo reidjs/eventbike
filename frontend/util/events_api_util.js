@@ -39,6 +39,7 @@ export const fetchEvent = (eventId) => {
 };
 
 export const postEvent = (event) => {
+  debugger
   return (
     $.ajax({
       method: 'POST',
@@ -89,5 +90,16 @@ export const deleteEvent = (eventId) => {
   return $.ajax({
     method: 'DELETE',
     url: `/api/events/${eventId}`
+  })
+}
+
+export const getAddress = (query) => {
+  console.log(query)
+  let mapsURL = "https://maps.googleapis.com/maps/api/geocode/json?address=";
+  let encodedQuery = encodeURIComponent(query);
+  let apiKey = "&key=AIzaSyDkREocgFR4OI0hcwrvDINxt0CuM0nKAgw"
+  return $.ajax({
+    method: 'GET',
+    url: `${mapsURL}${encodedQuery}${apiKey}`
   })
 }
