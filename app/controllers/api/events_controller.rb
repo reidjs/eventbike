@@ -4,6 +4,21 @@ class Api::EventsController < ApplicationController
     @events = Event.all
   end 
 
+  def destroy
+    
+    event = Event.find_by(id: params[:id])
+
+    if event 
+      if logged_in? && event.creator === current_user 
+        @event = event 
+        event.destroy 
+        render :show
+      end 
+    else 
+      render json: ["Event not found"], status: 404
+    end
+  end 
+
   def show 
     @event = Event.find_by(id: params[:id])
     if @event 

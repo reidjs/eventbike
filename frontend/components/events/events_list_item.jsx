@@ -26,13 +26,13 @@ const EventsListItem = ({event, square, currentUser}) => {
       <div className={cardClass}>
           {currentUser && event.creator === currentUser.id &&
             <div class="delete-event">
-              <DeleteEventModal event={event} />
+              <DeleteEventModal currentUser={currentUser} event={event} />
             </div>
           }
         <Link to={eventShowPath}>
           <div className="card-top">
             {event.registered &&
-              <div class="starburst checkmark" id="user-registered-checkmark">
+              <div className="starburst checkmark" id="user-registered-checkmark">
                 <Link to={userEventPath}><Done /></Link>
               </div>
             }

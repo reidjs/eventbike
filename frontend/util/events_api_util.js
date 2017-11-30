@@ -84,3 +84,10 @@ export const fetchBookmarkedEvents = () => {
     url: `/api/my_bookmarks/`
   }) 
 }
+
+export const deleteEvent = (eventId) => {
+  return $.ajax({
+    method: 'DELETE',
+    url: `/api/events/${eventId}`
+  })
+}

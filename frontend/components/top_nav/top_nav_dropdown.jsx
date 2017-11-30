@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom';
-import FlashContainer from '../flash/flash_container';
 // import SessionFormContainer from '../session_form/session_form_container'
-
+import FlashContainer from '../flash/flash_container';
 class TopNavDropDown extends React.Component {
   constructor(props) {
     super(props)
@@ -40,7 +39,6 @@ class TopNavDropDown extends React.Component {
         <div className={`user-dropdown ${myClass}`}>
           <Link to="/signin">SIGN IN</Link>
           <FlashContainer />
-
         </div>
       )
     } else {
@@ -48,8 +46,8 @@ class TopNavDropDown extends React.Component {
       return (
         <div className="user-dropdown">
           <Link to={`/users/${userId}/bookmarks`}>{this.props.currentUser.username}</Link>
-          <FlashContainer />
 
+          <FlashContainer />
           <div className="submenu">{/*Hacky way to have more forgiving dropdown mouse movement*/}</div>
           <ul className="user-dropdown-content">
           {/* //These links should be their own components and display a circle representing their quantity */}

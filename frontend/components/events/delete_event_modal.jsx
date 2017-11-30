@@ -1,5 +1,8 @@
 import React from 'react'
 import Modal from 'react-modal';
+import { deleteEvent } from '../../util/events_api_util';
+import { flashMessage } from 'redux-flash';
+import { withRouter } from 'react-router-dom';
 class DeleteEventModal extends React.Component {
   constructor(props){
     super(props)
@@ -27,8 +30,20 @@ class DeleteEventModal extends React.Component {
     // deleteevent();
     // this.props.history.push(`/users/${this.props.currentUser.id}/myevents`)
     // this.pushUserToPath("myevents")
-    console.log('delete')
+    // console.log('delete')
+    this.setState({modalIsOpen: false})
+    deleteEvent(this.props.event.id).then(res => {
+
+      this.props.history.push(`/users/${this.props.currentUser.id}/bookmarks`)
+
+      dispatch(flashMessage(`Your event, "${res.title}", was deleted`))
+    })
+    
+
+    
+    
   }
+
   render() {
     return (<div>
       <div className="delete-button">
@@ -56,8 +71,8 @@ class DeleteEventModal extends React.Component {
           <div className="register-modal-text">
             <h2>{this.props.event.title}</h2>
             <p class="overflow-ellipsis">Are you sure you want to delete this?</p>  
-            <div className="cancel">
-              <button className="cancel" onClick={this.handleDelete}>Delete</button>
+            <div className="delete">
+              <button className="delete" onClick={this.handleDelete}>Delete</button>
             </div>
           </div>
         </Modal>
@@ -65,4 +80,4 @@ class DeleteEventModal extends React.Component {
   }
 }
 
-export default DeleteEventModal;
+export default withRouter(DeleteEventModal);

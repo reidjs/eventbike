@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get 'my_tickets/', to: 'events#user_tickets'
     get 'my_bookmarks/', to: 'events#user_bookmarks'
     get 'page/:id', to: 'events#page'
-    resources :events, only: [:show, :index, :create, :new]
+    resources :events, only: [:show, :index, :create, :new, :destroy]
     resources :registrations, only: [:index, :create, :destroy]
     resources :users, only: [:new, :create, :show, :index] 
     resources :my_events, only: [:index]

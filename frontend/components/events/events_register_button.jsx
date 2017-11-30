@@ -12,7 +12,7 @@ class EventsRegisterButton extends React.Component {
     // debugger
     // this.userIsRegistered = this.userIsRegistered.bind(this);
     this.handleRegistration = this.handleRegistration.bind(this);
-    this.handleDelete = this.handleDelete.bind(this);
+    // this.handleDelete = this.handleDelete.bind(this);
     this.pushUserToPath = this.pushUserToPath.bind(this);
     this.state = {
       modalIsOpen: false
@@ -70,9 +70,9 @@ class EventsRegisterButton extends React.Component {
   }
 
   handleDelete() {
-    deleteevent();
-    // this.props.history.push(`/users/${this.props.currentUser.id}/myevents`)
-    this.pushUserToPath("myevents")
+    // deleteevent();
+    // // this.props.history.push(`/users/${this.props.currentUser.id}/myevents`)
+    // this.pushUserToPath("myevents")
     
   }
 
