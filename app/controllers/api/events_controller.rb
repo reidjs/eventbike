@@ -47,6 +47,23 @@ class Api::EventsController < ApplicationController
     render :index
   end   
 
+  #split data into groups of 6
+  def page
+    # events_per_page = 6
+    # page_number = params[:id]
+    # result = []
+    # Event.find_each(:batch_size => events_per_page) do |events|
+    #   result << events
+    # end 
+    # @events = result[page_number.to_i]
+    # render :index
+    page_number = params[:id].to_s
+
+    @events = Event.all.paginate(per_page: 6, page: page_number)
+    render :index
+  end 
+
+
   private
 
   def event_params

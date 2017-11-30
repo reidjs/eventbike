@@ -128,3 +128,24 @@ div.sidenav-container button {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+
+button.pageNumber {
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  padding: 5px;
+  text-align: center;
+  color: white;
+  background: $light-blue;
+}
+button.pageNumber:first-child {
+  margin-left: 100px;
+}
+button.pageNumber:last-child {
+  margin-right: 100px;
+}
+
+#pages {
+  display: flex;
+  justify-content: space-around;
+}

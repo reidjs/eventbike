@@ -10,6 +10,7 @@ class EventsIndex extends React.Component {
     this.state={events: {}, modalIsOpen: true}
     this.closeModal = this.closeModal.bind(this);
     this.getEventsFromURL = this.getEventsFromURL.bind(this);
+    this.getPage = this.getPage.bind(this);
   }
   //we should only send down specific 
   componentWillMount() {
@@ -33,6 +34,9 @@ class EventsIndex extends React.Component {
     } else {
       this.props.getevents();
     }
+  }
+  getPage(page) {
+    this.props.getevents(page)
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.path !== this.props.path) {
@@ -59,6 +63,11 @@ class EventsIndex extends React.Component {
     let eventsList = this.props.events.map((event) => {
       return <EventsShowContainer key={event.id} event={event} />
     })
+    let pages = [1,2,3,4]
+    let pageList = pages.map((page) => {
+      return <button className="pageNumber" onClick={() => {this.getPage(page)}}>{page}</button>
+    })
+      
     if (this.loading) {
       return (
         <Modal
@@ -83,6 +92,9 @@ class EventsIndex extends React.Component {
           <h1>Cycling events in San Francisco, California</h1>
           <div className="showEvents"></div>
             {eventsList}
+            <div id="pages"> 
+            {pageList}
+            </div>
         </div>  
       )
     }

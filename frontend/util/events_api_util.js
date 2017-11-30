@@ -3,8 +3,16 @@ export const fetchEvents = (query) => {
     return (
       $.ajax({
       method: 'GET',
-      url: `/api/events`
+      url: `/api/page/1`
     }));
+  } else if (typeof query === "number") {
+    return (
+      $.ajax({
+        method: 'GET',
+        url: `/api/page/${query}`
+      })
+    )
+    
   } else {
     return (
       $.ajax({
