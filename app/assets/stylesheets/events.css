@@ -1,17 +1,23 @@
 div.events-sidenav {
   padding: 20px;
   height: 650px;
-  width: 218px; }
+  width: 218px;
+  margin-left: 100px; }
 
 div.events-index-container h1 {
   font-size: 24px;
-  margin-top: 20px;
-  padding: 10px;
-  margin: 0 auto; }
+  margin-top: 60px;
+  padding: 50px;
+  margin: 0 auto;
+  margin-left: 100px;
+  margin-bottom: 80px; }
 
 div.events-container {
   display: flex;
   background: #f8f8fa; }
+
+div.events-index-container {
+  padding-left: 80px; }
 
 .loader {
   border: 16px solid #f3f3f3;

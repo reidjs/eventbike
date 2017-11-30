@@ -59,7 +59,7 @@ class Api::EventsController < ApplicationController
     # render :index
     page_number = params[:id].to_s
 
-    @events = Event.all.paginate(per_page: 6, page: page_number)
+    @events = Event.all.paginate(per_page: 5, page: page_number)
     render :index
   end 
 
