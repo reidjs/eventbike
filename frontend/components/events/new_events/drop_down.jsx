@@ -1,5 +1,7 @@
+//For the new event form
 import React from 'react'
 import DropDownListItem from './drop_down_list_item'
+import { fetchCategories } from '../../../util/events_api_util';
 class DropDown extends React.Component {
   constructor(props) {
     super(props);
@@ -9,11 +11,18 @@ class DropDown extends React.Component {
     this.handleSelection = this.handleSelection.bind(this);
 
     this.state = {
-      popupVisible: false
+      popupVisible: false,
+      categories: []
     };
 
   }
-
+  componentWillMount() {
+    fetchCategories()
+      .then(res => {
+        const categories = res.categories;
+        this.setState({categories})
+      })
+  }
   handleClick() {
     if (!this.state.popupVisible) {
       // attach/remove event handler
@@ -41,7 +50,7 @@ class DropDown extends React.Component {
   }
 
   render() {
-    const categoryItems = this.props.categories.map((category) => (
+    const categoryItems = this.state.categories.map((category) => (
         <li 
             key={category} 
             className="dropdown" 

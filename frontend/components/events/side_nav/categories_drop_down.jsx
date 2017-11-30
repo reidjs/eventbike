@@ -34,15 +34,19 @@ class CategoriesDropDown extends React.Component {
     this.handleClick();
   }
   handleSelection(category) {
-    console.log(category)
+    // console.log(category)
   }
   render() {
     const categoryItems = this.props.categories.map((category) => (
       <li 
           key={category} 
           className="dropdown" 
-          onClick={() => (this.handleSelection(category))}>
-          <Link to={`/categories/${category}`}>{category}</Link>
+          onClick={() => (this.handleSelection(category[0]))}>
+          <Link to={`/categories/${category[0]}`}>
+          <img src={category[1]} className="cat-img"/>
+          <div className="cat-text">{category[0]}</div>
+          
+          </Link>
       </li>
     )
   )

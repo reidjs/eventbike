@@ -9,7 +9,7 @@ class SideNav extends React.Component {
   componentWillMount() {
     fetchCategories()
       .then(res => {
-        const categories = res.categories;
+        const categories = res.category_with_image;
         // console.log(categories);
         this.setState({categories})
       })

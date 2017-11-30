@@ -4,12 +4,10 @@ import { withRouter } from 'react-router-dom';
 
 import { newEvent, resetEventErrors } from '../../../actions/events_actions';
 const mapStateToProps = (state) => {
-  const categories = ["Other", "Social", "Joyride"];
   const errors = state.errors.events;
   const user = state.session.currentUser;
   return {
     user,
-    categories,
     errors
   }
 }

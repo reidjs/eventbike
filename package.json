@@ -16,6 +16,7 @@
     "react-modal": "^3.1.2",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
+    "react-thumbnail-gallery": "^2.0.1",
     "redux": "^3.7.2",
     "redux-flash": "^1.1.0",
     "redux-logger": "^3.0.6",

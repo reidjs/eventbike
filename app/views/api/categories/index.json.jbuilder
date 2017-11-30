@@ -1,1 +1,3 @@
 json.categories Event.categories
+json.category_images Event.category_images
+json.category_with_image Event.category_with_image
