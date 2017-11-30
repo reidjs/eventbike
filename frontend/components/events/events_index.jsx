@@ -89,7 +89,10 @@ class EventsIndex extends React.Component {
     } else {
       return (
         <div className="events-index-container">
-          <h1>Cycling events in San Francisco, California</h1>
+          <div id="events-index-header">
+            {/* <img className="header-img" src="https://res.cloudinary.com/eventbike/image/upload/v1512048569/joseph-barrientos-49318_gnijyi.jpg" /> */}
+            <div className="header-txt">San Francisco</div>
+          </div>
           <div className="showEvents"></div>
             {eventsList}
             <div id="pages"> 

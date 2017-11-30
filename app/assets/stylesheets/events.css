@@ -17,7 +17,9 @@ div.events-container {
   background: #f8f8fa; }
 
 div.events-index-container {
-  padding-left: 80px; }
+  padding: 20px;
+  padding-left: 80px;
+  width: 700px; }
 
 .loader {
   border: 16px solid #f3f3f3;
@@ -112,13 +114,28 @@ button.pageNumber {
   background: #0085cc; }
 
 button.pageNumber:first-child {
-  margin-left: 100px; }
+  margin-left: 30%; }
 
 button.pageNumber:last-child {
-  margin-right: 100px; }
+  margin-right: 30%; }
 
 #pages {
   display: flex;
   justify-content: space-around; }
+
+#events-index-header {
+  overflow: hidden;
+  position: relative;
+  padding: 20px; }
+
+li.dropdown:hover:after {
+  opacity: 1; }
+
+div.header-txt {
+  text-align: center;
+  z-index: 4;
+  font-size: 36px;
+  padding: 50px;
+  font-family: "Roboto"; }
 
 /*# sourceMappingURL=events.css.map */

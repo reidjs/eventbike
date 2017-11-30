@@ -54,7 +54,7 @@ class CategoriesDropDown extends React.Component {
       // <DropDown categories={categories}/>
       <div className="sidenav-container" ref={node => { this.node = node; }}>      
         <button type="reset" onClick={this.handleClick}>
-          Select a category
+          {/* Select a category */}
         </button>
         {this.state.popupVisible && (
           <ul>{categoryItems}</ul>
