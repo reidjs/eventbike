@@ -1,10 +1,14 @@
 import React from 'react';
 
-const Details = ({details}) => {
+const Details = ({details, location, date}) => {
   return (
-    <div className="show-event-details">
+    <div className="details">
       <section className="main">
         {details}
+      </section>
+      <section className="other">
+        {location}
+        {date}
       </section>
     </div>
   )

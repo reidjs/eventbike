@@ -11,11 +11,15 @@ div.event-show-details {
   background: #EFF2F5; }
 
 div.action-bar > span.bookmark-button {
-  margin: 20px;
+  margin: 10px;
   font-size: 35px;
+  padding-left: 300px;
+  width: 50px; }
+
+div.action-bar > span.bookmark-button > button > svg {
+  color: green;
   width: 100%;
-  height: auto;
-  padding-left: 30px; }
+  height: auto; }
 
 div.register-modal {
   background: white; }
@@ -108,5 +112,14 @@ div.register-button button:hover {
   -moz-transition: box-shadow 0.5s ease-out;
   -o-transition: box-shadow 0.5s ease-out;
   transition: box-shadow 0.5s ease-out; }
+
+div.details {
+  display: flex; }
+
+section.main {
+  width: 65%; }
+
+section.other {
+  width: 35%; }
 
 /*# sourceMappingURL=events-show.css.map */

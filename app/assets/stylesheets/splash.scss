@@ -201,9 +201,10 @@ ul.query-match {
 
 ul.query-match li{
   background: white;
+  font-family: 'Oxygen, sans-serif';
   overflow: hidden;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 17px;
   border: 1px solid $light-grey;
   text-overflow: ellipsis;
   padding: 5px 10px;

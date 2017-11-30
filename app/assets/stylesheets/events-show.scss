@@ -15,12 +15,17 @@ div.event-show-details {
 }
 
 div.action-bar > span.bookmark-button {
-  margin: 20px;
+  margin: 10px;
   font-size: 35px;
+  padding-left: 300px;
+  width: 50px;
+  // padding: 20px;
+}
+//bookmark button on show page
+div.action-bar > span.bookmark-button > button >  svg {
+  color: green;
   width: 100%;
   height: auto;
-  padding-left: 30px;
-  // padding: 20px;
 }
 
 div.register-modal {
@@ -145,4 +150,15 @@ div.register-button button:hover{
   -moz-transition: box-shadow 0.5s ease-out;
   -o-transition: box-shadow 0.5s ease-out;
   transition: box-shadow 0.5s ease-out;
+}
+div.details {
+  display: flex;
+
+}
+section.main {
+  width: 65%;
+
+}
+section.other {
+  width: 35%;
 }

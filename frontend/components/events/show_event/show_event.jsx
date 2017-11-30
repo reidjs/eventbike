@@ -37,7 +37,8 @@ class ShowEvent extends React.Component {
       const id = event.id
       const title = event.title;
       const image_url = event.image_url;
-      const date = "temp date";
+      const date = event.date;
+      const location = event.location;
       const details = event.details;
       return (
         <div className="event-show-container">
@@ -48,7 +49,11 @@ class ShowEvent extends React.Component {
                 date={date}/>
           <ActionBar 
                 event={event} />
-          <Details details={details}/>
+          <Details 
+            details={details}
+            location={location}
+            date={date} 
+            />
         </div>
       )
     }
