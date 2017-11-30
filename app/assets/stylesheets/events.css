@@ -136,8 +136,11 @@ div.header-txt {
   z-index: 4;
   font-size: 36px;
   padding: 20px;
-  padding-bottom: 10px;
-  font-family: "Roboto"; }
+  padding-bottom: 0;
+  font-family: "Kalam"; }
+
+#events-index-header {
+  padding-bottom: 0; }
 
 #map-container {
   width: 500px;

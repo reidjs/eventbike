@@ -3,9 +3,14 @@ import React from 'react';
 import Header from './header';
 import ActionBar from './action_bar';
 import Details from './details';
+import Modal from 'react-modal';
+
 class ShowEvent extends React.Component {
   constructor(props) {
     super(props);
+    this.state={modalIsOpen: true}
+    this.closeModal = this.closeModal.bind(this);
+    
     this.loading = true;
   }
   componentWillMount() {
@@ -23,6 +28,9 @@ class ShowEvent extends React.Component {
     }
 
   }
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
   isLoading() {
     return (this.props.eventId !== this.props.event.id)
   }
@@ -30,7 +38,21 @@ class ShowEvent extends React.Component {
   render() {
     if (this.loading) {
       return (
-        <div className="loader"></div>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          className={{
+            base: 'loading-modal'
+          }}
+          overlayClassName={{
+            afterOpen: 'loading-modalOverlay_after-open'
+          }}
+          contentLabel="loading Modal"
+        >
+          <div className="loader"></div>
+          
+        </Modal>
       )
     } else {
       const event = this.props.event;
