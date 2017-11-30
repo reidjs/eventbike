@@ -8,7 +8,7 @@ class CategoriesDropDown extends React.Component {
     this.handleOutsideClick = this.handleOutsideClick.bind(this);
     this.handleSelection = this.handleSelection.bind(this);
     this.state = {
-      popupVisible: false
+      popupVisible: true
     };
 
   }
@@ -38,21 +38,21 @@ class CategoriesDropDown extends React.Component {
   }
   render() {
     const categoryItems = this.props.categories.map((category) => (
-      <li 
+      <Link to={`/categories/${category[0]}`}><li 
           key={category} 
           className="dropdown" 
           onClick={() => (this.handleSelection(category[0]))}>
-          <Link to={`/categories/${category[0]}`}>
+          
           <img src={category[1]} className="cat-img"/>
           <div className="cat-text">{category[0]}</div>
           
-          </Link>
-      </li>
+          
+      </li></Link>
     )
   )
     return (
       // <DropDown categories={categories}/>
-      <div className="dropdown-container" ref={node => { this.node = node; }}>      
+      <div className="sidenav-container" ref={node => { this.node = node; }}>      
         <button type="reset" onClick={this.handleClick}>
           Select a category
         </button>

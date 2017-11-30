@@ -90,6 +90,7 @@ li.dropdown img {
   width: 100%;
   vertical-align: top;
 }
+//http://jsfiddle.net/9z26ky19/
 li.dropdown:after {
   content:'\A';
   position:absolute;
@@ -101,5 +102,29 @@ li.dropdown:after {
   -webkit-transition: all 0.5s;
 }
 li.dropdown:hover:after {
-  opacity:1;
+  opacity: 1;
+}
+div.cat-text {
+  z-index: 4;
+  // background: white;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color:white;
+  font-family: "Fugaz One";
+  transform: translate(-50%, -50%);
+  text-shadow: 0px 0px 8px black;
+}
+// li.dropdown a {
+//   z-index: 4;
+//   position: absolute;
+// }
+div.sidenav-container button {
+  font-size: 24px;
+  font-family: "Kalam"
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

@@ -16,7 +16,7 @@ class SideNav extends React.Component {
   }
   render() {
     return (
-      <div className="events-sidenav">side nav here
+      <div className="events-sidenav">
         <CategoriesDropDown categories={this.state.categories} />
       </div>
     )
