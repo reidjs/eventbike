@@ -43,19 +43,19 @@ Any user with an account can create an event by filling in a few form fields. Th
 
 ### Frontend Technology 
 
-#### React JavaScript Library
++ #### React JavaScript Library
 
 EventBike is a single page web app that uses React's hashrouter to simulate page navigation. React delegates most of the rendering to the user's browser which dramatically speeds up load time on complex pages. 
 
-#### Sass
++ #### Sass
 
 Sass is used to streamline and organize the styling of EventBike's different components. 
 
-#### jQuery
++ #### jQuery
 
 jQuery takes care of AJAX calls which connect the frontend to the backend. 
 
-#### Webpack
++ #### Webpack
 
 Webpack processes and bundles the javascripts together to clean up the code.
 
@@ -63,11 +63,11 @@ Webpack processes and bundles the javascripts together to clean up the code.
 ### Backend Technology
 
 
-#### Ruby on Rails 
++ #### Ruby on Rails 
 
 Ruby on Rails is in charge of the models, database schema, controllers, and backend routes.
 
-#### PostgreSQL
++ #### PostgreSQL
 
 User, Event, and other data is organized in a relational database powered by Postgres. 
 
