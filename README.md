@@ -65,11 +65,24 @@ Webpack processes and bundles the javascripts together to clean up the code.
 
 + #### Ruby on Rails 
 
-Ruby on Rails is in charge of the models, database schema, controllers, and backend routes.
+Ruby on Rails is the framework used for generating models, database schema, controllers, and backend routes. 
+
+Routes 
+
+| Route | Index              | Create | Show | Destroy |  
+| ----- | ------------------ | ------ | ---- | ------- | 
+| Events| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Registrations | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
+| Users | :white_check_mark: | :white_check_mark: | :white_check_mark: | :x: |
+| Bookmarks | :white_check_mark: | :white_check_mark: | :x: | :white_check_mark: |
+| Categories | :white_check_mark: | :x: | :white_check_mark: | :x: |
+| Session | :x: | :white_check_mark: | :x: | :white_check_mark: |
 
 + #### PostgreSQL
 
-User, Event, and other data is organized in a relational database powered by Postgres. 
+Users, Events, Registrations, and Bookmarks are organized in a relational database powered by Postgres. 
+
+
 
 
 # Development :electric_plug:
@@ -106,5 +119,5 @@ Hovering over a map marker should show a glimpse into the event's show page befo
 Users should be able to edit the events they made and add markdown to the description.
 
 + ### Oauth 2.0 
-Users should be able to sign in using facebook or google. 
+Users should be able to sign in using their facebook or google accounts. 
 
