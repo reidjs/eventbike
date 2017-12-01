@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, Route } from 'react-router-dom';
-// import SessionFormContainer from '../session_form/session_form_container'
 import FlashContainer from '../flash/flash_container';
 class TopNavDropDown extends React.Component {
   constructor(props) {
@@ -10,14 +9,6 @@ class TopNavDropDown extends React.Component {
     this.state = {flash: props.flash}
   }
   componentWillReceiveProps(nextProps) {
-    // if (newProps.currentUser) {
-    //   // console.log('user logged in')
-    // } else {
-    //   // console.log('user logged out')
-      
-    // }
-    // console.log(newProps.flash)
-    console.log(nextProps)
     const flash = nextProps.flash;
     this.setState({flash})
 
@@ -25,8 +16,6 @@ class TopNavDropDown extends React.Component {
 
   handleClick(e) {
     e.preventDefault();
-    // console.log(logout);
-    // console.log(login)
     this.props.logout()
   }
   

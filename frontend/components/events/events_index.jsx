@@ -1,10 +1,8 @@
 import React from 'react';
-// import EventsListItem from './events_list_item';
 import EventsShowContainer from './events_show_container';
 import Modal from 'react-modal';
 import EventMap from './event_map';
 import values from 'lodash/values';
-// import { getCategory } from '../../actions/events_actions';
 class EventsIndex extends React.Component {
   constructor(props) {
     super(props);
@@ -14,24 +12,14 @@ class EventsIndex extends React.Component {
     this.getEventsFromURL = this.getEventsFromURL.bind(this);
     this.getPage = this.getPage.bind(this);
   }
-  //we should only send down specific 
   componentWillMount() {
-    // console.log(firstpart)
-    // debugger
     this.getEventsFromURL(this.props.path);
-    
-    // console.log(this.props.getevents)
-    // setTimeout(this.props.getevents, 0); //artificial delay
-    //spinner now 
   }
   getEventsFromURL(path) {
     const firstpart = path.split('/')[1]
-    console.log()
     if (firstpart === "categories") {
-      // console.log('here')
       this.props.getcategory(path.split('/')[2]);
     } else if (firstpart === "query") {
-      // this.props.getevents();
       this.props.getevents(path.split('/')[2]);
     } else {
       this.props.getevents();
@@ -55,7 +43,6 @@ class EventsIndex extends React.Component {
     this.setState({modalIsOpen: false});
   }
   render() {
-    // console.log(this.state.events)
     let myClass;
     // let myClass2;
     this.loading ? (myClass = "loader") : (myClass = "showEvents");
@@ -94,7 +81,6 @@ class EventsIndex extends React.Component {
       return (
         <div className="events-index-container">
           <div id="events-index-header">
-            {/* <img className="header-img" src="https://res.cloudinary.com/eventbike/image/upload/v1512048569/joseph-barrientos-49318_gnijyi.jpg" /> */}
             <div className="header-txt">San Francisco</div>
           </div>
             <EventMap events={values(this.props.events)}/>
@@ -108,11 +94,5 @@ class EventsIndex extends React.Component {
     }
   }
 }
-// return <EventsListItem 
-//           key={event.title} 
-//           event={event} 
-//           currentUser={this.props.currentUser}
-//           register={this.props.register}
-//           bookmark={this.props.bookmark}/>
 
 export default EventsIndex;
