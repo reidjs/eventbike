@@ -192,6 +192,9 @@ div.event-show-container {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: absolute;
+  z-index: -2;
+  background: $light-grey;
 }
 div.background-img-container {
   width:100%;
@@ -268,6 +271,7 @@ section.main {
   padding-right: 50px;
   hyphens: auto;
   font-size: 21px;
+  background: white;
   font-family: 'Roboto', sans-serif;
 
 }
@@ -276,6 +280,7 @@ section.other {
   padding: 40px;
   padding-top: 50px;
   font-family: 'Roboto';
+  background: white;
   
 }
 section.other h3 {

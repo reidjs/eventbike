@@ -69,6 +69,7 @@ class ShowEvent extends React.Component {
         <div className="event-show-container">
           <div className="background-img-container">
             <img className="background-img" src={event.image_url} />
+            <div></div>
           </div>
           <div className="event-show-content">
             <Header 

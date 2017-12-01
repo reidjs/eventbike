@@ -4,8 +4,8 @@ import React from 'react'
 import ModeEdit from 'material-ui-icons/ModeEdit';
 
 class LoginForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     // this.username = props.username
     this.state = ({password: ""});
     this.demoPassword;
@@ -14,12 +14,15 @@ class LoginForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleBack = this.handleBack.bind(this);
     this.setText = this.setText.bind(this);
+    this.errors = [];
     
     
   }
   handleChange(e) {
     // console.log(e.target.value)
     this.setState({password: e.target.value})
+    this.errors = [];
+    
   }
   handleSubmit(e) {
     if (e)
@@ -31,6 +34,10 @@ class LoginForm extends React.Component {
     this.props.history.push('/signin')
     this.props.reset()
 
+  }
+  componentWillReceiveProps(newProps) {
+    this.errors = newProps.errors.session;
+    
   }
   componentDidMount() {
     if (this.props.ui.demoUser) {
@@ -55,7 +62,7 @@ class LoginForm extends React.Component {
     }, 100) 
   }
   render() {
-    const errorList = this.props.errors.session.map((err) => {
+    const errorList = this.errors.map((err) => {
       return <li key={err}>{err}</li>
     })
     return(

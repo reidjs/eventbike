@@ -5,17 +5,27 @@ import ModeEdit from 'material-ui-icons/ModeEdit';
 
 // import { Link } from 'react-router-dom';
 class SignupForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     // this.username = props.username
     this.state = ({password: ""});
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleBack = this.handleBack.bind(this);
+    this.errors = []
   }
   handleChange(e) {
     // console.log(e.target.value)
     this.setState({password: e.target.value})
+    this.errors = [];
+    
+  }
+  componentWillReceiveProps(newProps) {
+    if (newProps.errors)
+      this.errors = newProps.errors.session;
+    else 
+      this.errors = []
+    
   }
   handleSubmit(e) {
     e.preventDefault();
@@ -27,7 +37,9 @@ class SignupForm extends React.Component {
     this.props.reset()
   }
   render() {
-    const errorList = this.props.errors.session.map((err) => {
+    // debugger
+    console.log(this.errors)
+    const errorList = this.errors.map((err) => {
       return <li key={err}>{err}</li>
     })
     return(
