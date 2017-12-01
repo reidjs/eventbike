@@ -1,7 +1,7 @@
 @import "util/variables.scss";
 
 form.new-event input, form.new-event textarea {
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 
 span.big-number {
@@ -119,12 +119,14 @@ form.new-event input[type=text]:focus, form.new-event input[type=date]:focus {
 
 input[type=date] {
   width: 150px;
-  font-color: $light-black;
+  color: $light-black;
 }
-textarea {
+form.new-event textarea {
   display: block;
   width: 313px;
   height: 129px;
+  padding: 20px;
+  border: 1px solid rgb(110, 109, 109);
 }
 
 form.new-event {
@@ -136,6 +138,12 @@ div.category-dropdown {
   color: $light-black;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+
+#form-errors {
+  text-align: center;
+  color: red;
+  font-size: 18px;
 }
 
 form.new-event input[type=submit] {
@@ -1938,7 +1946,7 @@ but rather `width: auto` or `left: 0; right: 0;`.
 
 .rrui__date-picker__collapsible
 {
-	min-width : 100%;
+	min-width : 47%;
 	background-color : white;
 }
 

@@ -9,9 +9,9 @@ class Event < ApplicationRecord
     'https://res.cloudinary.com/eventbike/image/upload/c_scale,w_486/v1511497434/2photo-pots-438912_skmyqh.jpg',
     'https://res.cloudinary.com/eventbike/image/upload/c_scale,w_163/v1511497467/paolo-candelo-327607_ebajjm.jpg',
     'https://res.cloudinary.com/eventbike/image/upload/c_scale,w_177/v1511497471/ryo-yoshitake-360687_ltsckg.jpg',
-    'https://res.cloudinary.com/eventbike/image/upload/c_scale,w_361/v1511497450/fonsi-fernandez-420911_vpetxg.jpg',
-    'https://res.cloudinary.com/eventbike/image/upload/c_scale,w_206/v1511497476/vishal-banik-440226_mvg23f.jpg',
     'https://res.cloudinary.com/eventbike/image/upload/c_scale,w_365/v1511497446/dennis-savenko-202218_bia7rx.jpg',
+    'https://res.cloudinary.com/eventbike/image/upload/c_scale,w_206/v1511497476/vishal-banik-440226_mvg23f.jpg',
+    'https://res.cloudinary.com/eventbike/image/upload/c_scale,w_361/v1511497450/fonsi-fernandez-420911_vpetxg.jpg',
     'https://res.cloudinary.com/eventbike/image/upload/c_scale,w_230/v1511497453/mark-northern-454140_xewhho.jpg'
   ]
   end 

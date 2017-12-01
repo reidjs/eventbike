@@ -78,21 +78,19 @@ class NewEventForm extends React.Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    // console.log('Submit new event!',this.state)
     this.props.submit(this.state)
-    // debugger
-    //redirect 
-    // console.log(this.props)
+    // this.props.history.push(`users/${this.props.user.id}/myevents`)
     this.waitingForConfirmation = true;
   }
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps)
     if (nextProps.errors.length === 0 && this.waitingForConfirmation) {
-      //show errors, do not redirect 
       this.waitingForConfirmation = false;
-      nextProps.history.push(`users/${this.props.user.id}/myevents`)
+      this.props.history.push(`users/${this.props.user.id}/myevents`)
       console.log('no errors')
       
     } else {
+      //show errors
       this.waitingForConfirmation = false;
     }
   }
@@ -121,9 +119,16 @@ class NewEventForm extends React.Component {
   render() {
     let matchItems = this.state.matchResults.map((result) => {
       if (result !== undefined) {
-        return <li>{result.formatted_address}</li>
+        return <li onClick={() => 
+          {
+            
+            this.setState({location: result.formatted_address}
+          )}}>{result.formatted_address}</li>
       } else 
         return <li></li>
+    })
+    let errorList = this.props.errors.map((error) => {
+      return <li key={error}>{error}</li>
     })
     return (
       <div className="new-event-container">
@@ -174,6 +179,9 @@ class NewEventForm extends React.Component {
             ]}/>
           </div>
           <input type="submit" value="Create New Event" />
+          <ul id="form-errors">
+            {errorList}
+          </ul>
         </form>
       </div>
     )

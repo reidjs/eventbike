@@ -3,11 +3,16 @@ import NewEventForm from './new_event_form';
 import { withRouter } from 'react-router-dom';
 
 import { newEvent, resetEventErrors } from '../../../actions/events_actions';
-const mapStateToProps = (state) => {
+
+const mapStateToProps = (state, ownProps) => {
   const errors = state.errors.events;
   const user = state.session.currentUser;
+  const history = ownProps.history;
+  const events = state.entities.events; //pass these to detect new event creation
   return {
+    events,
     user,
+    history,
     errors
   }
 }
