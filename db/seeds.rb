@@ -26,7 +26,7 @@ event1 = Event.new(
   lat: 37.773972,
   lng: -122.431297,
   date: Date.new(2018, 1, 1),
-  image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840424/joe-neric-223563_kjcucx.jpg")
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/c_scale,q_45,w_688/v1511840424/joe-neric-223563_kjcucx.jpg")
 event2 = Event.new(
   title: "Join us another Bicycle Event/Race put on by Relaxed Riders",
   details: "To get tickets and full race information about the Hangtown Motocross Classic, go to www.hangtownmx.com and click on tickets.\" In addition to General Admission tickets, the Hangtown Motocross Classic has some of the finest high-end hospitality areas in the entire series.", 
@@ -36,7 +36,7 @@ event2 = Event.new(
   lat: 37.7732,
   lng: -122.39,
   date: Date.new(2018, 4, 1),
-  image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840485/mohamed-nohassi-202199_exn3um.jpg")
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/c_scale,q_53,w_696/v1511840485/mohamed-nohassi-202199_exn3um.jpg")
 event3 = Event.new(
   title: 'Join us for our Bicycle Race',
   details: "Racing gets underway at 9am, with some of the best amateurs in the country doing battle. In the afternoon, the top pros will be riding on the track for their series media day. Later on Thursday night, join us at the Palladio Mall in Folsom from 5 - 7pm for a Hangtown pre-party. Amateur racing continues on Friday, May 18 at 9am, when the top experts and Pro Ams compete for pro points, which leads to a professional license in the premier professional series.", 
@@ -56,7 +56,7 @@ event4 = Event.new(
   lat: 37.743972,
   lng: -122.45,
   date: Date.new(2018, 1, 30),
-  image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840796/markus-spiske-265590_u0npvf.jpg")
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/c_scale,q_53,w_1317/v1511840796/markus-spiske-265590_u0npvf.jpg")
 event5 = Event.new(
   title: 'Stop by for our Motorcycle Event put on by Relaxed Riders',
   details: "Over the last few years Family Off-Road Adventures has raised and donated THOUSANDS of dollars to the Blue Ribbon Coalition, a non-profit organization that works to keep the trails open.\nDuring the Saturday evening Family BBQ we will award prizes and raffle THOUSHANDS in donations from motorcycle dealerships and product retailers.", 
@@ -106,7 +106,7 @@ event9 = Event.new(
   lng: -122.4431297,
   location: "Laguna Seca (The other one)",
   date: Date.new(2018, 2, 1),
-  image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497423/adils-photography-419425_uk3fif.jpg" )
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/c_scale,q_47,w_1885/v1511497423/adils-photography-419425_uk3fif.jpg" )
 event10 = Event.new(
   title: 'Join us a Bicycle Event arranged with Bay Area Moto Club',
   details: "Its not just any motocross race, but the oldest and one of the most prestigious in the United States. Hangtown is the opening round of the 12-race Lucas Oil Pro Motocross Championship sanctioned by the AMA.\nEvery year, there is a new battle to witness, and new champions to crown. Perhaps its the mystique of 50 years of racing, dating back before the series was even established, that makes Hangtown racing legendary. Many people say that attending Hangtown is a way to be a part of motorcross history.", 
@@ -126,7 +126,7 @@ event10 = Event.new(
   date: Date.new(2018, 1, 9),
   lat: 37.743972,
   lng: -122.4491297,
-  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_11/v1512048568/edgar-chaparro-143297_rsdzuz.jpg")
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/c_scale,q_54,w_1191/v1512048568/edgar-chaparro-143297_rsdzuz.jpg")
   
   event12 = Event.new(
   title: 'Maintaining Bikes Gettogether Today',
