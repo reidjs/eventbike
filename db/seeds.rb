@@ -200,6 +200,18 @@ event10 = Event.new(
   lat: 37.759,
   lng: -122.4319997,
   image_url: "https://res.cloudinary.com/eventbike/image/upload/q_10/v1511840660/francisco-aceldo-217919_ztiedc.jpg")
+  event17 = Event.new(
+  title: 'Sccoter thing',
+  details: "After visiting Australia for a series of sold out shows in 2013, LA three-piece Black Rebel Motorcycle Club have announced that they’ll once again return for a run of shows to showcase their much anticipated new album, expected in early 2018.
+  Presented by MJR Presents, Black Rebel Motorcycle Club will visit Sydney, Melbourne, Brisbane, Adelaide, and Perth where they’ll be performing a selection of new material as well as crowd favourites from the bands illustrious 19-year, seven album back catalogue, showing why they are one of the world’s most celebrated live bands.
+  ",
+  creator_id: user2.id,
+  category: "Scooter",
+  location: "Scoot town",
+  date: Date.new(2018, 5, 19),
+  lat: 37.759,
+  lng: -122.4819997,
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_10/v1511840660/francisco-aceldo-217919_ztiedc.jpg")
 
 event1.save
 event11.save 
@@ -217,6 +229,7 @@ event10.save
 event14.save 
 event15.save 
 event16.save 
+event17.save 
 #reidjs is registered for both events
 #bob is registered for the first event
 #charlie is registered for no events 
@@ -229,6 +242,20 @@ registration6 = Registration.new(user_id: user2.id, event_id: event7.id)
 registration7 = Registration.new(user_id: user4.id, event_id: event8.id)
 registration8 = Registration.new(user_id: user4.id, event_id: event8.id)
 registration9 = Registration.new(user_id: user5.id, event_id: event1.id)
+registration10 = Registration.new(user_id: user1.id, event_id: event6.id)
+registration11 = Registration.new(user_id: user4.id, event_id: event14.id)
+registration12 = Registration.new(user_id: user5.id, event_id: event14.id)
+registration13 = Registration.new(user_id: user2.id, event_id: event9.id)
+registration14 = Registration.new(user_id: user4.id, event_id: event9.id)
+registration15 = Registration.new(user_id: user5.id, event_id: event15.id)
+registration16 = Registration.new(user_id: user5.id, event_id: event16.id)
+registration17 = Registration.new(user_id: user5.id, event_id: event1.id)
+registration18 = Registration.new(user_id: user5.id, event_id: event5.id)
+registration19 = Registration.new(user_id: user5.id, event_id: event6.id)
+registration20 = Registration.new(user_id: user5.id, event_id: event7.id)
+registration21 = Registration.new(user_id: user5.id, event_id: event8.id)
+registration22 = Registration.new(user_id: user5.id, event_id: event9.id)
+
 registration1.save 
 registration2.save
 registration3.save
@@ -238,6 +265,19 @@ registration6.save
 registration7.save
 registration8.save
 registration9.save
+registration10.save
+registration11.save
+registration12.save
+registration13.save
+registration14.save
+registration15.save
+registration16.save
+registration17.save
+registration18.save
+registration19.save
+registration20.save
+registration21.save
+registration22.save
 #reidjs has bookmarked the first two events 
 #bob bookmarked the first event only
 bookmark1 = Bookmark.new(user_id: user1.id, event_id: event1.id)
