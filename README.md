@@ -43,11 +43,13 @@ Any user with an account can create an event by filling in a few form fields. Th
 
 ### Frontend Technology 
 
+---
+
 + #### React JavaScript Library with Redux
 
 EventBike is a single page web app that uses React's hashrouter to simulate page navigation. React delegates most of the rendering to the user's browser which dramatically speeds up load time on complex pages. 
 
-Frontend routes 
+###### Frontend routes 
 
 + root `/`
   * Sign in `/signin`
@@ -75,15 +77,17 @@ jQuery takes care of AJAX calls which connect the frontend to the backend.
 
 Webpack processes and bundles the javascripts together.
 
+---
 
 ### Backend Technology
 
+---
 
 + #### Ruby on Rails 
 
 Ruby on Rails is the framework used for generating models, database schema, controllers, and backend routes. 
 
-Routes 
+###### Routes 
 
 | Route | Index              | Create | Show | Destroy |  
 | ----- | ------------------ | ------ | ---- | ------- | 
@@ -94,25 +98,25 @@ Routes
 | Categories | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | Session | :x: | :white_check_mark: | :x: | :white_check_mark: |
 
-Associations 
+###### Associations 
 
-Event
+*Event*
   + belongs to creator 
   + has many registrations
   + has many attendees 
   
-User 
+*User*
   + has many events 
   + has many registrations 
   + has many bookmarks 
   + has many attending events 
   + has many bookmarked events
   
-Bookmark 
+*Bookmark* 
   + belongs to user 
   + belongs to event 
   
-Registration
+*Registration*
   + belongs to user 
   + belongs to event
  
@@ -141,6 +145,8 @@ Table Columns
 
 | user_id | event_id |
 | --- | --- |
+
+---
 
 # Development :electric_plug:
 
