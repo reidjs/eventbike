@@ -21,7 +21,6 @@
     "react-thumbnail-gallery": "^2.0.1",
     "redux": "^3.7.2",
     "redux-flash": "^1.1.0",
-    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "webpack": "^3.8.1"
   },
@@ -49,6 +48,7 @@
   "devDependencies": {
     "redux-devtools": "^3.4.1",
     "redux-devtools-dock-monitor": "^1.1.2",
+    "redux-logger": "^3.0.6",    
     "redux-devtools-log-monitor": "^1.4.0"
   },
   "engines": {
