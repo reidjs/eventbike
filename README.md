@@ -82,8 +82,27 @@ Routes
 
 Users, Events, Registrations, and Bookmarks are organized in a relational database powered by Postgres. 
 
+Table Columns
 
++ Events
 
+| title | details | creator_id | date | location | lat | lng |
+| --- | --- | --- | --- | --- | --- | --- |
+
++ Users 
+
+| username | password_digest | session_token |
+| --- | --- | --- |
+
++ Bookmarks  
+
+| user_id | event_id |
+| --- | --- |
+
++ Registrations 
+
+| user_id | event_id |
+| --- | --- |
 
 # Development :electric_plug:
 
