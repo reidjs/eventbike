@@ -105,7 +105,7 @@ button.open-register-modal, span.register-button button.register {
   margin-right: 47px;
 
 }
-button.open-register-modal:hover, span.register-button button.register {
+button.open-register-modal:hover, span.register-button button.register, div.register-button button:hover {
   background: $dark-green;
   transition-delay: 2s;
   -webkit-transition: background 0.5s ease-out;
@@ -114,7 +114,7 @@ button.open-register-modal:hover, span.register-button button.register {
   transition: background 0.5s ease-out;
 
 }
-button.open-register-modal.cancel:hover {
+button.open-register-modal.cancel:hover,  div.register-button button.cancel:hover {
   background: rgb(121, 7, 7);
   // transition-delay: 2s;
   // -webkit-transition: background 0.5s ease-out;
@@ -154,7 +154,7 @@ div.register-modal-text div.register-button {
   
 } 
 div.register-button button{
-  background: $dark-green;
+  background: $light-green;
   width: 100px;
   // height: 10px;
   color: white;
@@ -170,13 +170,13 @@ div.register-button button.cancel, button.cancel {
   background: red;
 }
 
-div.register-button button:hover{
-  box-shadow: 3px -3px 1px #bdbdbd;
-  -webkit-transition: box-shadow 0.5s ease-out;
-  -moz-transition: box-shadow 0.5s ease-out;
-  -o-transition: box-shadow 0.5s ease-out;
-  transition: box-shadow 0.5s ease-out;
-}
+// div.register-button button:hover{
+//   box-shadow: 3px -3px 1px #bdbdbd;
+//   -webkit-transition: box-shadow 0.5s ease-out;
+//   -moz-transition: box-shadow 0.5s ease-out;
+//   -o-transition: box-shadow 0.5s ease-out;
+//   transition: box-shadow 0.5s ease-out;
+// }
 div.details {
   display: flex;
 
