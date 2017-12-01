@@ -43,7 +43,7 @@ Any user with an account can create an event by filling in a few form fields. Th
 
 ### Frontend Technology 
 
-+ #### React JavaScript Library
++ #### React JavaScript Library with Redux
 
 EventBike is a single page web app that uses React's hashrouter to simulate page navigation. React delegates most of the rendering to the user's browser which dramatically speeds up load time on complex pages. 
 
@@ -58,9 +58,9 @@ Frontend routes
   * New Event `/create`
   * Category `/categories/:id`
   * User Dashboard
-    - Tickets `/users/:id/tickets
-    - Bookmarks `/users/:id/bookmarks
-    - Created events `/users/:id/myevents
+    - Tickets `/users/:id/tickets`
+    - Bookmarks `/users/:id/bookmarks`
+    - Created events `/users/:id/myevents`
     
 
 + #### Sass
@@ -73,7 +73,7 @@ jQuery takes care of AJAX calls which connect the frontend to the backend.
 
 + #### Webpack
 
-Webpack processes and bundles the javascripts together to clean up the code.
+Webpack processes and bundles the javascripts together.
 
 
 ### Backend Technology
