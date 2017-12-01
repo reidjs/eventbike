@@ -1,8 +1,8 @@
-# README :bicyclist:
+# README 
 
 EventBike is an event planning tool designed for the motorcycle and bicycle communities. Inspired by Eventbrite, it shares many features such as user authentication, event search, an interactive map, and a user dashboard. 
 
-# Features
+# Features :bicyclist:
 
 ## User Authentication
 
@@ -39,7 +39,7 @@ Any user with an account can create an event by filling in a few form fields. Th
 | ![Geocoding](https://media.giphy.com/media/xT0xeqrUVqFASK0DnO/giphy.gif) |
 
 
-# Technical Details 
+# Technical Details :wrench:
 
 ### Frontend Technology 
 
@@ -71,7 +71,8 @@ Ruby on Rails is in charge of the models, database schema, controllers, and back
 
 User, Event, and other data is organized in a relational database powered by Postgres. 
 
-### Development :checkered_flag:
+
+# Development :checkered_flag:
 
 #### Setup:
 + `npm install`
@@ -89,4 +90,21 @@ User, Event, and other data is organized in a relational database powered by Pos
 + `git push origin master`
 + `git push heroku master` 
 
+
+# Future plans 
+
++ ### Advanced search 
+At the moment, search only indexes by title. It should also look into the event description, event organizer, and perhaps it should organize by category.
+
++ ### Tags (dynamic categories)
+Users should be able to come up with their own categories when they create an event. 
+
++ ### Show page preview on the map
+Hovering over a map marker should show a glimpse into the event's show page before directing the user into the page. 
+
++ ### Edit events and text markdown 
+Users should be able to edit the events they made and add markdown to the description.
+
++ ### Oauth 2.0 
+Users should be able to sign in using facebook or google. 
 
