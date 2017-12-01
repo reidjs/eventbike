@@ -1,4 +1,18 @@
 # README
+![User show page](https://media.giphy.com/media/l4Ep4I7DDZw1PWLiE/giphy.gif)
+
+
+![User signin 1](https://media.giphy.com/media/3o6fIXGLPUNbG5BC12/giphy.gif)
+![User signin 2]https://media.giphy.com/media/xT0xeCMXhzeOicp2Io/giphy.gif)
+
+
+![Main Search](https://media.giphy.com/media/xT0xeJ1TXwuZKHUrSg/giphy.gif)
+
+
+![Map](https://media.giphy.com/media/3o6fJcbRMUoIlp26VW/giphy.gif)
+
+
+![Geocoding](https://media.giphy.com/media/xT0xeqrUVqFASK0DnO/giphy.gif)
 
 Setup:
 npm install
