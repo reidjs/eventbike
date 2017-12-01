@@ -1,7 +1,8 @@
-# README
+# README :bicyclist:
 
 EventBike is an event planning tool designed for the motorcycle and bicycle communities. Inspired by Eventbrite, it shares many features such as user authentication, event search, an interactive map, and a user dashboard. 
 
+# Features
 
 ## User Authentication
 
@@ -38,7 +39,7 @@ Any user with an account can create an event by filling in a few form fields. Th
 | ![Geocoding](https://media.giphy.com/media/xT0xeqrUVqFASK0DnO/giphy.gif) |
 
 
-## Technical Details 
+# Technical Details 
 
 ### Frontend Technology 
 
@@ -54,6 +55,10 @@ Sass is used to streamline and organize the styling of EventBike's different com
 
 jQuery takes care of AJAX calls which connect the frontend to the backend. 
 
+#### Webpack
+
+Webpack processes and bundles the javascripts together to clean up the code.
+
 
 ### Backend Technology
 
@@ -66,21 +71,22 @@ Ruby on Rails is in charge of the models, database schema, controllers, and back
 
 User, Event, and other data is organized in a relational database powered by Postgres. 
 
-### Development 
+### Development :checkered_flag:
 
 #### Setup:
 + `npm install`
 + `bundle install`
 + `rails db:reset`
 
-#### Development:
+#### Environment:
 + `webpack --watch`
 + `sass --watch app/assets/stylesheets`
 + `rails s`
++ `Open browser to localhost: 3000`
 
-Version control:
+
+#### Version control:
 + `git push origin master`
 + `git push heroku master` 
 
-+ `Open browser to localhost: 3000`
 
