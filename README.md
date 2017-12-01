@@ -55,8 +55,12 @@ Frontend routes
     - Sign in `/signin/login`
   * Events index `/events`
     - Event show page `/events/:id`
-  * Category index `/categories/:id`
-    
+  * New Event `/create`
+  * Category `/categories/:id`
+  * User Dashboard
+    - Tickets `/users/:id/tickets
+    - Bookmarks `/users/:id/bookmarks
+    - Created events `/users/:id/myevents
     
 
 + #### Sass
@@ -90,6 +94,28 @@ Routes
 | Categories | :white_check_mark: | :x: | :white_check_mark: | :x: |
 | Session | :x: | :white_check_mark: | :x: | :white_check_mark: |
 
+Associations 
+
+Event
+  + belongs to creator 
+  + has many registrations
+  + has many attendees 
+  
+User 
+  + has many events 
+  + has many registrations 
+  + has many bookmarks 
+  + has many attending events 
+  + has many bookmarked events
+  
+Bookmark 
+  + belongs to user 
+  + belongs to event 
+  
+Registration
+  + belongs to user 
+  + belongs to event
+ 
 + #### PostgreSQL
 
 Users, Events, Registrations, and Bookmarks are organized in a relational database powered by Postgres. 
