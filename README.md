@@ -72,7 +72,7 @@ Ruby on Rails is in charge of the models, database schema, controllers, and back
 User, Event, and other data is organized in a relational database powered by Postgres. 
 
 
-# Development :checkered_flag:
+# Development :electric_plug:
 
 #### Setup:
 + `npm install`
@@ -91,7 +91,7 @@ User, Event, and other data is organized in a relational database powered by Pos
 + `git push heroku master` 
 
 
-# Future plans 
+# Future plans :checkered_flag:
 
 + ### Advanced search 
 At the moment, search only indexes by title. It should also look into the event description, event organizer, and perhaps it should organize by category.
