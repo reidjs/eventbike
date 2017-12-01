@@ -4,6 +4,7 @@ import {
   RECEIVE_CURRENT_USER,
   RECEIVE_USERNAME,
   RECEIVE_NEW_USERNAME,
+  RESET_POTENTIAL_USER,
   RESET_ERRORS
 } from '../actions/session_actions';
 //somehow undefined is getting in here as the action
@@ -22,6 +23,8 @@ export default (state = [], action) => {
       return [];
     case RECEIVE_NEW_USERNAME:
       // console.log('recieve new username: ', action)
+      return [];
+    case RESET_POTENTIAL_USER:
       return [];
     default:
       return state;

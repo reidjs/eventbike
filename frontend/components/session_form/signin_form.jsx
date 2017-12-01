@@ -11,10 +11,12 @@ class SigninForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.setText = this.setText.bind(this)
+    this.errors = []
   }
   handleChange(e) {
     // console.log(e.target.value)
     this.setState({username: e.target.value})
+    this.errors = []
   }
   handleSubmit(e) {
     if (e)
@@ -24,7 +26,7 @@ class SigninForm extends React.Component {
   }
   componentDidMount() {
     this.setState({username: ""})
-    
+    this.errors = []
     // this.setText(this.demoText, 0)
     
   }
@@ -33,6 +35,7 @@ class SigninForm extends React.Component {
       this.demoUsername = newProps.ui.demoUser.username;
       this.setText(this.demoUsername, 0);
     }
+    this.errors = newProps.errors.session;
   }
   //for the demo user
   setText(text, index) {
@@ -50,7 +53,7 @@ class SigninForm extends React.Component {
   }
 
   render() {
-    const errorList = this.props.errors.session.map((err) => {
+    const errorList = this.errors.map((err) => {
       return <li key={err}>{err}</li>
     })
 
