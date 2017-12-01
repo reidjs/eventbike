@@ -125,6 +125,18 @@ form.new-event input[type=submit] {
   height: 45px;
   font-family: "Fugaz One"; }
 
+ul.location-match {
+  padding: 5px;
+  padding-left: 14px;
+  border-bottom: 1px solid #EFF2F5;
+  width: 305px; }
+
+ul.location-match li {
+  padding: 5px; }
+
+ul.location-match li:hover {
+  background: #EFF2F5; }
+
 /*===========================================================
 = Buttons                                                   =
 ===========================================================*/

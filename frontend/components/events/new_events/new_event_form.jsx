@@ -7,28 +7,15 @@ import { fetchCategories, getAddress } from '../../../util/events_api_util'
 
 import
 {
-  PageAndMenu,
-  Page,
-  CollapsibleMenu,
-  MenuButton,
-  Form,
-  Snackbar,
   Tooltip,
-  ActivityIndicator,
   TextInput,
   Select,
-  Button,
-  Switch,
-  Checkbox,
-  SegmentedControl,
   DatePicker,
-  FileUpload,
-  Modal
 }
 from 'react-responsive-ui'
-const test = () => {
-  console.log('hi')
-}
+// const test = () => {
+//   console.log('hi')
+// }
 const IMAGES =
 [{
         src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
@@ -66,6 +53,7 @@ class NewEventForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCategory = this.handleCategory.bind(this);
     this.handleLocationChange = this.handleLocationChange.bind(this);
+    this.showMatchItems = true;
     this.categories = []
   }
   handleInputChange(e) {
@@ -83,11 +71,11 @@ class NewEventForm extends React.Component {
     this.waitingForConfirmation = true;
   }
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps)
+    // console.log(nextProps)
     if (nextProps.errors.length === 0 && this.waitingForConfirmation) {
       this.waitingForConfirmation = false;
       this.props.history.push(`users/${this.props.user.id}/myevents`)
-      console.log('no errors')
+      // console.log('no errors')
       
     } else {
       //show errors
@@ -106,6 +94,7 @@ class NewEventForm extends React.Component {
   }
   //AIzaSyDkREocgFR4OI0hcwrvDINxt0CuM0nKAgw
   handleLocationChange(e) {
+    this.showMatchItems = true;
     let value = e.target.value;
     getAddress(value).then(res => {
         // console.log(res.results[0].formatted_address)
@@ -119,9 +108,10 @@ class NewEventForm extends React.Component {
   render() {
     let matchItems = this.state.matchResults.map((result) => {
       if (result !== undefined) {
-        return <li onClick={() => 
+        return <li key={result.formatted_address} onClick={() => 
           {
-            
+            this.showMatchItems = false;
+            this.setState({matchResults: []})
             this.setState({location: result.formatted_address}
           )}}>{result.formatted_address}</li>
       } else 
@@ -144,9 +134,11 @@ class NewEventForm extends React.Component {
           <span className="big-number">2</span> 
           <h3>Location</h3><span className="red-asterisk">*</span>
           <input type="text" name="location" onChange={this.handleLocationChange} value={this.state.location} placeholder="Search for a venue or address"/>          
-          <ul>
-            {matchItems}
-          </ul>
+          {this.showMatchItems === true &&
+            <ul className="location-match">
+              {matchItems}
+            </ul>
+          }
           <span className="big-number">3</span> 
           <h3>Date</h3><span className="red-asterisk">*</span>
           {/* <input name="date" placeholder="Search for a venue or address"/>  */}

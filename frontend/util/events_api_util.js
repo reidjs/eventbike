@@ -93,7 +93,6 @@ export const deleteEvent = (eventId) => {
 }
 
 export const getAddress = (query) => {
-  console.log(query)
   let mapsURL = "https://maps.googleapis.com/maps/api/geocode/json?address=";
   let encodedQuery = encodeURIComponent(query);
   let apiKey = "&key=AIzaSyDkREocgFR4OI0hcwrvDINxt0CuM0nKAgw"
