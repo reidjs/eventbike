@@ -38,6 +38,34 @@ Any user with an account can create an event by filling in a few form fields. Th
 | ![Geocoding](https://media.giphy.com/media/xT0xeqrUVqFASK0DnO/giphy.gif) |
 
 
+## Technical Details 
+
+### Frontend Technology 
+
+#### React JavaScript Library
+
+EventBike is a single page web app that uses React's hashrouter to simulate page navigation. React delegates most of the rendering to the user's browser which dramatically speeds up load time on complex pages. 
+
+#### Sass
+
+Sass is used to streamline and organize the styling of EventBike's different components. 
+
+#### jQuery
+
+jQuery takes care of AJAX calls which connect the frontend to the backend. 
+
+
+### Backend Technology
+
+
+#### Ruby on Rails 
+
+Ruby on Rails is in charge of the models, database schema, controllers, and backend routes.
+
+#### PostgreSQL
+
+User, Event, and other data is organized in a relational database powered by Postgres. 
+
 ### Development 
 
 #### Setup:
