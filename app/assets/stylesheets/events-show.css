@@ -219,8 +219,13 @@ section.main {
 section.other {
   padding: 40px;
   padding-top: 50px;
+<<<<<<< HEAD
   font-family: 'Roboto';
   background: white; }
+=======
+  background: white;
+  font-family: 'Roboto'; }
+>>>>>>> temp
 
 section.other h3 {
   padding: 15px;
@@ -232,5 +237,14 @@ section.other h4 {
   padding-left: 15px;
   font-size: 16px;
   margin: 0; }
+
+#bg {
+  background: #EFF2F5;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  top: 555px;
+  height: 555px; }
 
 /*# sourceMappingURL=events-show.css.map */

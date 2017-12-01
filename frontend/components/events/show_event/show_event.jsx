@@ -72,6 +72,7 @@ class ShowEvent extends React.Component {
             <div></div>
           </div>
           <div className="event-show-content">
+          <div id="bg"></div>
             <Header 
                   id={id}
                   title={title} 

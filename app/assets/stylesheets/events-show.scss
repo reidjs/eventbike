@@ -279,6 +279,7 @@ section.main {
 section.other {
   padding: 40px;
   padding-top: 50px;
+  background: white;
   font-family: 'Roboto';
   background: white;
   
@@ -293,4 +294,16 @@ section.other h4 {
   padding-left: 15px;
   font-size: 16px;
   margin: 0;
+}
+
+#bg {
+  background: $light-grey;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  top: 555px;
+  height: 555px;
+
+
 }

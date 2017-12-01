@@ -92,9 +92,11 @@ class EventsIndex extends React.Component {
             <EventMap events={values(this.props.events)}/>
           <div className="showEvents"></div>
             {eventsList}
-          <div id="pages"> 
-            {pageList}
-          </div>
+            {this.props.path.split('/')[1] === "events" &&
+              <div id="pages"> 
+                {pageList}
+              </div>
+            }
         </div>  
       )
     }
