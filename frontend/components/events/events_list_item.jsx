@@ -7,21 +7,14 @@ import Done from 'material-ui-icons/Done';
 import EventsRegisterContainer from './events_register_container';
 import DeleteEventModal from './delete_event_modal';
 const EventsListItem = ({event, square, currentUser}) => {
-  // const handleBookmark = (e) => {
-  //   e.preventDefault();
-  //   bookmark(event.id);
-  //   console.log('bookmark')
-  // }
+
   let cardClass; 
   square ? cardClass = "card square" : cardClass = "card long";
   const eventShowPath = `/events/${event.id}`;
   const userEventPath = currentUser ? `/users/${currentUser.id}/tickets` : "/";
-  // const categoryGoesHere = "#";
   const categoryPath = `/categories/${event.category}`;
   const bookmarkPath = `events/${event.id}/bookmark`;
-  // const fillerDateTime = "Sun, Dec 5 6:00 PM";
-  // const fillerVenue = "San Francisco Track";
-  // <li className={itemClass}>
+
   return (
       <div className={cardClass}>
           {currentUser && event.creator === currentUser.id &&
@@ -63,9 +56,6 @@ const EventsListItem = ({event, square, currentUser}) => {
       </div>
   )
 }
-// </li>
-{/* <button onClick={handleBookmark}><BookmarkBorder /></button> */}
-{/* <ProtectedRoute path={bookmarkPath} component={EventsBookmarkButton}/> */}
-{/* <button onClick={handleRegister}>RegisterIcon</button> */}
+
 
 export default EventsListItem;

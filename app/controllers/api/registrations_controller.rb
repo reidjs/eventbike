@@ -36,7 +36,6 @@ class Api::RegistrationsController < ApplicationController
       end 
 
       if @registration.nil? || @event.nil?
-        # debugger
         render json: ["Could not find registration"], status: 404
         return 
       end 

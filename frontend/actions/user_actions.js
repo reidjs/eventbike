@@ -14,7 +14,6 @@ export const RECEIVE_BOOKMARK = 'RECEIVE_BOOKMARK';
 // }
 
 export const receiveRegistration = (payload) => {
-  // debugger
   return ({
     type: REGISTER_EVENT,
     payload 

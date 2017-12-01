@@ -33,24 +33,18 @@ const sessionReducer = (state = _nullUser, action) => {
   let updated_bookmarks;
   switch(action.type) {
     case RESET_POTENTIAL_USER:
-      // console.log('reset user!')
       return _nullUser;
     case RECEIVE_CURRENT_USER:
-      //this should probably reset potential user and new user flag
       newState = merge({}, state)
       newState.newUserFlag = false;
       newState.potentialUser = null;
       newState.currentUser = action.currentUser;
-      // console.log('session receive user', action)
-      // const currentUser = action.currentUser;
       return newState;
     case RECEIVE_NEW_USERNAME:
-      // console.log('new user:', action)
       potentialUser = action.username;
       newUserFlag = true
       return merge({}, { potentialUser, newUserFlag });
     case RECEIVE_USERNAME:
-      // console.log("Received username", action.username.username)
       potentialUser = action.username.username //refactor this
       return merge({}, { potentialUser });
     case REGISTER_EVENT:
@@ -64,16 +58,6 @@ const sessionReducer = (state = _nullUser, action) => {
       // newState.currentUser.attending_events = updated_events_attending;
       return newState;
 
-    // case BOOKMARK_EVENT:
-    //   newState = merge({}, state)
-    //   //merge the updated bookmark array with the current user
-    //   updated_bookmarks = [...action.bookmarks];
-    //   newState.currentUser.bookmarked_events = updated_bookmarks;
-    //   return newState;
-    // case RECEIVE_TICKETS:
-    //   newState = merge({}, state)
-    //   updated_attending_events = [...action.tickets];
-    //   newState.currentUser.attending_events = updated_attending_events
     default:
       return state;
   }

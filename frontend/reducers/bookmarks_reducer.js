@@ -15,7 +15,6 @@ const bookmarksReducer = (state = _nullBookmarks, action) => {
       return [...action.payload.bookmarks]
     
     case RECEIVE_CURRENT_USER:
-      // debugger
       if (action.currentUser)
         return [...action.currentUser.bookmarked_events];
       else 

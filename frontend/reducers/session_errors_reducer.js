@@ -7,22 +7,16 @@ import {
   RESET_POTENTIAL_USER,
   RESET_ERRORS
 } from '../actions/session_actions';
-//somehow undefined is getting in here as the action
 export default (state = [], action) => {
-  // console.log(action, state)
-  // debugger
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_SESSION_ERRORS:
-      // debugger 
       return action.errors;
     case RECEIVE_CURRENT_USER:
       return []; //may cause issues
     case RECEIVE_USERNAME:
-      // console.log('recieve username: ', action)
       return [];
     case RECEIVE_NEW_USERNAME:
-      // console.log('recieve new username: ', action)
       return [];
     case RESET_POTENTIAL_USER:
       return [];

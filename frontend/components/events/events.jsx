@@ -7,7 +7,6 @@ class Events extends React.Component {
     super(props)
   }
   render() {
-    // console.log(this.props.noSideNav)
     return (
       <div className="events-container">
         

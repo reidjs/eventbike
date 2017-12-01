@@ -5,7 +5,6 @@ import Modal from 'react-modal';
 class EventsSigninModal extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
     this.state = {
       modalIsOpen: false
     };
@@ -14,8 +13,7 @@ class EventsSigninModal extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps)
-    console.log('here!')
+
   }
   openModal() {
     this.setState({modalIsOpen: true});
@@ -30,7 +28,6 @@ class EventsSigninModal extends React.Component {
     this.setState({modalIsOpen: false});
   }
   render() {
-    console.log('modal')
     return (
       <Modal 
             isOpen={this.state.modalIsOpen}

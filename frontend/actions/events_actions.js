@@ -14,7 +14,6 @@ export const receiveEvents = (events) => {
   })
 }
 export const receiveEvent = (event) => {
-  // console.log("event received",event)
   return ({
     type: RECEIVE_EVENT,
     event

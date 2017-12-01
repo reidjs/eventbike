@@ -17,11 +17,9 @@ class UsernameForm extends React.Component {
     this.handleSubmitSignup = this.handleSubmitSignup.bind(this);
   }
   handleChangeUsername(e) {
-    // console.log(e.target.value)
     this.setState({username: e.target.value})
   }
   handleChangePassword(e) {
-    // console.log(e.target.value)
     this.setState({password: e.target.value})
   }
   handleSubmitUsername(e) {

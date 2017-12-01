@@ -14,7 +14,6 @@ class SigninForm extends React.Component {
     this.errors = []
   }
   handleChange(e) {
-    // console.log(e.target.value)
     this.setState({username: e.target.value})
     this.errors = []
   }

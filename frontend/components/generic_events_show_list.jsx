@@ -4,15 +4,13 @@ import EventsShowContainer from './events/events_show_container';
 const GenericEventsShowList = ({events}) => {
   if (events === undefined || events.length === 0 || events[0] === undefined)
     return (<div></div>)
-  let events2 = []
+  // let events2 = []
   //BAD!
-  for(let i = 0; i < events.length; i++) {
-    if (events[i] !== undefined)
-      events2.push(events[i])
-  }
-  // console.log(events)
+  // for(let i = 0; i < events.length; i++) {
+  //   if (events[i] !== undefined)
+  //     events2.push(events[i])
+  // }
   let eventsList = events.map((event, idx) => {
-    console.log(event)
     if (event) {
       return (
         <div className="col">
@@ -20,7 +18,6 @@ const GenericEventsShowList = ({events}) => {
         </div>
       )
     } else {
-      console.log('HERE!')
       return (<div key={idx}></div>)
     }
   })

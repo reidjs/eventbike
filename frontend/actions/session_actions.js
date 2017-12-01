@@ -10,7 +10,6 @@ export const RESET_POTENTIAL_USER = 'RESET_POTENTIAL_USER';
 export const RESET_ERRORS = 'RESET_POTENTIAL_USER';
 
 export const receiveCurrentUser = currentUser => {
-  // console.log('receive current user', currentUser)
   return ({
   type: RECEIVE_CURRENT_USER,
   currentUser
@@ -50,7 +49,6 @@ export const signup = user => dispatch => (
 );
 
 export const login = user => dispatch => {
-  // console.log(user)
   return(
   SessionAPIUtil.login(user).then(user => (
     dispatch(receiveCurrentUser(user))
@@ -60,16 +58,10 @@ export const login = user => dispatch => {
 )};
 
 export const logout = () => dispatch => {
-  // console.log('logout user')
   return (
   SessionAPIUtil.logout()
   .then(res=> (dispatch(receiveCurrentUser(null))))
-  .fail(res => (console.log('failed to logout')))
-  // SessionAPIUtil.logout().then(res => {
-  //   console.log('asdf')
-  //   return (
-  //   dispatch(receiveCurrentUser(null)), err=>{console.log})
-  // })).fail(res => {console.log})
+  .fail(res => (null))
   )
 };
 //look for user by username in db

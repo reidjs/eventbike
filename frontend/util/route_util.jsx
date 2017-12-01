@@ -13,7 +13,6 @@ const Auth = ({ component: Component, path, loggedIn }) => (
   )} />
 );
 const flash = (text) => {
-  // console.log('attempting to flash')
   dispatch(flashMessage(text))
 }
 const Protected = ({ component: Component, path, loggedIn}) => (
@@ -44,7 +43,6 @@ const Protected = ({ component: Component, path, loggedIn}) => (
 //   );
 // }
 // export const PropsRoute = ({ component, ...rest }) => {
-//   // debugger
 //   return (
 //     <Route {...rest} render={routeProps => {
 //       return renderMergedProps(component, routeProps, rest);

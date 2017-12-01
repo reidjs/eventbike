@@ -26,14 +26,11 @@ const title = "User information"
 
 //authroutes should take care of issues where the logout button is not re-rendering.
 const App = () => {
-  // console.log(loggedIn)
-  // console.log(currentUser)
   //note you may be able to pass props to a route using standard method
   return (
     <div>
 
         <Route path="/" component={TopNavContainer}/>
-        {/* <Route path="/" component={FlashContainer} /> */}
         <div className="main">
           <Switch>
             <Route exact path="/" component={SplashContainer}/>
@@ -50,20 +47,5 @@ const App = () => {
     </div>
   )
 }
-{/* <TopNavContainer /> */}
 
 export default App;
-{/* <AuthRoute path="/login" component={SessionFormContainer} />
-<AuthRoute path="/signup" component={SessionFormContainer} /> */}
-// const event = {
-//     //state props
-//     title: "Event title goes here",
-//     description: "A short descript of the event",
-//     image_url: "",
-//     datetime: "",
-//     location: "",
-//     category: "",
-//     //dispatch functions
-//     register: () => {console.log("User registered")},
-//     bookmark: () => {console.log("Event saved")}
-//   };

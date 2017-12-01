@@ -34,7 +34,6 @@ class CategoriesDropDown extends React.Component {
     this.handleClick();
   }
   handleSelection(category) {
-    // console.log(category)
   }
   render() {
     const categoryItems = this.props.categories.map((category) => (

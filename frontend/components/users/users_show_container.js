@@ -12,14 +12,11 @@ const mapStateToProps = (state, ownProps) => {
   // const registeredEvents = values(state.entities.tickets)
   // const myevents = values(state.entities.events);
   // let bookmarkedEvents = getAllEventsInArray(state.entities.events, state.entities.bookmarks)
-  // console.log('books', bookmarkedEvents)
   // const bookmarkedEvents = values(state.entities.events);
   // const registeredEvents = values(state.entities.events);
   // let registeredEvents = getAllEventsInArray(state.entities.events, state.entities.registrations)
   const events = values(state.entities.events);
   const pathname = ownProps.location.pathname.split('/')[3]
-  // debugger
-  // console.log(state.entities.events)
   return {
     pathname,
     user,

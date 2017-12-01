@@ -1,8 +1,6 @@
 import React from 'react';
 import DropDown from './drop_down';
 
-// import rrui from 'react-responsive-ui/style.css'
-// import { getAddress } from '../../../util/events_api';
 import { fetchCategories, getAddress } from '../../../util/events_api_util'
 
 import
@@ -13,36 +11,8 @@ import
   DatePicker,
 }
 from 'react-responsive-ui'
-// const test = () => {
-//   console.log('hi')
-// }
-const IMAGES =
-[{
-        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 174,
-        isSelected: true,
-        caption: "After Rain (Jeshu John - designerspics.com)"
-},
-{
-        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212,
-        tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
-        caption: "Boats (Jeshu John - designerspics.com)",
-        enableImageSelection: true,
-        onSelectImage: () => {console.log('hi')},
-        onClickThumbnail: () => {console.log('hi')}
-},
- 
-{
-        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
-        thumbnailWidth: 320,
-        thumbnailHeight: 212
-}]
+
+
 
 class NewEventForm extends React.Component {
   constructor(props) {
@@ -71,11 +41,9 @@ class NewEventForm extends React.Component {
     this.waitingForConfirmation = true;
   }
   componentWillReceiveProps(nextProps) {
-    // console.log(nextProps)
     if (nextProps.errors.length === 0 && this.waitingForConfirmation) {
       this.waitingForConfirmation = false;
       this.props.history.push(`users/${this.props.user.id}/myevents`)
-      // console.log('no errors')
       
     } else {
       //show errors
@@ -83,7 +51,6 @@ class NewEventForm extends React.Component {
     }
   }
   handleCategory(category) {
-    // console.log('here',category)
     this.setState({category})
   }
   componentWillMount() {
@@ -92,16 +59,13 @@ class NewEventForm extends React.Component {
         res.categories 
       })
   }
-  //AIzaSyDkREocgFR4OI0hcwrvDINxt0CuM0nKAgw
   handleLocationChange(e) {
     this.showMatchItems = true;
     let value = e.target.value;
     getAddress(value).then(res => {
-        // console.log(res.results[0].formatted_address)
         let matchResults = res.results.slice(0, 4)
         this.setState({matchResults})
     })
-    // let location = value;
     this.setState({location: value})
   }
 
@@ -179,8 +143,6 @@ class NewEventForm extends React.Component {
     )
   }
 }
-// const NewEventForm = () => {
-  
-// }
+
 
 export default NewEventForm;

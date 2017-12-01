@@ -5,7 +5,6 @@ import { logout, login } from '../../actions/session_actions';
 import TopNav from './top_nav';
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log("nav dropdown: ", session);
   const flash = Boolean(state.flash.messages.length > 0)
   return {
     flash: flash, 

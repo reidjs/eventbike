@@ -11,7 +11,6 @@ export const login = user => {
 
 
 export const signup = user => {
-  // console.log(user)
   return (
   $.ajax({
     method: 'POST',
@@ -21,7 +20,6 @@ export const signup = user => {
 )};
 //for the nifty one input login we need this
 export const fetchUserByUsername = username => {
-  // console.log("fetching user ", username)
   return (
     $.ajax({
       method: 'GET',

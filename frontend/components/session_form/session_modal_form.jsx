@@ -31,8 +31,6 @@ class SessionModalForm extends React.Component {
   }
 
   afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    // this.subtitle.style.color = '#f00';
   }
 
   closeModal() {
@@ -47,8 +45,6 @@ class SessionModalForm extends React.Component {
   }
   componentWillReceiveProps(nextProps) {
     //We received a new potential user, determine the correct form type to show
-    // console.log("nextprops: ", nextProps)
-    // console.log(this.props)
     if (nextProps.potentialUser !== this.props.potentialUser) {
     // if (nextProps.potentialUser)
       this.determineFormType(nextProps);
@@ -98,7 +94,6 @@ class SessionModalForm extends React.Component {
       errors={this.props.errors}
       ui={this.props.ui}/>
     }
-    // console.log(this.props.match.path)
     return (
       <div>
 

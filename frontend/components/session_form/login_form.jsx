@@ -18,7 +18,6 @@ class LoginForm extends React.Component {
     
   }
   handleChange(e) {
-    // console.log(e.target.value)
     this.setState({password: e.target.value})
   }
   handleSubmit(e) {

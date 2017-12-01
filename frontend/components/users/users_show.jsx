@@ -18,8 +18,6 @@ class UsersShow extends React.Component {
     super(props);
     this.events = props.events;
     this.getEventsFromPath = this.getEventsFromPath.bind(this);
-    // console.log('my bookmarks',this.bookmarkedEvents)
-    // this.bookmarkedEvents = props.bookmar
   }
   componentWillMount() {
     this.getEventsFromPath(this.props.pathname)
@@ -27,27 +25,19 @@ class UsersShow extends React.Component {
   getEventsFromPath(path) {
     if (path === "myevents") {
       this.props.getmyevents();
-      // console.log('here')
     }
     if (path === "bookmarks") {
       this.props.getbookmarks();
-      // console.log('here')
     }
     if (path === "tickets") {
       this.props.gettickets();
-      // console.log('here')
     }
   }
   componentWillReceiveProps(nextProps, nextState) {
 
-    // console.log(nextProps);
-    // const path = nextProps.pathname
     if (nextProps.pathname !== this.props.pathname) {
       this.getEventsFromPath(nextProps.pathname);
       
-      // this.props.getmyevents();
-
-      // console.log('get my events')
     }
     if (this.props.events !== nextProps.events) {
       this.events = nextProps.events;

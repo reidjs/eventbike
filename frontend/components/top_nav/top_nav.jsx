@@ -6,10 +6,7 @@ import { Link } from 'react-router-dom';
 
 
 const TopNav = ({currentUser, potentialUser, logout, location}) => {
-  // console.log(currentUser)
-  // let linkUrl = "events/new";
-  // currentUser ? linkUrl = "/signin" : linkUrl = "/events/new";
-  // console.log(currentUser);
+
   return (
     <div className="top-nav">
         <span className="nav-brand">

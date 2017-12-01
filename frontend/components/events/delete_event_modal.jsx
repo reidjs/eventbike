@@ -27,10 +27,7 @@ class DeleteEventModal extends React.Component {
     this.setState({modalIsOpen: false});
   }
   handleDelete() {
-    // deleteevent();
-    // this.props.history.push(`/users/${this.props.currentUser.id}/myevents`)
-    // this.pushUserToPath("myevents")
-    // console.log('delete')
+
     this.setState({modalIsOpen: false})
     deleteEvent(this.props.event.id).then(res => {
 

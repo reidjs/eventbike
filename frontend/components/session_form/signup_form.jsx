@@ -14,7 +14,6 @@ class SignupForm extends React.Component {
     this.handleBack = this.handleBack.bind(this);
   }
   handleChange(e) {
-    // console.log(e.target.value)
     this.setState({password: e.target.value})
   }
   handleSubmit(e) {

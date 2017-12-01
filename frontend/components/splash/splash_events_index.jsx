@@ -10,7 +10,6 @@ class SplashEventsIndex extends React.Component {
     this.state={events: {}}
   }
   componentDidMount() {
-    // console.log(this.props.getevents)
     setTimeout(this.props.getevents, 0); //artificial delay
     //spinner now 
   }

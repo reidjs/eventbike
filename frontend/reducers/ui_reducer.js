@@ -17,7 +17,6 @@ const _defaultState = {
 
 const uiReducer = (state = _defaultState, action) => {
   Object.freeze(state);
-  // console.log('ui reducer', action)
   let newState;
   switch(action.type) {
     case DEMO_USER:
@@ -28,7 +27,6 @@ const uiReducer = (state = _defaultState, action) => {
     case RESET_POTENTIAL_USER:
       return _defaultState;
     default:
-      // console.log('return default state')
       return state;
   }
 }
