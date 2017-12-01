@@ -23,7 +23,8 @@ form.new-event > h1 {
   font-size: 23px; }
 
 span.red-asterisk {
-  color: red; }
+  color: red;
+  padding-left: 2px; }
 
 .new-event-container input {
   display: block; }
@@ -103,6 +104,23 @@ textarea {
 form.new-event {
   margin-left: 150px; }
 
+div.category-dropdown {
+  width: 150px;
+  color: #45494E;
+  margin-top: 20px;
+  margin-bottom: 30px; }
+
+form.new-event input[type=submit] {
+  background: #cd5120;
+  color: white;
+  font-weight: 700;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  width: 190px;
+  height: 45px;
+  font-family: "Fugaz One"; }
+
 /*===========================================================
 = Buttons                                                   =
 ===========================================================*/
@@ -140,7 +158,7 @@ form.new-event {
 .rrui__input-field,
 .rrui__select__button {
   border: none;
-  border-bottom: 1px solid #C5D2E0;
+  border-bottom: 1px solid #737b83;
   transition: border 0.1s; }
 
 .rrui__input-field:focus,
@@ -546,7 +564,7 @@ than 100% of the parent if the parent is small enough.
   border-style: solid;
   border-left-color: transparent;
   border-right-color: transparent;
-  color: #B8BDC4; }
+  color: #5596ec; }
 
 .rrui__select__arrow--expanded {
   opacity: 0.3; }
