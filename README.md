@@ -47,6 +47,18 @@ Any user with an account can create an event by filling in a few form fields. Th
 
 EventBike is a single page web app that uses React's hashrouter to simulate page navigation. React delegates most of the rendering to the user's browser which dramatically speeds up load time on complex pages. 
 
+Frontend routes 
+
++ root `/`
+  * Sign in `/signin`
+    - Sign up `/signin/signup`
+    - Sign in `/signin/login`
+  * Events index `/events`
+    - Event show page `/events/:id`
+  * Category index `/categories/:id`
+    
+    
+
 + #### Sass
 
 Sass is used to streamline and organize the styling of EventBike's different components. 
@@ -123,7 +135,7 @@ Table Columns
 + `git push heroku master` 
 
 
-# Future plans :checkered_flag:
+# Future improvements :checkered_flag:
 
 + ### Advanced search 
 At the moment, search only indexes by title. It should also look into the event description, event organizer, and perhaps it should organize by category.
