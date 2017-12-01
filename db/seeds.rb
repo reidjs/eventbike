@@ -115,25 +115,129 @@ event10 = Event.new(
   location: "The Track (Berkeley)",
   date: Date.new(2018, 4, 4),
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497438/chris-knight-434457_hqw9nz.jpg")
+
+  event11 = Event.new(
+  title: 'Motorcycle Gettogether Soon',
+  details: "The automotive world comes to the Monterey Peninsula each year to celebrate automotive history, racing, and design and Gordon McCall’s Motorworks Revival kicks-off this world class week of events.
+  Please join us and our 3000 VIP guests as we host our exclusive First-Class evening and experience culinary delights while strolling the array of exceptional and rare vintage race cars, motorcycles, and aircraft. World-Class sponsors will also join us to show off their latest offerings and WOW guests with the first look at what's coming next in the aviation and automotive world. Noted California chefs will pair gourmet selections with California wines for McCall's 27th Anniversary Celebration.",
+  creator_id: user3.id,
+  category: "Motorcycle",
+  location: "The Track (Alameda County)",
+  date: Date.new(2018, 1, 9),
+  lat: 37.743972,
+  lng: -122.4491297,
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_11/v1512048568/edgar-chaparro-143297_rsdzuz.jpg")
+  
+  event12 = Event.new(
+  title: 'Maintaining Bikes Gettogether Today',
+  details: "Don’t miss the SF Bicycle Coalition’s largest party of the year! Join more than a thousand of your bike-loving buddies for an evening of festivities. Enjoy the fabulous local art auction, snap a pick in the photo booth, make a bike-y craft and bid on items donated by your favorite bike-supporting businesses.
+  Winterfest is kid friendly - bring the whole family. Kids 12 and under are free.",
+  creator_id: user4.id,
+  category: "Bicycle",
+  location: "Bike Maintenance Shop",
+  date: Date.new(2018, 1, 9),
+  lat: 37.769972,
+  lng: -122.4471297,
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_10/v1511497476/stefan-rayner-98149_wauxct.jpg")
+  
+  event13 = Event.new(
+  title: 'Bicycle Race Next Week',
+  details: " a hacker/maker space for women, is hosting the SF Bicycle Coalition's class for women, trans*,  femme and non-binary individuals on the joys of biking in San Francisco!
+  Come learn the basics of biking in San Francisco at our Intro to Urban Bicycling Workshop. We are offering our one-hour course covering bicycling for everyday riding in SF, the rules of the road, route planning and more.
+  This course is a great introduction for people who are considering biking in the city or looking to brush up on urban biking skills.
+  Topics Covered:
+  Helmet fit
+  Preparing to ride
+  Rules of the road
+  Safety skills & tips
+  Route planning
+  Locking",
+  creator_id: user4.id,
+  category: "Other",
+  location: "Lake Meritt Picnic Spot",
+  date: Date.new(2018, 5, 19),
+  lat: 37.739972,
+  lng: -122.4411297,
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_14/v1511497439/dimon-blr-309444_vygcl2.jpg")
+
+  event14 = Event.new(
+  title: 'Bike to the Beach',
+  details: "Learn how to keep your bike in tip-top shape and fix simple mechanicals while out and about. Our maintenance classes are friendly, interactive sessions run by our expert workshop team.
+  Fix a Puncture - Learn how to replace tubes including pro tips and techniques.
+  Fix a Broken Chain - Learn how to replace a chain pin, fit a quick link and check chain length.
+  Cleaning - Learn how to clean and lube effectively in addition to cable maintenance and other moving parts.
+  Safety  - Learn how to ensure your bike is always safe to ride before you set out.",
+  creator_id: user5.id,
+  category: "Other",
+  location: "North Beach",
+  date: Date.new(2018, 11, 18),
+  lat: 37.730,
+  lng: -122.4511297,
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_10/v1511497456/matthew-lejune-384220_godh8t.jpg")
+
+  event15 = Event.new(
+  title: 'Track Day',
+  details: "For 15 years, Black Rebel Motorcycle Club has carried the torch for true rock and roll. The latest edition of the firebrand rock troupe, sees them at their most dynamic. Their sixth studio album, “Specter at the Feast,” ventures into diverse sonic territory, delivering their most ambitious offering yet. It’s an album of impossible dichotomies; opposing sounds amalgamate into a seamless, entirely coherent package, that rumbles with driving rhythms, and soars with skyward-arcing guitar howls. Robert Been delivers growling bass grooves on “Hate the Taste,” and Peter Hayes’ guitar wails on what may be their most hard-rocking song, “Rival.” Counterbalancing these frenetic outbursts are moments of star-gazing ambient textures, like the crystalline harmonics introducing the slinking album opener, “Fire Walker,” and the organ drones of “Returning.” There are moments of down-home blues paired alongside flailing punk bombasticism; gnarled dark rock shores upon uplifting, and optimistic anthems. Taking cues from all points of the band’s many years on the road, this record is the band’s most well-realized album to date. “We thought about making it a double album,” Been says of the many songs that were written for the record.
+  To write the album, the Los Angeles band traveled north to the sleepy Northern California town of Santa Cruz, where they holed up in an old Post Office-turned-recording studio. It was here, just a few blocks from where Been grew up, that they began to write. For two years, the band worked on creating the album, a process that they all agree, was one of the most difficult of their career. Like the Macbeth quote that became the album’s title, there was a painful shadow that had been cast upon the band. During the band’s 2010 tour, Robert’s father Michael Been — known for fronting 1980’s alt-rock group, The Call — died while backstage. He was BRMC’s sound engineer, and as Hayes says, “he was like another member of the band.” They finished the tour but afterward, the trauma began to set in.
+  ",
+  creator_id: user5.id,
+  category: "Race",
+  location: "North Beach Track",
+  date: Date.new(2018, 5, 18),
+  lat: 37.750,
+  lng: -122.4311297,
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_10/v1511497426/alex-holyoake-381214_y2dhtw.jpg")
+
+  event16 = Event.new(
+  title: 'Work Out with the crew',
+  details: "After visiting Australia for a series of sold out shows in 2013, LA three-piece Black Rebel Motorcycle Club have announced that they’ll once again return for a run of shows to showcase their much anticipated new album, expected in early 2018.
+  Presented by MJR Presents, Black Rebel Motorcycle Club will visit Sydney, Melbourne, Brisbane, Adelaide, and Perth where they’ll be performing a selection of new material as well as crowd favourites from the bands illustrious 19-year, seven album back catalogue, showing why they are one of the world’s most celebrated live bands.
+  ",
+  creator_id: user2.id,
+  category: "Workout",
+  location: "Motorcycle Gym",
+  date: Date.new(2018, 5, 19),
+  lat: 37.759,
+  lng: -122.4319997,
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_10/v1511840660/francisco-aceldo-217919_ztiedc.jpg")
+
 event1.save
+event11.save 
 event2.save
-event3.save
 event4.save
-event5.save
-event6.save
-event7.save
-event8.save
 event9.save
+event6.save
+event3.save
+event5.save
+event7.save
+event13.save 
+event8.save
+event12.save 
 event10.save
+event14.save 
+event15.save 
+event16.save 
 #reidjs is registered for both events
 #bob is registered for the first event
 #charlie is registered for no events 
 registration1 = Registration.new(user_id: user1.id, event_id: event1.id)
 registration2 = Registration.new(user_id: user1.id, event_id: event2.id)
 registration3 = Registration.new(user_id: user2.id, event_id: event1.id)
+registration4 = Registration.new(user_id: user3.id, event_id: event8.id)
+registration5 = Registration.new(user_id: user2.id, event_id: event9.id)
+registration6 = Registration.new(user_id: user2.id, event_id: event7.id)
+registration7 = Registration.new(user_id: user4.id, event_id: event8.id)
+registration8 = Registration.new(user_id: user4.id, event_id: event8.id)
+registration9 = Registration.new(user_id: user5.id, event_id: event1.id)
 registration1.save 
 registration2.save
 registration3.save
+registration4.save
+registration5.save
+registration6.save
+registration7.save
+registration8.save
+registration9.save
 #reidjs has bookmarked the first two events 
 #bob bookmarked the first event only
 bookmark1 = Bookmark.new(user_id: user1.id, event_id: event1.id)

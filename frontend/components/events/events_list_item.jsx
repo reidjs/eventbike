@@ -19,13 +19,13 @@ const EventsListItem = ({event, square, currentUser}) => {
   // const categoryGoesHere = "#";
   const categoryPath = `/categories/${event.category}`;
   const bookmarkPath = `events/${event.id}/bookmark`;
-  const fillerDateTime = "Sun, Dec 5 6:00 PM";
-  const fillerVenue = "San Francisco Track";
+  // const fillerDateTime = "Sun, Dec 5 6:00 PM";
+  // const fillerVenue = "San Francisco Track";
   // <li className={itemClass}>
   return (
       <div className={cardClass}>
           {currentUser && event.creator === currentUser.id &&
-            <div class="delete-event">
+            <div className="delete-event">
               <DeleteEventModal currentUser={currentUser} event={event} />
             </div>
           }
@@ -33,7 +33,7 @@ const EventsListItem = ({event, square, currentUser}) => {
           <div className="card-top">
             {event.registered &&
               <div className="starburst checkmark" id="user-registered-checkmark">
-                <Link to={userEventPath}><Done /></Link>
+                <Done />
               </div>
             }
             <div className="card-img">

@@ -40,3 +40,5 @@ else
   json.bookmarked false
   json.registered false
 end 
+#5 events per page
+json.pageArray (1..(Event.all.count.to_f/5.0).ceil).to_a

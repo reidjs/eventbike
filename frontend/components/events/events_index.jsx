@@ -53,8 +53,14 @@ class EventsIndex extends React.Component {
     let eventsList = this.props.events.map((event) => {
       return <EventsShowContainer key={event.id} event={event} />
     })
-    let pages = [1,2,3,4]
-    let pageList = pages.map((page) => {
+    let pageList;
+    let pages;
+    if (this.props.events.length === 0) {
+        pages = []
+    } else {
+      pages = this.props.events[0].pageArray
+    }
+    pageList = pages.map((page) => {
       return <button className="pageNumber" onClick={() => {this.getPage(page)}}>{page}</button>
     })
       
@@ -86,9 +92,9 @@ class EventsIndex extends React.Component {
             <EventMap events={values(this.props.events)}/>
           <div className="showEvents"></div>
             {eventsList}
-            <div id="pages"> 
+          <div id="pages"> 
             {pageList}
-            </div>
+          </div>
         </div>  
       )
     }

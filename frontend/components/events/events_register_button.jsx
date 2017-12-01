@@ -129,7 +129,7 @@ class EventsRegisterButton extends React.Component {
           </div>
           <div className="register-modal-text">
             <h2>{this.props.event.title}</h2>
-            <p class="overflow-ellipsis">{this.props.event.details}</p>  
+            <p className="overflow-ellipsis">{this.props.event.details}</p>  
             <div className="register-button">
               <button className={myClass} onClick={this.handleRegistration}>{buttonText}</button>
             </div>

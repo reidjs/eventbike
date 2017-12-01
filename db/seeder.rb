@@ -7,7 +7,9 @@ a4 = %w(hosted put\ on put\ together organized arranged)
 a5 = %w(with by)
 a6 = %w(The\ SF\ Riders Bay\ Area\ Moto\ Club Relaxed\ Riders The\ Bicycle\ Mafia Oakland\ Bicyclies) 
 
-
+b0 = %w(Bicycle Scooter Motorcycle BMX Social)
+b1 = %w(Race Event Function Meetup Gettogether Box\ Social)
+b2 = %w(Today Tomorrow Soon Next\ Week Next\ Month)
 def body1
 <<~HEREDOC
 It‘s not just any motocross race, but the oldest and one of the most prestigious in the United States. Hangtown is the opening round of the 12-race Lucas Oil Pro Motocross Championship sanctioned by the AMA.
@@ -71,5 +73,6 @@ def randomizerbody(*args)
 end 
 
 # p randomizer(a0, a1, a2, a3, a4, a5, a6)
+p randomizer(b0, b1, b2)
 # p randomizerbody(body1, body2, body3, body4, body5, body6)
-p randomizer(locations)
+# p randomizer(locations)

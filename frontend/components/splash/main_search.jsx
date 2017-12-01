@@ -38,7 +38,7 @@ class MainSearch extends React.Component {
     const matchItems = this.state.matches.map((match) => {
       const matchPath = `/events/${match[0]}`
       return (
-        <li><Link to={matchPath}>{match[1]}</Link></li>
+        <li key={match[1]}><Link to={matchPath}>{match[1]}</Link></li>
       )
     })
     // console.log(matchItems)

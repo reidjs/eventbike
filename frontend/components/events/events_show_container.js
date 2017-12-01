@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   const currentUser = state.session.currentUser;
   const event = ownProps.event;
   const square = ownProps.square;
+  console.log(ownProps)
   // debugger
   return {
     currentUser, 
