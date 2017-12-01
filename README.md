@@ -45,7 +45,7 @@ Any user with an account can create an event by filling in a few form fields. Th
 
 ---
 
-+ #### React JavaScript Library with Redux
+#### React JavaScript Library with Redux
 
 EventBike is a single page web app that uses React's hashrouter to simulate page navigation. React delegates most of the rendering to the user's browser which dramatically speeds up load time on complex pages. 
 
@@ -65,15 +65,15 @@ EventBike is a single page web app that uses React's hashrouter to simulate page
     - Created events `/users/:id/myevents`
     
 
-+ #### Sass
+#### Sass
 
 Sass is used to streamline and organize the styling of EventBike's different components. 
 
-+ #### jQuery
+#### jQuery
 
 jQuery takes care of AJAX calls which connect the frontend to the backend. 
 
-+ #### Webpack
+#### Webpack
 
 Webpack processes and bundles the javascripts together.
 
@@ -83,7 +83,7 @@ Webpack processes and bundles the javascripts together.
 
 ---
 
-+ #### Ruby on Rails 
+#### Ruby on Rails 
 
 Ruby on Rails is the framework used for generating models, database schema, controllers, and backend routes. 
 
@@ -120,7 +120,7 @@ Ruby on Rails is the framework used for generating models, database schema, cont
   + belongs to user 
   + belongs to event
  
-+ #### PostgreSQL
+#### PostgreSQL
 
 Users, Events, Registrations, and Bookmarks are organized in a relational database powered by Postgres. 
 
