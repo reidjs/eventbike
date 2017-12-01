@@ -18,27 +18,27 @@ user5.save
 #reidjs created first three events, bob created fourth
 
 event1 = Event.new(
-  title: "Stop by for our Bicycle Race put together by The Bicycle Mafia", 
+  title: "Stop by for our Motorcycle Race put together by The Moto SF Bay Area Club", 
   details: "Its not just any motocross race, but the oldest and one of the most prestigious in the United States. Hangtown is the opening round of the 12-race Lucas Oil Pro Motocross Championship sanctioned by the AMA.\nEvery year, there is a new battle to witness, and new champions to crown. Perhaps its the mystique of 50 years of racing, dating back before the series was even established, that makes Hangtown racing legendary. Many people say that attending Hangtown is a way to be a part of motorcross history.",
   creator_id: user1.id,
-  category: "Social",
+  category: "Motorcycle",
   location: "Oakland Track", 
   lat: 37.773972,
   lng: -122.431297,
   date: Date.new(2018, 1, 1),
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840424/joe-neric-223563_kjcucx.jpg")
 event2 = Event.new(
-  title: "Join us another Bicycle Ride put on by Relaxed Riders",
+  title: "Join us another Bicycle Event/Race put on by Relaxed Riders",
   details: "To get tickets and full race information about the Hangtown Motocross Classic, go to www.hangtownmx.com and click on tickets.\" In addition to General Admission tickets, the Hangtown Motocross Classic has some of the finest high-end hospitality areas in the entire series.", 
   creator_id: user1.id,
-  category: "Social",
+  category: "Bicycle",
   location: "SF Moto Club",
   lat: 37.7732,
   lng: -122.39,
   date: Date.new(2018, 4, 1),
   image_url: "https://res.cloudinary.com/eventbike/image/upload/v1511840485/mohamed-nohassi-202199_exn3um.jpg")
 event3 = Event.new(
-  title: 'Join us our Bicycle Race put together with Bay Area Moto Club',
+  title: 'Join us for our Bicycle Race',
   details: "Racing gets underway at 9am, with some of the best amateurs in the country doing battle. In the afternoon, the top pros will be riding on the track for their series media day. Later on Thursday night, join us at the Palladio Mall in Folsom from 5 - 7pm for a Hangtown pre-party. Amateur racing continues on Friday, May 18 at 9am, when the top experts and Pro Ams compete for pro points, which leads to a professional license in the premier professional series.", 
   creator_id: user1.id,
   category: "Race",
@@ -117,7 +117,7 @@ event10 = Event.new(
   image_url: "http://res.cloudinary.com/eventbike/image/upload/v1511497438/chris-knight-434457_hqw9nz.jpg")
 
   event11 = Event.new(
-  title: 'Motorcycle Gettogether Soon',
+  title: 'Motorcycle Get-together Soon',
   details: "The automotive world comes to the Monterey Peninsula each year to celebrate automotive history, racing, and design and Gordon McCall’s Motorworks Revival kicks-off this world class week of events.
   Please join us and our 3000 VIP guests as we host our exclusive First-Class evening and experience culinary delights while strolling the array of exceptional and rare vintage race cars, motorcycles, and aircraft. World-Class sponsors will also join us to show off their latest offerings and WOW guests with the first look at what's coming next in the aviation and automotive world. Noted California chefs will pair gourmet selections with California wines for McCall's 27th Anniversary Celebration.",
   creator_id: user3.id,
@@ -213,6 +213,32 @@ event10 = Event.new(
   lng: -122.4819997,
   image_url: "https://res.cloudinary.com/eventbike/image/upload/q_10/v1511840660/francisco-aceldo-217919_ztiedc.jpg")
 
+  event18 = Event.new(
+  title: 'Another fun golden gate bridge sideshow',
+  details: "After visiting Australia for a series of sold out shows in 2013, LA three-piece Black Rebel Motorcycle Club have announced that they’ll once again return for a run of shows to showcase their much anticipated new album, expected in early 2018.
+  Presented by MJR Presents, Black Rebel Motorcycle Club will visit Sydney, Melbourne, Brisbane, Adelaide, and Perth where they’ll be performing a selection of new material as well as crowd favourites from the bands illustrious 19-year, seven album back catalogue, showing why they are one of the world’s most celebrated live bands.
+  ",
+  creator_id: user2.id,
+  category: "Scooter",
+  location: "Golden gate bridge",
+  date: Date.new(2018, 3, 19),
+  lat: 37.769,
+  lng: -122.4819997,
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_32/v1512048569/joseph-barrientos-49318_gnijyi.jpg")
+
+  event19 = Event.new(
+  title: 'Hangout',
+  details: "After visiting Australia for a series of sold out shows in 2013, LA three-piece Black Rebel Motorcycle Club have announced that they’ll once again return for a run of shows to showcase their much anticipated new album, expected in early 2018.
+  Presented by MJR Presents, Black Rebel Motorcycle Club will visit Sydney, Melbourne, Brisbane, Adelaide, and Perth where they’ll be performing a selection of new material as well as crowd favourites from the bands illustrious 19-year, seven album back catalogue, showing why they are one of the world’s most celebrated live bands.
+  ",
+  creator_id: user3.id,
+  category: "Other",
+  location: "South bay",
+  date: Date.new(2018, 3, 19),
+  lat: 37.739,
+  lng: -122.4819997,
+  image_url: "https://res.cloudinary.com/eventbike/image/upload/q_33/v1511497473/markus-spiske-230269_pfppon.jpg")
+
 event1.save
 event11.save 
 event2.save
@@ -230,6 +256,8 @@ event14.save
 event15.save 
 event16.save 
 event17.save 
+event18.save 
+event19.save 
 #reidjs is registered for both events
 #bob is registered for the first event
 #charlie is registered for no events 
@@ -255,6 +283,8 @@ registration19 = Registration.new(user_id: user5.id, event_id: event6.id)
 registration20 = Registration.new(user_id: user5.id, event_id: event7.id)
 registration21 = Registration.new(user_id: user5.id, event_id: event8.id)
 registration22 = Registration.new(user_id: user5.id, event_id: event9.id)
+registration23 = Registration.new(user_id: user3.id, event_id: event6.id)
+registration24 = Registration.new(user_id: user3.id, event_id: event7.id)
 
 registration1.save 
 registration2.save

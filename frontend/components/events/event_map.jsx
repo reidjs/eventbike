@@ -27,7 +27,7 @@ class EventMap extends React.Component {
       this.MarkerManager.updateMarkers(values(res)));
   }
   handleMarkerClick(event) {
-    this.props.history.push(`events/${event.id}`);
+    this.props.history.push(`/events/${event.id}`);
   }
   registerListeners() {
     google.maps.event.addListener(this.map, 'idle', () => {
