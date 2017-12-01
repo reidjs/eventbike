@@ -39,7 +39,6 @@ export const fetchEvent = (eventId) => {
 };
 
 export const postEvent = (event) => {
-  debugger
   return (
     $.ajax({
       method: 'POST',

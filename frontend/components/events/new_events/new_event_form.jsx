@@ -1,8 +1,10 @@
 import React from 'react';
 import DropDown from './drop_down';
+
 // import rrui from 'react-responsive-ui/style.css'
 // import { getAddress } from '../../../util/events_api';
 import { fetchCategories, getAddress } from '../../../util/events_api_util'
+
 import
 {
   PageAndMenu,
@@ -24,11 +26,42 @@ import
   Modal
 }
 from 'react-responsive-ui'
+const test = () => {
+  console.log('hi')
+}
+const IMAGES =
+[{
+        src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
+        thumbnail: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_n.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 174,
+        isSelected: true,
+        caption: "After Rain (Jeshu John - designerspics.com)"
+},
+{
+        src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
+        thumbnail: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_n.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 212,
+        tags: [{value: "Ocean", title: "Ocean"}, {value: "People", title: "People"}],
+        caption: "Boats (Jeshu John - designerspics.com)",
+        enableImageSelection: true,
+        onSelectImage: () => {console.log('hi')},
+        onClickThumbnail: () => {console.log('hi')}
+},
+ 
+{
+        src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
+        thumbnail: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_n.jpg",
+        thumbnailWidth: 320,
+        thumbnailHeight: 212
+}]
+
 class NewEventForm extends React.Component {
   constructor(props) {
     super(props);
     this.waitingForConfirmation = false;
-    this.state = ({title: "", details: "", category: "Social", date: "", location:"", matchResults: []});
+    this.state = ({title: "", details: "", category: "Other", date: new Date(), location:"", matchResults: []});
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCategory = this.handleCategory.bind(this);
@@ -92,49 +125,54 @@ class NewEventForm extends React.Component {
       } else 
         return <li></li>
     })
-    console.log(matchItems)
     return (
       <div className="new-event-container">
-        <div>
-          <h1>Create An Event</h1>
+        <div className="header-info">
+          <h2>Create an Event</h2>
         </div>
+        <hr className="fancy" />
         <form className="new-event" onSubmit={this.handleSubmit}>
-          <div className="header">
-            {/* <span className="big-number">1</span>  */}
-            <h2>Event Details</h2>
-          </div>
+          <span className="big-number">1</span> 
           <h3>Event Title</h3><span className="red-asterisk">*</span>
-          <input name="title" placeholder="Give it a catchy name" value={this.state.title} onChange={this.handleInputChange}/>
-          <h3>Location</h3>
-          <input name="location" onChange={this.handleLocationChange} value={this.state.location} placeholder="Search for a venue or address"/>          
+          <hr className="divider" />
+          <input type="text" name="title" placeholder="Give it a catchy name" value={this.state.title} onChange={this.handleInputChange}/>
+          <span className="big-number">2</span> 
+          <h3>Location</h3><span className="red-asterisk">*</span>
+          <input type="text" name="location" onChange={this.handleLocationChange} value={this.state.location} placeholder="Search for a venue or address"/>          
           <ul>
             {matchItems}
           </ul>
-          <h3>Date</h3>
+          <span className="big-number">3</span> 
+          <h3>Date</h3><span className="red-asterisk">*</span>
           {/* <input name="date" placeholder="Search for a venue or address"/>  */}
-          <DatePicker  value={this.state.date} onChange={date => this.setState({ date })}/>
-          <h3>Event Image</h3>
-          Lightbox
+          <DatePicker type="date" value={this.state.date} onChange={date => this.setState({ date })}/>
+          {/* <h3>Event Image</h3> */}
           {/* <input name="image" placeholder="Pick an image"/>  */}
+
+          <span className="big-number">4</span> 
           <h3>Description</h3>
           <textarea name="details" value={this.state.details} onChange={this.handleInputChange}/>
           {/* <DropDown handleCategory={this.handleCategory} categories={this.props.categories}/> */}
-          <Select
-          placeholder="Select one"
-          value={this.state.category}
-          onChange={category => this.setState({ category })}
-          //pass in categories as [{value: '', label: ''}]
-          options=
-          {[
-            { value: 'Social', label: 'Social'},
-            { value: 'Race', label: 'Race'},
-            { value: 'Other', label: 'Other'},
-            { value: 'Joyride', label: 'Joyride'},
-            { value: 'Motorcycle', label: 'Motorcycle'},
-            { value: 'Scooter', label: 'Scooter'},
-            { value: 'Bicycle', label: 'Bicycle'},
-            { value: 'Workout', label: 'Workout'},
-          ]}/>
+          <span className="big-number">5</span> 
+          <h3>Category</h3>
+          <div className="category-dropdown">
+            <Select
+            placeholder="Select a category"
+            value={this.state.category}
+            onChange={category => this.setState({ category })}
+            //pass in categories as [{value: '', label: ''}]
+            options=
+            {[
+              { value: 'Social', label: 'Social'},
+              { value: 'Race', label: 'Race'},
+              { value: 'Other', label: 'Other'},
+              { value: 'Joyride', label: 'Joyride'},
+              { value: 'Motorcycle', label: 'Motorcycle'},
+              { value: 'Scooter', label: 'Scooter'},
+              { value: 'Bicycle', label: 'Bicycle'},
+              { value: 'Workout', label: 'Workout'},
+            ]}/>
+          </div>
           <input type="submit" value="Create New Event" />
         </form>
       </div>

@@ -4,6 +4,8 @@ form.new-event input, form.new-event textarea {
 span.big-number {
   font-size: 25px;
   background: blue;
+  padding: 5px 10px;
+  display: inline-block;
   color: white; }
 
 .header h2 {
@@ -36,10 +38,70 @@ div.dropdown-container > button {
   display: inline-block; }
 
 li.dropdown {
-  border: 1px solid blue; }
+  border: 1px solid #4242eb; }
 
 li.dropdown:hover {
   color: green; }
+
+div.header-info h2 {
+  font-size: 23px;
+  text-align: center;
+  font-family: "Kalam"; }
+
+div.new-event-container {
+  padding: 20px; }
+
+div.new-event-container h3 {
+  margin-top: 50px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: "Roboto";
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+
+form.new-event h3:first-of-type {
+  margin-top: 0; }
+
+hr.fancy {
+  border: 0;
+  height: 1px;
+  background: #6e6d6d;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc); }
+
+hr.divider {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
+
+form.new-event input[type=text], form.new-event input[type=date] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 1px 0px 1px 14px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+  width: 305px;
+  height: 36px;
+  font-family: "Roboto"; }
+
+form.new-event input[type=text]:focus, form.new-event input[type=date]:focus {
+  box-shadow: 0 0 5px #51cbee;
+  border: 1px solid #51cbee; }
+
+input[type=date] {
+  width: 150px;
+  font-color: #45494E; }
+
+textarea {
+  display: block;
+  width: 313px;
+  height: 129px; }
+
+form.new-event {
+  margin-left: 150px; }
 
 /*===========================================================
 = Buttons                                                   =
