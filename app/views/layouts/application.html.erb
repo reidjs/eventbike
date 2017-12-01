@@ -8,7 +8,7 @@
  (Brand) -->
       
     <title>EventBike</title>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyAPjYkDq0-iiCd6W5-qCw46J-r0EW39L1U"%>    
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV["google_maps_key"]}"%>    
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">

@@ -94,8 +94,9 @@ export const deleteEvent = (eventId) => {
 
 export const getAddress = (query) => {
   let mapsURL = "https://maps.googleapis.com/maps/api/geocode/json?address=";
-  let encodedQuery = encodeURIComponent(query);
+  // let encodedQuery = encodeURIComponent(query);
   let apiKey = "&key=AIzaSyDkREocgFR4OI0hcwrvDINxt0CuM0nKAgw"
+  // let apiKey = ENV["google_geocode_key"]
   return $.ajax({
     method: 'GET',
     url: `${mapsURL}${encodedQuery}${apiKey}`
