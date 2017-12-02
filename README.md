@@ -1,4 +1,4 @@
-# README 
+# EventBike 
 
 EventBike is an event planning tool designed for the motorcycle and bicycle communities. Inspired by Eventbrite, it shares many features such as user authentication, event search, an interactive map, and a user dashboard. 
 
