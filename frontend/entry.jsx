@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // getFlashMessages(state)
   // window.flash_messages = FlashMessages;  
   // window.events = getEvents;
-  window.store = store 
-  window.dispatch = store.dispatch
+  // window.store = store 
+  // window.dispatch = store.dispatch
   // window.getAddress = getAddress;
   // window.logout = logout
   ReactDOM.render(<Root store={store}/>, rootEl);
